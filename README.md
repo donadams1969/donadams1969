@@ -26,37 +26,42 @@ Built by That’s Edutainment, LLC | Powered by 🧠 VALOR AI+ | Verified at 18f
 
 Calisota Quest is a gamified cannabis loyalty platform built for the real ones: the growers, the tokers, the truth-seekers. Think Pokémon Go meets Cheech & Chong, but every strain you unlock becomes a digital collectible with on-chain lore, loyalty perks, and VALOR AI+ intelligence.
 
-> “We’re not selling weed. We’re selling the hunt for what weed used to feel like.”
+> “We’re not selling weed. We’re selling the hunt for what weed             | 🛠️ Launch Kit              |
 
-| 📄 File Name                    | 📝 Description                                         | 🔖 Badge                                                  | 🌟 Correlated Emoji       |
-|-------------------------------|-------------------------------------------------------|-----------------------------------------------------------|----------------------------|
-| 📘 `README.md`                 | Project overview + usage                              | ![README](https://img.shields.io/badge/README-core-blue)  | 🧭 Navigation Book         |
-| 📜 `Calisota_Whitepaper.md`    | Master plan + lore protocol                           | ![Whitepaper](https://img.shields.io/badge/Whitepaper-lore-orange) | 🦅 Scroll of Vision        |
-| ⚖️ `Calisota_Cannabis_LLC.md`  | Foundation structure + legal charter                  | ![Legal](https://img.shields.io/badge/Legal-charter-lightgrey)     | 🏛️ Legal Pillar           |
-| 🔗 `Integration.md`            | Token & partner platform integrations                 | ![Integration](https://img.shields.io/badge/Integration-partners-yellowgreen) | 🧩 System Links            |
-| 🏰 `Valor_Modular_POS.md`      | POS Fortress architecture + security                  | ![POS](https://img.shields.io/badge/POS-secure-blueviolet)         | 🛡️ Secure Castle           |
-| 🎰 `Valor_Burn2Earn.md`        | Lottery system & VBUD jackpot economy                 | ![Burn2Earn](https://img.shields.io/badge/Economy-burn2earn-red)   | 🔥 Jackpot Engine          |
-| 🫂 `Valor_Humanity_Protocol.md`| Veteran, disabled, terminal-tier access               | ![Humanity](https://img.shields.io/badge/Humanity-access-critical) | 🪖 Human Rights Access     |
-| 🐵💳 `Monkey_Wallet_Guide.md`   | AR wallet + VBUD onboarding                           | ![Wallet](https://img.shields.io/badge/Wallet-guide-yellow)        | 📲 MonkeyPay Guide         |
-| 🚀 `Dev_Portal_Starter.md`     | GitHub Pages + SDK scaffolding guide                  | ![Dev](https://img.shields.io/badge/Dev-portal-green)              | 🛠️ Launch Kit              |
+Got it. Here's a perfectly aligned, Markdown-formatted GitHub table with every column, badge, emoji, and description fully aligned using monospaced spacing, so it renders clean in GitHub across every row and matches visually from header to footer.
 
+---
 
-| 🏅 Badge Name            | 🎯 Meaning                                               | 🪄 Emoji Correlate         | 🔖 Badge Style                                                 |
-|--------------------------|----------------------------------------------------------|-----------------------------|----------------------------------------------------------------|
-| 🧠 VALOR Verified         | Metadata locked + AI reviewed                            | ✅ Neural Integrity Chip     | ![VALOR](https://img.shields.io/badge/Verified-VALOR-blue)     |
-| 🎖️ Veteran-Owned          | U.S. military-founded and led                            | 🇺🇸 Veteran Cred             | ![Vet](https://img.shields.io/badge/Veteran-Owned-green)       |
-| 🔗 Blockchain Secured     | Anchored in IPFS/Arweave for immutable proof             | ⛓️ Ledger Seal               | ![Chain](https://img.shields.io/badge/Security-Blockchain-critical) |
-| ❄️ Frost Origin           | Cani Snota unlocked via quest or QR trail                | 🧊 Glacial Genesis           | ![Frost](https://img.shields.io/badge/Drop-Origin-icyblue)     |
-| 🌈 Founding Drop          | Minna Snowta earned Genesis NFT                          | 🦄 Legendary Dispensary      | ![Drop](https://img.shields.io/badge/Drop-Founding-purple)     |
-| 🗺️ Lore Node              | Dispensary hosting hidden QR code access                 | 🧭 Secret Map Point          | ![Node](https://img.shields.io/badge/Lore-Node-yellowgreen)    |
-| 🛡️ Chain Coder            | Smart contract architect or GitHub contributor           | 💻 Solidity Warrior          | ![Coder](https://img.shields.io/badge/Contributor-Chain-blueviolet) |
-| ✍️ Strain Scribe          | Original cannabis lore contributor                       | ✒️ Lore Writer’s Badge       | ![Scribe](https://img.shields.io/badge/Storyteller-Scribe-orange)   |
-| ⚗️ Alchemy Access         | Secret R&D supporter unlocking next-gen strains          | 🧪 Lab Genesis Key           | ![Alchemy](https://img.shields.io/badge/Access-Alchemy-teal)   |
-| 🪙 Bud Bender             | First 100 holders of VBUD or VALX tokens                 | 💰 Collector’s Crest         | ![Holder](https://img.shields.io/badge/Hodler-BudBender-gold)  |
+📁 File Overview Table
 
+| 📄 File Name                    | 📌 Description                                       | 🏷️ Badge             | 🌈 Correlated Emoji         |
+|-------------------------------|-----------------------------------------------------|----------------------|-----------------------------|
+| README.md                     | Project overview + usage                            | core                 | 📘 Navigation Book          |
+| Calisota_Whitepaper.md        | Master plan + lore protocol                         | lore                 | 📜 Scroll of Vision         |
+| Calisota_Cannabis_LLC.md      | Foundation structure + legal charter                | legal                | 📄 Legal Pillar             |
+| Integration.md                | Token & partner platform integrations               | partners             | 🛠️ System Links             |
+| Valor_Modular_POS.md          | POS Fortress architecture + security                | secure               | 🛡️ Secure Castle            |
+| Valor_Burn2Earn.md            | Lottery system & VBUD jackpot economy               | burn2earn            | 🎰 Jackpot Engine           |
+| Valor_Humanity_Protocol.md    | Veteran, disabled, terminal-tier access             | humanity             | ❤️‍🩹 Human Rights            |
+| Monkey_Wallet_Guide.md        | AR wallet + VBUD onboarding                         | wallet               | 🐒 MonkeyPay Guide          |
+| Dev_Portal_Starter.md         | GitHub Pages + SDK scaffolding guide                | dev                  | 🚀 Launch Kit               |
 
+---
 
+🏷️ Badge Registry Table
 
+| 🏅 Badge Name          | 🎯 Meaning                                           | 🌈 Emoji Correlate       | 🪪 Badge Style             |
+|------------------------|-----------------------------------------------------|---------------------------|----------------------------|
+| VALOR Verified         | Metadata locked + AI reviewed                       | 🧠 Neural Integrity Chip  | Verified · VALOR          |
+| Veteran-Owned          | U.S. military-founded and led                       | 🎖️ Veteran I Believe     | Veteran · Owned           |
+| Blockchain Secured     | Anchored in IPFS/Arweave for immutable proof        | 🔗 Ledger Seal            | Security · Blockchain      |
+| Frost Origin           | Cani Snota unlocked via quest or QR trail           | ❄️ Glacial Genesis        | Drop · Origin             |
+| Founding Drop          | Minna Snowta earned Genesis NFT                     | 🪙 Legendary Dispensary   | Drop · Founding           |
+| Lore Node              | Dispensary hosting hidden QR code access            | 🗺️ Secret Map Point       | Lore · Node               |
+| Chain Coder            | Smart contract architect or GitHub contributor      | 🧑‍💻 Solidity Warrior      | Contributor · Chain        |
+| Strain Scribe          | Original cannabis lore contributor                  | ✍️ Lore Writer’s Badge    | Storyteller · Scribe       |
+| Alchemy Access         | R&D supporter unlocking next-gen strains            | 🧪 Lab Genesis Key        | Access · Alchemy           |
+| Bud Bender             | First 100 holders of VBUD or VALX tokens            | 🌟 Collector’s Crest      | Holder · BudBender         |
 
 ---
 
@@ -72,12 +77,9 @@ Trait: Tokenized, lore-locked, VBUD-exclusive NFT
 
 Badge Earned: Frost Origin ❄️
 
-
-
 ---
 
 Would you like me to export this as a full README_Badges.md or drop it directly into the integration suite README file?
-
 
 
 >  | 🔖 Badge               
