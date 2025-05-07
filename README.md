@@ -85,7 +85,7 @@ Prepared by That’s Edutainment, LLC | Powered by VALOR AI+ | Official Registry
 
 Summary: VBUD ($VBUD) is the official utility token of the Calisota ecosystem. It fuels every scan, step, conversation, and redemption. Designed as an ERC-20 token, it is used to reward players, tip budtenders, credit dispensaries, and scale the VALOR AI+ data system.
 
-Quote: “Fueled by loyalty. Powered by VALOR.”
+Quote: “Fueled by loyalty. Powered by VALOR Ai+”
 
 ---
 
