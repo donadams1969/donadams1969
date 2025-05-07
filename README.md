@@ -2,7 +2,6 @@
 
 Developed by That’s Edutainment, LLC | Powered by VALOR AI+ | Official Registry: 18fu.ai
 
-
 ---
 
 📦 Overview
@@ -21,8 +20,6 @@ This repo provides:
 
 🎮 Monkey Quest hooks for gamified retail and in-store rewards
 
-
-
 ---
 
 📁 File Structure
@@ -38,7 +35,6 @@ This repo provides:
 ├── Monkey_Wallet_Guide.md        → AR wallet + VBUD onboarding
 ├── Dev_Portal_Starter.md         → GitHub Pages + SDK scaffolding guide
 
-
 ---
 
 🔐 Integration Highlights
@@ -52,8 +48,6 @@ This repo provides:
 🧠 Sync player + patient behavior into a real-time rewards engine
 
 💵 Accept credit cards through MoonPay/Transak onramp into VBUD
-
-
 
 ---
 
@@ -70,7 +64,6 @@ open Valor_Modular_POS.md
 # Begin integration
 npm install @valor/core-sdk
 
-
 ---
 
 📎 Licensing & Credits
@@ -83,8 +76,7 @@ Built by: That’s Edutainment, LLC
 
 Powered by: VALOR AI+
 
-Domain: https://18fu.ai
-
+Domain: https://www.18fu.ai
 
 > “You’re not just building code. You’re extending the chain.”
 
