@@ -37,8 +37,7 @@
 
 ## 🔥 STRAINS + LORE
 
-<details>
-<summary>❄️ Cani Snota™ – The Hidden Frost</summary>
+❄️ Cani Snota™ – The Hidden Frost</summary>
 
 - **Status**: Hidden strain (quest unlock only)  
 - **Unlock**: Answer riddle: *“Who birthed the frost?”*  
@@ -48,10 +47,8 @@
   🧬 Legendary Strain | ❄️ Lore Quest Unlocked | 🧠 AI Track Enabled
 
 > “You don’t find Cani Snota™. She finds you.”
-</details>
 
-<details>
-<summary>🌨️ Minna Snowta™ – The Core Drop</summary>
+🌨️ Minna Snowta™ – The Core Drop</summary>
 
 - **Status**: Core strain (early quest reward)  
 - **Minted via**: Loyalty Tier 2 or beta activation  
@@ -61,7 +58,6 @@
   🧬 Founding Drop | 🎖️ Loyalty Tier Access | 🚀 NFT Staking Enabled
 
 > “Minna Snowta is the first story you earn, and the last one you forget.”
-</details>
 
 ---
 
@@ -80,11 +76,83 @@
 
 ---
 
+CALISOTA MASTER PLAN: Full Ecosystem Blueprint
+Prepared by That’s Edutainment, LLC | Powered by VALOR AI+ | Official Registry: 18fu.ai
+
+---
+
+💸 VALORBUD™ Economy: VBUD Token Utility Layer
+
+Summary: VBUD ($VBUD) is the official utility token of the Calisota ecosystem. It fuels every scan, step, conversation, and redemption. Designed as an ERC-20 token, it is used to reward players, tip budtenders, credit dispensaries, and scale the VALOR AI+ data system.
+
+Quote: “Fueled by loyalty. Powered by VALOR.”
+
+---
+
+🔗 Integrations for VBUD
+
+> “VBUD connects the world. From your scan to your stash—it all plugs into the chain.”
+
+---
+
+📲 In-App Integration
+
+Calisota Wallet: Every player gets a VBUD-compatible wallet on sign-up
+
+Reward Tracker: Real-time VBUD balance, XP multipliers, claim history
+
+QR Engine: Triggers smart contract to mint + distribute VBUD upon scan
+
+In-Game Store: VBUD is used to buy gear, card packs, AR unlocks
+
+Leaderboard: VBUD impacts player rank and weekly bonuses
+
+---
+
+🧑‍💼 Budtender Dashboard Integration
+
+Scan-to-Tip Engine: Budtender scans player QR → earns VBUD + logs performance
+
+Redemption Tracker: Shows how many players they’ve helped this week
+
+Rewards Bank: VBUD redeemable for store credit, merch, or bonuses
+
+Training XP: Track and earn extra VBUD through VALOR training modules
+
+---
+
+🏪 Dispensary POS Integration
+
+Footfall Tracker: Verifies VBUD trigger for each in-store visit
+
+Reward Engine: Credits tokens to dispensary wallet in real time
+
+Staff Insights: Who’s performing, who’s engaging, who’s boosting sales
+
+Campaign Manager: Launch strain-specific VBUD missions for customers
+
+Financial Bridge: Auto-converts VBUD to USD value per transaction (optional)
+
+---
+
+🌐 Community & Governance Layer
+
+Monkey DAO: VBUD staking for votes on lore, strain names, and game direction
+
+Content Portal: Submit story, art, or quests for VBUD payment and NFT credit
+
+IRL Events: Stake VBUD to reserve space, get backstage access, and swag drops
+
+Leaderboard Bonus Pools: Top contributors share bonus VBUD on a timed cycle
+
+
+> “Every interaction is a node. Every player, a validator. VBUD is what makes it matter.”
+
+The “Integrations for VBUD” section is now fully added to the white paper. It details how VBUD ties into player wallets, budtender dashboards, dispensary POS systems, and community governance through Monkey DAO.
+
+Ready to move into the actual VBUD smart contract buildout next?
+
 ## 🔧 REPO STRUCTURE
-
-
-
-📎 INTEGRATIONS
 
 ### 🗂️ Project Structure: `calisota-strain-website`
 
@@ -103,6 +171,20 @@
 | `📄 .gitignore`                | Git exclusions (node_modules, logs, etc.)      |
 | `📄 LICENSE`                   | Open source or proprietary license             |
 | `📄 README.md`                 | Project overview and usage                     |
+
+---
+CALISOTA MASTER PLAN: Full Ecosystem Blueprint
+Prepared by That’s Edutainment, LLC | Powered by VALOR AI+ | Official Registry: 18fu.ai
+
+---
+
+💸 VALORBUD™ Economy: VBUD Token Utility Layer
+
+Summary: VBUD ($VBUD) is the official utility token of the Calisota ecosystem. It fuels every scan, step, conversation, and redemption. Designed as an ERC-20 token, it is used to reward players, tip budtenders, credit dispensaries, and scale the VALOR AI+ data system.
+
+Quote: “Fueled by loyalty. Powered by VALOR.”
+
+The “Integrations for VBUD” section is now fully added to the white paper. It details how VBUD ties into player wallets, budtender dashboards, dispensary POS systems, and community governance through Monkey DAO.
 
 ---
 
@@ -316,10 +398,6 @@ It powers every scan, interaction, purchase, and piece of lore. It creates a mul
 
 ---
 
-📊 Who Earns VBUD — and How
-
----
-
 🔧 Utility Per Stakeholder
 
 ---
@@ -415,15 +493,11 @@ Story-centric loyalty over empty transactions
 
 Here is an expanded, GitHub-ready, badge-rich, and immersive breakdown of the VBUD Token Functionality section—ready to be embedded directly into your white paper or GitHub repo:
 
-
 ---
 
 💸 VBUD Token Functionality
 
 > “Fueled by loyalty. Powered by VALOR.”
-
-
-
 
 ---
 
@@ -442,11 +516,49 @@ It powers every scan, interaction, purchase, and piece of lore. It creates a mul
 
 ---
 
-📊 Who Earns VBUD — and How
+🔧 Utility Per Stakeholder
+
+TABLE OF CONTENTS
+
+<details>
+<summary>Platform Overview</summary>[...] (Previous sections retained)
+---
+
+💸 VALORBUD™ Economy: VBUD Token Utility Layer
+
+Summary: VBUD ($VBUD) is the official utility token of the Calisota ecosystem. It fuels every scan, step, conversation, and redemption. Designed as an ERC-20 token, it is used to reward players, tip budtenders, credit dispensaries, and scale the VALOR AI+ data system.
+
+Quote: “Fueled by loyalty. Powered by VALOR.”
 
 ---
 
 🔧 Utility Per Stakeholder
+
+> “VBUD ain’t just a token—it’s a vibe translator. It’s what loyalty feels like... on-chain.”
+
+---
+
+👤 PLAYER (The Hunter, The Learner, The Legend)
+
+---
+
+🧑‍💼 BUDTENDER (The Guide, The Gatekeeper)
+
+---
+
+🏪 DISPENSARY (The Portal, The Node)
+
+---
+
+🌐 COMMUNITY (The Pulse, The Mob, The Tribe)
+
+> “VBUD is the currency of connection. It’s how we tip the future, badge the past, and blaze forward as one.”
+
+</details>
+
+The full “Utility Per Stakeholder” section for VBUD has been added to the white paper, written in your voice and decked out with emojis, player roles, and badge triggers. It’s now locked in and ready to fuel the Calisota economy.
+
+Would you like to move on to the smart contract buildout for VBUD next?
 
 ---
 
@@ -480,6 +592,103 @@ burnVBUD(uint amount) – For exclusive merch or DAO events
 > VBUD doesn’t just track loyalty—it defines momentum. The more you move, the more you earn. The deeper you go, the rarer it gets.
 
 ---
+
+Say less, my dude. Let’s vibe this out—Calisota-style.
+Here’s the “Who Earns VBUD and How?” section rewritten in full stoner gamified glory—perfect for your white paper, app, or GitHub.
+
+---
+
+🌿 Who Earns VBUD—and How, Man?
+
+> “Yo, VBUD ain’t just a coin. It’s the dank you get for doing dope sht.*”
+
+---
+
+👤 Players (That’s You, Man)
+
+You’re the quester. The scavenger. The strain hunter. You hit the streets, you scan, you learn, you burn. And for that?
+You earn VBUD.
+
+---
+
+🧑‍💼 Budtenders (The Gatekeepers, Yo)
+
+They’re the guides. The in-store prophets. You show up with your phone, they show up with the key to the drop.
+
+---
+
+🏪 Dispensaries (The Lairs of Lore)
+
+Every player that walks in the door? That's cha-ching in VBUD, baby.
+The more quests completed in-store, the more you stack.
+
+---
+
+🌐 Community (The Movement, Bro)
+
+You don’t just earn by scanning—you earn by growing.
+The Calisota movement feeds back into itself. VBUD is the fuel for the monkey mob.
+
+---
+
+> “Every footstep earns. Every handshake counts. Every puff gets tracked in the chain, man.”
+— Monkey Scroll 420-A, Transcribed by VALOR AI+
+
+---
+
+Absolutely, my dude. Here’s the “Utility Per Stakeholder” section for VBUD, fully stonerified, GitHub-ready, and white paper-approved—with emojis, good vibes, and legit value design baked in.
+
+---
+
+🔧 Utility Per Stakeholder – What VBUD Actually Does for You
+
+> “VBUD ain’t just a token—it’s a vibe translator. It’s what loyalty feels like... on-chain.”
+
+---
+
+👤 Player (a.k.a. The Explorer, the Smoker, the Seeker)
+
+You walk. You scan. You blaze. You learn.
+VBUD turns your movement into power, bro.
+
+---
+
+🧑‍💼 Budtender (The Real MVPs in the Green Room)
+
+VBUD makes that budtalk pay off.
+
+---
+
+🏪 Dispensary (The Lore Node, the Anchor, the Portal)
+
+VBUD = verified value for verified vibes.
+
+---
+
+🌐 Community (The Builders, the Memers, the Lore Gang)
+
+Y’all breathe life into this chain.
+
+---
+
+🔐 Example Utility Script (In-App Logic)
+
+if (user.vbudBalance >= 5) {
+  unlockExclusiveStrain("Minna Snowta");
+  badgeAward("🌿 Strain Collector");
+}
+
+---
+
+> “VBUD is like karma in a wallet. The more good you do in the quest, the more it gives you back.”
+— The Monkey, probably.
+
+---
+
+
+
+
+
 
 
 
