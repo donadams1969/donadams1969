@@ -1,22 +1,18 @@
 
-## 👋 Welcome to CanisOda  
-**The Premier NFT Lore Hub for Calisota Quest™**  
-*Brought to you by That’s Edutainment, LLC | Fueled by 🧠 VALOR AI+ | Verified on-chain* 18fu.ai
-
----
+## 👋 Welcome to Calistona 
+**The Premier NFT Lore Hub for Canistona Quest™**  
+*Brought to you by That’s Edutainment, LLC | Fueled by 🧠 VALOR Ai+ | Verified on-chain* 18fu.ai
 
 ### 🌐 What Is This Place?
 
-This is the **official portal** for all things Calisota:
+This is the **official portal** for all things Canistona:
 - 🎮 NFT gameplay logic  
-- 🧬 Strain metadata (Minna Snowta, Cani Snota, and beyond)  
+- 🧬 Strain metadata (Minna Snowta, Cani Snota, and all the OG strains you can think of!)  
 - 🧠 VBUD token economy  
 - 🔗 Smart contracts & lore-based NFTs  
 - 💸 Budtender tips, dispensary drops, and Monkey-powered AR adventures
 
 This repo is your **map**, your **manual**, and your **portal** into a gamified Web3 cannabis ecosystem.
-
----
 
 ### 🗺️ How to Navigate
 
@@ -28,8 +24,6 @@ This repo is your **map**, your **manual**, and your **portal** into a gamified 
   - `docs/whitepaper` – Master lore and ecosystem explanation
   - `ar-engine/` – (Coming soon) Unity AR + Monkey AR SDK
 
----
-
 ### 🧭 Quick Tour
 
 | 📂 Folder                | 🔍 Purpose                             |
@@ -40,31 +34,23 @@ This repo is your **map**, your **manual**, and your **portal** into a gamified 
 | `docs/`                  | Whitepaper, gameplay docs, lore logs   |
 | `assets/strains/`        | Images and iconography                 |
 
----
-
 ### 🧠 Tips for Getting Started
 
 - Look for anything wrapped in `<details>` tags — those are **hidden chapters**, **quests**, or **tech walkthroughs**
 - When in doubt, check the `main` branch for latest game logic  
 - Want to play? Just follow the Monkey in the lore section... he’ll guide you.  
-- Got questions? Head to [https://18fu.ai](https://18fu.ai) or email us at **donny@18fu.ai**
-
----
+- Got questions? Head to [https://www.18fu.ai](https://www.18fu.ai) or email us at **donny@18fu.ai**
 
 > “You didn’t just stumble onto this repo... the Monkey called you here.”
 
----
-
-# 🌿 Calisota Strain Website  
+# 🌿 Calistona Strain Website  
 **🎖️ Veteran-Owned | 🧠 Powered by VALOR AI+ | 🌲 Rooted in OG Cannabis Culture**
 
-Welcome to the official front-end and metadata repo for the **Calisota Quest** ecosystem—a gamified, NFT-powered cannabis adventure built to honor legacy strains, empower dispensaries, and reward loyal stoners through a decentralized, augmented reality scavenger hunt.
-
----
+Welcome to the official front-end and metadata repo for the **Calistona Quest** ecosystem—a gamified, NFT-powered cannabis adventure built to honor legacy strains, empower dispensaries, and reward loyal stoners through a decentralized, augmented reality scavenger hunt.
 
 ## 🧬 Overview
 
-Calisota is a cultural fusion of:
+Calistona is a cultural fusion of:
 
 - 🌞 **California cannabis legacy**
 - ❄️ **Minnesota roots & hustle**
@@ -73,8 +59,6 @@ Calisota is a cultural fusion of:
 - 🧠 **VALOR AI+ smart indexing & SEO**
 
 Explore dispensaries. Unlock NFT cards. Hunt for strains like **Trainwreck**, **Green Crack**, and **Minna Snowta™**. Follow the Monkey on your personal hero’s journey—and earn real-world rewards for your loyalty.
-
----
 
 ## 🗂️ Project Structure
 
@@ -91,8 +75,6 @@ Explore dispensaries. Unlock NFT cards. Hunt for strains like **Trainwreck**, **
 | `📄 LICENSE`             | Licensing terms (MIT)                         |
 | `📄 .gitignore`          | Git exclusions (node_modules, .env, etc.)     |
 
----
-
 ## ⚙️ Tech Stack
 
 | 🚀 Technology        | 🔍 Use Case                                  |
@@ -104,21 +86,17 @@ Explore dispensaries. Unlock NFT cards. Hunt for strains like **Trainwreck**, **
 | Weedmaps API         | Real-time dispensary + strain integration    |
 | Unity (future)       | AR scanning, Monkey projection & gamification|
 
----
-
 ## 🔧 How to Run Locally
 
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/calisota-strain-website.git
-cd calisota-strain-website
+git clone https://github.com/YOUR_USERNAME/calistona-strain-website.git
+cd calistona-strain-website
 
 # Install dependencies
 npm install
 
 # Start dev server
 npm run dev
-
----
 
 🤝 Contribution Guidelines
 
@@ -134,8 +112,6 @@ We welcome:
 
 > See CONTRIBUTING.md for full guidelines and pull request rules.
 
----
-
 📜 Licensing
 
 🧾 Code: MIT
@@ -144,17 +120,15 @@ We welcome:
 
 🔐 VALOR AI+: Proprietary under That’s Edutainment, LLC
 
----
-
 🪪 Authorship & Chain of Record
 
 🛠️ Developed by: That’s Edutainment, LLC
 
-🎖️ Founded by: Donny Gillson, U.S. Navy Veteran
+🎖️ Founded by: Donny Adams, U.S. Navy Veteran
 
 🧠 Infrastructure: VALOR AI+
 
-🌐 Registry: https://18fu.ai
+🌐 Registry: https://www.18fu.ai
 
 📧 Contact: donny@18fu.ai
 
@@ -162,6 +136,5 @@ We welcome:
 
 > “This isn’t just weed. This is story, reward, and purpose—on-chain, on-brand, and on a mission.”
 
----
 
 
