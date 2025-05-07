@@ -1,4 +1,60 @@
 
+## 👋 Welcome to CanisOda  
+**The Premier NFT Lore Hub for Calisota Quest™**  
+*Brought to you by That’s Edutainment, LLC | Fueled by 🧠 VALOR AI+ | Verified on-chain* 18fu.ai
+
+---
+
+### 🌐 What Is This Place?
+
+This is the **official portal** for all things Calisota:
+- 🎮 NFT gameplay logic  
+- 🧬 Strain metadata (Minna Snowta, Cani Snota, and beyond)  
+- 🧠 VBUD token economy  
+- 🔗 Smart contracts & lore-based NFTs  
+- 💸 Budtender tips, dispensary drops, and Monkey-powered AR adventures
+
+This repo is your **map**, your **manual**, and your **portal** into a gamified Web3 cannabis ecosystem.
+
+---
+
+### 🗺️ How to Navigate
+
+- 🧾 **README.md** (You're here!) – The main map and startup guide  
+- 🔄 **Drop-down sections** – Click any `<details>` tags to expand storylines, economy mechanics, or token logic  
+- 🧪 **Branches** – Use the dropdown in GitHub (top left) to switch between code branches:
+  - `main` – Live version of the site + white paper
+  - `contracts/nft` – Smart contract logic for NFT minting
+  - `docs/whitepaper` – Master lore and ecosystem explanation
+  - `ar-engine/` – (Coming soon) Unity AR + Monkey AR SDK
+
+---
+
+### 🧭 Quick Tour
+
+| 📂 Folder                | 🔍 Purpose                             |
+|--------------------------|----------------------------------------|
+| `contracts/`             | Smart contracts for NFTs and VBUD      |
+| `metadata/`              | IPFS-ready JSONs for each strain       |
+| `scripts/`               | Deploy tools + badge minting           |
+| `docs/`                  | Whitepaper, gameplay docs, lore logs   |
+| `assets/strains/`        | Images and iconography                 |
+
+---
+
+### 🧠 Tips for Getting Started
+
+- Look for anything wrapped in `<details>` tags — those are **hidden chapters**, **quests**, or **tech walkthroughs**
+- When in doubt, check the `main` branch for latest game logic  
+- Want to play? Just follow the Monkey in the lore section... he’ll guide you.  
+- Got questions? Head to [https://18fu.ai](https://18fu.ai) or email us at **donny@18fu.ai**
+
+---
+
+> “You didn’t just stumble onto this repo... the Monkey called you here.”
+
+---
+
 # 🌿 Calisota Strain Website  
 **🎖️ Veteran-Owned | 🧠 Powered by VALOR AI+ | 🌲 Rooted in OG Cannabis Culture**
 
