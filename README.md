@@ -11,37 +11,77 @@ y CALISOTA CANNABIS ECOSYSTEM
 
 | 🧠 VALOR AI+ Verified | 🎖️ Veteran-Owned | 🔗 Blockchain Sealed | 🧾 CCPA Compliant | 🗺️ Geo-Lore Enabled |
 |-----------------------|------------------|----------------------|------------------|---------------------|
-| ✅                   | ✅               | ✅                   | ✅               | ✅                  |
+| ✅                   | ✅               | ✅                   
+
 
 ---
 
-## 🧭 WHAT IS CALISOTA?  
+🌿 CALISOTA QUEST – CANNABIS ECOSYSTEM
 
-**Calisota Quest** is a gamified cannabis loyalty platform built for the real ones: the growers, the tokers, the truth-seekers. Think Pokémon Go meets Cheech & Chong, but every strain you unlock becomes a **digital collectible** with **on-chain lore**, **loyalty perks**, and **VALOR AI+ intelligence**.
-
-> *“We’re not selling weed. We’re selling the hunt for what weed used to feel like.”*
+Built by That’s Edutainment, LLC | Powered by 🧠 VALOR AI+ | Verified at 18fu.ai
 
 ---
 
-## 🚀 TECHNOLOGY STACK  
+🧠 WHAT IS CALISOTA?
 
-| Layer         | Tech Used                           |
-|---------------|-------------------------------------|
-| Frontend      | React + Vite + Tailwind             |
-| AR Engine     | Unity AR Foundation (Mobile)        |
-| Blockchain    | Solidity (ERC-721) + Polygon + IPFS |
-| Metadata      | OpenTimestamps + Arweave/IPFS       |
-| Loyalty AI    | 🧠 VALOR AI+ SEO + Loyalty Feedback |
+Calisota Quest is a gamified cannabis loyalty platform built for the real ones: the growers, the tokers, the truth-seekers. Think Pokémon Go meets Cheech & Chong, but every strain you unlock becomes a digital collectible with on-chain lore, loyalty perks, and VALOR AI+ intelligence.
+
+> “We’re not selling weed. We’re selling the hunt for what weed used to feel like.”
+
+| 📄 File Name                    | 📝 Description                                         | 🔖 Badge                                                  | 🌟 Correlated Emoji       |
+|-------------------------------|-------------------------------------------------------|-----------------------------------------------------------|----------------------------|
+| 📘 `README.md`                 | Project overview + usage                              | ![README](https://img.shields.io/badge/README-core-blue)  | 🧭 Navigation Book         |
+| 📜 `Calisota_Whitepaper.md`    | Master plan + lore protocol                           | ![Whitepaper](https://img.shields.io/badge/Whitepaper-lore-orange) | 🦅 Scroll of Vision        |
+| ⚖️ `Calisota_Cannabis_LLC.md`  | Foundation structure + legal charter                  | ![Legal](https://img.shields.io/badge/Legal-charter-lightgrey)     | 🏛️ Legal Pillar           |
+| 🔗 `Integration.md`            | Token & partner platform integrations                 | ![Integration](https://img.shields.io/badge/Integration-partners-yellowgreen) | 🧩 System Links            |
+| 🏰 `Valor_Modular_POS.md`      | POS Fortress architecture + security                  | ![POS](https://img.shields.io/badge/POS-secure-blueviolet)         | 🛡️ Secure Castle           |
+| 🎰 `Valor_Burn2Earn.md`        | Lottery system & VBUD jackpot economy                 | ![Burn2Earn](https://img.shields.io/badge/Economy-burn2earn-red)   | 🔥 Jackpot Engine          |
+| 🫂 `Valor_Humanity_Protocol.md`| Veteran, disabled, terminal-tier access               | ![Humanity](https://img.shields.io/badge/Humanity-access-critical) | 🪖 Human Rights Access     |
+| 🐵💳 `Monkey_Wallet_Guide.md`   | AR wallet + VBUD onboarding                           | ![Wallet](https://img.shields.io/badge/Wallet-guide-yellow)        | 📲 MonkeyPay Guide         |
+| 🚀 `Dev_Portal_Starter.md`     | GitHub Pages + SDK scaffolding guide                  | ![Dev](https://img.shields.io/badge/Dev-portal-green)              | 🛠️ Launch Kit              |
+
+
+| 🏅 Badge Name            | 🎯 Meaning                                               | 🪄 Emoji Correlate         | 🔖 Badge Style                                                 |
+|--------------------------|----------------------------------------------------------|-----------------------------|----------------------------------------------------------------|
+| 🧠 VALOR Verified         | Metadata locked + AI reviewed                            | ✅ Neural Integrity Chip     | ![VALOR](https://img.shields.io/badge/Verified-VALOR-blue)     |
+| 🎖️ Veteran-Owned          | U.S. military-founded and led                            | 🇺🇸 Veteran Cred             | ![Vet](https://img.shields.io/badge/Veteran-Owned-green)       |
+| 🔗 Blockchain Secured     | Anchored in IPFS/Arweave for immutable proof             | ⛓️ Ledger Seal               | ![Chain](https://img.shields.io/badge/Security-Blockchain-critical) |
+| ❄️ Frost Origin           | Cani Snota unlocked via quest or QR trail                | 🧊 Glacial Genesis           | ![Frost](https://img.shields.io/badge/Drop-Origin-icyblue)     |
+| 🌈 Founding Drop          | Minna Snowta earned Genesis NFT                          | 🦄 Legendary Dispensary      | ![Drop](https://img.shields.io/badge/Drop-Founding-purple)     |
+| 🗺️ Lore Node              | Dispensary hosting hidden QR code access                 | 🧭 Secret Map Point          | ![Node](https://img.shields.io/badge/Lore-Node-yellowgreen)    |
+| 🛡️ Chain Coder            | Smart contract architect or GitHub contributor           | 💻 Solidity Warrior          | ![Coder](https://img.shields.io/badge/Contributor-Chain-blueviolet) |
+| ✍️ Strain Scribe          | Original cannabis lore contributor                       | ✒️ Lore Writer’s Badge       | ![Scribe](https://img.shields.io/badge/Storyteller-Scribe-orange)   |
+| ⚗️ Alchemy Access         | Secret R&D supporter unlocking next-gen strains          | 🧪 Lab Genesis Key           | ![Alchemy](https://img.shields.io/badge/Access-Alchemy-teal)   |
+| 🪙 Bud Bender             | First 100 holders of VBUD or VALX tokens                 | 💰 Collector’s Crest         | ![Holder](https://img.shields.io/badge/Hodler-BudBender-gold)  |
+
+
+
+
 
 ---
 
-## 🔥 STRAINS + LORE
+🔥 STRAINS + LORE
 
-❄️ Cani Snota™ – The Hidden Frost</summary>
+❄️ Cani Snota™ – The Hidden Frost
 
-- **Status**: Hidden strain (quest unlock only)  
-- **Unlock**: Answer riddle: *“Who birthed the frost?”*  
-- **Type**: Hybrid / Indica dominant  
+Status: Hidden strain (quest unlock only)
+
+Unlock: Answer the riddle: “Who birthed the frost?”
+
+Trait: Tokenized, lore-locked, VBUD-exclusive NFT
+
+Badge Earned: Frost Origin ❄️
+
+
+
+---
+
+Would you like me to export this as a full README_Badges.md or drop it directly into the integration suite README file?
+
+
+
+>  | 🔖 Badge               
+
 - **Effect**: Tactical calm, lucid clarity  
 - **Badge Line**:  
   🧬 Legendary Strain | ❄️ Lore Quest Unlocked | 🧠 AI Track Enabled
