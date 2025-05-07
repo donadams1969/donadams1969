@@ -2,8 +2,6 @@
 
 > Veteran-owned. Blockchain-fueled. AI-verified. Scavenger-activated.
 
-
-
 # 🌿 CALISOTA QUEST – CANNABIS ECOSYSTEM  
 **Built by That’s Edutainment, LLC | Powered by 🧠 VALOR AI+ | Verified at [18fu.ai](https://18fu.ai)**  
 
@@ -106,12 +104,6 @@
 | `📄 LICENSE`                   | Open source or proprietary license             |
 | `📄 README.md`                 | Project overview and usage                     |
 
-Would you like this inserted into your master README or packaged with the badge system above?
-
-
-
-
-
 ---
 
 🛡️ COMPLIANCE & PROTOCOLS
@@ -121,7 +113,6 @@ Would you like this inserted into your master README or packaged with the badge 
 ✅ CCPA & COPPA Privacy Aligned
 ✅ Blockchain-anchored & timestamp-validated via OpenTimestamps
 ✅ Fully Veteran-Owned & Ledger Verified
-
 
 ---
 
@@ -138,25 +129,17 @@ Would you like this inserted into your master README or packaged with the badge 
   ]
 }
 
-
 ---
 
 💌 CONTACT & TEAM
 
-Founder: Donny Gillson
+Founder: Donny Adams
 Company: That’s Edutainment, LLC
-VALOR AI+ Core: https://18fu.ai
+VALOR AI+ Core: https://www.18fu.ai
 Email: donny@18fu.ai
 Badge Verified: 🎖️ 🧠 🔗 ✅
 
-> “Calisota isn’t just a map. It’s a movement.”
-
-
-
----
-
-Would you like me to zip this as a complete `README.md` file with embedded badges, or generate matching `metadata/canisnota.json` and `contracts/CalisotaStrainNFT.sol` next?
-
+> “Calisota isn’t just a map. It’s a movement."
 
 ---
 
@@ -269,9 +252,7 @@ Quest Logs & Lore Pages
 
 GitHub Pull Requests (if contributor badge is triggered)
 
-
 Metadata badge fields:
-
 
 "badges": [
   "VALOR Verified",
@@ -288,5 +269,150 @@ Metadata badge fields:
 
 ---
 
-Would you like the full badge SVG/PNG pack designed next, or should I generate sample badge templates you can upload to GitHub Pages and embed via HTML or Markdown image links?
+You’ve just described a self-scaling, real-world, AR-powered cannabis loyalty economy.
+We’re going to encode it as the VALOR BUD Protocol™—a Moore’s Law loyalty engine that rewards:
+
+Customers for scanning + walking in
+
+---
+
+CALISOTA MASTER PLAN: Full Ecosystem Blueprint
+Prepared by That’s Edutainment, LLC | Powered by VALOR AI+ | Official Registry: 18fu.ai
+
+---
+
+💸 VALORBUD™ Economy: VBUD Token Utility Layer
+
+Summary: VBUD ($VBUD) is the official utility token of the Calisota ecosystem. It fuels every scan, step, conversation, and redemption. Designed as an ERC-20 token, it is used to reward players, tip budtenders, credit dispensaries, and scale the VALOR AI+ data system.
+
+Quote: “Fueled by loyalty. Powered by VALOR.”
+
+---
+
+🪙 VBUD Token Functionality
+
+Here is an expanded, GitHub-ready, badge-rich, and immersive breakdown of the VBUD Token Functionality section—ready to be embedded directly into your white paper or GitHub repo:
+
+---
+
+💸 VBUD Token Functionality
+
+> “Fueled by loyalty. Powered by VALOR.”
+
+---
+
+🪙 Overview
+
+VBUD is the on-chain heartbeat of Calisota Quest.
+It powers every scan, interaction, purchase, and piece of lore. It creates a multi-sided reward economy between:
+
+👤 Players
+
+🧑‍💼 Budtenders
+
+🏪 Dispensaries
+
+🧠 VALOR AI+
+
+---
+
+📊 Who Earns VBUD — and How
+
+---
+
+🔧 Utility Per Stakeholder
+
+---
+
+🔁 VBUD Utility Loop
+
+1. Player scans QR
+2. Budtender validates inside → both receive VBUD
+3. Dispensary logs verified engagement → receives VBUD
+4. VALOR AI+ analyzes behavior + engagement
+5. Token inflation/deflation adjusts based on node activity
+6. Community votes on next lore branch using staked VBUD
+
+---
+
+🛠️ Smart Contract Features (Preview)
+
+mintVBUD(address to, uint amount) – Admin-only function to distribute
+
+redeemVBUD(uint amount) – Used to unlock AR NFTs or whitelist access
+
+rewardNodeInteraction(address user) – Auto-executed on successful QR → redeem interaction
+
+burnVBUD(uint amount) – For exclusive merch or DAO events
+
+---
+
+🧬 Badge Tiering System with VBUD Triggers
+
+---
+
+> VBUD doesn’t just track loyalty—it defines momentum. The more you move, the more you earn. The deeper you go, the rarer it gets.
+
+---
+
+Would you like this smart contract and staking logic encoded into your white paper, or shall I now generate the official VALORBUD.sol (ERC-20) smart contract to go with this section?
+
+---
+
+🔁 Game Loop Integration
+
+1. Player scans QR (outside dispensary) → XP + NFT minted
+
+
+2. Walks in-store → Dispensary receives VBUD token
+
+
+3. Budtender confirms quest completion → Receives PotCoin tip + VBUD split
+
+
+4. Player redeems merch, learns strain story → XP + lore unlock
+
+
+5. VALOR AI+ learns behavior → Ecosystem self-reinforces
+
+---
+
+🔧 Technical Notes
+
+Token Name: VALORBUD
+
+Symbol: VBUD
+
+Type: ERC-20 (Ethereum + Polygon compatible)
+
+Supply: Elastic or capped depending on node activity and governance
+
+Issuer: That’s Edutainment, LLC via VALORChain node mint authority
+
+---
+
+🎯 Token Use Cases
+
+---
+
+🧬 Cultural Impact
+
+VBUD tokens encourage:
+
+Dispensary transparency
+
+Budtender participation
+
+Cannabis education gamified
+
+AR exploration that pays players back
+
+Story-centric loyalty over empty transactions
+
+> “VBUD is how you move through the world and leave something behind. XP is the memory. VBUD is the proof.”
+
+</details>
+
+
+
 
