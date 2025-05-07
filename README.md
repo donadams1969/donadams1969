@@ -1,4 +1,4 @@
- CALISOTA CANNABIS ECOSYSTEM
+y CALISOTA CANNABIS ECOSYSTEM
 
 > Veteran-owned. Blockchain-fueled. AI-verified. Scavenger-activated.
 
@@ -684,6 +684,9 @@ if (user.vbudBalance >= 5) {
 — The Monkey, probably.
 
 ---
+
+
+![1000013126](https://github.com/user-attachments/assets/d80de908-d157-46f9-aaa6-7decf157a12f)
 
 
 
