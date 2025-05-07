@@ -413,6 +413,77 @@ Story-centric loyalty over empty transactions
 
 </details>
 
+Here is an expanded, GitHub-ready, badge-rich, and immersive breakdown of the VBUD Token Functionality section—ready to be embedded directly into your white paper or GitHub repo:
+
+
+---
+
+💸 VBUD Token Functionality
+
+> “Fueled by loyalty. Powered by VALOR.”
+
+
+
+
+---
+
+🪙 Overview
+
+VBUD is the on-chain heartbeat of Calisota Quest.
+It powers every scan, interaction, purchase, and piece of lore. It creates a multi-sided reward economy between:
+
+👤 Players
+
+🧑‍💼 Budtenders
+
+🏪 Dispensaries
+
+🧠 VALOR AI+
+
+---
+
+📊 Who Earns VBUD — and How
+
+---
+
+🔧 Utility Per Stakeholder
+
+---
+
+🔁 VBUD Utility Loop
+
+1. Player scans QR
+2. Budtender validates inside → both receive VBUD
+3. Dispensary logs verified engagement → receives VBUD
+4. VALOR AI+ analyzes behavior + engagement
+5. Token inflation/deflation adjusts based on node activity
+6. Community votes on next lore branch using staked VBUD
+
+---
+
+🛠️ Smart Contract Features (Preview)
+
+mintVBUD(address to, uint amount) – Admin-only function to distribute
+
+redeemVBUD(uint amount) – Used to unlock AR NFTs or whitelist access
+
+rewardNodeInteraction(address user) – Auto-executed on successful QR → redeem interaction
+
+burnVBUD(uint amount) – For exclusive merch or DAO events
+
+---
+
+🧬 Badge Tiering System with VBUD Triggers
+
+---
+
+> VBUD doesn’t just track loyalty—it defines momentum. The more you move, the more you earn. The deeper you go, the rarer it gets.
+
+---
+
+
+
+
 
 
 
