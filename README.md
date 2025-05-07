@@ -22,18 +22,20 @@ This repo provides:
 
 ---
 
-📁 File Structure
+📁 File Structure Overview
 
-/calissota-integration-suite/
-├── README.md                     → Project overview + usage
-├── Calisota_Whitepaper.md        → Master plan + lore protocol
-├── Calisota_Cannabis_LLC.md      → Foundation structure + legal charter
-├── Integration.md                → Token & partner platform integrations
-├── Valor_Modular_POS.md          → POS Fortress architecture + security
-├── Valor_Burn2Earn.md            → Lottery system & VBUD jackpot economy
-├── Valor_Humanity_Protocol.md    → Veteran, disabled, terminal-tier access
-├── Monkey_Wallet_Guide.md        → AR wallet + VBUD onboarding
-├── Dev_Portal_Starter.md         → GitHub Pages + SDK scaffolding guide
+| 📄 File Name                    | 📝 Description                                               | 🔖 Badge                                             | 🌟 Correlated Emoji |
+|-------------------------------|-------------------------------------------------------------|-----------------------------------------------------|---------------------|
+| 📘 `README.md`                | Project overview + usage                                    | ![README](https://img.shields.io/badge/README-core-blue)             | 🧭 Navigation Book |
+| 📜 `Calisota_Whitepaper.md`   | Master plan + lore protocol                                 | ![Whitepaper](https://img.shields.io/badge/Whitepaper-lore-orange)   | 🦅 Scroll of Vision |
+| ⚖️ `Calisota_Cannabis_LLC.md` | Foundation structure + legal charter                        | ![Legal](https://img.shields.io/badge/Legal-charter-lightgrey)       | 🏛️ Legal Pillar    |
+| 🔗 `Integration.md`           | Token & partner platform integrations                       | ![Integration](https://img.shields.io/badge/Integration-partners-yellowgreen) | 🧩 System Links    |
+| 🏰 `Valor_Modular_POS.md`     | POS Fortress architecture + security                        | ![POS](https://img.shields.io/badge/POS-secure-blueviolet)           | 🛡️ Secure Castle   |
+| 🎰 `Valor_Burn2Earn.md`       | Lottery system & VBUD jackpot economy                       | ![Burn2Earn](https://img.shields.io/badge/Economy-burn2earn-red)     | 🔥 Jackpot Engine  |
+| 🫂 `Valor_Humanity_Protocol.md`| Veteran, disabled, terminal-tier access                     | ![Humanity](https://img.shields.io/badge/Humanity-access-critical)   | 🪖 Human Rights     |
+| 🐵💳 `Monkey_Wallet_Guide.md` | AR wallet + VBUD onboarding                                 | ![Wallet](https://img.shields.io/badge/Wallet-guide-yellow)          | 📲 MonkeyPay Guide  |
+| 🚀 `Dev_Portal_Starter.md`    | GitHub Pages + SDK scaffolding guide                        | ![Dev](https://img.shields.io/badge/Dev-portal-green)                | 🛠️ Launch Kit       |
+
 
 ---
 
@@ -81,7 +83,6 @@ Domain: https://www.18fu.ai
 > “You’re not just building code. You’re extending the chain.”
 
 Great question—and this is where Calisota goes from being a powerful documentation ecosystem to a real, scalable platform-as-a-service (PaaS) that any dispensary, cultivator, or cannabis tech startup can deploy, customize, or monetize.
-
 
 ---
 
@@ -159,7 +160,6 @@ Build:
 
 📂 Suggested file:
 
-/dashboard/
 ├── App.jsx                     # Admin dashboard UI
 ├── LoyaltyGraph.jsx           # XP + customer flow display
 ├── RewardTrigger.jsx          # Redeem NFT + print QR
@@ -193,7 +193,6 @@ Let dispensaries stake Proof of Honor NFTs to join veterans-only tiers
 
 Absolutely, here is your full text-based version of the final build of the CALISOTA INTEGRATION SUITE, designed for maximum visual impact—complete with emojis, badges, visual hierarchy, and an unforgettable voice.
 
-l
 ---
 
 # 🧩 CALISOTA INTEGRATION SUITE – FINAL LAUNCH  
@@ -229,44 +228,7 @@ Every part of this system is interoperable, forkable, and fortified by the **VAL
 
 ---
 
-## 🧠 Core Folder Structure
 
-```plaintext
-calisota-integration-suite/
-├── README.md                  # 🌐 Central hub for all documentation
-├── LICENSE                    # 📜 MIT open-source license
-├── .gitignore                 # 🙈 Clean your build
-│
-├── docs/                      # 📚 Full protocol documentation
-│   ├── Whitepaper.md          # 🎓 Full master ecosystem plan
-│   ├── Integration.md         # 🔗 Partner chains + token layers
-│   ├── POS-Fortress.md        # 🛡️ Checkout system architecture
-│   └── Humanity-Protocol.md   # 🎖️ Veteran, disabled, & legacy access
-│
-├── contracts/                 # 📜 Solidity smart contracts
-│   ├── VBUDToken.sol          # 🪙 ERC-20 loyalty token
-│   └── NFTStaking.sol         # 🧬 Stake for XP + status
-│
-├── scripts/                   # 💻 Deploy + AI modules
-│   ├── deploy_vbud.js         # 🚀 Token launch script
-│   └── valor_insight_engine.py# 🧠 Strain prediction AI
-│
-├── metadata/                  # 🎨 NFT card structure
-│   └── strain-example.json    # 🌿 IPFS-ready metadata
-│
-├── sql/                       # 🗃️ Analytics + loyalty data
-│   ├── loyalty_ledger.sql     # 🧾 Tracks reward history
-│   └── strain_performance.sql # 📈 Tells growers what’s hot
-│
-├── core/                      # 🔐 Security layer
-│   └── firewall_trap.cpp      # 🧱 Waterfall encryption engine
-│
-├── dashboard/                 # 📊 React admin portal
-│   ├── App.jsx                # 🧭 Dispensary dashboard
-│   ├── LoyaltyGraph.jsx       # 📊 Visual XP mapping
-│   └── RewardTrigger.jsx      # 🎁 In-store NFT redemption
-
----
 
 🛠️ For Dispensaries
 
@@ -335,6 +297,10 @@ Registry: https://18fu.ai
 🧠 Ready to deploy?
 📦 Download the Full Suite
 👨‍💻 Fork us. Build with us. Dominate the chain.
+
+---
+
+
 
 ---
 
