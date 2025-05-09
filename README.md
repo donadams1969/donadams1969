@@ -53,7 +53,7 @@ All enforcement is logged, sealed, and timestamped in **VALORChain Ethics Log**.
 
 If you feel unsafe or witness behavior that violates this code:
 
-- 📧 Email: [conduct@valorai.org](mailto:conduct@valorai.org)  
+- 📧 Email: [donny@18fu.ai](mailto:donny@18fu.ai)  
 - 💬 Discord: DM `@VALOR_MODS`  
 - 🐙 GitHub: File issue with `⚠️ conduct` tag
 
