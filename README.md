@@ -16,7 +16,7 @@ VBLK Tokenomics – Token + DAO Layer
 
 Digital Obstruction Ledger – Immutable evidence chain for First Amendment violations
 
-IntelliTree – AI-powered air/ground traffic control and safety ecosystem
+Valor Aiie÷ – AI-powered air/ground traffic control and safety ecosystem
 
 Calisota – Cannabis meets NFT game theory for brand & policy awareness
 
