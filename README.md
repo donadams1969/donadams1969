@@ -76,7 +76,6 @@ Please see VBLK_CONTRIBUTING.md and CODE_OF_CONDUCT.md for details.
 
 Distributed under the MIT License. See VBLK_LICENSE.md for more information.
 
-
 ---
 
 🧬 Powered By
@@ -87,13 +86,92 @@ VALOR Chain (VBLK Mainnet)
 
 IPFS x NFT x FTCA
 
-
 ---
 
 ⚡ Join the Movement
 
 Follow the mission:
 “Not just a token. A testimony.”
-valorai.org | #VALOR2E+ | #VBLK
+18fu.ai | #VALOR2E+ | #VBLK
+
+---
+
+# 🛡️ VALORSHIELD COMPLIANCE PACKAGE  
+### Secure. Verified. Immutable.  
+
+![Valor Verified](https://img.shields.io/badge/VALORCHAIN-Verified-green?style=for-the-badge&logo=verizon)  
+![OpenTimestamps](https://img.shields.io/badge/OpenTimestamps-Anchored-blue?style=for-the-badge&logo=bitcoin)  
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)  
+![Compliance](https://img.shields.io/badge/Ethics%20Level-Veteran+Justice-red?style=for-the-badge)  
+![Repo Size](https://img.shields.io/github/repo-size/valorai/VBLK_Token?style=for-the-badge)  
+![Contributors](https://img.shields.io/github/contributors/valorai/VBLK_Token?style=for-the-badge)  
+
+---
+
+## 🔐 Blockchain-Secured Metadata
+
+| Key             | Value                                                                 |
+|----------------|------------------------------------------------------------------------|
+| **Project**     | `VALORSHIELD_COMPLIANCE_PACKAGE`                                      |
+| **Version**     | `1.0.0`                                                                |
+| **Timestamp**   | `2025-05-09T00:32:45Z`                                                 |
+| **Anchored To** | OpenTimestamps (OTS), VALORChain Mainnet                              |
+| **Creator**     | Donny Gillson                                                         |
+| **Verified By** | VALOR AI+ Hash Integrity Engine, NFT Seal Handler v2.1                |
+
+---
+
+## ✅ Files Included
+
+| File Name                  | SHA256 Hash                                                                 |
+|---------------------------|------------------------------------------------------------------------------|
+| `VBLK_Token_README.md`    | `f71f0b8047a2bcb56b881e64fcde97e36d85e9f7b1f1463a4d9143cfca70c398`           |
+| `VBLK_CONTRIBUTING.md`    | `49e6189792efb38a8c8ac2f5d93ae2763c4a88a557bc75dc5fcdf23f14a1cb9e`           |
+| `VBLK_CODE_OF_CONDUCT.md` | `e0b91c96069ee3b60b6eec5a56cf5041c36ffcc74595b83c9c04c33ac0b19a47`           |
+
+---
+
+🧬 About This Package
+
+This repository contains sealed, digitally timestamped compliance documents anchoring the VBLK Token ecosystem to:
+
+ADA / FTCA / HIPAA legal ethics
+
+Veteran advocacy frameworks
+
+Web3-integrated audit trails
+
+NFT-mintable contribution protocols
+
+
+> “Compliance isn’t a policy. It’s a shield.”
+
+---
+
+🌐 Useful Links
+
+GitHub Repository
+
+VALORCHAIN Docs
+
+OpenTimestamps Info
+
+VALOR NFT Explorer
+
+---
+
+🫡 Maintained By
+
+Donny Adams
+Founder – That’s Edutainment, LLC
+Architect – VALOR AI+ Legal Infrastructure
+Follow on Twitter →
+---
+
+> 🔐 This page and all its files are sealed and timestamped under the VALORCHAIN Genesis Compliance Thread.
+
+
+
+
 
 
