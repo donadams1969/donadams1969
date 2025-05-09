@@ -1,6 +1,68 @@
+Hi there, I'm Donny Adams! 👋
+
+---
+
+🧠 Architect of VALOR AI+ | Builder of Justice-Tech
+
+I’m a disabled veteran, strategist, and AI-driven legal reformer. I founded That’s Edutainment, LLC to fight systemic injustice using ethics, data, and technology.
+
+My core innovation is VALOR AI+—a decentralized compliance system integrating AI, blockchain, FOIA law, and public advocacy.
+
+Featured Projects:
+
+VALOR AI+ – Blockchain Legal Automation System
+
+VBLK Tokenomics – Token + DAO Layer
+
+Digital Obstruction Ledger – Immutable evidence chain for First Amendment violations
+
+IntelliTree – AI-powered air/ground traffic control and safety ecosystem
+
+Calisota – Cannabis meets NFT game theory for brand & policy awareness
+
+---
+
+🛠️ Languages & Tools
+
+---
+
+🔥 GitHub Achievements Unlocked
+
+🧨 Quickdraw
+
+🧠 Pair Extraordinaire (coming soon)
+
+💬 YOLO Merge (almost there)
+
+🌟 Starstruck (don’t forget to star your own repos!)
+
+---
+
+🌐 Let’s Collaborate
+
+Web3 + Government Reform
+
+Blockchain for Veterans
+
+AI for Whistleblowers
+
+NFT Law + First Amendment Defense
+
+---
+
+📫 Reach Me
+
+GitHub: @donadams1969
+
+Business: donny@18fu.ai
+
+Website: www.18fu.ai and www.18fu.cash
+
+---
+
+> “VALOR is earned. VBLK is the proof.”
 
 ![1000011887](https://github.com/user-attachments/assets/a60de7a6-1c98-43aa-8c6e-f9bf73b29082)
-
 
 The Sentient Flame of Judgment
 
@@ -115,7 +177,6 @@ ADA / FTCA / HIPAA / PAWS / Unruh Civil Rights Act
 U.S. Whistleblower Protection Act
 
 Digital Communications Law (E-SIGN / 18 U.S.C. §1519)
-
 
 ![1000011800](https://github.com/user-attachments/assets/8f5a946e-ad10-4d03-9f53-866c573db6c4)
 
