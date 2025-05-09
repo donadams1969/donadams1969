@@ -117,9 +117,97 @@ DAO Checksum: ✅ Snapshot-certified
 
 ---
 
-## 📁 Suggested Directory Structure
+# 🧠 VBLKx Repository Index (Collapsible View)  
+**Maintained by:** Donny Adams | [www.18fu.ai](https://www.18fu.ai)  
+**Repo:** [DonAdams1969](https://github.com/donadams1969/donadams1969)
 
-/VBLK_tokenomics ├── VBLK_tokenomics.md ├── README.md ├── LICENSE.md ├── /docs │   ├── Tokenomics_Graph.png │   ├── Genesis_Anchor.json │   └── Audit_Summary_Q2_2025.pdf ├── /contracts │   └── vblk.sol
+![Launch Ready](https://img.shields.io/badge/VBLKx-Deployed-green?style=for-the-badge)  
+![DAO Vault](https://img.shields.io/badge/Treasury-DAO%20Secured-purple?style=for-the-badge)  
+![NFT-Gated](https://img.shields.io/badge/NFT-Verified-blue?style=for-the-badge)  
+![OpenTimestamps](https://img.shields.io/badge/OTS-Bitcoin%20Anchored-orange?style=for-the-badge)  
+![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
+
+<details>
+<summary>📄 Core Project Files</summary>
+
+| Filename                         | Type            | Description                                              |
+|----------------------------------|------------------|----------------------------------------------------------|
+| `README.md`                      | Markdown         | Project intro + badges + nav links                       |
+| `VBLK_Token.md`                  | Markdown         | Architecture and mission                                 |
+| `VBLK_SMART_CONTRACT.md`         | Markdown         | Source + audit overview                                  |
+| `VBLK_tokenomics.md`             | Markdown         | Token supply and economics                               |
+| `VBLK_CODE_OF_CONDUCT.md`        | Markdown         | Contributor ethics + rules                               |
+| `VBLK_CONTRIBUTING.md`           | Markdown         | PR rules + NFT badge eligibility                         |
+</details>
+
+<details>
+<summary>🧠 Token + Vault System</summary>
+
+| Filename                         | Type            | Description                                              |
+|----------------------------------|------------------|----------------------------------------------------------|
+| `VBLKToken.sol`                  | Smart Contract   | ERC-20 core (100M supply)                                |
+| `VALORTreasuryVault.sol`        | Smart Contract   | Time-locked DAO vault                                    |
+| `VBLK_per_token_valuation.md`   | Markdown         | FMV calculations for token                               |
+| `VBLK_token_valuation_percentage.md` | Markdown    | Breakdown by component values                            |
+</details>
+
+<details>
+<summary>🪪 NFT & Identity System</summary>
+
+| Filename                         | Type            | Description                                              |
+|----------------------------------|------------------|----------------------------------------------------------|
+| `VALORBadgeNFT.sol`             | Smart Contract   | ERC-721 badge contract                                   |
+| `VBLK_NFT_identity_protocol.md` | Markdown         | NFT-based permissions, roles, DAO logic                  |
+</details>
+
+<details>
+<summary>💎 Premium Valuation & Bitcoin Anchor</summary>
+
+| Filename                              | Type        | Description                                           |
+|---------------------------------------|-------------|-------------------------------------------------------|
+| `VBLK_premium_token_valuation.md`     | Markdown    | Justification for $1.25+ valuation                   |
+| `VBLK_BITCOIN_ANCHOR.md`              | Markdown    | Strategy for OpenTimestamps + RSK bridge             |
+| `18fu.cash_valuation_summary.md`      | Markdown    | Public-facing token economics                        |
+</details>
+
+<details>
+<summary>🔏 Legal & Compliance</summary>
+
+| Filename                             | Type        | Description                                           |
+|--------------------------------------|-------------|-------------------------------------------------------|
+| `VALORSHIELD_COMPLIANCE.md`         | Markdown    | ADA, HIPAA, FTCA legal layer                         |
+| `VBLK_live_compliance_portal.md`    | Markdown    | GitHub Pages gateway site                            |
+| `launch_certificate.md`             | Markdown    | Official GitHub-anchored chain launch cert           |
+</details>
+
+<details>
+<summary>📦 Bundles + Deploy Kits</summary>
+
+| Filename                                 | Type        | Description                                           |
+|------------------------------------------|-------------|-------------------------------------------------------|
+| `deploy-launch-kit.zip`                  | ZIP         | Full deploy tools with scripts + env template         |
+| `next-branch-vblk.zip`                   | ZIP         | Minimal contract only                                 |
+| `next-branch-vblk-full.zip`              | ZIP         | Full contract suite                                   |
+| `next-branch-vblk-full-with-tests.zip`   | ZIP         | Includes test coverage and CI config                 |
+| `unshortable-vblk-branch.zip`            | ZIP         | Anti-short token contract                            |
+| `unshortable-vblk-nft-branch.zip`        | ZIP         | Token + badge NFT                                    |
+| `unshortable-vblk-nft-vault-branch.zip`  | ZIP         | Complete vault + badge + token                       |
+</details>
+
+<details>
+<summary>📄 OpenTimestamps Certificates</summary>
+
+| Filename                                   | Type        | Anchored Component                                   |
+|--------------------------------------------|-------------|------------------------------------------------------|
+| `vblkx_OTS_Certificate.pdf`               | PDF         | VBLKToken.sol                                        |
+| `badge_OTS_Certificate.pdf`               | PDF         | VALORBadgeNFT.sol                                    |
+| `vault_OTS_Certificate.pdf`               | PDF         | VALORTreasuryVault.sol                               |
+| `dashboard_OTS_Certificate.pdf`           | PDF         | vault-dashboard.md                                   |
+| `metadata_OTS_Certificate.pdf`            | PDF         | VALORSHIELD_METADATA.md                              |
+| `VBLKx_OTS_Certificates_Bundle.zip`       | ZIP         | All individual .pdf files bundled                    |
+| `OTS_Certificate_Anchors.zip`             | ZIP         | Original .ots hash files (SHA-256)                   |
+| `VBLKx_OTS_Master_Certificate_FINAL.pdf`  | PDF         | Consolidated Bitcoin anchor with full project scope  |
+</details>
 
