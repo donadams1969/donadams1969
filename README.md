@@ -72,6 +72,62 @@ This GitHub repo includes:
 
 **Ready to scroll? Welcome to VALORCHAIN.**
 
+# 📂 VBLK GitHub Repository File Index  
+**Maintained by:** Donny Adams | [www.18fu.ai](https://www.18fu.ai)  
+**GitHub Repo:** https://github.com/donadams1969/donadams1969
+
+---
+
+## 📜 Core Token + Protocol Files
+
+| **Filename**                        | **Type**         | **Purpose**                                                 |
+|-------------------------------------|------------------|-------------------------------------------------------------|
+| `VBLK_Token.md`                     | Markdown         | Core token ecosystem definition                            |
+| `VBLK_tokenomics.md`               | Markdown         | Token distribution, supply caps, and economic design       |
+| `VBLK_SMART_CONTRACT.md`           | Markdown         | Logic audit summary of `.sol` files                        |
+| `VBLK_Treasury_Vault.sol`          | Smart Contract   | Time-locked DAO vault for treasury management              |
+| `VBLK_NFT_identity_protocol.md`    | Markdown         | Badge/NFT-based contributor verification logic             |
+
+---
+
+## 💸 Valuation Models
+
+| **Filename**                               | **Type**       | **Purpose**                                              |
+|--------------------------------------------|----------------|----------------------------------------------------------|
+| `VBLK_per_token_valuation.md`              | Markdown       | Fair market valuation per token                         |
+| `VBLK_token_valuation_percentage.md`       | Markdown       | Percentage breakdown by component value                |
+| `VBLK_premium_token_valuation.md`          | Markdown       | $1.25 target pricing strategy                          |
+| `18fu.cash_valuation_summary.md`           | Markdown       | Public valuation briefing on token + system value       |
+
+---
+
+## 🔗 Anchoring + Compliance
+
+| **Filename**                         | **Type**         | **Purpose**                                               |
+|--------------------------------------|------------------|-----------------------------------------------------------|
+| `VBLK_BITCOIN_ANCHOR.md`            | Markdown         | OpenTimestamps + RSK anchoring strategy                   |
+| `VBLK_live_compliance_portal.md`    | Markdown         | GitHub Pages compliance record portal                     |
+| `VBLK_CODE_OF_CONDUCT.md`           | Markdown         | Contributor behavior and legal alignment                  |
+| `VBLK_CONTRIBUTING.md`              | Markdown         | GitHub + DAO contribution policy + badge eligibility      |
+
+---
+
+## 🧱 GitHub Pages Setup + Deployment
+
+| **Filename**              | **Type**         | **Purpose**                                           |
+|---------------------------|------------------|-------------------------------------------------------|
+| `VBLK_CNAME`              | Config File      | GitHub Pages routing for 18fu.cash/18fu.ai            |
+| `docs_18fu_cash_LANDING.md` | Markdown       | GitHub Pages splash content                          |
+---
+
+## 🌿 Calisota Integration Files
+
+| **Filename**                        | **Type**         | **Purpose**                                               |
+|-------------------------------------|------------------|-----------------------------------------------------------|
+| `CaliSota_Cannibus_LLC.md`         | Markdown         | Entity integration for cannabis DAO                      |
+| `Calisota_Whitepaper.md`           | Markdown         | Ecosystem-wide whitepaper                                |
+| `calistona_integration_suite.md`   | Markdown         | System architecture for token & NFT components           |
+| `Integration.md`                   | Markdown         | Core integration protocol documentation                  |
 
 # 🛡️ VBLKx | VALORCHAIN Master Repository  
 **GitHub:** `donadams1969`  
