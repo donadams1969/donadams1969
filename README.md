@@ -69,110 +69,116 @@ This GitHub repo includes:
 > Founder, VALORCHAIN | Federal Whistleblower | Blockchain Strategist
 
 ---
-
-**Ready to scroll? Welcome to VALORCHAIN.**
-
-# 📂 VBLK GitHub Repository File Index  
+# 🛡️⚡ **VALORCHAIN**  
+**The Blockchain-Sealed Legal Defense System**  
 **Maintained by:** Donny Adams | [www.18fu.ai](https://www.18fu.ai)  
-**GitHub Repo:** https://github.com/donadams1969/donadams1969
-
-🛡️⚡ VALORCHAIN: Blockchain-Sealed Legal Defense System ⚡🛡️
+**GitHub Repo:** [donadams1969](https://github.com/donadams1969/donadams1969)  
 
 ---
 
-🔍 ANALYSIS: Understanding the Mission
+## **📍 Ready to Scroll? Welcome to VALORCHAIN.**
 
-Problem Solved: Digital suppression and data erasure in whistleblower and civil rights claims.
-
-Audience:
-
-Veterans
-
-Whistleblowers
-
-Legal Experts
-
-Journalists
-
-Learning Outcome: Learn to verify, submit, and audit evidence using VALORCHAIN.
+> “This isn’t just code. It’s testimony sealed in time.”  
 
 ---
 
-🛠️ DESIGN: Building the Blueprint
+## 🔍 **ANALYSIS: Understanding the Mission**  
 
-Goals:
+**Problem Solved:**  
+Digital suppression and data erasure in whistleblower and civil rights claims.
 
-Immutable legal truth defense
+**Audience:**  
+- Veterans  
+- Whistleblowers  
+- Legal Experts  
+- Journalists  
 
-NFT identity proofing
-
-Blockchain recordkeeping
-
-Modules Include:
-
-Smart contracts
-
-Compliance docs
-
-NFT identity protocols
+**Learning Outcome:**  
+Learn to verify, submit, and audit evidence using **VALORCHAIN**.
 
 ---
 
-🚀 IMPLEMENTATION: Deploying Truth
+## 🛠️ **DESIGN: Building the Blueprint**
 
-Hosted on GitHub: donadams1969
+**Goals:**  
+- Immutable legal truth defense  
+- NFT identity proofing  
+- Blockchain recordkeeping  
 
-Live portals: 18fu.ai | 18fu.cash
-
-IPFS linked evidence locker
-
-> “This isn’t just code. It’s testimony sealed in time.”
-
----
-
-📈 EVALUATION: Verifying Integrity
-
-✅ OpenTimestamps Verification
-
-✅ DID Identity Proofs
-
-✅ Blockchain Anchor to Bitcoin
-
-✅ Legal License and MIT compliance
-
-
-Impact Metrics:
-
-Downloads and verifications
-
-Cited in legal filings
-
-Referenced by journalists
-
+**Core Modules:**  
+- Smart Contracts  
+- Compliance Docs  
+- NFT Identity Protocols  
 
 ---
 
-♻️ SAM LOOPS: Always Iterating
+## 🚀 **IMPLEMENTATION: Deploying Truth**  
 
-Prototype Chain:
+- **Hosted on GitHub:** `donadams1969`  
+- **Live Portals:** [18fu.ai](https://www.18fu.ai) | [18fu.cash](https://www.18fu.cash)  
+- **Evidence Locker:** IPFS + Timestamped + CID Anchored  
 
-1. Markdown + Badge System
+---
 
+## 📈 **EVALUATION: Verifying Integrity**  
 
-2. NFT Gateways + Compliance
+**✅ Validation Tools:**  
+- OpenTimestamps  
+- DID Identity Proofs  
+- Bitcoin Blockchain Anchoring  
+- Legal License & MIT Compliance  
 
+**📊 Impact Metrics:**  
+- Downloads + Verifications  
+- Cited in Legal Filings  
+- Referenced by Journalists  
 
-3. Public Drop with Educational Overlay
+---
 
+## ♻️ **SAM LOOPS: Always Iterating**  
 
-Feedback Tools:
+**Prototype Chain:**  
+1. Markdown + Badge System  
+2. NFT Gateways + Compliance  
+3. Public Drop + Educational Overlay  
 
-GitHub Issues
+**Feedback Channels:**  
+- GitHub Issues  
+- Google Forms (via [18fu.ai](https://www.18fu.ai))  
+- Peer Submissions  
 
-Google Forms via 18fu.ai
+---
 
-Direct peer submissions
+## 📁 **VALORCHAIN File Index**
 
+| 📂 **File**                          | 📝 **Description**                            | 🕒 **Last Updated** | 🌟 **Badge / Flair** |
+|-------------------------------------|-----------------------------------------------|---------------------|----------------------|
+| `Calisota_Whitepaper.md`           | Project Vision & Strategy                      | 3 days ago          | 🦅 📜 `Vision`        |
+| `Calistona_intergration_suite.md`  | Integration Systems                            | 3 days ago          | 🧩 ⚙️ `Suite`         |
+| `calistona_in_suite.md`            | Internal Layout                                | 3 days ago          | 🧬 🧱 `Infra`         |
+| `Integration.md`                   | Strategy Overview                              | 3 days ago          | 🗺️ 🧠 `Map`           |
+| `DiD-KEY.md`                       | Decentralized ID Keys                          | 1 min ago           | 🧿 🔐 `ID Proof`      |
+| `Security.md`                      | Security Protocols                             | 3 min ago           | 🛡️ 🔒 `Secure`        |
+| `License.md`                       | Open Source Licensing                          | 5 min ago           | 📜 ✅ `MIT`           |
+| `docs_vblk_dblk`                   | VBLK/DBLK Docs                                 | 16 min ago          | 🗃️ 🧾 `Dual Chain`    |
+| `VBLK_tokenomics.md`               | Tokenomics Architecture                        | 25 min ago          | 💰 📈 `Econ`          |
+| `VBLK_NFT_identity_protocol.md`    | NFT Identity Protocol                          | 4 hrs ago           | 🧬 🖼️ `NFT ID`        |
+| `docs`                             | General Documentation Folder                   | 10 hrs ago          | 📂 📚 `Docs`          |
+| `VBLK_Token.md`                    | VBLK Token Overview                            | 11 hrs ago          | 🪙 🔁 `Token`         |
+| `18fu.cash_valuation_summary.md`   | Valuation Summary                              | 11 hrs ago          | 💵 📊 `Valuation`     |
+| `VBLK_BITCOIN_ANCHOR.md`           | Bitcoin Anchoring Method                       | 11 hrs ago          | ⚓ ₿ `Anchor`         |
+| `VBLK_premium_token_valuation.md`  | Premium Token Valuation                        | 11 hrs ago          | 💸 👑 `Premium`       |
+| `VBLK_Treasury_Vault.sol`          | Treasury Smart Contract                        | 12 hrs ago          | 🔐 ⛓️ `Vault`         |
+| `VBLK_token_valuation_percoin.md`  | Valuation Per Coin                             | 12 hrs ago          | 💎 🪙 `Coin Math`     |
+| `VBLK_per_token_valustion`         | Per Token Metrics                              | 12 hrs ago          | 📏 🧮 `Metrics`       |
+| `VBLK_SMART_CONTRACT.md`           | Smart Contract Blueprint                       | 12 hrs ago          | 📐 🧾 `Contract`      |
+| `VBLK_CNAME`                       | Custom Name Registry                           | 12 hrs ago          | 🧾 🏷️ `CNAME`         |
+| `VBLK_live_compliance_portal.md`   | Live Compliance System                         | 13 hrs ago          | 📡 ⚖️ `Compliance`    |
+| `VBLK_CODE_OF_CONDUCT.md`         | Code of Conduct                                | 14 hrs ago          | 🧭 🤝 `Community`     |
+| `VBLK_CONTRIBUTING.md`            | Contributor Guidelines                         | 14 hrs ago          | ✍️ 👥 `Open Source`   |
+| `CaliSota_Cannibus_LLC`           | Cannabis Legal Charter                         | 2 days ago          | 🌿 📘 `Legal Entity`  |
+
+---
 
  📂 Complete Repository File Structure | Timestamped & Emoji-Flaired
 
@@ -203,17 +209,30 @@ Direct peer submissions
 | `VBLK_CONTRIBUTING.md`                | Contributor Guidelines                          | 14 hrs ago          | ![guide](https://img.shields.io/badge/Guide-Contributing-lightblue) | ✍️ 👥              |
 | `CaliSota_Cannibus_LLC`               | Cannabis Legal Entity Charter                   | 2 days ago          | ![legal](https://img.shields.io/badge/Entity-Cannabis_LLC-green) | 🌿 📘              |
 
+## ✅ **FINAL FOOTER – CHAIN STATUS**
 
+| Key Metric                  | Status                     |
+|----------------------------|----------------------------|
+| Blockchain Anchoring       | ✅ Live on Bitcoin         |
+| IPFS Evidence Locker       | ✅ CID Timestamped         |
+| NFT Gateway (WIP)          | ⚙️ Development Stage 2     |
+| Legal & License Compliance | ✅ MIT / APA Verified      |
+| Owner                      | Donny Adams (VALORCHAIN)  |
+
+**Deployed at:** [www.18fu.cash](https://www.18fu.cash) | [www.18fu.ai](https://www.18fu.ai)  
+**Contact:** `donny@18fu.ai` | [GitHub Repo](https://github.com/donadams1969/donadams1969)
+
+---
+
+> *“In the age of AI, truth must be timestamped.”*
 ---
 
 🔗 FOOTER: Immutable Trust Network
 
-    
 
 Maintainer: Donny Adams | U.S. Navy Veteran | Blockchain Compliance Architect
 
 > "Forged in fire. Sealed in code. Anchored for justice."
-
 
 ---
 
@@ -347,7 +366,6 @@ Built with precision, purpose, and public accountability.
 | `CaliSota_Cannibus_LLC`               | Cannabis Legal Entity Charter                   | 2 days ago          | ![legal](https://img.shields.io/badge/Entity-Cannabis_LLC-green) | 🌿 📘              |
 
 
-
 <summary>🪙 Tokenomics + Valuation</summary>
 
 - `VBLKx_Current_Valuation.md` → Current valuation: $72.5M  
@@ -423,6 +441,62 @@ Built with precision, purpose, and public accountability.
 | **Total Current Valuation**      |            | **$72.5M**  
 
 ---
+
+🧠⚡ VALORCHAIN Repository Branch Map ⚡🧠
+
+Engineered by That's Edutainment, LLC | Powered by VALOR Ai+2E
+
+# 🧠⚖️ VALORCHAIN Repository Menu  
+**Maintained by:** *That’s Edutainment, LLC*  
+**Engine:** *VALOR Ai+ 2E*  
+**GitHub:** [`donadams1969`](https://github.com/donadams1969)  
+**Blockchain-Backed | Veteran-Built | AI-Driven**
+
+---
+
+| 📁 **File Name**                         | 📝 **Description**                                | 🕒 **Last Updated** | 🔖 **Badge**                                                                 | 🌟 **Emoji Flair** |
+|----------------------------------------|--------------------------------------------------|---------------------|------------------------------------------------------------------------------|---------------------|
+| `Calisota_Whitepaper.md`              | Calisota Project Vision & Strategy               | 3 days ago          | ![Vision](https://img.shields.io/badge/Vision-Strategy-blueviolet)          | 🦅 📜 |
+| `Calistona_intergration_suite.md`     | Calistona Integration Systems                    | 3 days ago          | ![Integration](https://img.shields.io/badge/System-Modular-green)           | 🧩 ⚙️ |
+| `calistona_in_suite.md`               | Calistona Suite Internal Layout                  | 3 days ago          | ![Layout](https://img.shields.io/badge/Layout-Design-orange)                | 🧬 🧱 |
+| `Integration.md`                      | Integration Strategy Overview                    | 3 days ago          | ![Map](https://img.shields.io/badge/Integration-Map-lightblue)              | 🗺️ 🧠 |
+| `DiD-KEY.md`                          | Decentralized ID Key Definitions                 | 1 min ago           | ![DiD](https://img.shields.io/badge/ID-Decentralized-yellow)                | 🧿 🔐 |
+| `Security.md`                         | Security Policy Details                          | 3 min ago           | ![Security](https://img.shields.io/badge/Security-Protocols-red)            | 🛡️ 🔒 |
+| `License.md`                          | Repository Licensing                             | 5 min ago           | ![License](https://img.shields.io/badge/License-OpenSource-brightgreen)     | 📜 ✅ |
+| `docs_vblk_dblk`                      | Docs for VBLK / DBLK                             | 16 min ago          | ![Docs](https://img.shields.io/badge/Docs-VBLK%2FDBLK-informational)        | 🗃️ 🧾 |
+| `VBLK_tokenomics.md`                  | VBLK Tokenomics Details                          | 25 min ago          | ![Tokenomics](https://img.shields.io/badge/Tokenomics-VBLK-gold)            | 💰 📈 |
+| `VBLK_NFT_identity_protocol.md`       | NFT Identity Protocol                            | 4 hrs ago           | ![NFT ID](https://img.shields.io/badge/NFT-Protocol-blue)                   | 🧬 🖼️ |
+| `docs`                                | General Documentation Folder                     | 10 hrs ago          | ![Docs](https://img.shields.io/badge/Folder-General-grey)                   | 📂 📚 |
+| `VBLK_Token.md`                       | VBLK Token Overview                              | 11 hrs ago          | ![Token](https://img.shields.io/badge/Token-VBLK-blue)                      | 🪙 🔁 |
+| `18fu.cash_valuation_summary.md`      | 18fu.cash Valuation Summary                      | 11 hrs ago          | ![Valuation](https://img.shields.io/badge/Valuation-Finance-yellowgreen)    | 💵 📊 |
+| `VBLK_BITCOIN_ANCHOR.md`              | Bitcoin Anchoring Method                         | 11 hrs ago          | ![Anchor](https://img.shields.io/badge/Anchor-Bitcoin-black)                | ⚓ ₿ |
+| `VBLK_premium_token_valuation.md`     | Premium Token Valuation                          | 11 hrs ago          | ![Premium](https://img.shields.io/badge/Valuation-Premium-orange)           | 💸 👑 |
+| `VBLK_Treasury_Vault.sol`             | Smart Contract for Vault                         | 12 hrs ago          | ![Vault](https://img.shields.io/badge/Vault-Contract-blue)                  | 🔐 ⛓️ |
+| `VBLK_token_valuation_percoin.md`     | Valuation Per Coin                               | 12 hrs ago          | ![Per Coin](https://img.shields.io/badge/Valuation-PerCoin-brightgreen)     | 💎 🪙 |
+| `VBLK_per_token_valustion`            | Per Token Valuation Metrics                      | 12 hrs ago          | ![Metrics](https://img.shields.io/badge/Metrics-Tokens-blue)                | 📏 🧮 |
+| `VBLK_SMART_CONTRACT.md`              | Smart Contract Blueprint                         | 12 hrs ago          | ![Blueprint](https://img.shields.io/badge/SmartContract-Design-darkblue)    | 📐 🧾 |
+| `VBLK_CNAME`                          | Custom Name Registry                             | 12 hrs ago          | ![CNAME](https://img.shields.io/badge/CNAME-Registry-yellow)                | 🧾 🏷️ |
+| `VBLK_live_compliance_portal.md`      | Live Compliance System                           | 13 hrs ago          | ![Compliance](https://img.shields.io/badge/Compliance-LiveSystem-red)       | 📡 ⚖️ |
+| `VBLK_CODE_OF_CONDUCT.md`            | Community Code of Conduct                        | 14 hrs ago          | ![Code](https://img.shields.io/badge/Conduct-Code-blueviolet)               | 🧭 🤝 |
+| `VBLK_CONTRIBUTING.md`               | Contributor Guidelines                           | 14 hrs ago          | ![Contrib](https://img.shields.io/badge/Contribute-Guide-green)             | ✍️ 👥 |
+| `CaliSota_Cannibus_LLC`              | Cannabis Legal Entity Charter                    | 2 days ago          | ![Cannabis](https://img.shields.io/badge/Entity-Cannabis-green)             | 🌿 📘 |
+
+---
+
+## 🧾 Footer  
+
+**Status:** `Live & Indexed`  
+**VALORCHAIN Blockchain Anchor:** `Active`  
+**Compliance Hash:** `Verified via Bitcoin & IPFS`  
+**Last Refresh:** `May 9, 2025`
+
+> **Powered by:** `VALOR Ai+ 2E`  
+> **Sealed by:** `That’s Edutainment, LLC`  
+> **Deployed at:** [www.18fu.cash](https://www.18fu.cash) | [www.18fu.ai](https://www.18fu.ai)
+
+---
+
+✅ Repository Verified and Blockchain Anchored
 
 ## 🫡 Signed + Sealed
 
