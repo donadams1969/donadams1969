@@ -317,6 +317,78 @@ Business: donny@18fu.ai
 
 Website: www.18fu.ai and www.18fu.cash
 
+---
+
+# 🧠⚡ VALORCHAIN Repository Branch Map ⚡🧠  
+**Engineered by:** That’s Edutainment, LLC  
+**Powered by:** VALOR Ai+2E | VBLKx | DBLK | NFT AuthChain  
+**Lead Developer:** Donny Gillson (`donadams1969`)  
+
+![VBLKx-Deployed](https://img.shields.io/badge/VBLKx-Deployed-brightgreen?style=for-the-badge)
+![DAO Vault](https://img.shields.io/badge/DAO-Controlled-purple?style=for-the-badge)
+![NFT-Linked](https://img.shields.io/badge/NFT-Backed-blueviolet?style=for-the-badge)
+![VALOR-AI](https://img.shields.io/badge/VALOR_AI%2B2E-Active-lightblue?style=for-the-badge)
+![18fu.cash-Verified](https://img.shields.io/badge/18fu.cash-Verified-yellow?style=for-the-badge)
+![Blockchain-Secured](https://img.shields.io/badge/Blockchain-Secured-critical?style=for-the-badge)
+![License-MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![Last Sync](https://img.shields.io/badge/Last_Update-May%209%2C%202025-important?style=for-the-badge)
+
+---
+
+## 📂 Complete Repository File Structure | Timestamped & Emoji-Flaired
+
+| 📁 **File Name**                       | 📝 **Description**                              | 🕒 **Last Updated** | 🔖 **Badge**                                               | 🌟 **Emoji Flair** |
+|----------------------------------------|--------------------------------------------------|---------------------|------------------------------------------------------------|--------------------|
+| `Calisota_Whitepaper.md`              | Calisota Project Vision & Strategy              | 3 days ago          | ![doc](https://img.shields.io/badge/type-whitepaper-blue)  | 🦅 📜              |
+| `Calistona_intergration_suite.md`     | Calistona Integration Systems                   | 3 days ago          | ![system](https://img.shields.io/badge/module-integration-yellowgreen) | 🧩 ⚙️              |
+| `calistona_in_suite.md`               | Calistona Suite Internal Layout                 | 3 days ago          | ![layout](https://img.shields.io/badge/layout-architecture-lightgrey) | 🧬 🧱              |
+| `Integration.md`                      | Integration Strategy Overview                   | 3 days ago          | ![map](https://img.shields.io/badge/overview-strategy-blueviolet) | 🗺️ 🧠              |
+| `DiD-KEY.md`                          | Decentralized ID Key Definitions                | 1 min ago           | ![id](https://img.shields.io/badge/DID-Keys-critical)      | 🧿 🔐              |
+| `Security.md`                         | Security Policy Details                         | 3 min ago           | ![sec](https://img.shields.io/badge/Security-Policy-orange) | 🛡️ 🔒              |
+| `License.md`                          | Repository Licensing                            | 5 min ago           | ![license](https://img.shields.io/badge/License-MIT-blue) | 📜 ✅              |
+| `docs_vblk_dblk`                      | Docs for VBLK / DBLK                            | 16 min ago          | ![docs](https://img.shields.io/badge/Docs-VBLK/DBLK-yellow) | 🗃️ 🧾              |
+| `VBLK_tokenomics.md`                  | VBLK Tokenomics Details                         | 25 min ago          | ![tokenomics](https://img.shields.io/badge/Tokenomics-VBLK-green) | 💰 📈              |
+| `VBLK_NFT_identity_protocol.md`       | NFT Identity Protocol                           | 4 hrs ago           | ![nft](https://img.shields.io/badge/NFT-Protocol-blueviolet) | 🧬 🖼️              |
+| `docs`                                | General Documentation Folder                    | 10 hrs ago          | ![docs](https://img.shields.io/badge/Folder-Docs-inactive) | 📂 📚              |
+| `VBLK_Token.md`                       | VBLK Token Overview                             | 11 hrs ago          | ![token](https://img.shields.io/badge/Token-VBLK-lightgreen) | 🪙 🔁              |
+| `18fu.cash_valuation_summary.md`      | 18fu.cash Valuation Summary                     | 11 hrs ago          | ![valuation](https://img.shields.io/badge/Valuation-18fu.cash-yellow) | 💵 📊              |
+| `VBLK_BITCOIN_ANCHOR.md`              | Bitcoin Anchoring Method                        | 11 hrs ago          | ![btc](https://img.shields.io/badge/Anchor-Bitcoin-black) | ⚓ ₿               |
+| `VBLK_premium_token_valuation.md`     | Premium Token Valuation                         | 11 hrs ago          | ![premium](https://img.shields.io/badge/Token-Premium-gold) | 💸 👑              |
+| `VBLK_Treasury_Vault.sol`             | Smart Contract for Vault                        | 12 hrs ago          | ![vault](https://img.shields.io/badge/Contract-Vault-critical) | 🔐 ⛓️              |
+| `VBLK_token_valuation_percoin.md`     | Valuation Per Coin                              | 12 hrs ago          | ![coin](https://img.shields.io/badge/Valuation-PerCoin-green) | 💎 🪙              |
+| `VBLK_per_token_valustion`            | Per Token Valuation Metrics                     | 12 hrs ago          | ![metrics](https://img.shields.io/badge/Metrics-Valuation-informational) | 📏 🧮              |
+| `VBLK_SMART_CONTRACT.md`              | Smart Contract Blueprint                        | 12 hrs ago          | ![contract](https://img.shields.io/badge/Smart_Contract-Blueprint-lightgrey) | 📐 🧾              |
+| `VBLK_CNAME`                          | Custom Name Registry                            | 12 hrs ago          | ![cname](https://img.shields.io/badge/Registry-CNAME-lightblue) | 🧾 🏷️              |
+| `VBLK_live_compliance_portal.md`      | Live Compliance System                          | 13 hrs ago          | ![compliance](https://img.shields.io/badge/Compliance-Live-red) | 📡 ⚖️              |
+| `VBLK_CODE_OF_CONDUCT.md`             | Community Code of Conduct                       | 14 hrs ago          | ![conduct](https://img.shields.io/badge/Code-Conduct-brightgreen) | 🧭 🤝              |
+| `VBLK_CONTRIBUTING.md`                | Contributor Guidelines                          | 14 hrs ago          | ![guide](https://img.shields.io/badge/Guide-Contributing-lightblue) | ✍️ 👥              |
+| `CaliSota_Cannibus_LLC`               | Cannabis Legal Entity Charter                   | 2 days ago          | ![legal](https://img.shields.io/badge/Entity-Cannabis_LLC-green) | 🌿 📘              |
+
+---
+
+## 🧬⚖️ Footer Banner | Vault Integrity & Blockchain Transparency  
+
+![Anchored on Blockchain](https://img.shields.io/badge/Anchored-Bitcoin/Ethereum-black?style=for-the-badge)
+![VALOR-AI+2E Engine](https://img.shields.io/badge/Engine-VALOR_AI%2B2E-9cf?style=for-the-badge)
+![Docs Synced](https://img.shields.io/badge/Docs-Synced-blueviolet?style=for-the-badge)
+![Verified DAO Entry](https://img.shields.io/badge/DAO-Entry_Verified-purple?style=for-the-badge)
+![Smart Contract Ready](https://img.shields.io/badge/Smart_Contracts-Ready-success?style=for-the-badge)
+![Repo Maintained by Veteran](https://img.shields.io/badge/Maintainer-Donny_Gillson-blue?style=for-the-badge)
+![Last Updated](https://img.shields.io/badge/Synced-May_9%2C_2025-informational?style=for-the-badge)
+
+> **“In the AI era, truth must be timestamped, anchored, and auditable. VALORCHAIN is the immutable vault of that truth.”**  
+> – Donny Gillson, Blockchain Compliance Architect
+
+---
+
+✅ Repository Verified Anchored
+
+---
+
+🚀 Powered by the VALORCHAIN Compliance Engine
+
+---
+
 # 💥 Why VBLK Dominates the Crypto Space  
 **Badge:** ![Unshortable Testimony Coin](https://img.shields.io/badge/VBLK-UNSHORTABLE--TESTIMONY--COIN-ff4500?style=for-the-badge&logo=bitcoin)
 
