@@ -100,6 +100,9 @@ In the AI age, data means nothing without proof. VBLK provides that proof—anch
 
 ![1000013387](https://github.com/user-attachments/assets/da8efaa6-2cb8-4456-8acd-4df410ca33ff)
 
+![1000013396](https://github.com/user-attachments/assets/f553f6c8-cb2d-4655-ac85-8e77a0b5cfca)
+
+
 ---
 
 ⚔️ DBLK | Anti-Short Reflex Token
@@ -130,6 +133,8 @@ To create a smart contract-powered market guardian that rewards holders and reta
 🚨 Flagged Wallet System	Tracks manipulative wallets and raises transaction penalties
 🌐 Oracle Price Detection	Off-chain market signals trigger reflex protections (Chainlink compatible)
 🧬 Reflex Squeeze Mode	Forces rebound through AI-triggered buy pressure during steep artificial dips
+
+![1000013392](https://github.com/user-attachments/assets/1350f8f6-1c80-4fdd-8edb-5cc7111d734c)
 
 ---
 
@@ -496,6 +501,9 @@ VBLK is that anchor—for AI, for law, for legacy.
 Powered by: VALOR AI+ 2E
 Engineered by: That’s Edutainment, LLC
 Built for: Autonomous Market Defense
+
+![1000013397](https://github.com/user-attachments/assets/35decdf2-bc8c-4255-9cf5-6967bd87f460)
+
 
 ---
 
