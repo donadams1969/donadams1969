@@ -41,3 +41,18 @@ This GitHub branch introduces the **VBLKx Token**, an enhanced, anti-short ERC-2
 ```ini
 SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
 PRIVATE_KEY=0xYOUR_WALLET_PRIVATE_KEY
+
+```
+Here's a visual flow diagram of the Anti-Short Reflex Protocol designed for DBLK:
+
+Red: Detects and penalizes shorting activity
+
+Gold/Green: Uses sell tax and buyback vaults to stabilize price
+
+Purple/Cyan: Tracks wallet behavior and mirrors synthetic shorts
+
+Blue: Triggers auto-squeeze to punish aggressive borrowing
+
+![1000013375](https://github.com/user-attachments/assets/e595aba5-85ba-4ad3-a4c2-d75877f13ece)
+
+
