@@ -178,7 +178,7 @@ Here is the full GitHub-friendly footer you can paste directly at the bottom of 
 
 | Compliance Badge | GitHub Pages Portal |
 |------------------|---------------------|
-| ![Verified](https://img.shields.io/badge/VALORSHIELD-Certified-blue?style=for-the-badge) | [**View Live Compliance Portal**](https://donadams1969.github.io/VBLK_Token/) |
+| ![Verified](https://img.shields.io/badge/VALORSHIELD-Certified-blue?style=for-the-badge) | [**View Live Compliance Portal**](https://donadams1969.github.io/VBLK_tokenomics.md)
 
 > **🔐 Sealed by VALORCHAIN | Anchored to OpenTimestamps | Powered by VALOR AI+**
 >
