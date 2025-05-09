@@ -1,6 +1,6 @@
 
 
-# 🚀 V-Block Token Whitepaper (v1.0)
+# 🚀 VBLK and DBLK Token Whitepaper (v1.0)
 
 ![VBLK Badge](https://img.shields.io/badge/TOKEN-VBLK-blueviolet)
 ![Chain](https://img.shields.io/badge/CHAIN-Ethereum-orange)
