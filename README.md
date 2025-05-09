@@ -5,7 +5,7 @@ This acts as the official homepage for VBLK Token + VALORCHAIN, tailored for blo
 ---
 
 # 🧠 Welcome to **18fu.cash**  
-### 🛡️ The Official Gateway to VALORCHAIN | Powered by Donny Adams
+### 🛡️ The Official Gateway to VALORCHAIN | Powered by VALOR Ai+ 2E
 
 ![VALORCHAIN Verified](https://img.shields.io/badge/VALORCHAIN-Verified-green?style=for-the-badge&logo=verizon)  
 ![OpenTimestamps Anchored](https://img.shields.io/badge/OTS-Timestamped-blue?style=for-the-badge&logo=bitcoin)  
