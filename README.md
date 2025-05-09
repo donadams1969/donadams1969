@@ -57,7 +57,7 @@
 
 ## 🧰 Developer Quick Start
 
-git clone https://github.com/valorai/VBLK_Token.git
+git clone https://github.com/donadams1969/donadams1969
 cd VBLK_Token
 npm install
 npm run deploy
