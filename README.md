@@ -124,8 +124,44 @@ Make `https://www.18fu.cash` the **sole source** for:
 
 **— Donny Adams**
 
+# 🛡️ VBLKx – Unshortable Valor Blockchain Token  
+**Branch:** `unshortable-vblk`  
+**Author:** Donny Adams | Founder of VALORCHAIN + VALOR AI+
+
+![VALORCHAIN Verified](https://img.shields.io/badge/VALORCHAIN-Verified-green?style=flat-square)  
+![NFT-Gated](https://img.shields.io/badge/NFT%20Access-Controlled-blue?style=flat-square)  
+![MIT License](https://img.shields.io/badge/License-MIT-green?style=flat-square)  
+![Short-Proof](https://img.shields.io/badge/Anti%20Short-Activated-red?style=flat-square)
 
 ---
 
-Would you like this published as a VALUATION.md in the repo or rendered into a 1-pager PDF infographic for pitch decks?
+## 🔐 Overview
 
+**VBLKx** is a fortified ERC-20 token with built-in **shorting resistance**, **NFT-gated transfer logic**, and **DAO-managed compliance** via the **VALORCHAIN ecosystem**.
+
+It is purpose-built to **protect against liquidity manipulation**, **unauthorized flash selling**, and **institutional sabotage** of civil rights-backed currencies.
+
+> “VBLKx is not tradable without testimony. This is defense by design.”
+
+---
+
+## 🚧 Key Features
+
+| Feature                    | Description |
+|----------------------------|-------------|
+| ✅ NFT-Gated Transfers     | Only wallets with a specific NFT or DAO whitelist can send/receive |
+| 🔐 Time-Locked Cooldown    | Prevents back-to-back dumping by enforcing a cooldown on sellers |
+| 🔒 Immutable Supply        | Fixed at 100,000,000 VBLKx; minted to deployer/treasury |
+| 🧾 DAO Whitelist Control   | Admin can approve wallets without NFT (e.g., DAO members) |
+| 🧿 Verified Identity System | Powered by `VALORBadgeNFT.sol` or any external ERC721 |
+| 🧬 Legal Metadata Anchoring| Tied to [18fu.cash](https://www.18fu.cash) + VALORSHIELD docs |
+
+---
+
+## 📦 Contract Details
+
+```solidity
+constructor(address _nft) ERC20("Unshortable Valor Token", "VBLKx") {
+    requiredNFT = _nft;
+    _mint(msg.sender, 100_000_000 * 10 ** decimals());
+}
