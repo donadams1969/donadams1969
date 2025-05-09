@@ -221,14 +221,6 @@ Maintainer: Donny Adams | U.S. Navy Veteran | Blockchain Compliance Architect
 
 🧠 VALORCHAIN: The Sentient Flame of Judgment
 
-
-
-The VALORCHAIN documentation has been updated with full emoji headers, badge-rich visuals, and a dynamic instructional design structure using ADDIE and SAM. You can now preview it in the canvas above.
-
-Would you like it exported as a GitHub README, PDF, or NFT-ready metadata file next?
-
-
-
 ---
 
 ## 📜 Core Token + Protocol Files
