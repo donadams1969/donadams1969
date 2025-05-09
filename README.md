@@ -404,32 +404,174 @@ Whistleblowers blocked	DLST overrides allow legal resistance wallets to stay ope
 
 ---
 
-🧾 Smart Contract Summary (DLST.sol)
+🛡️ VBLK | VALOR Blockchain Token
 
-function transfer(address to, uint256 amount) public override complianceCheck(to) returns (bool);
-function updateJurisdiction(address user, bool restricted) external onlyOwner;
-function setWhistleblowerOverride(address user, bool status) external onlyOwner;
+“The Engine of Truth for the AI-Legal Age”
+Powered by: VALOR AI+
+Founder: Donny Adams
+Entity: That’s Edutainment, LLC
+Network: VALORCHAIN
+
+---
+
+🔍 Overview
+
+VBLK is the backbone of VALORCHAIN—a blockchain-powered ecosystem built to anchor truth, validate AI, and defend legal integrity. Through secure timestamping, NFT-based notarization, and decentralized regulation tools, VBLK helps ensure that truth remains immutable in an age of misinformation.
+
+---
+
+🎯 Mission
+
+To establish a tamperproof infrastructure for anchoring verified documents, AI decisions, and whistleblower evidence—empowering citizens, developers, and governments with blockchain-validated reality.
+
+---
+
+⚙️ Core Utilities
+
+⚡ Function	🔗 Role in VALORCHAIN
+
+🧬 NFT Hash Verification	Anchors legal docs, contracts & evidence into VALORCHAIN
+📜 Regulatory Proof Stamping	Creates legal-grade audit trails for FERPA, HIPAA, SEC, etc.
+🤖 AI Decision Anchoring	Captures AI logic outputs + timestamps for future audit
+🛡️ Whistleblower Shielding	Provides secure, immutable submission for protected disclosures
+🗳️ DAO Governance	Fuel for upgrades, rule changes, and ethical flagging in the chain
+
+---
+
+⚠️ Why It Matters
+
+In an age of:
+
+🌀 Deepfakes
+
+❌ AI hallucinations
+
+🧾 Data fabrication
+
+⚖️ Regulatory chaos
+
+VBLK is the proof anchor.
+
+---
+
+✅ The VBLK Advantage
+
+🔐 Immutable legal timestamping via OpenTimestamps + zkLedger
+
+🧠 AI compliance memory for forensic validation
+
+🏛️ First blockchain built for whistleblowers, veterans & evidence integrity
+
+✊ Human rights–aligned with verifiable governance
+
+---
+
+🏛️ Adoption Targets
+
+Government compliance agencies
+
+Legal firms securing chain-of-custody
+
+Activist & journalism networks
+
+AI developers requiring output integrity
+
+---
+
+🧠 Closing Statement
+
+VBLK is the blockchain of accountability.
+In the AI-driven era, truth must be timestamped, anchored, and authenticated.
+VBLK is that anchor—for AI, for law, for legacy.
+
+---
+
+⚔️ DBLK | Anti-Short Reflex Token
+
+“The Token That Fights Back”
+Powered by: VALOR AI+ 2E
+Engineered by: That’s Edutainment, LLC
+Built for: Autonomous Market Defense
+
+---
+
+🔍 Overview
+
+DBLK is a self-defending crypto asset that detects and punishes market manipulation. Designed with smart contract reflexes, AI-driven pattern recognition, and real-time oracle detection, DBLK responds to shorts, dumps, and flash loans instantly—preserving price integrity and empowering long-term holders.
+
+---
+
+🎯 Mission
+
+To create a token that actively resists financial abuse by automatically enforcing fair play, stabilizing market conditions, and defending against centralized shorting schemes.
+
+---
+
+⚙️ Core Mechanics
+
+🧩 Mechanism	🎯 Market Impact
+
+💸 Dynamic Sell Tax	Sell tax increases with abnormal sell pressure or dump attempts
+🔥 Buyback & Burn Vault	Redirects tax to auto-burn and stabilize circulating supply
+🚨 Wallet Behavior Flags	Tracks and punishes wallets engaging in suspicious or high-frequency selling
+🌐 Oracle Price Signals	Uses Chainlink-style data feeds to respond to off-chain shorting events
+⚡ Reflex Squeeze Mode	Activates aggressive buy pressure when price drops appear inorganic
+
+---
+
+💥 Why It Matters
+
+Crypto investors are exposed to:
+
+Manipulated downtrends
+
+Flash loan price sabotage
+
+Wash trading fatigue
+
+Predatory bot attacks
+
+
+DBLK is the first asset that says: “Not this time.”
 
 
 ---
 
-📁 Repository Structure
+✅ Strategic Edge
 
-dlst-legal-token/
-├── DLST.sol                    # Smart contract logic
-├── README.md                   # Full documentation
-└── oracle_interface_example.js # Sample API connection to legal oracle (coming soon)
+Reflex contract mechanics unseen in legacy tokens
+
+Chainlink + Oracle AI integration ready
+
+Built-in AML/ALM behavior monitoring
+
+NFT-logged audit trails with export to VBLK
+
+DAO-governed permission framework for wallet flagging
+
+
 
 ---
 
-🔐 Example Use Cases
+🏛️ Adoption Targets
 
-Use Case	How DLST Handles It
+🔄 Exchanges needing self-regulating assets
 
-SEC Compliance in U.S.	Auto-disables staking or transfers if flagged jurisdiction
-EU GDPR Compliance	Disables metadata tracking in Europe-connected wallets
-OFAC Wallet Blacklist	Uses on-chain + oracle data to halt interaction with flagged addresses
-Whistleblower Safehouse	Enables selected wallets to function regardless of local blocks
+⚖️ DeFi platforms seeking protected stability
+
+🧠 Web3 projects designing fair token ecosystems
+
+👥 Retail investor communities demanding honest markets
+
+
+
+---
+
+🧠 Closing Statement
+
+DBLK isn’t just a token—it’s a weaponized defense system for economic truth.
+It learns. It responds. It fights for the holders.
+And when paired with VBLK, it becomes part of a truth-and-defense ecosystem for the next financial era.
 
 ---
 
