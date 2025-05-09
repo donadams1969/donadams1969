@@ -1,3 +1,4 @@
+![1000013386](https://github.com/user-attachments/assets/73647cc6-2123-4950-8c6e-cddfba84dd0b)
 
 
 # 🚀 VBLK and DBLK Token Whitepaper (v1.0)
@@ -15,8 +16,8 @@
 **Date:** May 9, 2025  
 
 ---
+![1000013391](https://github.com/user-attachments/assets/4a6ad470-5124-491c-afdd-fa49cd0fffdb)
 
-Absolutely. Below is your visually captivating, emoji-rich, badge-loaded dual Executive Summary for VBLK and DBLK, designed to dazzle audiences, drive engagement, and hold attention like a pitch-perfect investor deck.
 
 ---
 
@@ -96,6 +97,8 @@ AI Platforms validating model output & ethical audits
 
 VBLK is the blockchain of accountability.
 In the AI age, data means nothing without proof. VBLK provides that proof—anchoring code to conscience, truth to tokens, and justice to immutable ledgers.
+
+![1000013387](https://github.com/user-attachments/assets/da8efaa6-2cb8-4456-8acd-4df410ca33ff)
 
 ---
 
@@ -195,6 +198,7 @@ It’s more than a token—it’s a **proof-of-integrity system** for the truth 
 | 🎖️ Veteran & Watchdog Funding    | DAO-voted stipends, case fees, public grant issuance                       |
 
 ---
+![1000013394](https://github.com/user-attachments/assets/d1c097be-4d11-435c-985f-cfde07b20dba)
 
 ## 💰 III. Tokenomics
 
