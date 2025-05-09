@@ -55,12 +55,23 @@
 
 ---
 
-## 🧰 Developer Quick Start
+## 🧰 Developer Quick Set-up
 
-git clone https://github.com/donadams1969/donadams1969
-cd VBLK_Token
-npm install
-npm run deploy
+## 🧪 How to Run Locally
+
+| Step | Command / Description |
+|------|------------------------|
+| 1️⃣   | `git clone https://github.com/DonAdams1969/VBLK_Token.git` <br> Clone the repository |
+| 2️⃣   | `cd VBLK_Token` <br> Navigate into the project directory |
+| 3️⃣   | `git checkout next` <br> Switch to the `next` branch |
+| 4️⃣   | `npm install` <br> Install project dependencies |
+| 5️⃣   | `npx hardhat test` <br> Run the full test suite |
+| 6️⃣   | `npx hardhat run scripts/deploy.js --network sepolia` <br> Deploy to Sepolia testnet | <br> Clone the repository |
+| 2️⃣   | `cd VBLK_Token` <br> Navigate into the project directory |
+| 3️⃣   | `git checkout next` <br> Switch to the `next` branch |
+| 4️⃣   | `npm install` <br> Install project dependencies |
+| 5️⃣   | `npx hardhat test` <br> Run the full test suite |
+| 6️⃣   | `npx hardhat run scripts/deploy.js --network sepolia` <br> Deploy to Sepolia testnet |
 
 ---
 
