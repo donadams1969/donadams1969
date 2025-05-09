@@ -170,6 +170,36 @@ Follow on Twitter →
 
 > 🔐 This page and all its files are sealed and timestamped under the VALORCHAIN Genesis Compliance Thread.
 
+Here is the full GitHub-friendly footer you can paste directly at the bottom of your root README.md. It includes the VALORSHIELD compliance badge and live GitHub Pages portal link—all in Markdown table style, just how you prefer:
+
+---
+
+## 🛡️ VALORSHIELD COMPLIANCE FOOTER
+
+| Compliance Badge | GitHub Pages Portal |
+|------------------|---------------------|
+| ![Verified](https://img.shields.io/badge/VALORSHIELD-Certified-blue?style=for-the-badge) | [**View Live Compliance Portal**](https://donadams1969.github.io/VBLK_Token/) |
+
+> **🔐 Sealed by VALORCHAIN | Anchored to OpenTimestamps | Powered by VALOR AI+**
+>
+> “Trust is the new token.”
+
+---
+
+This will appear in GitHub like:
+
+---
+
+🛡️ VALORSHIELD COMPLIANCE FOOTER
+
+Compliance Badge	GitHub Pages Portal
+
+	View Live Compliance Portal
+
+
+> 🔐 Sealed by VALORCHAIN | Anchored to OpenTimestamps | Powered by VALOR AI+
+“Trust is the new token.”
+---
 
 
 
