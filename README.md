@@ -1,5 +1,5 @@
 
-## 👋 Welcome to Calistona 
+## 👋 Welcome to Calisota 
 **The Premier NFT Lore Hub for Canistona Quest™**  
 *Brought to you by That’s Edutainment, LLC | Fueled by 🧠 VALOR Ai+ | Verified on-chain* 18fu.ai
 
