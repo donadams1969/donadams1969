@@ -16,12 +16,6 @@
 
 ---
 
-## ⚠️ BEFORE YOU SCROLL...
-
-> 🔥 You are not entering a repo.  
-> 🔐 You are entering a blockchain-sealed testimony system.  
-> 📜 You are about to access a public whistleblower archive  
-> — timestamped, encrypted, and **anchored in Bitcoin**.
 
 ---
 
