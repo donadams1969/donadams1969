@@ -98,6 +98,64 @@ npm install
 # Start dev server
 npm run dev
 
+# 💸 VBLK | DBLK | VBLOCK Tokenomics Index  
+**Built on:** VALORCHAIN | Powered by VALOR Ai+ 2E  
+**Hosted on GitHub:** [`donadams1969`](https://github.com/donadams1969)  
+**Parent Project:** [🌿 Calisota Cannabis Ecosystem](https://github.com/donadams1969/Calisota_Cannibus_MN_CA)  
+
+---
+
+## 🪙 Token Overview
+
+| Token      | Role                                | Network       | Key Features                          | Badge         |
+|------------|-------------------------------------|---------------|----------------------------------------|---------------|
+| **VBLK**   | Core Blockchain Verification Token  | Bitcoin/IPFS  | Legal timestamping, document hashes    | ⛓️ `TruthStamp` |
+| **DBLK**   | Derivative Blockchain Token         | Ethereum      | Data handling, compliance routing      | 🛰️ `ProofNode` |
+| **VBLOCK** | Governance + Treasury Framework     | Hybrid (EVM)  | DAO control, treasury gating           | 🏛️ `Governance` |
+
+> All tokens are interlinked and timestamped via **VALORCHAIN**, using OpenTimestamps, IPFS, and compliance protocols.
+
+---
+
+## 🔗 Tokenomics Files
+
+| 📁 File Name                        | 📝 Description                             | 🔗 GitHub Link |
+|------------------------------------|---------------------------------------------|----------------|
+| `VBLK_tokenomics.md`              | Core VBLK tokenomics, purpose, and flow     | [View File](https://github.com/donadams1969/donadams1969/blob/main/VBLK_tokenomics.md) |
+| `VBLK_premium_token_valuation.md` | Premium and escalated-tier valuation model  | [View File](https://github.com/donadams1969/donadams1969/blob/main/VBLK_premium_token_valuation.md) |
+| `VBLK_token_valuation_percoin.md` | Individual token breakdown metrics          | [View File](https://github.com/donadams1969/donadams1969/blob/main/VBLK_token_valuation_percoin.md) |
+| `VBLK_Treasury_Vault.sol`         | Smart contract governing VBLOCK Vault       | [View File](https://github.com/donadams1969/donadams1969/blob/main/VBLK_Treasury_Vault.sol) |
+| `VBLK_BITCOIN_ANCHOR.md`          | Anchoring methodology to Bitcoin blockchain | [View File](https://github.com/donadams1969/donadams1969/blob/main/VBLK_BITCOIN_ANCHOR.md) |
+
+---
+
+## 🌿 Calisota Repository Context
+
+| Project Component           | Purpose & Relevance                                      | GitHub Link |
+|----------------------------|-----------------------------------------------------------|-------------|
+| `Calistona_intergration_suite.md` | Systems integration module for cannabis/NFT APIs        | [View File](https://github.com/donadams1969/Calisota_Cannibus_MN_CA/blob/main/Calistona_intergration_suite.md) |
+| `Calisoda_Branding_Deck.md`       | Branding + gamification via soda NFT product line       | [View File](https://github.com/donadams1969/Calisota_Cannibus_MN_CA/blob/main/Calisoda_Branding_Deck.md) |
+| `Calisnoda_Distribution.md`       | Blockchain product tracking node (compliance layer)     | [View File](https://github.com/donadams1969/Calisota_Cannibus_MN_CA/blob/main/Calisnoda_Distribution.md) |
+| `Calisota_Cannibus_LLC.md`        | Legal charter of Calisota cannabis multi-state entity   | [View File](https://github.com/donadams1969/Calisota_Cannibus_MN_CA/blob/main/Calisota_Cannibus_LLC.md) |
+
+---
+
+## ⚙️ Deployment & Verification
+
+| Feature            | Status       |
+|--------------------|--------------|
+| IPFS Integration   | ✅ Live       |
+| Smart Contracts    | ✅ Operational |
+| NFT Metadata Suite | ✅ Deployed   |
+| DAO Treasury Logic | ⚙️ Finalizing |
+
+---
+
+> **“VBLK anchors the truth. DBLK routes the data. VBLOCK governs the mission.”**
+
+*Built by veterans. Sealed by time. Run on VALORCHAIN.*
+
+
 🤝 Contribution Guidelines
 
 We welcome:
