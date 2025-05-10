@@ -16,8 +16,6 @@
 **Date:** May 9, 2025  
 
 ---
-![1000013391](https://github.com/user-attachments/assets/4a6ad470-5124-491c-afdd-fa49cd0fffdb)
-
 
 ---
 
