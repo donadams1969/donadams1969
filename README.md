@@ -1,13 +1,13 @@
-y CALISOTA CANNABIS ECOSYSTEM
+  CALISTONA CANNABIS ECOSYSTEM
 
 > Veteran-owned. Blockchain-fueled. AI-verified. Scavenger-activated.
 
-# 🌿 CALISOTA QUEST – CANNABIS ECOSYSTEM  
+# 🌿 CALISTONA QUEST – CANNABIS ECOSYSTEM  
 **Built by That’s Edutainment, LLC | Powered by 🧠 VALOR AI+ | Verified at [18fu.ai](https://18fu.ai)**  
 
 ---
 
-### 📛 CALISOTA STATUS BADGES  
+### 📛 CALISTONAA STATUS BADGES  
 
 | 🧠 VALOR AI+ Verified | 🎖️ Veteran-Owned | 🔗 Blockchain Sealed | 🧾 CCPA Compliant | 🗺️ Geo-Lore Enabled |
 |-----------------------|------------------|----------------------|------------------|---------------------|
@@ -16,13 +16,13 @@ y CALISOTA CANNABIS ECOSYSTEM
 
 ---
 
-🌿 CALISOTA QUEST – CANNABIS ECOSYSTEM
+🌿 CALISTONA QUEST – CANNABIS ECOSYSTEM
 
 Built by That’s Edutainment, LLC | Powered by 🧠 VALOR AI+ | Verified at 18fu.ai
 
 ---
 
-🧠 WHAT IS CALISOTA?
+🧠 WHAT IS CALISTONA
 
 Calisota Quest is a gamified cannabis loyalty platform built for the real ones: the growers, the tokers, the truth-seekers. Think Pokémon Go meets Cheech & Chong, but every strain you unlock becomes a digital collectible with on-chain lore, loyalty perks, and VALOR AI+ intelligence.
 
@@ -118,11 +118,6 @@ Would you like me to export this as a full README_Badges.md or drop it directly 
 
 ---
 
-CALISOTA MASTER PLAN: Full Ecosystem Blueprint
-Prepared by That’s Edutainment, LLC | Powered by VALOR AI+ | Official Registry: 18fu.ai
-
----
-
 💸 VALORBUD™ Economy: VBUD Token Utility Layer
 
 Summary: VBUD ($VBUD) is the official utility token of the Calisota ecosystem. It fuels every scan, step, conversation, and redemption. Designed as an ERC-20 token, it is used to reward players, tip budtenders, credit dispensaries, and scale the VALOR AI+ data system.
@@ -187,7 +182,6 @@ IRL Events: Stake VBUD to reserve space, get backstage access, and swag drops
 
 Leaderboard Bonus Pools: Top contributors share bonus VBUD on a timed cycle
 
-
 > “Every interaction is a node. Every player, a validator. VBUD is what makes it matter.”
 
 The “Integrations for VBUD” section is now fully added to the white paper. It details how VBUD ties into player wallets, budtender dashboards, dispensary POS systems, and community governance through Monkey DAO.
@@ -213,10 +207,6 @@ Ready to move into the actual VBUD smart contract buildout next?
 | `📄 .gitignore`                | Git exclusions (node_modules, logs, etc.)      |
 | `📄 LICENSE`                   | Open source or proprietary license             |
 | `📄 README.md`                 | Project overview and usage                     |
-
----
-CALISOTA MASTER PLAN: Full Ecosystem Blueprint
-Prepared by That’s Edutainment, LLC | Powered by VALOR AI+ | Official Registry: 18fu.ai
 
 ---
 
