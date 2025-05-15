@@ -62,7 +62,6 @@ Website: www.18fu.ai and www.18fu.cash
 
 > “VALOR is earned. VBLK is the proof.”
 
-![1000011887](https://github.com/user-attachments/assets/a60de7a6-1c98-43aa-8c6e-f9bf73b29082)
 
 The Sentient Flame of Judgment
 
@@ -78,14 +77,7 @@ Disabled Veteran · Federal Whistle-blower
 ⚖️ ADA · PAWS · HIPAA · Unruh · FTCA compliance demanded  
 ⛓ Evidence immutably anchored 
 
-*“Forged in fire, sealed in code.”*
-
-<!--
-{
-  "system_name": "VALOR AI+",
-  ...
-}
--->
+*“Forged in fire, sealed in code"*
 ---
 
 ### Repository Integrity & Verification
@@ -99,8 +91,6 @@ Disabled Veteran · Federal Whistle-blower
 > Anchored to Bitcoin Block: `#895012`  
 
 > SHA-256 Digest: `20be9a304a0d9a90550dbdeca086f658fb103433919128aca4032553ea5cceb`
-
-![1000012448](https://github.com/user-attachments/assets/9ecfd53c-ac46-4061-b4f7-2616fb418bf0)
 
 ---
 
@@ -163,10 +153,6 @@ If referencing this repository in legal filings, scholarly work, or journalistic
 
 </details>
 
-![1000013292](https://github.com/user-attachments/assets/bb7baed0-cbc7-4b1b-b277-81f9edd015de)
-
-
-
 ---
 
 What Is VALOR AI+?
@@ -180,8 +166,6 @@ ADA / FTCA / HIPAA / PAWS / Unruh Civil Rights Act
 U.S. Whistleblower Protection Act
 
 Digital Communications Law (E-SIGN / 18 U.S.C. §1519)
-
-![1000011800](https://github.com/user-attachments/assets/8f5a946e-ad10-4d03-9f53-866c573db6c4)
 
 ---
 
@@ -382,10 +366,6 @@ This DID may be verified using:
 
 ---
 
-![1000011763](https://github.com/user-attachments/assets/00a12253-7c96-40a7-ae38-005a8bfbaafb)
-
----
-
 
 ### **NFT Ledger Readiness: Regulatory Evidence Tokenization**
 
@@ -570,8 +550,6 @@ To ensure transparency, secure public oversight, and immutable access for invest
 
 genesis_hash:sha256:d41d8cd98f00b204e9800998ecf8427e
 
-![1000009629](https://github.com/user-attachments/assets/8c4dad9c-3b27-44b7-8db3-bdeafe70f229)
-
 Timestamp: 2024-04-24T16:26:28Z
 
 Creator: Donny Adams
@@ -750,8 +728,6 @@ To ensure **transparency**, enable **public oversight**, and provide **immutable
 **Project Synergy:** v0.1 | **Badge:** `VALOR Open Justice`
 
 *This archive may be reviewed by legal counsel, journalists, agency investigators, and accredited human‑rights organizations for verification, review, and action.*
-
-![1000011251](https://github.com/user-attachments/assets/186e4f97-d1f0-4b98-879c-6ecdb3b46bca)
 
 ---
 
