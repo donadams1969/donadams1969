@@ -92,15 +92,10 @@ the system they never saw coming.
 ## 📎 LINKS & CONTACT
 
 - Email: [donny@18fu.ai](mailto:donny@18fu.ai)  
-- VA File #: **3461**  
 - NFT Certificate: _Coming Soon_  
 - GitHub Repo: [github.com/donnygillson/valor-ai-plus](#)
 
----
-
-# 🧠⚖️ CODE. CONVICTION. COURAGE. VALOR. 🛡️🧬
-<!-- ================================================= -->
-
+🧠⚖️ CODE. CONVICTION. COURAGE. VALOR. 🛡️
 
 # 🛡️⚖️ WELCOME TO VALORCHAIN  
 **The Blockchain-Sealed Legal Defense System**  
