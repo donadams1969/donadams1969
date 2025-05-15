@@ -1,3 +1,36 @@
+
+## 🛡️ Maintained by: VALORCHAIN Autonomous Node
+This repository is part of the VALORCHAIN suite for DAO-controlled digital civil rights infrastructure.
+
+---
+
+### ✅ VBLK Price Floor — $1.25 Verified
+![VBLK Price Floor](https://img.shields.io/badge/VBLK%20Price%20Floor-$1.25%20Verified-green?style=for-the-badge&logo=ethereum)
+
+---
+
+### 📜 Code of Ethics – VALORCHAIN Governance
+This repository and all associated contracts operate under the principles of the VALORCHAIN Protocol:
+
+1. **Integrity by Design** — All code is timestamped, hashed, and open to public scrutiny.
+2. **Justice through Automation** — AI-enforced fairness and automated compliance guardrails.
+3. **Transparency First** — Vaults, logs, and governance votes are permanently recorded and queryable.
+4. **Decentralized Advocacy** — Governance is DAO-based. No single actor controls release or censorship.
+5. **Nonviolence by Code** — All contracts are structured to avoid harm, bias, or exploitative mechanisms.
+
+> “Code is law — when written by the people, for the people.”
+
+---
+
+### 🌐 Compliance Tags
+- ADA Title II
+- Whistleblower Protection Act
+- FTCA §§ 2671–2680
+- HIPAA 164.312(c)
+- OpenTimestamps / IPFS Certified
+- VALORSHIELD Digital Ethics Doctrine
+
+
 <a href="https://github.com/donadams1969/donadams1969/tree/VBLK_tokenomics.md" target="_blank">
   <img src="https://img.shields.io/badge/VBLK%20Price%20Floor-$1.25%20Verified-green?style=for-the-badge&logo=ethereum" 
        alt="VBLK $1.25 Verified on Blockchain Badge">
