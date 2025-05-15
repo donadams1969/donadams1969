@@ -1,3 +1,7 @@
+<a href="https://github.com/donadams1969/donadams1969/tree/VBLK_tokenomics.md" target="_blank">
+  <img src="https://img.shields.io/badge/VBLK%20Price%20Floor-$1.25%20Verified-green?style=for-the-badge&logo=ethereum" 
+       alt="VBLK $1.25 Verified on Blockchain Badge">
+</a>
 
 ---
 
