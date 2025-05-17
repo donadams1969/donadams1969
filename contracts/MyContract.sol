@@ -1,30 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-/// @title VALOR Case Registry v2
-/// @notice Blockchain-based anchoring system for legal complaint records with metadata and status tracking.
-contract ValorCaseRegistry {
+import "@openzeppelin/contracts/access/Ownable.sol";
 
+/// @title VALOR Case Registry v2 (A+ Edition)
+/// @notice Enhanced registry with admin roles, gas optimizations, and user management
+contract ValorCaseRegistry is Ownable {
     // --- ENUMS ---
     /// @notice Legal case status lifecycle
     enum CaseStatus { Filed, Reviewed, InProgress, Closed, Rejected }
-
-    // --- STRUCTS ---
-    /// @notice Struct representing a registered user
-    struct User {
-        address userAddress;
-        string signature; // Optional alias or digital signature
-    }
-
-    /// @notice Struct representing a legal case record
-    struct CaseRecord {
-        bytes32 id;
-        string ipfsHash;
-        string caseType; // e.g., ADA, FTCA, OSC, etc.
-        User filer;
-        uint256 timestamp;
-        CaseStatus status;
-    }
 
     // --- STATE VARIABLES ---
     mapping(address => bool) public registeredUsers;
@@ -33,10 +17,20 @@ contract ValorCaseRegistry {
     mapping(bytes32 => CaseRecord) private cases;
     mapping(address => bytes32[]) private userCaseIds;
 
+    // --- STRUCTS ---
+    struct CaseRecord {
+        bytes32 id;
+        string ipfsHash;
+        bytes32 caseType;
+        address filer;
+        uint256 timestamp;
+        CaseStatus status;
+    }
+
     // --- EVENTS ---
     event CaseFiled(
         bytes32 indexed caseId,
-        string indexed caseType,
+        bytes32 indexed caseType,
         address indexed filer
     );
 
@@ -45,92 +39,101 @@ contract ValorCaseRegistry {
         CaseStatus newStatus
     );
 
-    // --- FUNCTIONS ---
+    // --- USER MANAGEMENT ---
 
-    /// @notice Registers a new user with an optional alias/digital signature
-    function registerUser(string memory signature) external {
-        require(!registeredUsers[msg.sender], "User already registered");
+    /// @notice Registers a new user with an optional alias
+    function registerUser(string calldata signature) external {
+        require(!registeredUsers[msg.sender], "Already registered");
         registeredUsers[msg.sender] = true;
         userSignatures[msg.sender] = signature;
     }
 
-    /// @notice Files a new legal case with IPFS hash and metadata
+    /// @notice Updates the caller's signature alias
+    function updateSignature(string calldata newSignature) external {
+        require(registeredUsers[msg.sender], "Not registered");
+        userSignatures[msg.sender] = newSignature;
+    }
+
+    /// @notice Deregisters the caller, removing their signature
+    function deregisterUser() external {
+        require(registeredUsers[msg.sender], "Not registered");
+        registeredUsers[msg.sender] = false;
+        delete userSignatures[msg.sender];
+    }
+
+    // --- CASE OPERATIONS ---
+
+    /// @notice Files a new legal case
+    /// @param ipfsHash IPFS CID of the complaint document
+    /// @param caseType 32-byte identifier (e.g., bytes32("ADA"))
     function fileCase(
-        string memory ipfsHash,
-        string memory caseType
+        string calldata ipfsHash,
+        bytes32 caseType
     ) external {
-        require(registeredUsers[msg.sender], "You must register first");
+        require(registeredUsers[msg.sender], "Register first");
 
-        // Generate a unique case ID using nonce to avoid collisions
+        // Unique ID: user + nonce + IPFS hash
         bytes32 caseId = keccak256(
-            abi.encodePacked(
-                msg.sender,
-                userNonce[msg.sender],
-                ipfsHash,
-                block.timestamp
-            )
+            abi.encodePacked(msg.sender, userNonce[msg.sender], ipfsHash)
         );
-        userNonce[msg.sender] += 1;
+        userNonce[msg.sender]++;
 
-        // Build and store the CaseRecord
+        // Store record
         cases[caseId] = CaseRecord({
             id: caseId,
             ipfsHash: ipfsHash,
             caseType: caseType,
-            filer: User({
-                userAddress: msg.sender,
-                signature: userSignatures[msg.sender]
-            }),
+            filer: msg.sender,
             timestamp: block.timestamp,
             status: CaseStatus.Filed
         });
 
-        // Track by user
         userCaseIds[msg.sender].push(caseId);
-
         emit CaseFiled(caseId, caseType, msg.sender);
     }
 
-    /// @notice Updates the status of a previously filed case
+    /// @notice Updates the status of a case (by filer or admin)
     function updateCaseStatus(bytes32 caseId, CaseStatus newStatus) external {
-        CaseRecord storage targetCase = cases[caseId];
-        require(targetCase.timestamp != 0, "Case not found");
+        CaseRecord storage rec = cases[caseId];
+        require(rec.timestamp != 0, "Case not found");
         require(
-            targetCase.filer.userAddress == msg.sender,
-            "Unauthorized: Only filer can update status"
+            msg.sender == rec.filer || msg.sender == owner(),
+            "Unauthorized"
         );
 
-        targetCase.status = newStatus;
+        rec.status = newStatus;
         emit CaseStatusUpdated(caseId, newStatus);
     }
 
-    /// @notice Retrieves case metadata and filer details by ID
+    // --- VIEW FUNCTIONS ---
+
+    /// @notice Retrieves detailed case info
     function getCase(bytes32 caseId)
         external
         view
         returns (
             string memory ipfsHash,
-            string memory caseType,
+            bytes32 caseType,
             string memory signature,
-            address userAddress,
+            address filer,
             uint256 timestamp,
             CaseStatus status
         )
     {
-        CaseRecord storage c = cases[caseId];
-        require(c.timestamp != 0, "Case does not exist");
+        CaseRecord storage rec = cases[caseId];
+        require(rec.timestamp != 0, "Not exists");
 
         return (
-            c.ipfsHash,
-            c.caseType,
-            c.filer.signature,
-            c.filer.userAddress,
-            c.timestamp,
-            c.status
+            rec.ipfsHash,
+            rec.caseType,
+            userSignatures[rec.filer],
+            rec.filer,
+            rec.timestamp,
+            rec.status
         );
     }
 
-    /// @notice Returns all case IDs associated with a specific user
+    /// @notice Returns all case IDs for a user
     function getUserCases(address user)
         external
         view
@@ -138,5 +141,22 @@ contract ValorCaseRegistry {
     {
         return userCaseIds[user];
     }
-}
 
+    /// @notice Paginates through a user's cases to avoid gas issues
+    function getUserCasesInRange(
+        address user,
+        uint256 start,
+        uint256 count
+    ) external view returns (bytes32[] memory) {
+        uint256 total = userCaseIds[user].length;
+        if (start >= total) return new bytes32[](0);
+        uint256 end = start + count;
+        if (end > total) end = total;
+
+        bytes32[] memory slice = new bytes32[](end - start);
+        for (uint256 i = start; i < end; i++) {
+            slice[i - start] = userCaseIds[user][i];
+        }
+        return slice;
+    }
+}
