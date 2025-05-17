@@ -4,8 +4,6 @@
 
 🛠️🏗️ **We're building something awesome! Check back soon!** 🏗️🛠️
 
-Here’s your fully rewritten GitHub-ready `README.md` section with **emojis**, **ads-style impact phrases**, and **clean Markdown** formatting for the **VALOR Case Registry v3** smart contract system. This is designed to impress both developers and stakeholders on a professional GitHub repo:
-
 ---
 
 # ⚖️ VALOR Case Registry v3
