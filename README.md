@@ -10,6 +10,10 @@ Here’s your fully rewritten GitHub-ready `README.md` section with **emojis**, 
 
 # ⚖️ VALOR Case Registry v3
 
+📦 CID: bafybeihvgxs3bfpszhirqeiytau2tjogfrvi4itdviovpyk3irc6lr6hm
+
+🌐 Link: https://bafybeihvgxs3bfpszhirqeiytau2tjogfrvi4itdviovpyk3irc6lr6hm.ipfs.w3s.link/
+
 🚀 *Enterprise-grade blockchain case management with AI-native integration*
 
 > *“Justice meets AI. Web3 meets real-world enforcement.”*
