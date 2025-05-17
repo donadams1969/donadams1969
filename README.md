@@ -1,7 +1,17 @@
-### 🔗 Latest IPFS Record
-[📁 View Document](https://bafybeigt6huoqrqrvat5kovnn5x2bxudrvaqpswggxx7yqo6bggfgv2nue.ipfs.w3s.link/)
-CID: `bafybeigt6huoqrqrvat5kovnn5x2bxudrvaqpswggxx7yqo6bggfgv2nue`
 
+---
+
+## 🔗 Latest IPFS Record
+
+**🧾 Smart Contract: VALOR Registry Codex (.sol)**
+
+📁 **View Document**
+CID: `bafybeigt6huoqrqrvat5kovnn5x2bxudrvaqpswggxx7yqo6bggfgv2nue`
+🔗 [Click to Open](https://bafybeigt6huoqrqrvat5kovnn5x2bxudrvaqpswggxx7yqo6bggfgv2nue.ipfs.w3s.link/)
+
+📌 This file is permanently anchored to IPFS via Web3.Storage and may be referenced in all on-chain and legal transactions tied to the VALOR AI+2E ecosystem.
+
+---
 
 # 🚀 VALOR Case Registry v3: Blockchain Case Management 🚀
 
