@@ -1,19 +1,15 @@
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
 /// @title VALOR Case Registry v2
 /// @notice Blockchain-based anchoring system for legal complaint records with metadata and status tracking.
-
 contract ValorCaseRegistry {
 
     // --- ENUMS ---
-
     /// @notice Legal case status lifecycle
     enum CaseStatus { Filed, Reviewed, InProgress, Closed, Rejected }
 
     // --- STRUCTS ---
-
     /// @notice Struct representing a registered user
     struct User {
         address userAddress;
@@ -31,7 +27,6 @@ contract ValorCaseRegistry {
     }
 
     // --- STATE VARIABLES ---
-
     mapping(address => bool) public registeredUsers;
     mapping(address => string) public userSignatures;
     mapping(address => uint256) private userNonce;
@@ -39,7 +34,6 @@ contract ValorCaseRegistry {
     mapping(address => bytes32[]) private userCaseIds;
 
     // --- EVENTS ---
-
     event CaseFiled(
         bytes32 indexed caseId,
         string indexed caseType,
@@ -67,13 +61,19 @@ contract ValorCaseRegistry {
     ) external {
         require(registeredUsers[msg.sender], "You must register first");
 
+        // Generate a unique case ID using nonce to avoid collisions
         bytes32 caseId = keccak256(
-            abi.encodePacked(msg.sender, userNonce[msg.sender], ipfsHash, block.timestamp)
+            abi.encodePacked(
+                msg.sender,
+                userNonce[msg.sender],
+                ipfsHash,
+                block.timestamp
+            )
         );
-
         userNonce[msg.sender] += 1;
 
-        CaseRecord memory newCase = CaseRecord({
+        // Build and store the CaseRecord
+        cases[caseId] = CaseRecord({
             id: caseId,
             ipfsHash: ipfsHash,
             caseType: caseType,
@@ -85,7 +85,7 @@ contract ValorCaseRegistry {
             status: CaseStatus.Filed
         });
 
-        cases[caseId] = newCase;
+        // Track by user
         userCaseIds[msg.sender].push(caseId);
 
         emit CaseFiled(caseId, caseType, msg.sender);
@@ -95,21 +95,28 @@ contract ValorCaseRegistry {
     function updateCaseStatus(bytes32 caseId, CaseStatus newStatus) external {
         CaseRecord storage targetCase = cases[caseId];
         require(targetCase.timestamp != 0, "Case not found");
-        require(targetCase.filer.userAddress == msg.sender, "Unauthorized: Only filer can update status");
+        require(
+            targetCase.filer.userAddress == msg.sender,
+            "Unauthorized: Only filer can update status"
+        );
 
         targetCase.status = newStatus;
         emit CaseStatusUpdated(caseId, newStatus);
     }
 
     /// @notice Retrieves case metadata and filer details by ID
-    function getCase(bytes32 caseId) external view returns (
-        string memory ipfsHash,
-        string memory caseType,
-        string memory signature,
-        address userAddress,
-        uint256 timestamp,
-        CaseStatus status
-    ) {
+    function getCase(bytes32 caseId)
+        external
+        view
+        returns (
+            string memory ipfsHash,
+            string memory caseType,
+            string memory signature,
+            address userAddress,
+            uint256 timestamp,
+            CaseStatus status
+        )
+    {
         CaseRecord storage c = cases[caseId];
         require(c.timestamp != 0, "Case does not exist");
 
@@ -124,7 +131,12 @@ contract ValorCaseRegistry {
     }
 
     /// @notice Returns all case IDs associated with a specific user
-    function getUserCases(address user) external view returns (bytes32[] memory) {
+    function getUserCases(address user)
+        external
+        view
+        returns (bytes32[] memory)
+    {
         return userCaseIds[user];
     }
 }
+
