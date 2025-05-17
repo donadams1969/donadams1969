@@ -1,3 +1,4 @@
+![ChatGPT Image May 17, 2025, 08_28_27 AM](https://github.com/user-attachments/assets/9449c063-f248-43de-890a-09d070f588aa)
 
 ---
 
@@ -65,6 +66,7 @@ Join us on this journey to revolutionize digital case management and record inte
 
 🎉 **Your gateway to powerful, transparent, and AI-enhanced blockchain solutions.** 🎉
 
+![ChatGPT Image May 17, 2025, 08_31_35 AM](https://github.com/user-attachments/assets/f5668e98-4253-4e70-a942-a793ab6a2ee2)
 
 ---
 
