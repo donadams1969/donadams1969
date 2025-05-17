@@ -568,7 +568,7 @@ Verified by: VALORCHAIN LEGAL SYSTEMS
 
 ### 🧾 Footer: That’s Edutainment, LLC
 
-*Developed & maintained by Donny Gillson — U.S. Navy Veteran, Founder of VALORCHAIN.*  
+*Developed & maintained by Donny Adams — U.S. Navy Veteran, Founder of VALORCHAIN.*  
 *For truth that cannot be erased. For sovereignty that cannot be revoked.*
 
 **→ http://github.com/donadams1969/donadams1969**
