@@ -222,7 +222,111 @@ contract ValorCaseRegistry is Ownable, Pausable, ReentrancyGuard, AccessControlE
 
 🎉 **Happy Blockchain Building!** 🎉
 
+---
 
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+/**
+ *  🌐 VALOR AI+ | Blockchain Whistleblower Archive
+ *  🔐 Valor Registry Codex – Immutable Evidence Chain
+ *  📦 Stores timestamped IPFS links for whistleblower filings, legal records, and sealed memos
+ *  👤 Owner-controlled | ⏱ On-chain timeproof | 📜 Immutable history
+ *
+ *  🛠️ Deployed by: Donny Gillson (Founder, VALOR AI+)
+ *  📅 Deployment Date: 2025-05-16
+ */
+
+contract Valor_Registry_Codex {
+    // 👤 Owner of the registry
+    address public owner;
+
+    // 🧾 Counter for total registered entries
+    uint256 public totalRecords;
+
+    // 📚 Struct for each document
+    struct Record {
+        string ipfsURI;         // 🔗 IPFS Link (e.g., https://bafy...link)
+        string description;     // 📝 Description / Context
+        uint256 timestamp;      // ⏱ When it was added
+    }
+
+    // 📦 ID-based archive of records
+    mapping(uint256 => Record) private registry;
+
+    // 📢 Event emitted when a new record is stored
+    event RecordCreated(
+        uint256 indexed recordId,
+        string ipfsURI,
+        string description,
+        uint256 timestamp
+    );
+
+    // 🚫 Modifier: restricts to owner
+    modifier onlyOwner() {
+        require(msg.sender == owner, "❌ Unauthorized: Only owner can call this");
+        _;
+    }
+
+    // 🏗️ Constructor: sets the deploying address as the owner
+    constructor() {
+        owner = msg.sender;
+    }
+
+    /**
+     * ✍️ Add a new IPFS-linked document to the codex
+     * @param _ipfsURI 🔗 IPFS hash or full URI
+     * @param _description 📝 Description or memo label
+     */
+    function register(string memory _ipfsURI, string memory _description) external onlyOwner {
+        totalRecords++;
+        registry[totalRecords] = Record({
+            ipfsURI: _ipfsURI,
+            description: _description,
+            timestamp: block.timestamp
+        });
+
+        emit RecordCreated(totalRecords, _ipfsURI, _description, block.timestamp);
+    }
+
+    /**
+     * 🔍 View a record by its unique ID
+     * @param _id 🔢 Record index (1-based)
+     * @return ipfsURI, description, timestamp
+     */
+    function getRecord(uint256 _id)
+        external
+        view
+        returns (
+            string memory ipfsURI,
+            string memory description,
+            uint256 timestamp
+        )
+    {
+        require(_id > 0 && _id <= totalRecords, "⚠️ Record does not exist");
+        Record memory entry = registry[_id];
+        return (entry.ipfsURI, entry.description, entry.timestamp);
+    }
+
+    /**
+     * 🔄 Transfer contract ownership
+     * @param _newOwner 👤 New owner address
+     */
+    function transferOwnership(address _newOwner) external onlyOwner {
+        require(_newOwner != address(0), "⚠️ Invalid new owner address");
+        owner = _newOwner;
+    }
+}
+```
+---
+
+### 🖥 Where Colors Work:
+
+* **✅ Remix IDE**: Automatic syntax highlighting.
+* **✅ GitHub repo**: Use `.sol` file and view it online.
+* **✅ VS Code**: Install Solidity extension (Juan Blanco's).
+* **✅ Static Site or DApp**: Use PrismJS or Highlight.js for live syntax highlighting.
 
 The value of this Solidity smart contract (**VALOR Case Registry v3**) can be analyzed from several perspectives, including its technological innovation, real-world applicability, market demand, security, and monetization potential. Here's a structured valuation assessment:
 
