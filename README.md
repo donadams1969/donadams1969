@@ -255,19 +255,16 @@ contract ValorCaseRegistry is Ownable, Pausable, ReentrancyGuard, AccessControlE
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-
-/**
  *  🌐 VALOR AI+ | Blockchain Whistleblower Archive
  *  🔐 Valor Registry Codex – Immutable Evidence Chain
  *  📦 Stores timestamped IPFS links for whistleblower filings, legal records, and sealed memos
- *  👤 Owner-controlled | ⏱ On-chain timeproof | 📜 Immutable history
- *
+ *  👤 Owner-controlled | ⏱ On-chain timeproof |
+ *  📜 Immutable history
  *  🛠️ Deployed by: Donny Gillson (Founder, VALOR AI+)
  *  📅 Deployment Date: 2025-05-16
- */
 
-contract Valor_Registry_Codex {
-    // 👤 Owner of the registry
+     contract Valor_Registry_Codex {
+    � Owner of the registry
     address public owner;
 
    🧾 Counter for total registered entries
