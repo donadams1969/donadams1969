@@ -193,15 +193,6 @@ MIT License – Open to adapt, extend, or build commercial SaaS.
 
 ---
 
-## 🛠️ Installation
-
-```bash
-npm install
-truffle compile
-```
-
----
-
 ## 📖 Contract Structure
 
 * **Enums**: Clearly defined case statuses for workflow management.
@@ -217,26 +208,8 @@ truffle compile
 1. **User Registration:** ✅
 2. **Case Filing:** 📁
 3. **AI Report Integration:** 🤖
-4. **Status Update & Expiration:** ⏰
+4. **Status Update & Expiration:** 
 
----
-
-## 🧑‍💻 Development
-
-* Clone this repository:
-
-```bash
-git clone https://github.com/yourusername/valor-case-registry.git
-cd valor-case-registry
-```
-
-* Deploy to Ethereum:
-
-```bash
-truffle migrate --network mainnet
-```
-
----
 
 ## 🚨 Security & Audit
 
@@ -259,34 +232,27 @@ Distributed under the MIT License. See [LICENSE](LICENSE.md) for details.
 
 ## ✨ Contract Interface Preview
 
-```solidity
 contract ValorCaseRegistry is Ownable, Pausable, ReentrancyGuard, AccessControlEnumerable, ERC165 {
     enum CaseStatus { Filed, Reviewed, InProgress, Closed, Rejected, Appealed, Expired }
 
-    // User Management
+  User Management
     function registerUser(bytes calldata signature) external;
     function deregisterUser() external;
 
-    // Case Operations
+  Case Operations
     function fileCase(string calldata ipfsHash, bytes32 caseType, bytes32 signatureHash) external returns (bytes32);
     function updateCaseStatus(bytes32 caseId, CaseStatus newStatus, string calldata note, string calldata aiReportCID) external;
 
-    // AI Integration
+  AI Integration
     function storeAIReport(bytes32 caseId, string calldata cid) external;
 
-    // Role Management
+  Role Management
     function grantReviewer(address account) external;
     function revokeReviewer(address account) external;
 }
-```
-
----
 
 🎉 **Happy Blockchain Building!** 🎉
 
----
-
-```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -304,20 +270,20 @@ contract Valor_Registry_Codex {
     // 👤 Owner of the registry
     address public owner;
 
-    // 🧾 Counter for total registered entries
+   🧾 Counter for total registered entries
     uint256 public totalRecords;
 
-    // 📚 Struct for each document
+  📚 Struct for each document
     struct Record {
         string ipfsURI;         // 🔗 IPFS Link (e.g., https://bafy...link)
         string description;     // 📝 Description / Context
         uint256 timestamp;      // ⏱ When it was added
     }
 
-    // 📦 ID-based archive of records
+  📦 ID-based archive of records
     mapping(uint256 => Record) private registry;
 
-    // 📢 Event emitted when a new record is stored
+  📢 Event emitted when a new record is stored
     event RecordCreated(
         uint256 indexed recordId,
         string ipfsURI,
@@ -325,19 +291,18 @@ contract Valor_Registry_Codex {
         uint256 timestamp
     );
 
-    // 🚫 Modifier: restricts to owner
+  🚫 Modifier: restricts to owner
     modifier onlyOwner() {
         require(msg.sender == owner, "❌ Unauthorized: Only owner can call this");
         _;
     }
 
-    // 🏗️ Constructor: sets the deploying address as the owner
+  🏗️ Constructor: sets the deploying address as the owner
     constructor() {
         owner = msg.sender;
     }
 
-    /**
-     * ✍️ Add a new IPFS-linked document to the codex
+   ✍️ Add a new IPFS-linked document to the codex
      * @param _ipfsURI 🔗 IPFS hash or full URI
      * @param _description 📝 Description or memo label
      */
@@ -349,11 +314,10 @@ contract Valor_Registry_Codex {
             timestamp: block.timestamp
         });
 
-        emit RecordCreated(totalRecords, _ipfsURI, _description, block.timestamp);
+  emit RecordCreated(totalRecords, _ipfsURI, _description, block.timestamp);
     }
 
-    /**
-     * 🔍 View a record by its unique ID
+  🔍 View a record by its unique ID
      * @param _id 🔢 Record index (1-based)
      * @return ipfsURI, description, timestamp
      */
@@ -371,17 +335,14 @@ contract Valor_Registry_Codex {
         return (entry.ipfsURI, entry.description, entry.timestamp);
     }
 
-    /**
-     * 🔄 Transfer contract ownership
-     * @param _newOwner 👤 New owner address
+  🔄 Transfer contract ownership
+  @param _newOwner 👤 New owner address
      */
     function transferOwnership(address _newOwner) external onlyOwner {
         require(_newOwner != address(0), "⚠️ Invalid new owner address");
         owner = _newOwner;
     }
 }
-```
----
 
 ### 🖥 Where Colors Work:
 
