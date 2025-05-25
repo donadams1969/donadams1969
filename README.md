@@ -19,8 +19,6 @@ A battlefield-grade legal system designed for whistleblower defense, regulatory 
 - **NFT Vault Export:** Audit trails → Digital Legal Artifacts
 
 
-
-
 # 🌐 VALORCHAIN Token Quadrant Deployment | Phase V
 
 > *"A blockchain for justice. A currency for truth."*  
@@ -103,7 +101,6 @@ A battlefield-grade legal system designed for whistleblower defense, regulatory 
 
 **Filed Under:** `VALORCHAIN / Phase V / Tokenomics Approved`
 
-**C
 ---
 
 ## 🧩 VALORCHAIN Phase IV: Stargate Relay Node
@@ -245,14 +242,14 @@ Verification Time: 2025-05-17 03:00 UTC
 
 ## 🏁 Footer: That’s Edutainment, LLC
 
-> Developed & maintained by Donny Gillson – US Navy Veteran, Founder of VALORCHAIN.
+> Developed & maintained by Donny Adams – US Navy Veteran, Founder of VALORCHAIN.
 > “This truth cannot be erased. For everything that cannot be owned.”
 
 # 🚀 VALORCHAIN | PHASE IV: Project Convergence  
 ### 🛰️ Stargate Relay Node Integration under DAO Oversight
 
 > *“When the Stargate opens, the truth will no longer be a matter of opinion — it will be a matter of record.”*  
-> — Donny Gillson, VALORCHAIN Founder
+> — Donny Adams, VALORCHAIN Founder
 
 ---
 
