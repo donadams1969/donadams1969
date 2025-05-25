@@ -223,6 +223,47 @@ This document outlines the integration of all VALORCHAIN tokens (VBLK, DBLK, VAC
 - **Contract 3:** `VACNAccess.sol` — Token-gated legal claim / FOIA portal
 - **Contract 4:** `JAXXMicro.sol` — ERC-20 micro-reward system + NFT interface
 
+# 📚 VALOR_Registry_Codex
+
+> Immutable Ledger Index for VALORCHAIN Smart Contracts & Simulation Modules
+
+---
+
+## 🧾 Purpose
+This codex serves as the canonical registry of all VALORCHAIN smart contracts, simulation engines, and ethics scoring mechanisms. It anchors the naming conventions, roles, and hierarchical integration within the decentralized AGI-legal governance stack.
+
+---
+
+## 📂 Registered Modules
+
+| Contract/File             | Symbol     | Type                 | Description                                                                 |
+|--------------------------|------------|----------------------|-----------------------------------------------------------------------------|
+| `ValorToken.sol`         | `VBLK`     | ERC-20 Token         | Primary utility token for DAO governance, staking, and gating access       |
+| `ValorDAO.sol`           | `vDAO`     | DAO Engine           | Proposal submission, voting logic, and quorum-based execution              |
+| `ValorRegistry.sol`      | `vREG`     | Registry/Index       | On-chain record of all deployed modules, proposals, and DAO activity logs  |
+| `VALOR_Sim.sol`          | `vSIM`     | Simulator            | Predictive simulation model for legal and behavioral test cases            |
+| `VALOR_Ethics.ots`       | `vETHx`    | Off-chain State File | Ethics token state / snapshot for simulation and proposal ethics scoring   |
+| `VALOR_Witness.sol`      | `vWIT`     | Witness Engine       | Verifiable truth module; logs signed witness events for DAO transparency   |
+| `AAEE77Ethics.sol`       | `AAEE77`   | Ethics Engine (Exp.) | Alpha ethics engine used for experimental alignment scoring (v77 spec)     |
+| `README.md`              | —          | Documentation        | Markdown documentation, structure, and DAO narrative                       |
+
+---
+
+## 🔐 Access
+All entries in this codex are cryptographically anchored and validated through the VALORCHAIN’s on-chain registry.
+
+- Registry Smart Contract: `ValorRegistry.sol`
+- Certificate Anchor: `vREG_HASH_256`
+- Last Updated: `auto-generated on commit`
+
+---
+
+## 🧠 Alignment Statement
+> "This Codex ensures that every contract, module, and simulation added to the ecosystem is traceable, auditable, and ethically bounded."
+
+— *VALORCHAIN Core Directive*
+
+
 ---
 
 ## 🧠 AGI Layer Usage
