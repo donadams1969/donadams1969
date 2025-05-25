@@ -1,3 +1,4 @@
+
 ![ENS](https://img.shields.io/badge/ENS-valorchain.eth-purple?logo=ethereum)
 ![IPFS](https://img.shields.io/badge/IPFS-Deployed-green?logo=ipfs)
 [![Access](https://img.shields.io/badge/View-dweb.link-blue)](https://bafybeiexamplecid.ipfs.dweb.link)
@@ -200,7 +201,6 @@ npx hardhat test
 # or
 forge test
 ```
-
 ---
 
 ## 🚀 Deployment
@@ -231,6 +231,37 @@ main().catch(console.error);
 npx hardhat run scripts/deploy.js --network sepolia
 ```
 
+✨🔐 VALORCHAIN Repository File Index 🔐✨
+> Immutable Infrastructure. Verifiable Truth. Tokenized Justice.
+> 
+Welcome to the VALORCHAIN Master Archive — a high-fidelity registry of all critical smart contracts, dashboards, tools, and metadata kits anchored to the VALORCHAIN legal-tech ecosystem.
+| 📁 File Name | 📝 Description | 🏷️ Type |
+|---|---|---|
+| JAXX.sol | Core smart contract for JAXX service token and access rights | Smart Contract |
+| JAXX_ServiceAnimal_Metadata.json | ADA-compliant metadata for JAXX as a certified service animal | Metadata |
+| MyContract.sol | Sandbox contract for test deployment and structural logic | Smart Contract |
+| VALORCHAIN_Contracts.zip | Primary bundle of VALORCHAIN governance + logic contracts | Contract Bundle |
+| VALORCHAIN_DAO_UI.zip | Frontend DAO interface for proposals and community votes | Frontend UI |
+| VALORCHAIN_ENS_IPFS_Badge_Display.zip | ENS and IPFS-based credential badge visualization layer | Utility UI |
+| VALORCHAIN_Full_Project.zip | Complete VALORCHAIN protocol source code for deployment | Full System |
+| VALORCHAIN_Full_Project_With_Tests.zip | Project bundle with full Mocha/Chai unit test integration | Tested System |
+| VALORCHAIN_Live_Deployment_Bundle.zip | Public deployment-ready toolkit for Ethereum/IPFS launch | Deployment Kit |
+| VALORCHAIN_Scaling_Toolkit.zip | Initial scaling toolkit for IPFS clusters and DAO load | Toolkit |
+| VALORCHAIN_Scaling_Toolkit_Full.zip | Full scaling stack, validators, shard logic | Scaling Kit |
+| VALORCHAIN_UI_CaseViewer.zip | UI dashboard to browse immutable legal case files | Frontend UI |
+| VALORCHAIN_UI_CaseViewer (1).zip | Revision or alternate build of case viewer module | UI Variant |
+| VALORCHAIN_UI_Forms_Integrated.zip | UI + smart form capture system for live submissions | Integrated UI |
+| VALOR_Sim.sol | Behavioral simulation contract for logic emulation | Smart Contract |
+| VALOR_Witness.sol | Contract to hash, sign, and timestamp witness logs | Smart Contract |
+| ipfs_web3storage_package.zip | Original IPFS-ready front-end + metadata export | Deployment Package |
+| ipfs_web3storage_package (1).zip | Improved bundle with ENS, DAO, and badge integration | Updated Package |
+| jaxx_minter_ui.html | JAXX UI for minting tokens or NFTs | Minting Page |
+| valor_badge_minter.html | Badge-based NFT minting page for VALOR identities | Badge Minter |
+📌 LEGEND
+ * Smart Contract → Solidity-based logic files
+ * Frontend UI → React or static HTML user interfaces
+ * Deployment Kit → Scripts or compiled ZIPs for IPFS/Web3Storage
+> 🔗 All files referenced above are anchored and verifiable through VALORCHAIN IPFS Registry (v2.0).
 ---
 
 ## 🤝 Contributing
@@ -245,11 +276,6 @@ MIT — see `LICENSE` file for details.
 
 ## 📬 Contact
 For more information, visit the main [VALORCHAIN GitHub](https://github.com/donadams1969).
-
-
-
-
-
 
 # 🚀 VALORCHAIN | Phase VI Proposal  
 
@@ -392,7 +418,6 @@ VALORCHAIN is entering its most critical development phase: Phase V — "Autonom
 
 ---
 
-
 ## 🧠 Purpose
 
 This codex defines the **structure and role** of each smart contract in the VALORCHAIN AGI + legal governance stack.  
@@ -416,7 +441,6 @@ Each entry is **cryptographically traceable**, linked to simulation modules, DAO
 — *VALORCHAIN Founders Circle*
 
 ---
-
 
 ⚖️ VALORCHAIN | Project Synergy v2.0
 
@@ -802,7 +826,6 @@ Verification Time: 2025-05-17 03:00 UTC
 ```
 
 ---
-
 
 # 🚀 VALORCHAIN | PHASE IV: Project Convergence  
 ### 🛰️ Stargate Relay Node Integration under DAO Oversight
@@ -1369,7 +1392,6 @@ The **VALOR Case Registry v3** is a powerful smart contract system for secure, a
   Use OZ Transparent Proxy pattern for long-term evolution
 * ⛓️ **Automation Suggestion:**
   Integrate **Chainlink Automation** to monitor stale or idle cases
-
 
 ### 🔗 External References
 
