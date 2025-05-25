@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JAXX Service Animal NFT Minter</title>
+</head>
+<body>
+  <h1>🐾 JAXX Service Animal Badge Minter</h1>
+  <p>This tool mints an official NFT badge for JAXX, honoring his role as a PTSD service animal.</p>
+
+  <label for="recipient">Recipient Wallet Address:</label><br />
+  <input type="text" id="recipient" placeholder="0x..." size="42"><br /><br />
+
+  <label for="ipfsUri">Metadata IPFS URI:</label><br />
+  <input type="text" id="ipfsUri" placeholder="ipfs://..." size="60"><br /><br />
+
+  <button onclick="mintBadge()">Mint JAXX Badge</button>
+
+  <p id="status">Status: Not connected</p>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script>
+    const CONTRACT_ADDRESS = "YOUR_JAXX_CONTRACT_ADDRESS"; // Replace with actual deployed address
+    const ABI = [
+      "function mintServiceBadge(address to, string memory uri) public",
+      "function currentTokenId() public view returns (uint256)"
+    ];
+
+    async function mintBadge() {
+      if (!window.ethereum) return alert("MetaMask is required.");
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      await provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+
+      const to = document.getElementById("recipient").value;
+      const uri = document.getElementById("ipfsUri").value;
+
+      try {
+        const tx = await contract.mintServiceBadge(to, uri);
+        document.getElementById("status").innerText = "Transaction sent: " + tx.hash;
+        await tx.wait();
+        document.getElementById("status").innerText = "✅ JAXX NFT Badge minted!";
+      } catch (err) {
+        console.error(err);
+        document.getElementById("status").innerText = "❌ Error: " + err.message;
+      }
+    }
+  </script>
+</body>
+</html>

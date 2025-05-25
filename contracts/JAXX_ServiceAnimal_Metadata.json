@@ -1,0 +1,31 @@
+{
+  "name": "JAXX | PTSD Service Animal",
+  "description": "This NFT honors JAXX, a certified PTSD service dog and companion to Donny Gillson. Protected under the ADA and PAWS for Veterans Therapy Act.",
+  "image": "ipfs://bafybeiexamplecidjaxxphoto",
+  "attributes": [
+    {
+      "trait_type": "Species",
+      "value": "Dog"
+    },
+    {
+      "trait_type": "Service Role",
+      "value": "PTSD Support"
+    },
+    {
+      "trait_type": "Legal Protection",
+      "value": "ADA + PAWS Act"
+    },
+    {
+      "trait_type": "Handler",
+      "value": "Donny Gillson"
+    },
+    {
+      "trait_type": "Certification",
+      "value": "Verified"
+    },
+    {
+      "trait_type": "Registry",
+      "value": "VALORCHAIN"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VALORCHAIN Badge NFT Minter</title>
+</head>
+<body>
+  <h1>🏅 VALORCHAIN Badge NFT Minter</h1>
+  <p>Mint official NFT badges for contracts and deployments verified in the VALORCHAIN registry.</p>
+
+  <label for="recipient">Recipient Address:</label><br />
+  <input type="text" id="recipient" placeholder="0x..." size="42"><br /><br />
+
+  <label for="ipfsUri">IPFS Metadata URI:</label><br />
+  <input type="text" id="ipfsUri" placeholder="ipfs://..." size="60"><br /><br />
+
+  <button onclick="mintNFT()">Mint Badge NFT</button>
+
+  <p id="status">Status: Not connected</p>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script>
+    const CONTRACT_ADDRESS = "YOUR_CONTRACT_ADDRESS_HERE"; // Replace with deployed VALORBadgeNFT address
+    const ABI = [
+      "function safeMint(address to, string memory uri) public",
+      "function getNextTokenId() public view returns (uint256)"
+    ];
+
+    async function mintNFT() {
+      if (!window.ethereum) return alert("MetaMask is required.");
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      await provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+
+      const to = document.getElementById("recipient").value;
+      const uri = document.getElementById("ipfsUri").value;
+
+      try {
+        const tx = await contract.safeMint(to, uri);
+        document.getElementById("status").innerText = "Transaction sent: " + tx.hash;
+        await tx.wait();
+        document.getElementById("status").innerText = "✅ NFT minted successfully!";
+      } catch (err) {
+        console.error(err);
+        document.getElementById("status").innerText = "❌ Error: " + err.message;
+      }
+    }
+  </script>
+</body>
+</html>
