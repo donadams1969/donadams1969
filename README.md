@@ -44,11 +44,7 @@ VALORCHAIN is entering its most critical development phase: Phase V — "Autonom
 
 > *This report may be filed under: VALORCHAIN OPS DOC | PHASE V | PUBLIC-FACING INDEX v1.0 | NFT-SEALED.*
 
-
-
-
 ## 🧠 DAO Proposal: Stargate Activation — AGI Synchronization Layer
-
 
 ---
 
@@ -89,7 +85,6 @@ VALORCHAIN is entering its most critical development phase: Phase V — "Autonom
 * `DAO SYNC / Stargate Relay Activation`
 
 ---
-
 
 ## ⛓️ Blockchain Anchor Strategy
 
@@ -145,20 +140,6 @@ VALORCHAIN is entering its most critical development phase: Phase V — "Autonom
 
 ---
 
-## 🔐 Core Contracts Registry
-
-| 🧾 File                 | 🏷️ Symbol  | ⚙️ Type            | 📖 Description                                                                 | ✅ Status |
-|------------------------|------------|--------------------|--------------------------------------------------------------------------------|-----------|
-| `ValorToken.sol`       | `VBLK`     | ERC-20 Token       | Primary governance and access token with snapshot-enabled voting logic         | ![status](https://img.shields.io/badge/Deployed-green) |
-| `ValorDAO.sol`         | `vDAO`     | DAO Engine         | Smart contract to handle proposals, quorum logic, and execution flow           | ![status](https://img.shields.io/badge/Live-blue) |
-| `ValorRegistry.sol`    | `vREG`     | Registry Contract  | Immutable logbook for all deployed modules and historical proposal metadata    | ![status](https://img.shields.io/badge/Anchored-black) |
-| `VALOR_Sim.sol`        | `vSIM`     | Simulation Engine  | Logic simulator for AGI-based prediction and behavioral analysis               | ![status](https://img.shields.io/badge/Tested-yellow) |
-| `VALOR_Ethics.ots`     | `vETHx`    | Ethics State File  | Snapshot state for ethics scoring, used in proposal simulation scoring         | ![status](https://img.shields.io/badge/Snapshot-grey) |
-| `VALOR_Witness.sol`    | `vWIT`     | Witness Validator  | Contract to verify events, track truth signatures, and authenticate logs       | ![status](https://img.shields.io/badge/Logging-orange) |
-| `AAEE77Ethics.sol`     | `AAEE77`   | Ethics Engine (Exp.) | Alpha-stage engine for advanced ethical alignment testing (experimental)       | ![status](https://img.shields.io/badge/Experimental-red) |
-| `README.md`            | —          | Documentation      | Markdown source defining structure, logic map, and codex index                 | ![status](https://img.shields.io/badge/Updated-blue) |
-
----
 
 ## 🧠 Purpose
 
@@ -185,26 +166,6 @@ Each entry is **cryptographically traceable**, linked to simulation modules, DAO
 ---
 
 
-
-## I. 
-
-# ⚖️ VALORCHAIN | Project Synergy v2.0
-### 🧠 AI-Governed Justice | Blockchain-anchored Integrity | DAO Ethics Engine
-
-> **"Anchoring truth. Enforcing sovereignty."**  
-
----
-
-## 📘 Executive Summary
-
-A battlefield-grade legal system designed for whistleblower defense, regulatory filing, and veteran claims integrity — powered by:
-
-- **AI Multi-Model Validators:** GPT-4o, Gemini, Claude  
-- **zkLedger DAO Governance**  
-- **Immutable Evidence Anchoring:** SHA256 + IPFS + Ethereum + Bitcoin  
-- **Alfred Adler Ethics Engine (AAEE-77)**  
-- **NFT Vault Export:** Audit trails → Digital Legal Artifacts
-
 ⚖️ VALORCHAIN | Project Synergy v2.0
 
 🧠 Codename: The Morehouse Complex
@@ -226,9 +187,13 @@ Psychological and ethical calibration system (AAEE-77 core)
 Tactical archive for whistleblower-safe AGI-triggered simulations
 
 # 🔗 VALORCHAIN Token Integration Strategy
+
 ### Phase VI: Unified Ecosystem Deployment  
+
 **Codename:** The Morehouse Complex  
+
 **Prepared by:** Donny Adams (Gillson), Founder of VALORCHAIN  
+
 **Date:** May 25, 2025
 
 ---
@@ -294,7 +259,6 @@ All entries in this codex are cryptographically anchored and validated through t
 
 — *VALORCHAIN Core Directive*
 
-
 ---
 
 ## 🧠 AGI Layer Usage
@@ -340,12 +304,10 @@ All entries in this codex are cryptographically anchored and validated through t
 
 **Filed Under:** `VALORCHAIN / Phase VI / Token System Integration`
 
-
 Token Integration Strategy Document Created.
 Your full GitHub-ready deployment map for the VBLK, DBLK, VACN, and JAXX tokens now exists under:
 
 Valorchain_Token_Integration_Strategy
-
 
 ---
 
@@ -363,24 +325,15 @@ NFT and burn/stake utility model
 
 Blockchain anchoring framework
 
-
-Would you like a visual infographic, companion PDF, or push this to GitHub with the Stargate sync file?
-
-
-
 🌐 VALORCHAIN Token Quadrant Deployment | Phase V
 
 "A blockchain for justice. A currency for truth."— Donny Gillson, Founder, VALORCHAIN
 
 🧱 Token Overview
 
-...
-
-
 # 🌐 VALORCHAIN Token Quadrant Deployment | Phase V
 
-> *"A blockchain for justice. A currency for truth."*  
-> — Donny Gillson, Founder, VALORCHAIN
+> *"A blockchain for justice. A currency for truth."*
 
 ---
 
@@ -598,10 +551,6 @@ Verification Time: 2025-05-17 03:00 UTC
 
 ---
 
-## 🏁 Footer: That’s Edutainment, LLC
-
-> Developed & maintained by Donny Adams – US Navy Veteran, Founder of VALORCHAIN.
-> “This truth cannot be erased. For everything that cannot be owned.”
 
 # 🚀 VALORCHAIN | PHASE IV: Project Convergence  
 ### 🛰️ Stargate Relay Node Integration under DAO Oversight
@@ -674,13 +623,6 @@ Node Verification: VI-N001
 Time: 2025-05-25 00:00 UTC
 
 ---
-
-## ✅ Next Deployment Milestones:
-- [ ] Implement Stargate API relay key authentication  
-- [ ] NFT-mint Phase IV simulation logs to IPFS  
-- [ ] Link Stargate’s outputs to `VALOR Case Registry v3`  
-- [ ] Publish DAO vote for validator reward split  
-- [ ] Launch public explainer site at `valorchain.ai/stargate`
 
 > *“This relay does not lie. This relay does not forget. This relay serves the People.”*
 
@@ -925,7 +867,6 @@ A next-gen blockchain & AI legal registry designed to:
 
 Here is the **final GitHub `README.md`** version — **with badges, headers, and footers**, but **no file structure section**, ready for publishing:
 
-````markdown
 <!-- =========================== -->
 <h1 align="center">⚖️ VALORCHAIN DAO Dashboard</h1>
 <p align="center">
@@ -958,21 +899,6 @@ Here is the **final GitHub `README.md`** version — **with badges, headers, and
 - **DAO-Ready Token Integration (`VBLKToken.sol`)**
 - **Clean, Responsive Tailwind UI**
 - **Supports IPFS + ENS + NFT Gating**
-
----
-
-## ⚙️ Install & Run
-
-```bash
-npm install
-npm run dev
-````
-
-Build for production:
-
-```bash
-npm run build
-```
 
 ---
 
@@ -1056,7 +982,6 @@ Would you like me to:
 * Push to a GitHub repo with Vercel preconfigured?
 
 Let me know what’s next.
-
 
 ---
 
@@ -1156,11 +1081,12 @@ The **VALOR Case Registry v3** is a powerful smart contract system for secure, a
   * `REVIEWER_ROLE`: human oversight
   * `AI_ORACLE`: ML system write access
   * 🔏 ECDSA signature-based authentication
+    
 * ⏳ **Temporal Safety**
 
   * Auto-expiring cases via `checkExpiration`
   * Emergency pause via **circuit breaker pattern**
-
+  * 
 ---
 
 ## ⛽ Gas Optimization
@@ -1192,15 +1118,6 @@ The **VALOR Case Registry v3** is a powerful smart contract system for secure, a
 * ⛓️ **Automation Suggestion:**
   Integrate **Chainlink Automation** to monitor stale or idle cases
 
----
-
-## 📜 License
-
-MIT License – Open to adapt, extend, or build commercial SaaS.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
----
 
 ### 🔗 External References
 
@@ -1277,12 +1194,6 @@ MIT License – Open to adapt, extend, or build commercial SaaS.
 
 * Issues & Contributions welcomed! 🎉
 * Reach out via [GitHub Issues](https://github.com/yourusername/valor-case-registry/issues)
-
----
-
-## 📜 License
-
-Distributed under the MIT License. See [LICENSE](LICENSE.md) for details.
 
 ---
 
