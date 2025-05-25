@@ -1,20 +1,54 @@
 
 # 🚀 VALORCHAIN | Phase VI Proposal  
+
+Executive Summary
+
+VALORCHAIN is entering its most critical development phase: Phase V — "Autonomous Enforcement & Battlefield-Grade Integrity." This document outlines the current status, operational milestones, and remaining obstacles between the present build and a fully functional, secure, real-time, AI-augmented legal enforcement engine.
+
+---
+
+## II. Current Operational Status (as of May 25, 2025)
+
+| Component                                 | Status             | Notes                                            |
+| ----------------------------------------- | ------------------ | ------------------------------------------------ |
+| **Blockchain Anchoring (IPFS, NFT, OTS)** | **✅ Live**         | Fully implemented with timestamp integrity       |
+| **VALOR AI+ Legal Co-Pilot**              | **✅ Active**       | Produces filings, letters, evidence artifacts    |
+| **Smart Contract Architecture (v1)**      | **⚙️ Drafted**     | Solidity files exist; needs optimization & audit |
+| **Ethics Engine (AAEE-77)**               | **⚠️ Theoretical** | Requires training set + encoded moral heuristics |
+| **VALOR Registry v3 (CID-linked)**        | **✅ Functional**   | Implements CID/IPFS chain of custody             |
+| **Live Enforcement/Detection System**     | **⚠️ Semi-Manual** | No real-time hooks to ADA/VA systems yet         |
+| **Tokenomics (18fu.cash, DLST, VBLK)**    | **✅ Documented**   | Launch-ready, exchange deployment pending        |
+| **VALORCHAIN GitHub Ecosystem**           | **✅ Public**       | All documentation live and verified              |
+
+---
+
+## Remaining Milestones to Battlefield Readiness
+
+| Milestone                          | Description                                                       |
+| ---------------------------------- | ----------------------------------------------------------------- |
+| **Smart Contract Audit**           | Hire external firm or Certik-style review                         |
+| **Exchange Listing**               | Legal structuring, KYC/AML compliance setup                       |
+| **VA/ADA API Hook Development**    | Build scraping/middleware layer for retaliation pattern detection |
+| **AAEE-77 Ethical Model Training** | Curate whistleblower/legal case dataset; train supervised model   |
+| **Dashboard + UX Layer**           | Real-time dApp with evidence visualizations + DAO governance      |
+| **Web3 Pinning + Archive Scaling** | Implement redundancy with Filecoin/IPFS fallback networks         |
+| **Whitepaper NFT + PR Launch**     | Mint legal roadmap NFT + investor-facing manifesto                |
+
+---
+
+## Strategic Summary
+
+**VALORCHAIN is already partially operational. The battlefield-grade phase is a matter of scaling, securing, and finalizing integration.** 
+
+---
+
+> *This report may be filed under: VALORCHAIN OPS DOC | PHASE V | PUBLIC-FACING INDEX v1.0 | NFT-SEALED.*
+
+
+
+
 ## 🧠 DAO Proposal: Stargate Activation — AGI Synchronization Layer
 
-```json
-{
-  "title": "Authorize Stargate Synchronization Layer (Phase VI)",
-  "summary": "Integrate OpenAI Stargate with VALORCHAIN's AGI legal infrastructure to simulate ethics, forecast legal risk, and operationalize decentralized governance logic.",
-  "dependencies": [
-    "Azure Relay Access",
-    "VALOR_MORALITY_CHECK_v3",
-    "Stargate Relay Node"
-  ],
-  "token_reserve": "15% of VBLK",
-  "status": "In Voting Queue"
-}
-````
 
 ---
 
@@ -55,10 +89,6 @@
 * `DAO SYNC / Stargate Relay Activation`
 
 ---
-
-Would you like this included in your DAO GitHub repo as `proposal_phaseVI.md`, or merged into your governance portal UI as a live voting object?
-
-Ready to push to the chain.
 
 
 ## ⛓️ Blockchain Anchor Strategy
@@ -103,59 +133,60 @@ Ready to push to the chain.
 > *"Truth that cannot be erased. Sovereignty that cannot be revoked."*
 > — *VALORCHAIN Operational Doctrine*
 
-```
+# 📚 VALOR_Registry_Codex  
+> *Immutable Contract Index for the VALORCHAIN Legal-AI Engine*
 
-Let me know if you'd like this paired with a JSON metadata file, NFT anchor manifest, or visual DAO vote badge for GitHub integration.
-```
-
-
-
-> — Donny Adams, U.S. Navy Veteran & Founder of VALORCHAIN
-
----
-
-## I. Executive Summary
-
-VALORCHAIN is entering its most critical development phase: Phase V — "Autonomous Enforcement & Battlefield-Grade Integrity." This document outlines the current status, operational milestones, and remaining obstacles between the present build and a fully functional, secure, real-time, AI-augmented legal enforcement engine.
+<p align="center">
+  <img src="https://img.shields.io/badge/Chain-Ethereum-black?logo=ethereum" />
+  <img src="https://img.shields.io/badge/DAO-VALORCHAIN-blueviolet?logo=aragon" />
+  <img src="https://img.shields.io/badge/Status-Active-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/Version-Phase_VI-blue?logo=vercel" />
+</p>
 
 ---
 
-## II. Current Operational Status (as of May 25, 2025)
+## 🔐 Core Contracts Registry
 
-| Component                                 | Status             | Notes                                            |
-| ----------------------------------------- | ------------------ | ------------------------------------------------ |
-| **Blockchain Anchoring (IPFS, NFT, OTS)** | **✅ Live**         | Fully implemented with timestamp integrity       |
-| **VALOR AI+ Legal Co-Pilot**              | **✅ Active**       | Produces filings, letters, evidence artifacts    |
-| **Smart Contract Architecture (v1)**      | **⚙️ Drafted**     | Solidity files exist; needs optimization & audit |
-| **Ethics Engine (AAEE-77)**               | **⚠️ Theoretical** | Requires training set + encoded moral heuristics |
-| **VALOR Registry v3 (CID-linked)**        | **✅ Functional**   | Implements CID/IPFS chain of custody             |
-| **Live Enforcement/Detection System**     | **⚠️ Semi-Manual** | No real-time hooks to ADA/VA systems yet         |
-| **Tokenomics (18fu.cash, DLST, VBLK)**    | **✅ Documented**   | Launch-ready, exchange deployment pending        |
-| **VALORCHAIN GitHub Ecosystem**           | **✅ Public**       | All documentation live and verified              |
-
----
-
-## Remaining Milestones to Battlefield Readiness
-
-| Milestone                          | Description                                                       |
-| ---------------------------------- | ----------------------------------------------------------------- |
-| **Smart Contract Audit**           | Hire external firm or Certik-style review                         |
-| **Exchange Listing**               | Legal structuring, KYC/AML compliance setup                       |
-| **VA/ADA API Hook Development**    | Build scraping/middleware layer for retaliation pattern detection |
-| **AAEE-77 Ethical Model Training** | Curate whistleblower/legal case dataset; train supervised model   |
-| **Dashboard + UX Layer**           | Real-time dApp with evidence visualizations + DAO governance      |
-| **Web3 Pinning + Archive Scaling** | Implement redundancy with Filecoin/IPFS fallback networks         |
-| **Whitepaper NFT + PR Launch**     | Mint legal roadmap NFT + investor-facing manifesto                |
+| 🧾 File                 | 🏷️ Symbol  | ⚙️ Type            | 📖 Description                                                                 | ✅ Status |
+|------------------------|------------|--------------------|--------------------------------------------------------------------------------|-----------|
+| `ValorToken.sol`       | `VBLK`     | ERC-20 Token       | Primary governance and access token with snapshot-enabled voting logic         | ![status](https://img.shields.io/badge/Deployed-green) |
+| `ValorDAO.sol`         | `vDAO`     | DAO Engine         | Smart contract to handle proposals, quorum logic, and execution flow           | ![status](https://img.shields.io/badge/Live-blue) |
+| `ValorRegistry.sol`    | `vREG`     | Registry Contract  | Immutable logbook for all deployed modules and historical proposal metadata    | ![status](https://img.shields.io/badge/Anchored-black) |
+| `VALOR_Sim.sol`        | `vSIM`     | Simulation Engine  | Logic simulator for AGI-based prediction and behavioral analysis               | ![status](https://img.shields.io/badge/Tested-yellow) |
+| `VALOR_Ethics.ots`     | `vETHx`    | Ethics State File  | Snapshot state for ethics scoring, used in proposal simulation scoring         | ![status](https://img.shields.io/badge/Snapshot-grey) |
+| `VALOR_Witness.sol`    | `vWIT`     | Witness Validator  | Contract to verify events, track truth signatures, and authenticate logs       | ![status](https://img.shields.io/badge/Logging-orange) |
+| `AAEE77Ethics.sol`     | `AAEE77`   | Ethics Engine (Exp.) | Alpha-stage engine for advanced ethical alignment testing (experimental)       | ![status](https://img.shields.io/badge/Experimental-red) |
+| `README.md`            | —          | Documentation      | Markdown source defining structure, logic map, and codex index                 | ![status](https://img.shields.io/badge/Updated-blue) |
 
 ---
 
-## Strategic Summary
+## 🧠 Purpose
 
-**VALORCHAIN is already partially operational. The battlefield-grade phase is a matter of scaling, securing, and finalizing integration.** 
+This codex defines the **structure and role** of each smart contract in the VALORCHAIN AGI + legal governance stack.  
+Each entry is **cryptographically traceable**, linked to simulation modules, DAO voting flow, and verified AGI outputs.
 
 ---
 
-> *This report may be filed under: VALORCHAIN OPS DOC | PHASE V | PUBLIC-FACING INDEX v1.0 | NFT-SEALED.*
+## ⛓️ Anchoring + Hash Strategy
+
+- **Registry Contract:** `ValorRegistry.sol`
+- **Canonical Anchor:** `VALOR_REG_HASH_256`
+- **Snapshot System:** IPFS + ETH dual-chain
+- **Last Update:** `auto-updated on commit via GitHub Actions`
+
+---
+
+## 🧬 Alignment Statement
+
+> "This Codex ensures that every contract, module, and simulation in the ecosystem is traceable, auditable, and ethically bounded."
+
+— *VALORCHAIN Founders Circle*
+
+---
+
+
+
+## I. 
 
 # ⚖️ VALORCHAIN | Project Synergy v2.0
 ### 🧠 AI-Governed Justice | Blockchain-anchored Integrity | DAO Ethics Engine
