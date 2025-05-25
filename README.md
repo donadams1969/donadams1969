@@ -3,7 +3,7 @@
 
 > Immutable Smart Contract Registry for Legal Case Anchoring on VALORCHAIN
 
-<p align="center">
+<p align="left">
   <img src="https://img.shields.io/badge/Status-MVP-blue" />
   <img src="https://img.shields.io/badge/Chain-Ethereum-black?logo=ethereum" />
   <img src="https://img.shields.io/badge/Security-OpenZeppelin-brightgreen?logo=shield" />
