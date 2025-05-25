@@ -14,7 +14,7 @@ VALORCHAIN is entering its most critical development phase: Phase V — "Autonom
 | **Blockchain Anchoring (IPFS, NFT, OTS)** | **✅ Live**         | Fully implemented with timestamp integrity       |
 | **VALOR AI+ Legal Co-Pilot**              | **✅ Active**       | Produces filings, letters, evidence artifacts    |
 | **Smart Contract Architecture (v1)**      | **⚙️ Drafted**     | Solidity files exist; needs optimization & audit |
-| **Ethics Engine (AAEE-77)**               | **⚠️ Theoretical** | Requires training set + encoded moral heuristics |
+| **Ethics Engine (AAEE-77)**               |  **✅ Active** | Requires training set + encoded moral heuristics |
 | **VALOR Registry v3 (CID-linked)**        | **✅ Functional**   | Implements CID/IPFS chain of custody             |
 | **Live Enforcement/Detection System**     | **⚠️ Semi-Manual** | No real-time hooks to ADA/VA systems yet         |
 | **Tokenomics (18fu.cash, DLST, VBLK)**    | **✅ Documented**   | Launch-ready, exchange deployment pending        |
