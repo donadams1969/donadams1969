@@ -1,4 +1,159 @@
 
+# ⚖️ VALOR Registry Codex - MVP
+
+> Immutable Smart Contract Registry for Legal Case Anchoring on VALORCHAIN
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-MVP-blue" />
+  <img src="https://img.shields.io/badge/Chain-Ethereum-black?logo=ethereum" />
+  <img src="https://img.shields.io/badge/Security-OpenZeppelin-brightgreen?logo=shield" />
+  <img src="https://img.shields.io/badge/Tested-Yes-yellow" />
+</p>
+
+---
+
+## 🧠 Overview
+The **VALOR Registry Codex** is a foundational smart contract within the VALORCHAIN ecosystem. It provides a secure, immutable, and auditable on-chain ledger for registering legal case metadata.
+
+This MVP focuses on anchoring document hashes (e.g., IPFS CIDs), ensuring case uniqueness, and enabling transparent auditability for legal records.
+
+---
+
+## ✨ Features (MVP)
+
+- **Immutable Case Registration**
+- **Audit Trail with Timestamp + Submitter**
+- **Access Control via `Ownable`**
+- **Duplicate Entry Prevention**
+
+---
+
+## 🛠️ Technologies Used
+
+- **Solidity**: Smart contract language
+- **Hardhat / Foundry**: Development frameworks
+- **OpenZeppelin Contracts**: For `Ownable` access control
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+- Node.js
+- npm or yarn
+- Git
+
+### Installation
+```bash
+git clone https://github.com/your-username/valor-registry-codex.git
+cd valor-registry-codex
+npm install # or yarn install
+```
+
+---
+
+## 🔐 Smart Contract
+
+**Filename**: `ValorRegistryCodex.sol`
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract ValorRegistryCodex is Ownable {
+
+    struct Case {
+        bytes32 caseId;
+        address submitter;
+        uint256 timestamp;
+        string documentHash;
+        bool exists;
+    }
+
+    mapping(bytes32 => Case) public cases;
+
+    event CaseAdded(bytes32 indexed caseId, address indexed submitter, uint256 timestamp, string documentHash);
+
+    constructor(address initialOwner) Ownable(initialOwner) {}
+
+    function addCase(bytes32 _caseId, string calldata _documentHash) external onlyOwner {
+        require(!cases[_caseId].exists, "Case already exists");
+        require(bytes(_documentHash).length > 0, "Document hash required");
+
+        cases[_caseId] = Case({
+            caseId: _caseId,
+            submitter: msg.sender,
+            timestamp: block.timestamp,
+            documentHash: _documentHash,
+            exists: true
+        });
+
+        emit CaseAdded(_caseId, msg.sender, block.timestamp, _documentHash);
+    }
+}
+```
+
+---
+
+## 🧪 Testing
+```bash
+npx hardhat test
+# or
+forge test
+```
+
+---
+
+## 🚀 Deployment
+
+### 1. `.env` Setup:
+```bash
+PRIVATE_KEY="YOUR_PRIVATE_KEY"
+SEPOLIA_RPC_URL="https://sepolia.infura.io/v3/YOUR_PROJECT_ID"
+```
+
+### 2. Deployment Script: `scripts/deploy.js`
+```js
+const hre = require("hardhat");
+
+async function main() {
+  const [deployer] = await hre.ethers.getSigners();
+  const ValorRegistryCodex = await hre.ethers.getContractFactory("ValorRegistryCodex");
+  const contract = await ValorRegistryCodex.deploy(deployer.address);
+  await contract.waitForDeployment();
+  console.log("Deployed to:", contract.target);
+}
+
+main().catch(console.error);
+```
+
+### 3. Deploy
+```bash
+npx hardhat run scripts/deploy.js --network sepolia
+```
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome! Please open an issue first for major changes.
+
+---
+
+## 📄 License
+MIT — see `LICENSE` file for details.
+
+---
+
+## 📬 Contact
+For more information, visit the main [VALORCHAIN GitHub](https://github.com/donadams1969).
+
+
+
+
+
+
 # 🚀 VALORCHAIN | Phase VI Proposal  
 
 Executive Summary
