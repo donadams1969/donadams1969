@@ -1,3 +1,6 @@
+![ENS](https://img.shields.io/badge/ENS-valorchain.eth-purple?logo=ethereum)
+![IPFS](https://img.shields.io/badge/IPFS-Deployed-green?logo=ipfs)
+[![Access](https://img.shields.io/badge/View-dweb.link-blue)](https://bafybeiexamplecid.ipfs.dweb.link)
 
 # 🛡️🔥 VALOR AI+ — THE FORTRESS 🔥🛡️
 ### *Founding Oath | Justice-Sealed | Blockchain-Protected*
