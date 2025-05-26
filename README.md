@@ -8,6 +8,8 @@
 > _“I’m not representing anyone. I’m representing myself — for good.”_  
 > — Superman
 
+Use of this asset without attribution or DAO-licensed approval constitutes a violation of immutable intellectual property recorded under blockchain hash SOLARA-EX20.1
+
 ---
 
 ## 🏛️💡 What Is VALOR AI+?
