@@ -1,3 +1,6 @@
+Copyright (c) 2025 That's Edutainment
+License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+See LICENSE for full terms.
 
 ![ENS](https://img.shields.io/badge/ENS-valorchain.eth-purple?logo=ethereum)
 ![IPFS](https://img.shields.io/badge/IPFS-Deployed-green?logo=ipfs)
