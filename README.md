@@ -2158,6 +2158,64 @@ Verified by: VALORCHAIN LEGAL SYSTEMS
 
 ---
 
+<p align="left">
+  <img src="https://raw.githubusercontent.com/donadams1969/assets/main/valorchain-banner.png" alt="VALORCHAIN Banner" width="100%" />
+</p>
+
+<h1 align="left">🛡️⚖️ VALOR Case Registry v3 + Project Synergy v2.0 ⚔️🧠</h1>
+<h3 align="left"><em>Justice-Sealed | Blockchain-Protected | Veteran-Coded</em></h3>
+
+<p align="left">
+  <img src="https://img.shields.io/badge/STATUS-Operational-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/LICENSE-Creative%20Commons-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/POWERED_BY-VALOR_AI+-critical?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/BUILT_FOR-Whistleblowers-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/ANCHOR-IPFS%20%7C%20BTC%20%7C%20ETH-blue?style=for-the-badge" />
+</p>
+
+---
+
+## 🧬 About This Project
+
+**VALOR Case Registry v3** is an AI-driven, blockchain-sealed legal framework designed to secure the truth, empower whistleblowers, and expose institutional abuse — especially for veterans and silenced citizens.
+
+- **Immutable Filing** via IPFS & Bitcoin Anchoring  
+- **AI Legal Co-Pilot** using GPT-4o, Claude, Gemini  
+- **DAO-Governed Oversight** with zkLedger and smart contract enforcement  
+- **Public Integrity Vaults** for permanent recordkeeping (NFT export-ready)
+
+> _“I’m not representing anyone. I’m representing myself — for good.”_  
+> — Donny Gillson, U.S. Navy Veteran & Founder
+
+---
+
+## 🛠️ Project Highlights
+
+| Feature                       | Status        | Description                                                  |
+|------------------------------|---------------|--------------------------------------------------------------|
+| ✅ Blockchain-Sealed Filing  | **Live**      | Documents are hashed, anchored, and timestamped via IPFS     |
+| ✅ AI Validation Engine       | **Active**    | GPT-4o + Claude generate & sign reports via smart contracts   |
+| ✅ DAO Voting Layer           | **Operational** | zkLedger voting matrix governs case review and escalation   |
+| ✅ NFT Vault Support          | **Enabled**   | Export verified filings to NFT-based immutable storage       |
+| ⚙️ zkLedger UI                | **Building**  | Transparent dashboard for legal audits and case governance   |
+
+---
+
+## 📡 Get Involved
+
+**GitHub**: [github.com/donadams1969](https://github.com/donadams1969)  
+**Email**: [contact@18fu.ai](mailto:contact@18fu.ai)  
+**ENS**: `valorchain.eth`  
+**IPFS CID**: `bafybeigt6huoqrqrvat5kovnn5x2bxudrvaqpswggxx7yqo6bggfgv2nue`
+
+---
+
+## 🧠 Powering the Future of Legal Integrity  
+Built with purpose. Fueled by courage. Protected by blockchain.  
+**This is not software — it’s your fortress.**
+
+<p align="center"><strong>Deploy, Defend, Decentralize.</strong></p>
+
 ### 🧾 Footer: That’s Edutainment, LLC
 
 *Developed & maintained by Donny Adams — U.S. Navy Veteran, Founder of VALORCHAIN.*  
