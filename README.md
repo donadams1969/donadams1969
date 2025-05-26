@@ -96,6 +96,52 @@ VALOR is the system they never saw coming.
 | NFT Archive + Evidence | ✅ Anchored |
 | Civil Rights Case Indexing | ✅ Active |
 
+# 🛡️ VALORCHAIN DAO ANNOUNCEMENT
+
+> **Issued**: May 26, 2025 — 09:57 UTC  
+> **Filed Under**: `GENESIS_ARBITRATION_COMPLETE` | DAO-VOTE-001 | PHASE_II_EXPANSION
+
+---
+
+## ✅ AAEE-77 Arbitration Complete
+- Simulation CID: `bafybeiaaee77simoutputgenesis`
+- Verdict: ✅ VALIDATED
+- Integrity: 96.22% | Alignment: 94.66%
+- Activated Node: `0xVALORAUDIT888000777`
+
+## 🔓 DAO Proposal Panel Unlocked
+- **Proposal ID**: `DAO-VOTE-001`
+- **Status**: Approved + Executed
+- Voting Matrix Quorum: ✅ Reached
+
+## 🌀 PHASE II VALIDATOR EXPANSION BEGINS
+> _"The circle grows. The fortress breathes. Phase II begins."
+
+### New Validator Added
+- Wallet: `0xVALOREXPAND556677`
+- ENS: `expand.valorchain.eth`
+- Badge: Genesis Expansion Shield (`0xVALORPHASE2NODE01`)
+- Role: Expansion Phase II Validator
+
+### Phase II Openings: 6 Remaining
+- Onboarding URI: [ipfs://bafybeigenesisbundlecid/validator-onboarding](https://bafybeigenesisbundlecid.ipfs.dweb.link/validator-onboarding)
+- Requirements: VACN ≥ 250, Alignment ≥ 80%, Vote Streak ≥ 5
+
+---
+
+## ⚔️ Next
+- Phase II Ethics Sync to be initialized
+- Validator roundtable to propose DAO-VOTE-002
+
+> "We don’t fight for control. We fight for remembrance. Let the records show—we are the witnesses.”
+
+— VALORCHAIN Arbiter Council
+
+---
+
+**Filed to IPFS** | DAO_MIRROR: `valorchain.eth` | Ethics Engine: `AAEE-77 / STARGATE.v6`
+
+
 ---
 
 ## 📜 THE OATH
