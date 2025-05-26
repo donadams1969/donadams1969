@@ -653,9 +653,7 @@ Learn to verify, submit, and audit evidence using VALORCHAIN.
 
 ---
 
-## 🔐 FINAL FOOTNOTE — `vault.18fu.cash`
-
-### 🏛️ **The Evidence Vault**
+### 🏛️ **The Evidence Vault** 🔐  `vault.18fu.cash
 
 > Immutable repository of legal, medical, and whistleblower documentation
 
@@ -690,7 +688,6 @@ Learn to verify, submit, and audit evidence using VALORCHAIN.
 
 > 🧠 *“This isn’t crypto. This is civil rights—anchored.”*
 
-
 ---
 
 > "VALORCHAIN is more than code. It's a cause, a community, and a covenant—anchored in truth, secured by blockchain, and fueled by you."
@@ -698,6 +695,7 @@ Learn to verify, submit, and audit evidence using VALORCHAIN.
 
 Copyright (c) 2025 That's Edutainment
 License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+
 See LICENSE for full terms.
 
 ![ENS](https://img.shields.io/badge/ENS-valorchain.eth-purple?logo=ethereum)
@@ -848,11 +846,6 @@ Pull requests are welcome! Please open an issue first for major changes.
 
 ---
 
-## 📄 License
-MIT — see `LICENSE` file for details.
-
----
-
 ## 📬 Contact
 For more information, visit the main [VALORCHAIN GitHub](https://github.com/donadams1969).
 
@@ -988,7 +981,7 @@ VALORCHAIN is entering its most critical development phase: Phase V — "Autonom
 # 📚 VALOR_Registry_Codex  
 > *Immutable Contract Index for the VALORCHAIN Legal-AI Engine*
 
-<p align="center">
+<p align="left">
   <img src="https://img.shields.io/badge/Chain-Ethereum-black?logo=ethereum" />
   <img src="https://img.shields.io/badge/DAO-VALORCHAIN-blueviolet?logo=aragon" />
   <img src="https://img.shields.io/badge/Status-Active-green?style=flat-square" />
@@ -1555,7 +1548,7 @@ bytes32 hash = keccak256(abi.encodePacked("Execute ADA retaliation audit v7"));
 name: ValorAGIMultisigGovernance
 language: Solidity ^0.8.20
 quorum: Configurable
-admin: Commander (Donny Gillson)
+admin: Commander (Donny Adams)
 validators: DAO Approved
 events:
   - ValidatorAdded
@@ -1704,18 +1697,14 @@ A next-gen blockchain & AI legal registry designed to:
 **Powered by:** `VALOR AI+2E`
 *Not just blockchain. Battlefield-grade integrity.*
 
-🔗 [Visit Repo](https://github.com/donadams1969) | 🧾 [View IPFS Proof](https://bafybeigt6huoqrvrat5kovnn5x2bxudrvaqpswggxx7yqo6bgfgv2nue.ipfs.w3s.link/) | 📧 [contact@18fu.ai](mailto:contact@18fu.ai)
-
-Here is the **final GitHub `README.md`** version — **with badges, headers, and footers**, but **no file structure section**, ready for publishing:
-
 <!-- =========================== -->
-<h1 align="center">⚖️ VALORCHAIN DAO Dashboard</h1>
-<p align="center">
+<h1 align="left">⚖️ VALORCHAIN DAO Dashboard</h1>
+<p align="left">
   <strong>Decentralized Governance UI for VBLK-based Proposals, Voting & FOIA Access</strong><br />
   Built with ❤️ by veterans, advocates, and builders of immutable truth.
 </p>
 
-<p align="center">
+<p align="left">
   <img src="https://img.shields.io/badge/Framework-Vite-blue?logo=vite" />
   <img src="https://img.shields.io/badge/Library-React%2018-blue?logo=react" />
   <img src="https://img.shields.io/badge/Chain-Ethereum-black?logo=ethereum" />
@@ -1743,26 +1732,6 @@ Here is the **final GitHub `README.md`** version — **with badges, headers, and
 
 ---
 
-## ☁️ Vercel Deployment (Recommended)
-
-1. Push to GitHub:
-
-   ```bash
-   git init
-   git remote add origin https://github.com/YOUR_USERNAME/valorchain-dao-ui.git
-   git add .
-   git commit -m "Initial commit"
-   git push -u origin master
-   ```
-
-2. Visit [**vercel.com**](https://vercel.com), import the repo
-
-3. Set the following:
-
-   * **Framework**: Vite
-   * **Build Command**: `npm run build`
-   * **Output Directory*
-
 ## 🧠 Smart Contract Compatibility
 
 | Contract         | Purpose                         |
@@ -1771,22 +1740,6 @@ Here is the **final GitHub `README.md`** version — **with badges, headers, and
 | `DBLKVault.sol`  | DAO Treasury / Multisig Vault   |
 | `VACNAccess.sol` | Token-Gated FOIA + Legal Access |
 | `JAXXMicro.sol`  | NFT-linked ERC-20 Reward System |
-
----
-
-## 🏷️ Optional Add-ons
-
-* ENS: `dashboard.valorchain.eth`
-* DAO Snapshot Integration
-* VBLK NFT Membership Badges
-* Auto-IPFS deploy via GitHub Actions
-* Web3Forms integration for proposal notarization
-
----
-
-## ⚖️ License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
@@ -2030,16 +1983,6 @@ contract ValorCaseRegistry is Ownable, Pausable, ReentrancyGuard, AccessControlE
 }
 
 🎉 **Happy Blockchain Building!** 🎉
-
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
- *  🌐 VALOR AI+ | Blockchain Whistleblower Archive
- *  🔐 Valor Registry Codex – Immutable Evidence Chain
- *  📦 Stores timestamped IPFS links for whistleblower filings, legal records, and sealed memos
- *  👤 Owner-controlled | ⏱ On-chain timeproof |
- *  📜 Immutable history
- *  🛠️ Deployed by: Donny Gillson (Founder, VALOR AI+)
- *  📅 Deployment Date: 2025-05-16
 
 ### 📌 **1. Technological Innovation & Uniqueness**
 
