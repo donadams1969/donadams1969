@@ -885,15 +885,6 @@ This document outlines the integration of all VALORCHAIN tokens (VBLK, DBLK, VAC
 - **Contract 3:** `VACNAccess.sol` — Token-gated legal claim / FOIA portal
 - **Contract 4:** `JAXXMicro.sol` — ERC-20 micro-reward system + NFT interface
 
-# 📚 VALOR_Registry_Codex
-
-> Immutable Ledger Index for VALORCHAIN Smart Contracts & Simulation Modules
-
----
-
-## 🧾 Purpose
-This codex serves as the canonical registry of all VALORCHAIN smart contracts, simulation engines, and ethics scoring mechanisms. It anchors the naming conventions, roles, and hierarchical integration within the decentralized AGI-legal governance stack.
-
 ---
 
 ## 📂 Registered Modules
