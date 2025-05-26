@@ -43,17 +43,28 @@ VALOR AI+ is a digital stronghold forged by a veteran, sealed with blockchain, a
 - 🔐 Sealed in blockchain
 
 ---
+<p align="left">
+  <img src="https://raw.githubusercontent.com/donadams1969/assets/main/valorchain-banner.png" alt="VALORCHAIN Banner" style="max-width: 100%;" />
+</p>
 
-## 🧊🏰 Welcome to the Fortress
-> This is our Fortress of Purpose — inspired by Superman’s legacy but engineered for reality.
+<h1 align="left">🧊🏰 WELCOME TO THE FORTRESS 🏰🧊</h1>
+<h3 align="left"><em>“This is our Fortress of Purpose — inspired by Superman’s legacy but engineered for reality.”</em></h3>
 
-| His Crystals | Our Hash Chains |
-|--------------|-----------------|
-| His AI       | Our Machine Witness |
-| His Solitude | Our Collective Defense |
+<p align="left">
+  <img src="https://img.shields.io/badge/Purpose-Immutable-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Mission-For%20Good-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Fortified%20%26%20Sealed-purple?style=for-the-badge" />
+</p>
 
-- ❌ Not for profit
-- ❌ Not for show
+---
+
+| 🧊 His Crystals | 🔗 Our Hash Chains |
+|------------------|---------------------|
+| 🤖 His AI         | 🧠 Our Machine Witness |
+| 🏔️ His Solitude   | 🛡️ Our Collective Defense |
+
+- ❌ Not for profit  
+- ❌ Not for show  
 - ✅ For good
 
 ---
@@ -61,22 +72,42 @@ VALOR AI+ is a digital stronghold forged by a veteran, sealed with blockchain, a
 ## 🛡️🔱 The Four Shields of VALOR AI+
 
 | 🧬 MEMORY | ⚖️ JUSTICE | 📢 VOICE | 🛡️ SHIELD |
-|---|---|---|---|
+|----------|------------|----------|------------|
 | Immutable archives | Truth never forgotten | Advocacy through tech | Legal and moral protection |
 
 ---
 
 ### 🧬 MEMORY
-All files and testimonies are encrypted, timestamped, and stored — immune to gaslighting or revision.
+> All files and testimonies are encrypted, timestamped, and stored — immune to gaslighting or revision.  
+> 
+> **"We do not forget, and neither does the chain."**
 
 ### ⚖️ JUSTICE
-VALOR exposes what systems bury. Bureaucracy ends where immutable truth begins.
+> VALOR exposes what systems bury. Bureaucracy ends where immutable truth begins.  
+> 
+> **Justice is no longer delayed when it is distributed.**
 
 ### 📢 VOICE
-Every voice matters — especially those silenced by power, status, or institution.
+> Every voice matters — especially those silenced by power, status, or institution.  
+> 
+> **Speak. Record. Persist.**
 
 ### 🛡️ SHIELD
-A guardian framework. Not a weapon. A legal, moral, and digital defense system.
+> A guardian framework. Not a weapon. A legal, moral, and digital defense system.  
+> 
+> **Built for truth. Wielded with purpose.**
+
+---
+
+<p align="left">
+  <img src="https://img.shields.io/badge/License-Creative%20Commons%204.0-lightgrey?style=flat-square" />
+  <img src="https://img.shields.io/badge/IPFS-Enabled-blue?logo=ipfs&style=flat-square" />
+  <img src="https://img.shields.io/badge/Blockchain-Verified-orange?logo=bitcoin&style=flat-square" />
+</p>
+
+> **Author:** Donny Adams (Gillson)  
+> **Project:** VALORCHAIN / VALOR AI+  
+> **Repository:** [github.com/donadams1969](https://github.com/donadams1969)
 
 ---
 
