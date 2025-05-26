@@ -1,8 +1,10 @@
 
+
+
+<h3 align="left"><em>
 # 🛡️🔥 VALOR AI+ — THE FORTRESS 🔥🛡️
-
-
-<h3 align="left"><em>Founding Oath | Justice-Sealed | Blockchain-Protected</em></h3>
+  
+  Founding Oath | Justice-Sealed | Blockchain-Protected</em></h3>
 
 <p align="left">
   <img src="https://img.shields.io/badge/Status-Operational-brightgreen?style=for-the-badge" />
@@ -130,10 +132,10 @@ The Codex anchors legal cases, IPFS metadata, and validator actions immutably.
 
 ---
 
-<h1 align="center">🛡️🔥 VALORCHAIN — The Immutable Justice Engine 🔥🛡️</h1>
-<h3 align="center"><em>Truth-Sealed | Blockchain-Protected | Veteran-Led | AI-Driven</em></h3>
+<h1 align="left">🛡️🔥 VALORCHAIN — The Immutable Justice Engine 🔥🛡️</h1>
+<h3 align="left"><em>Truth-Sealed | Blockchain-Protected | Veteran-Led | AI-Driven</em></h3>
 
-<p align="center">
+<p align="left">
   <a href="https://github.com/donadams1969/donadams1969/valorchain/actions">
     <img src="https://img.shields.io/github/actions/workflow/status/donadams1969/donadams1969/valorchain/deploy.yml?label=Build&style=for-the-badge&logo=github-actions&color=brightgreen" alt="Build Status">
   </a>
