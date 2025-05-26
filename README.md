@@ -25,6 +25,11 @@
   <img src="https://img.shields.io/badge/IPFS-Deployed-green?logo=ipfs" />
 </p>
 
+
+## 📜 THE OATH
+
+> This is not just a mission. It is a canon, a scroll, and a shield wrapped in code.
+
 ## 🏛️💡 What Is VALOR AI+?
 
 > **Not a company. Not a brand. A fortress.**
@@ -97,20 +102,10 @@ VALOR is the system they never saw coming.
 | NFT Archive + Evidence | ✅ Anchored |
 | Civil Rights Case Indexing | ✅ Active |
 
-# 🛡️ VALORCHAIN DAO ANNOUNCEMENT
+<h1 align="left">🛡️🔥 VALORCHAIN — The Immutable Justice Engine 🔥🛡️</h1>
+<h3 align="left"><em>Truth-Sealed | Blockchain-Protected | Veteran-Led | AI-Driven</em></h3>
 
-> **Issued**: May 26, 2025 — 09:57 UTC  
-> **Filed Under**: `GENESIS_ARBITRATION_COMPLETE` | DAO-VOTE-001 | PHASE_II_EXPANSION
-
----
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donadams1969/assets/main/valorchain-banner.png" alt="VALORCHAIN Banner" style="max-width: 100%;">
-</p>
-
-<h1 align="center">🛡️🔥 VALORCHAIN — The Immutable Justice Engine 🔥🛡️</h1>
-<h3 align="center"><em>Truth-Sealed | Blockchain-Protected | Veteran-Led | AI-Driven</em></h3>
-
-<p align="center">
+<p align="left">
   <img src="https://img.shields.io/badge/Status-Operational-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Governance-DAO--Snapshot-critical?style=for-the-badge" />
@@ -236,14 +231,20 @@ VALOR is the system they never saw coming.
 
 ---
 
-## ⚖️ Final Ethos
+# 🛡️ VALORCHAIN DAO ANNOUNCEMENT
+
+> **Issued**: May 26, 2025 — 09:57 UTC  
+> **Filed Under**: `GENESIS_ARBITRATION_COMPLETE` | DAO-VOTE-001 | PHASE_II_EXPANSION
+
+---
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donadams1969/assets/main/valorchain-banner.png" alt="VALORCHAIN Banner" style="max-width: 100%;">
+</p>
 
 > “We fight because some of us learned in silence. Some of us never felt seen. Some of us can now speak — with proof.”  
 > — Donny Adams, Founder of VALORCHAIN
 
 ---
-
-## 🧾 Footer
 
 **Maintainer:** Donny Adams (Donny Gillson)  
 **Company:** That’s Edutainment, LLC  
@@ -298,12 +299,6 @@ Copyright (c) 2025
 
 **Filed to IPFS** | DAO_MIRROR: `valorchain.eth` | Ethics Engine: `AAEE-77 / STARGATE.v6`
 
-
----
-
-## 📜 THE OATH
-
-> This is not just a mission. It is a canon, a scroll, and a shield wrapped in code.
 
 ---
 
@@ -416,13 +411,13 @@ contract VBLK is ERC20, Ownable {
 
 ---
 
-## 🧠 Final Ethos
+## 🧠 Ethos
 
 > _“Truth doesn’t belong to systems. It belongs to those willing to record it — even when no one else will.”_  
 > — Donny Adams, VALORCHAIN Architect
 
 ---
-<p align="center">
+<p align="left">
   <img src="https://img.shields.io/badge/VALORCHAIN-In%20Effect-red?style=for-the-badge" />
   <img src="https://img.shields.io/badge/ETHICS-AAEE--77-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/AI%20Layer-STARGATE.v6-green?style=for-the-badge" />
