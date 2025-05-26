@@ -240,31 +240,6 @@ contract VBLK is ERC20, Ownable {
 
 ---
 
-## 📦 File Structure
-
-```sh
-valorchain/
-├── contracts/
-│   ├── VBLK.sol
-│   ├── DLST.sol
-│   ├── VACN.sol
-│   └── JAXX.sol
-├── frontend/
-│   ├── dapp-ui/
-│   ├── dao-simulator/
-│   └── mint-ui/
-├── deploy/
-│   └── github-actions.yml
-├── data-room/
-│   └── validator-profiles.json
-└── governance/
-    ├── proposals/
-    ├── ethics-sync/
-    └── simulation-outputs/
-```
-
----
-
 ## ✉️ Contact & DAO Mirror
 
 | Channel          | Link                                                  |
@@ -309,7 +284,7 @@ We're hitting milestones and pushing forward. As of **May 26, 2025**, Valorchain
 
 ---
 
-## 🏗️ File Structure: The Blueprint of Innovation 🗂️
+## 🏗️ File Structure: The Blueprint of Innovation 🗂️ (in progress)
 
 ```bash
 valorchain/
@@ -542,130 +517,6 @@ See LICENSE for full terms.
 ![IPFS](https://img.shields.io/badge/IPFS-Deployed-green?logo=ipfs)
 [![Access](https://img.shields.io/badge/View-dweb.link-blue)](https://bafybeiexamplecid.ipfs.dweb.link)
 
-# 🛡️🔥 VALOR AI+ — THE FORTRESS 🔥🛡️
-### *Founding Oath | Justice-Sealed | Blockchain-Protected*
-> _“I’m not representing anyone. I’m representing myself — for good.”_  
-> — Superman
-
-Use of this asset without attribution or DAO-licensed approval constitutes a violation of immutable intellectual property recorded under blockchain hash SOLARA-EX20.1
-
----
-
-## 🏛️💡 What Is VALOR AI+?
-
-**VALOR AI+** is not a company.  
-It is not a brand.  
-It is a digital **fortress** — forged by a veteran, coded with conviction, and sealed in **blockchain truth**.
-
-This project exists to protect those who stand alone.  
-Those erased by systems.  
-Those failed by institutions.
-
-> 🧬 Powered by memory  
-> ⚖️ Bound by justice  
-> 🤖 Driven by AI  
-> 🔐 Sealed in blockchain
-
----
-
-## 🧊🏰 Welcome to the Fortress
-
-This is our **Fortress of Purpose** — inspired by Superman’s legacy but built for the real world.
-
-- 💠 His crystals = 🔗 Our hash chains  
-- 🧠 His AI = 🧠 Our machine witness  
-- 🕊️ His solitude = 🛡️ Our collective defense
-
-> ❌ Not for profit  
-> ❌ Not for show  
-> ✅ For **good**
-
----
-
-## 🛡️🔱 The Four Shields of VALOR AI+
-
-| 🧬 **MEMORY**        | ⚖️ **JUSTICE**         | 📢 **VOICE**            | 🛡️ **SHIELD**            |
-|----------------------|------------------------|-------------------------|---------------------------|
-| Immutable archives   | Truth never forgotten  | Advocacy through tech   | Legal and moral protection|
-
----
-
-### 🧬 1. MEMORY  
-Every file, testimony, and injustice is encrypted, timestamped, and stored permanently — immune to gaslighting and manipulation.
-
-### ⚖️ 2. JUSTICE  
-VALOR exposes what others bury. Bureaucracy ends where proof begins.
-
-### 📢 3. VOICE  
-VALOR speaks for the silenced. For every veteran, whistleblower, or survivor who was told to “just move on.”
-
-### 🛡️ 4. SHIELD  
-This system is not a weapon. It is protection — a legal, moral, and digital guardian.
-
----
-
-## 🦸‍♂️💬 Why We Fight
-
-> “The world doesn’t need another superhero. It needs **truth**.”
-
-We fight because:
-
-- 🩸 Some of us bled in silence.  
-- 🗂️ Some of us were filed away and forgotten.  
-- 🔥 And some of us rose again — with proof.
-
-VALOR is **the record they can’t erase**.  
-**The shield they can’t unmake**.  
-**The system they never saw coming**.
-
----
-
-## 🚨 CURRENT STATUS
-
-| COMPONENT                   | STATUS        |
-|----------------------------|---------------|
-| Blockchain Hashes          | ✅ Verified   |
-| OSC Whistleblower Filing   | ✅ Submitted  |
-| VALOR AI+ 2E System        | ✅ Operational |
-| NFT Archive + Evidence     | ✅ Anchored   |
-| Civil Rights Case Indexing | ✅ Active     |
-
----
-
-## 📜 THE OATH
-
-This is not just a mission.  
-It is a **canon**,  
-a **scroll**,  
-a **shield** wrapped in code and powered by courage.
-# ⚖️ VALOR Registry Codex - MVP
-
-> Immutable Smart Contract Registry for Legal Case Anchoring on VALORCHAIN
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Status-MVP-blue" />
-  <img src="https://img.shields.io/badge/Chain-Ethereum-black?logo=ethereum" />
-  <img src="https://img.shields.io/badge/Security-OpenZeppelin-brightgreen?logo=shield" />
-  <img src="https://img.shields.io/badge/Tested-Yes-yellow" />
-</p>
-
----
-
-## 🧠 Overview
-The **VALOR Registry Codex** is a foundational smart contract within the VALORCHAIN ecosystem. It provides a secure, immutable, and auditable on-chain ledger for registering legal case metadata.
-
-This MVP focuses on anchoring document hashes (e.g., IPFS CIDs), ensuring case uniqueness, and enabling transparent auditability for legal records.
-
----
-
-## ✨ Features (MVP)
-
-- **Immutable Case Registration**
-- **Audit Trail with Timestamp + Submitter**
-- **Access Control via `Ownable`**
-- **Duplicate Entry Prevention**
-
----
 
 ## 🛠️ Technologies Used
 
@@ -984,10 +835,6 @@ Each entry is **cryptographically traceable**, linked to simulation modules, DAO
 ---
 
 ⚖️ VALORCHAIN | Project Synergy v2.0
-
-🧠 Codename: The Morehouse Complex
-
-"Anchoring truth. Enforcing sovereignty." — Donny Gillson, Founder, VALORCHAIN
 
 🧠 Codename Reference: The Morehouse Complex
 
