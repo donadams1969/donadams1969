@@ -394,14 +394,140 @@ export default App;
 
 ---
 
-## 🖼️ Visual Gallery (Interface Snapshots)
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donadams1969/assets/main/valorchain-banner.png" alt="VALORCHAIN: In Effect - Powered by React" />
-  <img src="https://raw.githubusercontent.com/donadams1969/assets/main/ethics-badge.png" alt="ETHICS: AAEE-77 - Ethereum Powered" />
-  <img src="https://raw.githubusercontent.com/donadams1969/assets/main/stargate-ai.png" alt="AI Layer: STARGATE.v6 - Driven by AI" />
-  <img src="https://raw.githubusercontent.com/donadams1969/assets/main/ipfs-anchor.png" alt="IPFS Anchor: Locked - Secured by IPFS" />
-  <img src="https://raw.githubusercontent.com/donadams1969/assets/main/community-discord.png" alt="COMMUNITY: Join Us - Discord" />
-</p>
+# 🧠⚡ VALORCHAIN: Blockchain-Sealed Legal Defense System ⚡🧠
+
+![Anchored to Bitcoin](https://img.shields.io/badge/Anchored-Bitcoin-orange?style=for-the-badge\&logo=bitcoin)
+![AI Monitored](https://img.shields.io/badge/VALOR_AI%2B-Watchdog-orange?style=for-the-badge)
+![DAO Vault Secured](https://img.shields.io/badge/Vault-DAO_Controlled-purple?style=for-the-badge)
+![NFT-Gated Access](https://img.shields.io/badge/NFT-Access_Required-blue?style=for-the-badge)
+![Compliance](https://img.shields.io/badge/ADA/HIPAA/FTCA-Compliant-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-VALOR_Open_Justice-blue?style=for-the-badge)
+
+---
+
+## 🔍 ANALYSIS: Understanding the Mission
+
+**Problem Solved:**
+Digital suppression and data erasure in whistleblower and civil rights claims.
+
+**Audience:**
+
+* Veterans
+* Whistleblowers
+* Legal Experts
+* Journalists
+
+**Learning Outcome:**
+Learn to verify, submit, and audit evidence using VALORCHAIN.
+
+---
+
+## 🛠️ DESIGN: Building the Blueprint
+
+**Goals:**
+
+* Immutable legal truth defense
+* NFT identity proofing
+* Blockchain recordkeeping
+
+**Modules Include:**
+
+* Smart contracts
+* Compliance docs
+* NFT identity protocols
+
+---
+
+## 🏗️ DEVELOPMENT: Constructing the Framework
+
+| 📁 **File**               | 📝 **Purpose**            | 🕒 **Last Updated** | 🔖 **Badge**                                                     | 🌟 **Emoji** |
+| ------------------------- | ------------------------- | ------------------- | ---------------------------------------------------------------- | ------------ |
+| `Calisota_Whitepaper.md`  | Project Vision & Strategy | 3 days ago          | ![Whitepaper](https://img.shields.io/badge/Type-Whitepaper-blue) | 🦅 📜        |
+| `DiD-KEY.md`              | Decentralized ID Keys     | 1 min ago           | ![DID](https://img.shields.io/badge/DID-Keys-red)                | 🧿 🔐        |
+| `VBLK_Token.md`           | Token Overview            | 11 hrs ago          | ![Token](https://img.shields.io/badge/Token-VBLK-lightgreen)     | 🪙 🔁        |
+| `VBLK_Treasury_Vault.sol` | Smart Contract Vault      | 12 hrs ago          | ![Vault](https://img.shields.io/badge/Contract-Vault-critical)   | 🔐 ⛓️        |
+| `Security.md`             | Security Policy           | 3 min ago           | ![Security](https://img.shields.io/badge/Security-Policy-orange) | 🛡️ 🔒       |
+
+---
+
+## 🚀 IMPLEMENTATION: Deploying Truth
+
+* Hosted on GitHub: [`donadams1969`](https://github.com/donadams1969)
+* Live portals: [18fu.ai](https://www.18fu.ai) | [18fu.cash](https://www.18fu.cash)
+* IPFS linked evidence locker
+
+> “This isn’t just code. It’s testimony sealed in time.”
+
+---
+
+## 📈 EVALUATION: Verifying Integrity
+
+* ✅ OpenTimestamps Verification
+* ✅ DID Identity Proofs
+* ✅ Blockchain Anchor to Bitcoin
+* ✅ Legal License and MIT compliance
+
+**Impact Metrics:**
+
+* Downloads and verifications
+* Cited in legal filings
+* Referenced by journalists
+
+---
+
+## ♻️ SAM LOOPS: Always Iterating
+
+**Prototype Chain:**
+
+1. Markdown + Badge System
+2. NFT Gateways + Compliance
+3. Public Drop with Educational Overlay
+
+**Feedback Tools:**
+
+* GitHub Issues
+* Google Forms via 18fu.ai
+* Direct peer submissions
+
+---
+
+## 🔐 FINAL FOOTNOTE — `vault.18fu.cash`
+
+### 🏛️ **The Evidence Vault**
+
+> Immutable repository of legal, medical, and whistleblower documentation
+
+### **Example Entry**
+
+* **Filename:** `NFT_US_Navy_Veteran_VALOR_Archive_Final.pdf`
+* **Hash (SHA-256):** `20be9a304a0d9a90550dbdeca086f658fb103433919128aca4032553ea5cceb`
+* **.ots File:** [`Download`](https://vault.18fu.cash/proofs/NFT_US_Navy_Veteran_VALOR_Archive_Final.pdf.ots)
+* **IPFS CID:** [`bafybeibjpcscdfb55e757wyw5b25bgqls4lta5ou2apl3f5gd6i4ordg4y`](https://ipfs.io/ipfs/bafybeibjpcscdfb55e757wyw5b25bgqls4lta5ou2apl3f5gd6i4ordg4y)
+* **Bitcoin Block ID:** `#895012`
+* **Timestamp (UTC):** `2024-04-24T16:26:28Z`
+
+### **What These Fields Mean**
+
+| Attribute         | Explanation                                                             |
+| ----------------- | ----------------------------------------------------------------------- |
+| **Filename**      | Describes the evidence artifact                                         |
+| **SHA-256**       | Unique digital fingerprint to detect tampering                          |
+| **.ots File**     | OpenTimestamps proof of the file's time of existence                    |
+| **IPFS CID**      | Decentralized location for file access                                  |
+| **Bitcoin Block** | The block in which the timestamp was anchored                           |
+| **Timestamp**     | When the event or file was cryptographically recorded on the blockchain |
+
+---
+
+## 📬 Contact + Legal Integrity
+
+**Maintainer:** Donny Gillson | U.S. Navy Veteran | Blockchain Compliance Architect
+**Email:** [donny@18fu.ai](mailto:donny@18fu.ai)
+**GitHub Repo:** [https://github.com/donadams1969/valor-ai](https://github.com/donadams1969/valor-ai)
+**Status:** Blockchain-Sealed | ADA, HIPAA, FTCA Compliant
+
+> 🧠 *“This isn’t crypto. This is civil rights—anchored.”*
+
 
 ---
 
