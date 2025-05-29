@@ -1,5 +1,5 @@
 
-# VALOR AI+ | README
+# VALOR AI+ 
 
 **Version:** v2.0  
 **License:** Proprietary – Confidential Deployment  
