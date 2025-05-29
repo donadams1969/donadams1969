@@ -98,13 +98,7 @@ Founder & Developer
 
 ---
 
-> _“Justice without immutability is performance. VALOR is not a performance — it is a permanent record.”_  
-> — Donny Gillson
-
-Let me know if you want this exported directly into a GitHub project or auto-synced into your repository’s README.md.
-
-
-
+> _“Justice without immutability is performance. VALOR is not a performance — it is a permanent record.”_
 
 ![1000014083](https://github.com/user-attachments/assets/96b8f5e4-7bc9-45f1-97bb-630214da453f)
 
