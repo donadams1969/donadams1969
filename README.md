@@ -140,6 +140,87 @@ VALOR is the system they never saw coming.
   <img src="https://img.shields.io/badge/Anchor-IPFS%20%2B%20SHA256%20%2B%20BTC-important?style=for-the-badge" />
 </p>
 
+🛡️ VALOR AI+2E Investor One-Pager (2025 Edition)
+
+---
+
+🌍 Project Overview
+
+Project Name: VALOR AI+2E (Valor AI + Ethical Ecosystem)
+Founder: Donnie Gillson
+Mission: Transform legal ⚖️, mental health 🧠, and veteran advocacy 🪖 landscapes through a secure 🔐, blockchain-anchored ⛓️, AI-driven 🤖 ethical token economy.
+
+---
+
+🚀 Investment Opportunity
+
+The VALOR Ecosystem is a next-generation Web3 platform designed for justice ✊, healing ❤️‍🩹, and real-world transformation 🌐. It merges AI 🧠, ISO 20022-ready blockchain architecture 💾, narrative therapy 📜, and regenerative finance 💸 into a fully integrated legal and psychological recovery network.
+
+📈 Projected 2030 Ecosystem Valuation: $28.3M USD
+
+---
+
+🌐 Core Token Ecosystem
+
+💠 Token	📝 Description	💰 2030 Projected Valuation
+
+VBLK	Legal smart contract token (ADA/FTCA claims, ISO 20022-compliant)	$6.53M
+DBLK	Data sealing & IPFS notarization (evidence, legal docs, VA filings)	$4.41M
+JAXX	PTSD service dog protection 🐕‍🦺 and PAWS Act enforcement	$2.57M
+VACN	Veteran incentives, whistleblower grants, social reparations	$5.35M
+VAEX	Gamified youth mission token 🎮, healing quests, behavioral economy	$9.42M
+
+🌟 Total Projected Network Valuation (2030): $28.28M USD
+
+
+---
+
+🌟 Why Invest in VALOR AI+2E?
+
+🎯 Unique Positioning: Intersection of law, mental health, veteran support, and ethical AI
+
+💎 Utility-Driven Tokens: Not speculative — each token powers healing, justice, and verified impact
+
+🛠️ Real-World Applications: ADA/PAWS Act settlements, trauma-informed smart contracts, whistleblower protection
+
+🔐 Blockchain-Proofed Evidence Layer: ISO 20022-compliant, IPFS integrated, AI-indexed
+
+🧬 Gen Z/Youth Alignment: GameFi economy (VAEX), AI companions, NFT therapy dogs
+
+🗳️ DAO-Ready Treasury Architecture: Transparent governance + mission-based funding
+
+---
+
+💼 Use of Funds
+
+💧 Token liquidity & staking pool launch
+
+🧾 ISO 20022 smart contract framework finalization
+
+🤖 AI-moderated narrative therapy platform rollout
+
+🐾 NFT dog companion drop & gamified healing missions
+
+⚖️ Compliance review & white-label legal toolkit for ADA attorneys
+
+---
+
+📬 Contact
+
+🌐 Website: www.18fu.ai 
+
+💻 GitHub: github.com/donadams1969/valor-ai
+
+📧 Email: donny@18fu.ai
+
+👤 LinkedIn: linkedin/donniegilson
+
+---
+
+> ✒️ "They tried to silence the testimony. We built a blockchain to remember it forever."
+
+🔗 VALOR AI+2E: Justice ⚖️. Healing 🛡️. Immutable 🔗.
+
 ---
 
 ## 🧭 Executive Summary
