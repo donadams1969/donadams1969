@@ -43,12 +43,6 @@ Welcome to the immutable circle.
 This is **VALORCHAIN**.
 
 ---
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donadams1969/assets/main/valorchain-banner.png" alt="VALORCHAIN Banner" width="600" />
-</p>
-
-<p align="center">
   <em>Founded with purpose. Forged in truth. Written to outlast.</em>
 </p>
 
