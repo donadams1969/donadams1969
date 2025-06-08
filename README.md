@@ -58,7 +58,6 @@ Email Automation	SendGrid, SMTP relay
 Regulatory Portals	DOJ API (planned), FOIA scrapers
 
 
-
 ---
 
 🧱 Constitution: The VALOR Covenant
@@ -77,9 +76,6 @@ Regulatory Portals	DOJ API (planned), FOIA scrapers
 
 5. Victory Is Transparency — Sunlight is the greatest disinfectant
 
-
-
-
 ---
 
 🚀 MVP Use Cases
@@ -91,7 +87,6 @@ Regulatory Portals	DOJ API (planned), FOIA scrapers
 ⛓️ Anchor evidence + record correspondence as NFTs
 
 🧠 Summarize psychological harm using Adlerian metrics
-
 
 ---
 
@@ -106,6 +101,7 @@ All actions are hash-sealed with SHA-256 and anchored into:
 ✅ Bitcoin Sidechains for immutable legal recordkeeping
 
 ---
+
 ## 🎯 What Is VALOR AI+?
 
 > _“In a world without regulation, conscience becomes the product.”_
@@ -242,24 +238,7 @@ Security + compliance audits
 
 Market activation in VA + civil rights ecosystems
 
-📄 Download Investor Memo
-📊 View Pitch Deck
-
----
-
-🌐 Contact & Social
-
-🌍 Website: https://www.18fu.ai 
-
-📫 Email: donny@18fu.ai
-
-🧠 GitHub: github.com/donadams1969
-
----
-
 > Built with ❤️ by veterans, engineers, and survivors of broken systems.
-
---
 
 <!-- 🔱 HEADER BANNER -->
 <h1 align="left">🎬 That's Edutainment × ⚖️ VALOR AI+ × 🤖 VALOR AI+2E</h1>
@@ -356,7 +335,6 @@ We're looking for:
 
 ---
 
-
 # 🚀 VALOR AI+ v2.0 | Immutable Justice Engine
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://18fu.ai)
@@ -445,41 +423,7 @@ Now powered by the **18FU.AI** infrastructure, this system is designed to surviv
 | FERPA / CMIA – Education & Privacy     | ✅ Full                  |
 | Whistleblower Federal Protections      | ✅ Enhanced              |
 | PAWS for Veterans Therapy Act          | ✅ Fully Integrated      |
-| Unruh Civil Rights Act (California)    | ✅ Full Compliance       |
-
----
-
-## 📫 Contact Info
-
-| Field             | Information                     |
-|------------------|----------------------------------|
-| 👤 Primary Contact | Donny Gillson                   |
-| 📧 Email           | [donny@18fu.ai](mailto:donny@18fu.ai) |
-| 🌐 Website         | [https://18fu.ai](https://18fu.ai)     |
-
----
-
-## 🧭 Roadmap & Timeline
-
-| Phase             | Actions                                              | Timeline     |
-|------------------|------------------------------------------------------|--------------|
-| 🛡️ Security Audit  | Finalize external cryptographic audits               | Immediate    |
-| 📚 Documentation   | Publish ethical, technical whitepapers              | 1–2 Months   |
-| 🤝 Partnerships    | Strategic alliances with regulators, NGOs            | 2–4 Months   |
-| 🚀 Pilot Rollout   | Launch controlled legal-tech & AGI pilot trials      | 6 Months     |
-| 🧠 AGI Kernel Init | STARGATE.AGI + AGI Court Tribunal Beta               | 6–9 Months   |
-| 🌐 Full Merge      | VALOR AI+2E complete integration under 18FU.AI       | Ongoing      |
-
----
-
-## 🤝 Contribute or Join Us
-
-Want to contribute to the future of legal tech, ethical AI, or trauma-informed systems?  
-We welcome open-source, open-governance collaborators. Reach out.
-
-📩 [Email Donny](mailto:donny@18fu.ai) | 🌐 [Join the Movement](https://www.18fu.ai)  
-💬 Community Portal Coming Soon
-
+| Unruh Civil Rights Act (California)    | ✅ Full Compliance    
 ---
 
 ### 🔗 MetaBlock (for embedding in OpenGraph & Twitter cards)
