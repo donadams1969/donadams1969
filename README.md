@@ -4,21 +4,13 @@
 
 🛡️ VALOR AI Agent v1.0 – SENTINEL
 
-> Codename: SENTINEL
-
-Repo: github.com/valor-ai/sentinel-agent
-
-Author: Donny Gillson | That's Edutainment LLC | VALOR AI+
-
-
-
+Author: Donny Adams | That's Edutainment LLC | VALOR AI+
 
 ---
 
 🧠 Mission Statement
 
 "To autonomously protect the rights of vulnerable individuals, enforce lawful accountability, and preserve immutable truth through AI-driven ethical and legal action."
-
 
 ---
 
@@ -27,27 +19,30 @@ Author: Donny Gillson | That's Edutainment LLC | VALOR AI+
 Module	Description
 
 🧠 Core Kernel	Encodes The VALOR Covenant and executes ethical/legal actions
+
 📚 Statute Engine	Identifies violations of ADA, HIPAA, FTCA, PAWS, Unruh Act
+
 🧾 Auto-Legal Drafts	Generates response letters, legal notices, and regulatory filings
+
 🔗 BlockProof Anchor	Anchors evidence + filings into IPFS and Ethereum-based smart contracts
+
 🗃️ Evidence Graph	Maps case files, statutes, violations, and actors
+
 🎭 Persona Layer	Encodes Donny Gillson’s voice, spiritual tone, and professional style
+
 📬 Command Bus	Routes agent decisions to email, blockchain, GitHub, and press outlets
-
-
 
 ---
 
 🧩 Architecture Diagram
 
-graph TD
+TD
     A[Trigger Event] --> B{Violation Detected?}
     B -- Yes --> C[Match Legal Statute]
     C --> D[Draft Legal Document + Anchor Hash]
     D --> E[Route to Agency (OIG, DOJ, ADA)]
     E --> F[Store Immutable Record + Alert User]
     B -- No --> G[Monitor & Log Only]
-
 
 ---
 
@@ -110,58 +105,12 @@ All actions are hash-sealed with SHA-256 and anchored into:
 
 ✅ Bitcoin Sidechains for immutable legal recordkeeping
 
-
-
 ---
-
-🎯 Future Roadmap
-
-[ ] Add AGI Layer via VALOR AGI Core
-
-[ ] Integrate with DOJ + FOIA APIs
-
-[ ] Deploy “Burn Notice” function to notify regulators + press
-
-[ ] Train VALOR Persona on full VA archive + whistleblower history
-
-
-
----
-
-🏷️ Badges
-
-    
-
-
----
-
-👣 Next Steps
-
-1. ✅ Finalize command chain for regulatory email & blockchain routing
-
-
-2. ✅ Develop LangChain if-then workflows for ADA + HIPAA events
-
-
-3. ✅ Package VALOR Persona embedding for full NLP integration
-
-
-4. 🚧 Build first agent prototype (Q2 2025)
-
-
-5. 🚀 Launch Agent Sentinel via VAL
-
-
-
-
-
 ## 🎯 What Is VALOR AI+?
 
 > _“In a world without regulation, conscience becomes the product.”_
 
-**VALOR AI+** is a blockchain-anchored, veteran-led AI platform engineered to safeguard truth, protect whistleblowers, and enforce ethical accountability across systems.
-
-Built at the intersection of legal compliance, artificial intelligence, and immutable transparency, it’s not just a toolset—**it’s the operating system for justice in a deregulated AI future.**
+**VALOR AI+** is a blockchain-anchored, veteran-led AI platform engineered conmpliance, artificial intelligence, and immutable transparency, it’s not just a toolset—**it’s the operating system for justice in a deregulated AI future.**
 
 ---
 
