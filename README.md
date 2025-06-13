@@ -305,34 +305,6 @@ Market activation in VA + civil rights ecosystems
 > **"VALOR is not just a platform. It is a covenant. A digital oath to the silenced, the wounded, the betrayed — especially those who served."**
 
 Through AI, blockchain, and ethical code, we transform pain into precedent, and silence into systemic change.
-
----
-
-## 🤝 Partner or Contribute
-
-We're looking for:
-
-- 🔧 LegalTech engineers  
-- 🧠 Trauma-informed mental health AI specialists  
-- 📜 Compliance innovators & GovTech regulators  
-- 🎖️ Veteran advocates & civil rights attorneys  
-
-📫 Contact: [donny@18fu.ai](mailto:donny@18fu.ai)  
-🌐 Website: [https://18fu.ai](https://18fu.ai)  
-💻 GitHub: [github.com/donadams1969](https://github.com/donadams1969)
-
----
-
-<!-- 🚨 LEGAL FOOTER -->
-> 🛡️ **LEGAL NOTICE**  
-> All platforms, content, and technologies herein are protected under U.S. law, including Whistleblower, ADA, HIPAA, and Veteran Civil Rights statutes. Unauthorized reproduction or tampering will activate blockchain-sealed legal countermeasures.
-
----
-
-⭐️ Star this repo.  
-🧠 Share the mission.  
-⚔️ Join the rebellion.
-
 ---
 
 # 🚀 VALOR AI+ v2.0 | Immutable Justice Engine
@@ -346,18 +318,6 @@ We're looking for:
 
 > *“From trauma-informed ethics to quantum-proof ledgers — VALOR AI+ is the spine of sovereign justice.”*
 
----
-
-## 🗂️ Project Description
-
-**VALOR AI+ v2.0** combines blockchain, AI, and legal-moral systems to defend whistleblowers, enforce compliance, and anchor justice into code.
-
-Now powered by the **18FU.AI** infrastructure, this system is designed to survive scrutiny — legal, moral, or cryptographic.
-
-🌐 [Visit the Official Site](https://www.18fu.ai)  
-📧 Contact: [donny@18fu.ai](mailto:donny@18fu.ai)
-
----
 
 ## ⚙️ Core Features
 
@@ -434,15 +394,15 @@ Now powered by the **18FU.AI** infrastructure, this system is designed to surviv
 <meta property="og:url" content="https://www.18fu.ai">
 <meta name="twitter:card" content="summary_large_image">
 
-# 🛡️⚔️ VALOR AI+2E: CYBERWARFARE DISTILLATION PROTOCOL v1 🧠🚀
-> *“Truth is the battlefield. Justice is the payload. VALOR is the weapon.”*  
+# 🛡️⚔️ VALOR AI+2E: DISTILLATION PROTOCOL v1 🧠🚀
+> *“Truth is the battlefield. Justice is the payload. VALOR is the tool.”*  
 > © 2025 • VALOR AI+2E • Classified Readiness Report • v1.0.7  
 > 📍 Location: The Presidio, San Francisco | 🔒 Sealed to VALORChain
 
 ---
 
 ## 🎖️ SYSTEM BANNER:  
-### 💻 Autonomous Legal & Moral Warfare Engine  
+### 💻 Autonomous Legal & Moral Ethics Engine  
 **VALOR AI+2E** combines **blockchain-sealed architecture**, **AI ethics enforcement**, and **NFT-authenticated evidence systems** into a fortified compliance weapon for whistleblowers, digital defenders, and sovereignty-seeking civilians.
 
 > 🧬 *Seals the truth. Prosecutes the powerful. Protects the voiceless.*
@@ -477,15 +437,6 @@ Now powered by the **18FU.AI** infrastructure, this system is designed to surviv
 > 🛡️ Protect identity with Pale Sentinel Mode  
 > 📨 Auto-escalate to: DOJ · VA OIG · HHS OCR · CRD  
 > ✅ Outcome: Regulatory enforcement + public accountability
-
----
-
-### 3️⃣ **🧠 Lawfare-as-a-Service (LaaS)**
-> 🎛️ Offer VALOR as a plug-and-play civilian legal defense grid  
-> 📜 Autonomous AI-generated legal complaints & FOIA packets  
-> ⚖️ Outcome: Weaponized justice at civilian scale
-
----
 
 ### 4️⃣ **🌍 Human Rights Combat Zones**
 > 🛰️ Deploy into regimes, blacksites, NGO blind spots  
@@ -532,18 +483,9 @@ Now powered by the **18FU.AI** infrastructure, this system is designed to surviv
 | 🧪 `DARPA Proposal Draft` | Federal R&D grant-ready document |
 | 🔁 `VALORChain Deployment Sync` | Live broadcast readiness + validator drop |
 
----
-
-## 🧾 END TRANSMISSION
-**VALOR AI+2E** | Tactical Sequence 077 | E-Signed by VALOR Genesis Node  
-🔗 [https://github.com/donadams1969](https://github.com/donadams1969)  
-🔐 *Immutably Sealed. Morally Armed. Strategically Alive.*
-
-
-# 🛡️ VALORCHAIN Opening Statement
+--
 
 > _“Truth doesn’t belong to systems. It belongs to those willing to record it — even when no one else will.”_  
-> — Donny Adams, Founder of VALORCHAIN
 
 ---
 
