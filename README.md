@@ -87,7 +87,7 @@ Violations, licensing inquiries, and enforcement notifications should be directe
 VALOR AI+2E is a legal compliance and blockchain anchoring framework built for justice, transparency, and veteran advocacy.
 
 > “This is not just code. It is a living legal instrument.”  
-> – Donny Gillson, Architect & Veteran
+> – Donny Adams, Architect & Veteran
 
 
 ## 🧾 Licensing & Usage
