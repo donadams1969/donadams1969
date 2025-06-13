@@ -44,17 +44,6 @@ Module	Description
 
 ---
 
-## 🧩 Architecture Flow
-
-flowchart TD
-    A[⚡ Trigger Event] --> B{🔍 Violation Detected?}
-    B -- Yes --> C[⚖️ Match Legal Statute]
-    C --> D[📝 Draft Legal Document + Anchor Hash]
-    D --> E[📤 Route to Agency (OIG, DOJ, ADA)]
-    E --> F[📁 Store Immutable Record + Alert User]
-    B -- No --> G[📊 Monitor & Log Onl
----
-
 ## 🧬 Tech Stack
 
 | ⚙️ Layer               | 🧪 Technology                                |
