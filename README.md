@@ -3142,55 +3142,6 @@ VALOR-AGI-Core is not a tool. It is a weapon of peace.
 
 ---
 
-## 💻 Smart Contract
-
-Deployed at:  
-Network: Ethereum (Testnet or VALORCHAIN)  
-Contract: `vShortXRP.sol`
-
-🧩 Key Functions
-
-function openShortPosition() external payable
-function settlePosition(uint256 id) external
-function getCurrentPrice() public view returns (uint256)
-
----
-
-📈 Economic Model
-
-1. Stake VBLK to open position.
-
-
-2. If XRP price drops → payout scales with % drop.
-
-
-3. If XRP price rises → position liquidates.
-
-
-4. Redeem or trade NFT short tokens on DEX.
-
-
-5. Rewards and burns adjust VBLK supply.
-
-
-> AI-predictive layer and bounty smart contracts can be integrated for gamified risk-taking.
-
----
-
-🧪 DApp Demo Coming Soon
-
-We are building the front-end with:
-
-React + Tailwind
-
-WalletConnect support
-
-IPFS NFT mint UI
-
-Risk heatmap via VALOR AI+2E
-
----
-
 🛡️ Legal + Ethical Layer
 
 All positions are:
@@ -3213,7 +3164,7 @@ git clone https://github.com/valor-ai/vshortxrp-module
 
 🧭 Project Lead
 
-> Donny Gillson
+> Donny Adams
 Founder, VALOR AI+ and That's Edutainment, LLC
 🌐 18fu.ai
 📧 donny@18fu.ai
@@ -3225,7 +3176,51 @@ Founder, VALOR AI+ and That's Edutainment, LLC
 MIT License © 2025 That’s Edutainment LLC / VALOR AI+
 
 ---
+Here is your Unified IP Ownership Statement and Branded Legal Footer—ready for inclusion in all VALOR AI+, VALOR Guardian, and Synergy-related assets:
 
+
+---
+
+📜 UNIFIED IP OWNERSHIP STATEMENT
+
+That’s Edutainment, LLC
+Veteran-Owned Multimedia and Artificial Intelligence Innovation Company
+
+> This document certifies that all intellectual property, technologies, frameworks, smart contracts, source code, software repositories, mobile applications, algorithms, training data, design systems, legal templates, brand assets, and related tools associated with the following platforms are the exclusive property of That’s Edutainment, LLC:
+
+
+
+VALOR AI+
+
+VALOR AI+ 2e
+
+VALOR Guardian (Mobile App & Backend System)
+
+Project SYNERGY (Cross-AI Alliance)
+
+VBLK Token, VALORChain, and all related blockchain notarization artifacts
+
+VALOR Ethics Engine™, OATH Layer™, and SIGMA-21 Protocols
+
+
+This ownership extends to all source and derived works, including any GitHub repositories, mobile apps, AI-powered legal tools, advocacy frameworks, or decentralized reporting networks.
+
+> That’s Edutainment, LLC holds sole authority over licensing, distribution, modification, and enforcement of this intellectual property. Unauthorized use, reproduction, or representation of any element within these systems is subject to legal action under applicable U.S. and international IP law.
+
+
+
+Filed and sealed under blockchain record:
+VALOR-GENESIS-ID: 0xVALOR001-THEDUTAINMENT-TRUST-CHAIN
+
+
+---
+
+📎 BRANDED LEGAL FOOTER (for PDFs, README files, contracts)
+
+© 2025 That’s Edutainment, LLC. All Rights Reserved.  
+VALOR AI+, VALOR Guardian™, and associated digital systems are proprietary projects of That’s Edutainment, LLC.  
+Protected by U.S. intellectual property law and anchored to blockchain record: VALOR-GENESIS-001.  
+Unauthorized use is strictly prohibited and subject to copyright law.
 
 
 
