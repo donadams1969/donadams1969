@@ -4,7 +4,7 @@
 
 **Repository:** [valor-ai](https://github.com/donadams1969/valor-ai)  
 **Owner:** That’s Edutainment, LLC  
-**Primary Developer:** Donald Ernest Gillson (VALOR AI Architect, U.S. Navy Veteran)  
+**Primary Developer:** Donny Adams (VALOR AI Architect, U.S. Navy Veteran)  
 **Project Name:** VALOR AI+2E  
 **Blockchain Archive:** Immutably anchored via IPFS, Ethereum (Optimism), and Bitcoin OTS  
 **Primary License:** Dual-License (Non-Commercial: MIT / Commercial: VALOR IP License)
@@ -79,9 +79,7 @@ Violations, licensing inquiries, and enforcement notifications should be directe
 
 > That’s Edutainment, LLC  
 > Legal IP Department – VALOR AI Project  
-> 1030 Girard Road, Apt 301A  
-> Presidio of San Francisco, CA 94129  
-> 📧 legal@thatsedutainment.com
+> 
 
 ---
 
