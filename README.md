@@ -64,11 +64,6 @@ Module	Description
 * 🔄 DAO voting + validator logic
 * 📜 Token-based access: VBLK, DBLK, VACN, JAXX
 
----
-
-Let me know if you’d like this deployed directly to your GitHub repo, auto-linked to existing badges, or used as a README template for your submodules.
-
-
 
 ---
 
