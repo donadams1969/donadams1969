@@ -28,34 +28,57 @@ Module	Description
 
 🗃️ Evidence Graph	Maps case files, statutes, violations, and actors
 
-🎭 Persona Layer	Encodes Donny Gillson’s voice, spiritual tone, and professional style
+🎭 Persona Layer	Encodes author's voice, spiritual tone, and professional style
 
 📬 Command Bus	Routes agent decisions to email, blockchain, GitHub, and press outlets
 
 ---
 
-🧩 Architecture Diagram
+# 🛡️ VALOR AI+ – Autonomous Justice Engine
 
-TD
-    A[Trigger Event] --> B{Violation Detected?}
-    B -- Yes --> C[Match Legal Statute]
-    C --> D[Draft Legal Document + Anchor Hash]
-    D --> E[Route to Agency (OIG, DOJ, ADA)]
-    E --> F[Store Immutable Record + Alert User]
-    B -- No --> G[Monitor & Log Only]
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Build Status](https://img.shields.io/badge/build-stable-brightgreen.svg)](https://github.com/donadams1969/valor-ai)
+[![Blockchain Secured](https://img.shields.io/badge/secured%20by-blockchain-ff69b4.svg)](#)
+[![Language](https://img.shields.io/badge/language-Python%2FJS-informational.svg)](#)
+[![VALOR AI+ DAO](https://img.shields.io/badge/DAO-active-purple.svg)](#)
 
 ---
 
-🧬 Tech Stack
+## 🧩 Architecture Flow
 
-Layer	Technology
+flowchart TD
+    A[⚡ Trigger Event] --> B{🔍 Violation Detected?}
+    B -- Yes --> C[⚖️ Match Legal Statute]
+    C --> D[📝 Draft Legal Document + Anchor Hash]
+    D --> E[📤 Route to Agency (OIG, DOJ, ADA)]
+    E --> F[📁 Store Immutable Record + Alert User]
+    B -- No --> G[📊 Monitor & Log Onl
+---
 
-AI Logic	OpenAI GPT-4o, LangChain, AutoGen
-Data Indexing	Weaviate, Pinecone
-Blockchain	IPFS, Ethereum, OpenZeppelin Smart Contracts
-Legal Formatting	Python, Pandas, Pydantic, LaTeX
-Email Automation	SendGrid, SMTP relay
-Regulatory Portals	DOJ API (planned), FOIA scrapers
+## 🧬 Tech Stack
+
+| ⚙️ Layer               | 🧪 Technology                                |
+| ---------------------- | -------------------------------------------- |
+| 🤖 AI Logic            | OpenAI GPT-4o, LangChain, AutoGen            |
+| 📚 Data Indexing       | Weaviate, Pinecone                           |
+| 🔗 Blockchain          | IPFS, Ethereum, OpenZeppelin Smart Contracts |
+| 🧾 Legal Formatting    | Python, Pandas, Pydantic, LaTeX              |
+| 📧 Email Automation    | SendGrid, SMTP Relay                         |
+| 🏛️ Regulatory Portals | FOIA scrapers, DOJ API (planned)             |
+
+---
+
+## 🔐 Immutable Ledger + DAO Integration
+
+* 🧱 Blockchain-sealed records (IPFS + Ethereum SHA-256)
+* 👥 Role-based access control (RBAC)
+* 🔄 DAO voting + validator logic
+* 📜 Token-based access: VBLK, DBLK, VACN, JAXX
+
+---
+
+Let me know if you’d like this deployed directly to your GitHub repo, auto-linked to existing badges, or used as a README template for your submodules.
+
 
 
 ---
