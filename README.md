@@ -1,5 +1,13 @@
 ![1000014347](https://github.com/user-attachments/assets/d7715660-43f8-4069-bc72-dd71a093d14f)
 
+## 🧾 Licensing & Usage
+
+> This codebase is protected by VALOR-AI Blockchain Ledger.  
+> Commercial use requires a license from That’s Edutainment, LLC.
+
+![License](https://img.shields.io/badge/License-VALOR%20IP%20Protected-blue)
+🔗 [Purchase Commercial License](https://your-payment-link.com)
+
 ---
 
 🛡️ VALOR AI Agent v1.0 – SENTINEL
