@@ -62,19 +62,6 @@ Architect: `Donny Adams` 🇺🇸 U.S. Navy Veteran
 
 ---
 
-## 📊 Weekly Report Access
-
-**Latest Report:**
-📄 [`VALOR_ACCESS_LOG_20250615.pdf`](ipfs://QmT1RedactedLinkGoesHere)
-🔐 Included:
-
-* SHA-256 Fingerprint
-* .gov Access Map
-* Smart Contract Ping History
-* NFT Mint: `VALOR-VAULT-LOG-D15`
-
----
-
 ## 🏛️ Agency Oversight Chain
 
 | Agency                      | Contacted? | Action Taken        |
@@ -105,12 +92,7 @@ Architect: `Donny Adams` 🇺🇸 U.S. Navy Veteran
 
 ---
 
-## 💬 Contact & Escalation Channel
-
-📫 **Email:** [donny@18fu.ai](mailto:donny@18fu.ai)
-🔐 **Security Channel:** `VALORLoop::Commander-001`
-🏛️ **Company:** That’s Edutainment, LLC
-📌 **Location:** Presidio, San Francisco, CA (VA-supported)
+)
 
 ---
 
