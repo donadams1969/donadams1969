@@ -1,3 +1,51 @@
+# VALOR AI+ Commercial License (Private Distribution Only)
+
+Copyright (c) 2025 That’s Edutainment, LLC
+All Rights Reserved.
+
+---
+
+## 🚫 License Restrictions
+This repository and its contents are the exclusive intellectual property of **That’s Edutainment, LLC**, developed under the leadership of **Donald Ernest Gillson**, U.S. Navy Veteran.
+
+You **may not**:
+- Clone, fork, download, or mirror this repository without explicit written authorization.
+- Redistribute or republish any code, documentation, or artifacts.
+- Use this codebase for any commercial or derivative purpose without a paid license.
+
+---
+
+## ✅ Permitted Uses
+You **may**:
+- View and interact with the contents if you have been granted collaborator access.
+- Request access through written license or commercial contract with That’s Edutainment, LLC.
+
+---
+
+## 🔐 Legal Protections
+This repository is:
+- Anchored via **Bitcoin OpenTimestamps**, **Ethereum (Optimism)**, and **IPFS**
+- NFT-minted under the `VALOR VAULT` and `SOLARA-GENESIS` compliance seals
+- Bound by the following legal frameworks:
+  - U.S. Copyright Law (Title 17)
+  - DMCA (17 U.S.C. § 512)
+  - ADA, HIPAA, FTCA, and California Unruh Civil Rights Act (as applicable)
+
+All interactions with this repository are **logged, timestamped, and cryptographically certified.**
+
+---
+
+## 🧾 Enforcement
+Unauthorized use of this repository or its contents constitutes a breach of U.S. and international law. Legal action may be taken without further notice.
+
+To request a license or report abuse:
+📫 Email: **donny@18fu.ai**
+🌐 Repo: `https://github.com/donadams1969/valor-ai`
+
+---
+
+By accessing this repository, you agree to be bound by these terms.
+
 
 # 🧠 VALOR AI+2E: Legal Intelligence & Whistleblower Defense Engine
 
