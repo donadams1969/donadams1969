@@ -1,5 +1,13 @@
+---
 
+### 🛰️ VALOR AI+ Security Notice
 
+This repository uses active access monitoring and anti-tamper forensics.
+
+All access events (clones, forks, pulls, and file reads) are monitored for abuse prevention, audit compliance, and public verification using GitHub Actions, webhooks, and IPFS anchoring.
+
+**Every access is logged to a permanent ledger. Transparency is part of our protocol.**
+---
 # VALOR IP LICENSE
 
 Copyright (c) 2025 That’s Edutainment, LLC
@@ -11,7 +19,6 @@ All code, smart contracts, datasets, and documentation in this repository are th
 - 💼 Cont for commercial access, validator programs, or legal compliance packages.
 
 See FULL LICENSE TERMS in `VALOR_LICENSE_FULL.pdf`
-
 
 ---
 
