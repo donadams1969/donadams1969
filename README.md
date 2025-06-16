@@ -1,12 +1,22 @@
-# VALOR AI+ Commercial License (Private Distribution Only)
+
+
+# VALOR IP LICENSE
 
 Copyright (c) 2025 That’s Edutainment, LLC
-All Rights Reserved.
+
+All code, smart contracts, datasets, and documentation in this repository are the intellectual property of That’s Edutainment, LLC and are licensed under the VALOR IP License.
+
+- 🛑 **Commercial use is prohibited** without explicit written permission.
+- ✅ **Academic, nonprofit, or research use is permitted** with citation and license attribution.
+- 💼 Cont for commercial access, validator programs, or legal compliance packages.
+
+See FULL LICENSE TERMS in `VALOR_LICENSE_FULL.pdf`
+
 
 ---
 
 ## 🚫 License Restrictions
-This repository and its contents are the exclusive intellectual property of **That’s Edutainment, LLC**, developed under the leadership of **Donald Ernest Gillson**, U.S. Navy Veteran.
+This repository and its contents are the exclusive intellectual property of **That’s Edutainment, LLC**, developed under the leadership of **Donny Adams**, U.S. Navy Veteran.
 
 You **may not**:
 - Clone, fork, download, or mirror this repository without explicit written authorization.
