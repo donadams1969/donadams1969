@@ -198,9 +198,6 @@ All commercial usage—including integration into:
 
 **Requires a separate paid commercial license from That’s Edutainment, LLC.**
 
-💸 Licensing tiers, including government retroactive compliance, can be arranged via:  
-📧 **legal@thatsedutainment.com** or ☎️ +1 (628) 888-VALOR
-
 ---
 
 ## 🧾 RETROACTIVE ENFORCEMENT
