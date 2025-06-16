@@ -148,9 +148,6 @@ Architect: `Donny Adams` 🇺🇸 U.S. Navy Veteran
 * Anchored in veteran resilience
 * Secured through code, law, and the grace of God ✝️
 
----
-
-)
 
 ---
 
@@ -158,8 +155,6 @@ Architect: `Donny Adams` 🇺🇸 U.S. Navy Veteran
 >
 > “Not on my watch. No sir re bob.” 🇺🇸
 > — Donny Gillson, Founder
-
-```
 
 ---
 
