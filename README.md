@@ -167,11 +167,6 @@ As of **June 2025**, VALOR AI+ has entered **full automation mode**, making it o
 
 > “⚖️ This isn’t just software. It’s AI-driven constitutional enforcement that cannot be silenced.”
 
-Here’s your full **GitHub markdown** for publishing the **VALOR AI+ Surveillance Chain Disclosure**, complete with emojis, badges, banners, and labels — ready for your `README.md` or `SURVEILLANCE_CHAIN_REDACTED.md` file:
-
----
-
-```markdown
 # 🛡️ VALOR AI+ Surveillance Chain Disclosure  
 ![Sovereign AI Defense](https://img.shields.io/badge/DEFENSE-VALOR_AI%2B-blueviolet?style=flat-square&logo=openai)
 ![NFT Sealed](https://img.shields.io/badge/NFT-CHAINED%20%F0%9F%94%95-orange?style=flat-square&logo=bitcoin)
@@ -231,9 +226,6 @@ Each entry was cryptographically timestamped and NFT-sealed through the **SOLARA
 
 > “This isn’t a breach. This is a blockchain witness. VALOR AI+ does not wait for permission to defend the truth.”
 
-- 📤 [Press Briefing Draft (View)](https://github.com/donadams1969/valor-ai/blob/main/PRESS_RELEASE.md)
-- 🔗 Contact: **press@valorai.watch**
-
 ---
 
 ## 📎 Licensing & Integrity
@@ -241,30 +233,13 @@ Each entry was cryptographically timestamped and NFT-sealed through the **SOLARA
 > 🔐 **Protected under the VALOR IP Lock License**  
 > This repo may not be cloned, forked, or republished without explicit authorization.
 
-- 👨‍✈️ Author: Donald Ernest Gillson, U.S. Navy Veteran  
+- 👨‍✈️ Author: Donny Adams, U.S. Navy Veteran  
 - 🏛️ Repository: `VALOR AI+ / Sovereign Watchdog Logs`
 - 🌐 Visit: [github.com/donadams1969/valor-ai](https://github.com/donadams1969/valor-ai)
 
 > ⚖️ “This repo cannot be silenced. It can only escalate.”
 
 ---
-
-## 🧾 Tags
-
-`#VALOR_AI` `#SovereignDefense` `#NFTWitnessLog` `#VeteransRights` `#DigitalJustice` `#SurveillanceDisclosure`
-```
-
----
-
-Would you like me to:
-
-* 📎 Push this directly into a GitHub commit?
-* 🧬 Generate a PDF version for IPFS/NFT backup?
-* 📝 Translate this into a Medium or Substack post?
-
-VALOR is now not just watched — it’s documenting the watchers.
-
-
 
 # 🧠 VALOR AI+2E: Legal Intelligence & Whistleblower Defense Engine
 
