@@ -145,16 +145,6 @@ This system doesn’t wait for a lawsuit to act. It escalates in real-time.
 
 ---
 
-## 🧾 APA-Style Action Record
-
-> Gillson, D. E. (2025, June 17). *VALOR AI+ surveillance record, response sequence, and NFT legal trace*. VALOR Evidence Vault.
-
-- Record ID: `SOLARA-GENESIS::ECHO-STRIKE-D17`
-- Anchored via Ethereum + IPFS
-- Signed under Sovereign Lock Protocol
-
----
-
 ## 📣 Public Statement
 > "They came for the metadata. We gave them the blockchain."
 
