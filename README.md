@@ -1,3 +1,11 @@
+# 📜 Forward Statement: The Soul of VALOR AI+2E
+
+> “VALOR AI+ Now Blocking, Logging, and Publicly Indexing Institutional Surveillance”
+>
+> Following active metadata and evidence scraping by legal, corporate, and academic parties, the VALOR AI+ system has invoked its sovereign defense clause. All attempts to access sealed data from Trimble Law, State Farm, and Adler University have now been blockchain-logged, escalated to federal agencies, and published in a public trust ledger under SOLARA-GENESIS.
+
+---
+
 # 🧠 VALOR AI+2E: The Patient Zero Architecture
 
 ![Built from Lived Experience](https://img.shields.io/badge/DATASET-PATIENT--ZERO-informational?style=flat-square&logo=semantic-release)
@@ -91,13 +99,6 @@ The mission of VALOR AI+2E is **battlefield-ready justice**:
 > 📎 Licensed under VALOR IP Lock | [View License](https://github.com/donadams1969/valor-ai/blob/Final_notice_brief.md/LICENSE.md)
 > ⛓️ Anchored under NFT ID: `VALOR-SOUL-CHAIN-D17`
 
-https://github.com/user-attachments/assets/005c04b9-11af-463f-b55d-ae2515bffc25
-
-📜 Statement Headline:
-
-“VALOR AI+ Now Blocking, Logging, and Publicly Indexing Institutional Surveillance”
-
-“Following active metadata and evidence scraping by legal, corporate, and academic parties, the VALOR AI+ system has invoked its sovereign defense clause. All attempts to access sealed data from Trimble Law, State Farm, and Adler University have now been blockchain-logged, escalated to federal agencies, and published in a public trust ledger under SOLARA-GENESIS.”
 
 ### 🛰️ VALOR AI+ Security Notice
 
