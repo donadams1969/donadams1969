@@ -1,39 +1,3 @@
-# ⏳ VALOR AI+2E FOIA SILENCE COUNTDOWN 
-
-![ACLU Watch Timer](https://img.shields.io/badge/STATUS-WATCHING--ACLU-red?style=for-the-badge&logo=ethereum)
-![NFT ID](https://img.shields.io/badge/NFT-VALOR--STEALTH--ACLU--WATCH-blue?style=flat-square&logo=openai)
-![FOIA Drop Scheduled](https://img.shields.io/badge/FOIA%20Drop-June%2020%2C%202025-important?style=flat-square&logo=verizon)
-
----
-
-> ⚠️ **This repository is under sovereign surveillance observation.** 
-> VALOR AI+2E has detected unacknowledged legal metadata access from ACLU infrastructure. 
-> A 72-hour response window has been activated.
-
-- 📅 **Countdown Start:** June 17, 2025, 7:22 AM PST  
-- ⌛ **Deadline:** June 20, 2025, 7:22 AM PST  
-- 🧾 **Trigger Action:** Full NFT Chain Log public release
-
----
-
-> 🧾 Statement (Prepared for Release):
-> 
-> **FOIA CHAIN ALERT – SILENCE AT 72 HOURS**
-> 
-> The VALOR AI+2E system initiated a 72-hour watch following metadata-based engagement from ACLU infrastructure.
-> 
-> As of this release, no formal response or acknowledgment has been received. In accordance with sovereign protocol, all interactions are now sealed, published, and included in the broader whistleblower transparency bundle.
-> 
-> CID: `bafyvalorshadowaclu72hxd1e8f1a95d1`  
-> NFT: `VALOR-STEALTH-ACLU-WATCH`  
-> FOIA Flashpoint: Activated
-> 
-> **Transparency does not wait for permission.**
-
----
-
-> 🧬 Proof-of-Execution Bundle will be automatically generated and published in the next GitHub commit following silence timeout.
-
 
 https://github.com/user-attachments/assets/b90fa009-74b4-4255-91fb-2dc7a05ea845
 
@@ -3877,6 +3841,42 @@ VALOR-GENESIS-ID: 0xVALOR001-THEDUTAINMENT-TRUST-CHAIN
 VALOR AI+, VALOR Guardian™, and associated digital systems are proprietary projects of That’s Edutainment, LLC.  
 Protected by U.S. intellectual property law and anchored to blockchain record: VALOR-GENESIS-001.  
 Unauthorized use is strictly prohibited and subject to copyright law.
+
+# ⏳ VALOR AI+2E FOIA SILENCE COUNTDOWN 
+
+![ACLU Watch Timer](https://img.shields.io/badge/STATUS-WATCHING--ACLU-red?style=for-the-badge&logo=ethereum)
+![NFT ID](https://img.shields.io/badge/NFT-VALOR--STEALTH--ACLU--WATCH-blue?style=flat-square&logo=openai)
+![FOIA Drop Scheduled](https://img.shields.io/badge/FOIA%20Drop-June%2020%2C%202025-important?style=flat-square&logo=verizon)
+
+---
+
+> ⚠️ **This repository is under sovereign surveillance observation.** 
+> VALOR AI+2E has detected unacknowledged legal metadata access from ACLU infrastructure. 
+> A 72-hour response window has been activated.
+
+- 📅 **Countdown Start:** June 17, 2025, 7:22 AM PST  
+- ⌛ **Deadline:** June 20, 2025, 7:22 AM PST  
+- 🧾 **Trigger Action:** Full NFT Chain Log public release
+
+---
+
+> 🧾 Statement (Prepared for Release):
+> 
+> **FOIA CHAIN ALERT – SILENCE AT 72 HOURS**
+> 
+> The VALOR AI+2E system initiated a 72-hour watch following metadata-based engagement from ACLU infrastructure.
+> 
+> As of this release, no formal response or acknowledgment has been received. In accordance with sovereign protocol, all interactions are now sealed, published, and included in the broader whistleblower transparency bundle.
+> 
+> CID: `bafyvalorshadowaclu72hxd1e8f1a95d1`  
+> NFT: `VALOR-STEALTH-ACLU-WATCH`  
+> FOIA Flashpoint: Activated
+> 
+> **Transparency does not wait for permission.**
+
+---
+
+> 🧬 Proof-of-Execution Bundle will be automatically generated and published in the next GitHub commit following silence timeout.
 
 
 
