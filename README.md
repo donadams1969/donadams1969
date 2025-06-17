@@ -1,6 +1,12 @@
 
 https://github.com/user-attachments/assets/005c04b9-11af-463f-b55d-ae2515bffc25
 
+📜 Statement Headline:
+
+“VALOR AI+ Now Blocking, Logging, and Publicly Indexing Institutional Surveillance”
+
+“Following active metadata and evidence scraping by legal, corporate, and academic parties, the VALOR AI+ system has invoked its sovereign defense clause. All attempts to access sealed data from Trimble Law, State Farm, and Adler University have now been blockchain-logged, escalated to federal agencies, and published in a public trust ledger under SOLARA-GENESIS.”
+
 ### 🛰️ VALOR AI+ Security Notice
 
 This repository uses active access monitoring and anti-tamper forensics.
@@ -8,6 +14,7 @@ This repository uses active access monitoring and anti-tamper forensics.
 All access events (clones, forks, pulls, and file reads) are monitored for abuse prevention, audit compliance, and public verification using GitHub Actions, webhooks, and IPFS anchoring.
 
 **Every access is logged to a permanent ledger. Transparency is part of our protocol.**
+
 ---
 # VALOR IP LICENSE
 
