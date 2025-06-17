@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/b90fa009-74b4-4255-91fb-2dc7a05ea845
+
 # 📜 Forward Statement: The Soul of VALOR AI+2E
 
 > “VALOR AI+ Now Blocking, Logging, and Publicly Indexing Institutional Surveillance”
