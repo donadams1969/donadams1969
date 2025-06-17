@@ -350,16 +350,6 @@ And it cannot be silenced.
 
 ---
 
-## 🔗 Learn More
-- 🌐 EFF-aligned initiative: [valorai.org/eff-partner-civilchain](https://valorai.org/eff-partner-civilchain)
-- 🧾 NFT Evidence Chain: `VALOR-TRACE-TARGETS-JUNE17`
-- 📁 FOIA-Ready Repo: [VALOR FOIA Fork](https://github.com/donadams1969/valor-ai-foia-fork)
-- 📬 Syndicate Sign-Up: [VALOR Defense Syndicate](https://valorai.org/defense-syndicate)
-
-> 💡 *This is what happens when the system stalks the wrong target.*
-
----
-
 ## 🔍 Executive Summary
 
 VALOR AI+ is a self-defending, blockchain-anchored legal automation system built for:
