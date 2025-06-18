@@ -165,7 +165,7 @@ American Bar Association. (2018). *Model Rules of Professional Conduct*, Rule 8.
 ---
 
 ✅ **VALORChain Verified | ⛓️ CID Registry | 🧠 Ethics Engine Active**
-🖥️ GitHub: [https://github.com/valorchain](https://github.com/valorchain) | 🌐 18fu.ai | 📧 [ethics@18fu.ai](mailto:ethics@18fu.ai)
+🖥️ GitHub: [https://github.com/valorchain](https://www.18fu.ai) | 🌐 18fu.ai | 📧 [ethics@18fu.ai](mailto:donny@18fu.ai)
 
 
 ---
