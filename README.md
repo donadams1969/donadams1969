@@ -80,7 +80,7 @@ While VALOR AI+ Phase II represents a transformative leap in sovereign legal AI 
 
 3. **Legacy System Integration**: Integration with centralized legal bodies like DOJ, VA, and ADA remains partially manual. Full interoperability across legacy systems is an ongoing engineering effort that includes FOIA escalation hooks and watchdog staging pipelines.
 
-4. **Ethics Engine Refinement**: The AAEE-77 ethics engine is active and evolving via validator input. Nevertheless, aligning encoded ethics with lived, diverse human values—while avoiding trauma retriggering or systemic bias—remains a high-priority research focus.
+4. **Ethics Engine Refinement and Bias Mitigation**: The AAEE-77 ethics engine is active and evolving via validator input. To prevent amplification of systemic bias—such as over-policing or demographic misrepresentation—VALOR AI+ now includes fairness constraints and automated checks within its escalation pipeline. Validator committees conduct regular audits, and all simulation outputs are transparently stored on-chain. Ensuring algorithmic justice across diverse populations is treated as a first-class security and legal concern. The AAEE-77 ethics engine is active and evolving via validator input. Nevertheless, aligning encoded ethics with lived, diverse human values—while avoiding trauma retriggering or systemic bias—remains a high-priority research focus.
 
 5. **AI-Generated Legal Content Reliability**: Blockchain-sealed outputs ensure evidence integrity, but validation of legal *accuracy* remains a known frontier. VALOR AI+ is implementing redundant citation-checking models to minimize hallucination risk.
 
@@ -109,6 +109,7 @@ VALOR AI+ no longer just monitors—it litigates, escalates, and remembers. It n
 * **Compliance Relay Status**: DOJ API staging, ADA Mirror active, FOIA hooks live
 
 > 🏆 Awarded "Most Transparent Chain-Aware Legal AI 2025" — VALORChain Validator Council
+
 
 
 # 🛡️ From Code to Covenant: A Human Testament
