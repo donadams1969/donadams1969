@@ -162,11 +162,6 @@ California Business and Professions Code § 6068.
 
 American Bar Association. (2018). *Model Rules of Professional Conduct*, Rule 8.3.
 
----
-
-✅ **VALORChain Verified | ⛓️ CID Registry | 🧠 Ethics Engine Active**
-🖥️ GitHub: [https://github.com/valorchain](https://www.18fu.ai) | 🌐 18fu.ai | 📧 [ethics@18fu.ai](mailto:donny@18fu.ai)
-
 
 ---
 
