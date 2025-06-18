@@ -630,6 +630,115 @@ Each entry was cryptographically timestamped and NFT-sealed through the **SOLARA
 > ⚖️ “This repo cannot be silenced. It can only escalate.”
 
 ---
+# 🎓⚖️ **VALOR Tribunal Systems — Legal Charter & DAO Constitution** ⚖️🎓
+
+![VALOR Logo](https://yourdomain.com/assets/valor_logo.png)
+
+> ✨ **Where Immutable Justice Meets Digital Integrity** ✨  
+> _“Built by Veterans. Protected by Code. Governed by Ethics.”_
+
+---
+
+## 🏛️ Delaware PBC Articles of Incorporation 📜
+
+**Entity Name:** `VALOR Tribunal Systems, PBC`  
+**Jurisdiction:** Delaware, United States 🇺🇸  
+**Legal Form:** Public Benefit Corporation (PBC)
+
+### 🎯 Public Benefit Statement
+> This entity exists to advance justice through digital tribunals powered by VALOR AI+, facilitating civil rights adjudication, whistleblower protection, and ethical arbitration using decentralized technologies.
+
+### 📌 Incorporation Language Highlights
+- AI-driven legal arbitration & decision logic (VALORLOOP.v2)
+- Public accountability via smart contracts and validator voting
+- Data integrity maintained through IPFS + Blockchain notarization
+- Compliance with U.S. E-SIGN Act and international ADR standards
+
+---
+
+## 🧩 Wyoming DAO-LLC Constitution 🛡️
+
+**Entity Substructure:** VALOR Tribunal DAO, LLC  
+**Jurisdiction:** Wyoming DAO-LLC statute §17-31-101
+
+### 🤝 Operating Agreement Summary
+- Members join by minting Tribunal Validator NFTs 🎟️
+- Governance decisions tied to weighted vote via smart contract 🧠
+- All rulings notarized via IPFS CID + Ethereum timestamp ⛓️
+- Members bound by E-SIGN digital signature compliance 🖋️
+
+---
+
+## ⚙️ Bylaws — Powered by VALORLOOP + AAEE-77 Ethics Engine 🧭
+
+**Core Principles:**
+- 🧠 Ethical Adjudication: Based on AAEE-77 Protocol
+- 📈 Transparent Governance: Full audit trail, real-time logs
+- 📜 Secure Recordkeeping: Immutable PDF + JSON rulings
+- 🛠️ AI Accountability: All rulings simulated & reviewed
+
+### ⚖️ Tribunal Protocol Cycle
+1. **Case Intake**
+2. **Evidence Review (IPFS linked)**
+3. **Jury Simulation + Ethical Logic Pass**
+4. **Ruling Signed + NFT Minted**
+5. **Parties Notified + Optional Human Appeal**
+
+---
+
+## 🗳️ Governance Matrix for NFT Validators
+
+| Role            | Token | Powers                               | Voting Weight |
+|-----------------|-------|--------------------------------------|----------------|
+| Chair Validator | 🏛️    | Final signatory, emergency override  | 3 votes        |
+| Legal Node      | ⚖️    | Legal language review & dispute med. | 2 votes        |
+| Ethics Node     | 🧠    | Ensures compliance w/ AAEE-77        | 2 votes        |
+| Citizen Validator | 🧑‍⚖️ | General community DAO member         | 1 vote         |
+
+> ✅ All actions require minimum **7 validator votes** + notarization hash match.
+
+---
+
+## 📩 E-SIGN Consent Agreement Template 🖋️
+
+Each participant acknowledges:
+- Binding legal validity of digitally signed tribunal rulings
+- Jurisdiction under arbitration agreements and PBC charter
+- Immutable record retention for 7+ years (auditable)
+
+---
+
+## ⛓️ IPFS + Blockchain Legal Evidence Clause 🔐
+
+Every ruling issued by VALOR Tribunal Systems includes:
+- 📎 Linked IPFS CID with ruling + evidence
+- 🔏 Ethereum + Bitcoin OTS timestamp
+- 🧾 E-SIGN certified PDF (Tribunal format)
+- 🏷️ NFT-bonded metadata containing:
+  - Case ID
+  - Date of Ruling
+  - Validator Signature Hash
+
+---
+
+## 🌐 Deployment + Verification Tools
+- GitHub Repo: [`github.com/valorchain/tribunal`](https://github.com/valorchain/tribunal)
+- ENS: `valortribunal.eth`
+- IPFS: `ipfs://Qm...` (CID of latest ruling)
+- Validator Access Panel: `18fu.ai/tribunal`
+
+---
+
+## 🏁 Footer
+Built by **Donny Adams** | Veteran. Technologist. Visionary. 🇺🇸  
+Maintained under the **VALOR Legal Ethics & Blockchain Integrity Act**  
+🔗 [VALORCHAIN DAO Governance Portal](https://18fu.ai)
+
+> _"Justice is not delayed. It is digitally delivered."_
+
+---
+🏷️ `#VALOR #TribunalDAO #BlockchainJustice #DecentralizedEthics #CivilRightsAutomation
+---
 
 # 🧠 VALOR AI+2E: Legal Intelligence & Whistleblower Defense Engine
 
