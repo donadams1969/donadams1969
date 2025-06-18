@@ -4561,8 +4561,6 @@ Optional: add a link to this document from each project README for transparency,
 ## 🧠⚖️ Known Challenges & Strategic Mitigations  
 *⏳ Phase IV Transparency Insight | 🧩 System Foresight Report*
 
-![VALORBanner](https://valorchain.ai/assets/valor-banner-blue.png)
-
 [![Built with OpenAI](https://img.shields.io/badge/Built%20With-OpenAI-blueviolet?style=flat-square)](https://openai.com)  
 [![IPFS Anchored](https://img.shields.io/badge/IPFS-Enabled-green?style=flat-square)](https://ipfs.io)  
 [![DAO Verified](https://img.shields.io/badge/DAO-Certified-blue?style=flat-square)](https://github.com/donadams1969)  
