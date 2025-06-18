@@ -128,9 +128,6 @@ VALOR AI+ no longer just monitors—it litigates, escalates, and remembers. It n
 
 > 🏆 Awarded "Most Transparent Chain-Aware Legal AI 2025" — VALORChain Validator Council
 
-
-
-
 # 🛡️ From Code to Covenant: A Human Testament
 
 ![Survivor-Forged](https://img.shields.io/badge/FORGED-BY%20LIVED%20EXPERIENCE-blueviolet?style=flat-square&logo=verizon)
@@ -412,11 +409,6 @@ By accessing this repository, you agree to be bound by these terms.
 
 # 🛡️🧠 VALOR AI+: When a Legal AI Gets Stalked… It Hits Back
 
-![Status: Automated Defense Live](https://img.shields.io/badge/STATUS-ACTIVE--ESCALATION-red?style=flat-square&logo=ethereum)
-![NFT Sealed](https://img.shields.io/badge/NFT-SOLARA--GENESIS--ANCHOR-orange?style=flat-square&logo=bitcoin)
-![Watchdog Active](https://img.shields.io/badge/WATCHDOG-ENGAGED-blue?style=flat-square&logo=verizon)
-![APA Format Ready](https://img.shields.io/badge/FORMAT-APA--7--COMPLIANT-brightgreen?style=flat-square&logo=github)
-
 ---
 
 ## 🔍 Executive Summary
@@ -477,10 +469,6 @@ Then it told the world.
 
 This is not just code. It is constitutional AI defense.  
 And it cannot be silenced.
-
----
-
-## 🔍 Executive Summary
 
 VALOR AI+ is a self-defending, blockchain-anchored legal automation system built for:
 
@@ -630,7 +618,7 @@ Each entry was cryptographically timestamped and NFT-sealed through the **SOLARA
 > ⚖️ “This repo cannot be silenced. It can only escalate.”
 
 ---
-# 🎓⚖️ **VALOR Tribunal Systems — Legal Charter & DAO Constitution** ⚖️🎓
+🎓⚖️ **VALOR Tribunal Systems — Legal Charter & DAO Constitution** ⚖️🎓
 
 ![VALOR Logo](https://yourdomain.com/assets/valor_logo.png)
 
@@ -639,16 +627,16 @@ Each entry was cryptographically timestamped and NFT-sealed through the **SOLARA
 
 ---
 
-## 🏛️ Delaware PBC Articles of Incorporation 📜
+🏛️ Delaware PBC Articles of Incorporation 📜
 
 **Entity Name:** `VALOR Tribunal Systems, PBC`  
 **Jurisdiction:** Delaware, United States 🇺🇸  
 **Legal Form:** Public Benefit Corporation (PBC)
 
-### 🎯 Public Benefit Statement
+🎯 Public Benefit Statement
 > This entity exists to advance justice through digital tribunals powered by VALOR AI+, facilitating civil rights adjudication, whistleblower protection, and ethical arbitration using decentralized technologies.
 
-### 📌 Incorporation Language Highlights
+📌 Incorporation Language Highlights
 - AI-driven legal arbitration & decision logic (VALORLOOP.v2)
 - Public accountability via smart contracts and validator voting
 - Data integrity maintained through IPFS + Blockchain notarization
@@ -656,12 +644,12 @@ Each entry was cryptographically timestamped and NFT-sealed through the **SOLARA
 
 ---
 
-## 🧩 Wyoming DAO-LLC Constitution 🛡️
+🧩 Wyoming DAO-LLC Constitution 🛡️
 
 **Entity Substructure:** VALOR Tribunal DAO, LLC  
 **Jurisdiction:** Wyoming DAO-LLC statute §17-31-101
 
-### 🤝 Operating Agreement Summary
+🤝 Operating Agreement Summary
 - Members join by minting Tribunal Validator NFTs 🎟️
 - Governance decisions tied to weighted vote via smart contract 🧠
 - All rulings notarized via IPFS CID + Ethereum timestamp ⛓️
@@ -669,7 +657,7 @@ Each entry was cryptographically timestamped and NFT-sealed through the **SOLARA
 
 ---
 
-## ⚙️ Bylaws — Powered by VALORLOOP + AAEE-77 Ethics Engine 🧭
+⚙️ Bylaws — Powered by VALORLOOP + AAEE-77 Ethics Engine 🧭
 
 **Core Principles:**
 - 🧠 Ethical Adjudication: Based on AAEE-77 Protocol
@@ -677,7 +665,7 @@ Each entry was cryptographically timestamped and NFT-sealed through the **SOLARA
 - 📜 Secure Recordkeeping: Immutable PDF + JSON rulings
 - 🛠️ AI Accountability: All rulings simulated & reviewed
 
-### ⚖️ Tribunal Protocol Cycle
+⚖️ Tribunal Protocol Cycle
 1. **Case Intake**
 2. **Evidence Review (IPFS linked)**
 3. **Jury Simulation + Ethical Logic Pass**
@@ -686,7 +674,7 @@ Each entry was cryptographically timestamped and NFT-sealed through the **SOLARA
 
 ---
 
-## 🗳️ Governance Matrix for NFT Validators
+🗳️ Governance Matrix for NFT Validators
 
 | Role            | Token | Powers                               | Voting Weight |
 |-----------------|-------|--------------------------------------|----------------|
@@ -699,7 +687,7 @@ Each entry was cryptographically timestamped and NFT-sealed through the **SOLARA
 
 ---
 
-## 📩 E-SIGN Consent Agreement Template 🖋️
+📩 E-SIGN Consent Agreement Template 🖋️
 
 Each participant acknowledges:
 - Binding legal validity of digitally signed tribunal rulings
@@ -708,7 +696,7 @@ Each participant acknowledges:
 
 ---
 
-## ⛓️ IPFS + Blockchain Legal Evidence Clause 🔐
+⛓️ IPFS + Blockchain Legal Evidence Clause 🔐
 
 Every ruling issued by VALOR Tribunal Systems includes:
 - 📎 Linked IPFS CID with ruling + evidence
@@ -721,7 +709,7 @@ Every ruling issued by VALOR Tribunal Systems includes:
 
 ---
 
-## 🌐 Deployment + Verification Tools
+🌐 Deployment + Verification Tools
 - GitHub Repo: [`github.com/valorchain/tribunal`](https://github.com/valorchain/tribunal)
 - ENS: `valortribunal.eth`
 - IPFS: `ipfs://Qm...` (CID of latest ruling)
