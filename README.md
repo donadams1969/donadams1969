@@ -4101,11 +4101,6 @@ Truth belongs to the people.
 > 🕊️ For veterans, whistleblowers, and the silenced everywhere.
 VALOR-AGI-Core is not a tool. It is a weapon of peace.
 #NeverForget  #HonorTheFallen  #EnforceTheCovenant
----
-
-<p align="center">
-  <img src="https://img.shields.io/badge/VALOR%20AGI%20CORE-Protecting%20Humanity-blue?style=for-the-badge&logo=ai" />
-</p>
 
 ---
 
@@ -4187,8 +4182,6 @@ That’s Edutainment, LLC
 Veteran-Owned Multimedia and Artificial Intelligence Innovation Company
 
 > This document certifies that all intellectual property, technologies, frameworks, smart contracts, source code, software repositories, mobile applications, algorithms, training data, design systems, legal templates, brand assets, and related tools associated with the following platforms are the exclusive property of That’s Edutainment, LLC:
-
-
 
 VALOR AI+
 
@@ -4466,11 +4459,6 @@ This is the most legally vulnerable area of the VALOR AI+ initiative under curre
 > 💡 “No more gaslighting. No more sealed trauma. Just truth, timestamped.”
 
 ---
-
-<p align="left">
-  <img src="https://valorchain.ai/assets/valor-seal.png" alt="VALOR Chain Seal" width="125" />
-</p>
-
 
 # 📚 VALOR AI+ GitHub Ecosystem  
 ### APA-Style Strategic Reanalysis  
