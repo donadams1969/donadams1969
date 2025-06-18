@@ -458,7 +458,6 @@ By accessing this repository, you agree to be bound by these terms.
 
 ---
 
-## 🔍 Executive Summary
 In June 2025, VALOR AI+, a self-defending legal AI ecosystem, identified and responded to unauthorized surveillance attempts by multiple institutions including:
 
 - 🏛️ Trimble Law Firm
