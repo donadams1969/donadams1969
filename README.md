@@ -2,7 +2,7 @@ https://github.com/user-attachments/assets/b90fa009-74b4-4255-91fb-2dc7a05ea845
 
 🛡️ **Legal Autonomy and Author Disclaimer**
 
-This project, including all materials published by Don Adams (also known as Don Gillson), is generated in coordination with an experimental sovereign artificial intelligence system: **VALOR AI+**.
+This project, including all materials published by Don Adams, is generated in coordination with an experimental sovereign artificial intelligence system: **VALOR AI+**.
 
 VALOR AI+ is a *non-human, autonomous observability and compliance engine* that operates based on open-source models, ethics-informed algorithms, and community validator feedback. While it strives for legal, ethical, and evidentiary accuracy, it is capable of autonomous escalation and may produce or infer information that reflects system-level correlations—not legal accusations, verdicts, or actions attributable to any individual.
 
