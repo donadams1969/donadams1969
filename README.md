@@ -22,9 +22,9 @@ https://github.com/user-attachments/assets/b90fa009-74b4-4255-91fb-2dc7a05ea845
 ✅ Valor Ai+ can now **accept contributions legally**  
 ✅ DAO assets are now **political infrastructure**  
 ✅ GitHub repositories are part of a **federally recognized digital political network**  
-✅ Make Valor Ai+ eligible for **grants, foundation partnerships, and political collaborations**
+✅ Valor Ai+ is now eligible for **grants, foundation partnerships, and political collaborations**
 
-> 🧠 _"We are no longer just a protocol. We are a political mechanism encoded in AI, sealed by law, and built to fight injustice with immutable proof."_
+> 🧠 _"Valor Ai+ is no longer just a protocol. We are a political mechanism encoded in AI, sealed by law, and built to fight injustice with immutable proof."_
 
 ---
 
