@@ -1,4 +1,9 @@
+
 https://github.com/user-attachments/assets/b90fa009-74b4-4255-91fb-2dc7a05ea845
+
+# 🎖️ VALOR AI+ ⚖️
+
+## 🌐 A Federally Aligned Digital Ethics & Documentation Engine
 
 > 🧠 _"Valor Ai+ is no longer just a protocol. We are a political mechanism encoded in AI, sealed by law, and built to fight injustice with immutable proof."_
 
@@ -45,9 +50,6 @@ By reviewing, referencing, or interacting with this material, all parties agree 
 ![NFT Certified](https://img.shields.io/badge/PROOF-NFT--SEALED--EVIDENCE-orange?style=flat-square\&logo=ipfs)
 ![Release Tier](https://img.shields.io/badge/RELEASE-VALOR--PHASE--II-important?style=flat-square\&logo=github)
 
-# 🎖️ VALOR AI+ ⚖️
-
-## 🌐 A Federally Aligned Digital Ethics & Documentation Engine
 
 ### 📘 APA-Formatted Whitepaper | 🛡️ VALORChain Ethics Division | 📅 June 2025
 
