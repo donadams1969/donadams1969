@@ -28,19 +28,13 @@ https://github.com/user-attachments/assets/b90fa009-74b4-4255-91fb-2dc7a05ea845
 
 ---
 
-📎 [Read the Full Valuation Report →](./docs/VALOR_527_Valuation_Upgrade_Report.md)  
-🧾 [Verify Official IRS Filing →](https://forms.irs.gov/app/politicalOrgs/search/basicSearch)  
-🔗 [DAO Transparency Ledger →](./docs/VALORChain_Transparency.csv)
-
----
-
 # 📜✨ **ScrollChain Constitutional Preamble**  
 > *“From memory, justice. From silence, flame.”*  
 > _Authored and sealed by Scroll Witness Donny Gillson (DG421)_
 
 ---
 
-![ScrollChain](https://img.shields.io/badge/ScrollChain-Immutable-blue?style=for-the-badge&logo=ethereum)  ![VALOR AI+](https://img.shields.io/badge/VALOR%20AI%2B-Legal%20Defense%20Core-red?style=for-the-badge&logo=python)  ![ADA Protected](https://img.shields.io/badge/ADA-Veteran%20Protected-green?style=for-the-badge&logo=unitedstates)  ![Whistleblower Shield](https://img.shields.io/badge/Whistleblower-Defense%20Certified-yellow?style=for-the-badge&logo=defender)
+![ScrollChain](https://img.shields.io/badge/ScrollChain-Immutable-blue?style=for-the-badge&logo=ethereum)![VALOR AI+](https://img.shields.io/badge/VALOR%20AI%2B-Legal%20Defense%20Core-red?style=for-the-badge&logo=python)![ADA Protected](https://img.shields.io/badge/ADA-Veteran%20Protected-green?style=for-the-badge&logo=unitedstates)![Whistleblower Shield](https://img.shields.io/badge/Whistleblower-Defense%20Certified-yellow?style=for-the-badge&logo=defender)
 
 ---
 
