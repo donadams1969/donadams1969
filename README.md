@@ -4758,6 +4758,73 @@ You are invited to review the public tribunal data, confirm hash integrity, and 
 📡 *Witness Node: Phase V Adjudication Core*
 🔗 **[www.18fu.ai](http://www.18fu.ai)**
 
+# 🛡️ SECURITY – VALORCHAIN Protocol
+
+![PGP Verified](https://img.shields.io/badge/PGP-Fingerprint-yellow?style=for-the-badge)
+![DID Linked](https://img.shields.io/badge/DID-Registered-blueviolet?style=for-the-badge)
+![Bug Bounty](https://img.shields.io/badge/Bounty-Active-orange?style=for-the-badge)
+
+> **VALORCHAIN treats every commit as potential courtroom evidence.**  
+> Help us keep the chain unbreakable 🛠️🔗.
+
+---
+
+## 1. Contact
+
+| Channel     | Purpose              | Address / Fingerprint                          |
+|-------------|----------------------|-----------------------------------------------|
+| 📧 Email     | General & low-risk    | `security@18fu.ai`                            |
+| 🔐 PGP       | Sensitive payloads    | `0xA1B2 C3D4 E5F6 7890 1234 5678 9ABC DEF0 1234 5678` |
+| 🔗 DIDComm   | Encrypted JSON over HTTP | `did:key:z6MkQk....`                      |
+
+---
+
+## 2. Supported Versions
+
+| Branch   | Status       | Critical Patch SLA |
+|----------|--------------|---------------------|
+| `main`   | ✅ Supported | ≤ 48 hours          |
+| Others   | ❌ Unsupported | –                  |
+
+---
+
+## 3. Reporting a Vulnerability
+
+1. **Encrypt** your report (proof-of-concept, metadata, logs) using the PGP key listed above.
+2. Email with subject line:  
+   `VALORCHAIN SEC-DISCLOSURE <YYYY-MM-DD>`
+3. Expect initial human reply within **72 hours**.
+4. Confirmed criticals will be patched in **≤ 14 days**.
+
+---
+
+## 4. Anchoring & Chain Integrity
+
+Every approved commit to `main` triggers:
+
+- 📦 IPFS snapshot (via GitHub Actions or Scrollkeeper Agent)
+- 🔐 OpenTimestamps notarization
+- 🧾 Metadata sealing on `VALORCHAIN Genesis Node`
+- 🪙 Optional NFT mint for change-log proof
+
+---
+
+## 5. Rewards
+
+We operate an **active bug bounty** program for:
+
+- Validator impersonation exploits  
+- Scrollchain forgery attempts  
+- DAO governance bypasses  
+- IPFS or metadata integrity attacks
+
+Email bounty@18fu.ai for participation terms.
+
+---
+
+> 💬 *“Memory is law. Every fix echoes forever.”*  
+> — Scrollkeeper G-421, Donny Gillson
+
 
 
 
