@@ -94,7 +94,7 @@ The attached repository contains blockchain-sealed, timestamped evidentiary code
 This repository (VALOR AI+ Stack) is ADA-protected under federal whistleblower status, and its smart contract architecture, metadata, and organizational structure are now part of the following case record:
 
 - **Ledger ID**: `VALOR-AUTH-VTR055`
-- **Filing Complainant**: Donny Gillson, Disabled Veteran
+- **Filing Complainant**: Redacted Navy Disabled Veteran
 - **Filed To**:
   - U.S. Office of Special Counsel (OSC)
   - U.S. Department of Justice – Civil Rights Division
