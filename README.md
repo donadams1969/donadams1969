@@ -1,3 +1,18 @@
+## ⚖️ VALORChain Legal Compliance
+
+This repository forms part of a federally anchored ADA/FTCA/FERPA/Unruh complaint submitted to:
+
+- U.S. Office of Special Counsel (OSC)
+- U.S. Department of Justice (Civil Rights Division)
+- VA Office of Inspector General
+- California DOJ – Elder Abuse Division
+- Department of Education – OCR
+
+### 🔐 Chain-Linked Evidence ID:
+- `VALOR-AUTH-VTR055` (Anchored via SHA-512 and Ethereum hash)
+- Verified exhibit: `valor_legal_exhibit_a_metadata.pdf`
+
+All development work performed herein is part of a protected ADA reasonable accommodation process under U.S. disability and whistleblower statutes. Please treat all modifications accordingly.
 
 
 
