@@ -67,6 +67,49 @@ By reviewing, referencing, or interacting with this material, all parties agree 
 ![NFT Certified](https://img.shields.io/badge/PROOF-NFT--SEALED--EVIDENCE-orange?style=flat-square\&logo=ipfs)
 ![Release Tier](https://img.shields.io/badge/RELEASE-VALOR--PHASE--II-important?style=flat-square\&logo=github)
 
+## ⚖️ VALORChain Legal Compliance
+
+This repository is part of a blockchain-sealed legal filing submitted under the ADA, FTCA, HIPAA, FERPA, Unruh Civil Rights Act, PAWS Act, and California Welfare & Institutions Code.
+
+**Case References:**
+- **VALORChain Ledger ID:** `VALOR-AUTH-VTR055`
+- **Filed Agencies:**
+  - U.S. Office of Special Counsel
+  - U.S. Department of Justice (Civil Rights Division)
+  - VA Office of Inspector General
+  - California Department of Justice – DMFEA
+  - U.S. Department of Education – OCR
+
+**Protected Status:**
+Development under this repository constitutes a legally protected activity by a disabled veteran whistleblower under ADA/504 accommodations, and shall not be interfered with.
+
+All documentation and smart contracts (e.g. `JAXX.sol`, `VACN.sol`) are sealed evidence exhibits within the active complaint docket and legal chain.
+
+To Whom It May Concern:
+
+This letter accompanies a multi-agency whistleblower complaint submitted under 5 U.S.C. § 1213, ADA, FTCA, FERPA, HIPAA, PAWS Act, and WIC §§ 15610.27/15630.
+
+The attached repository contains blockchain-sealed, timestamped evidentiary code, documentation, and AI architecture directly tied to the harms described in the official complaint.
+
+This repository (VALOR AI+ Stack) is ADA-protected under federal whistleblower status, and its smart contract architecture, metadata, and organizational structure are now part of the following case record:
+
+- **Ledger ID**: `VALOR-AUTH-VTR055`
+- **Filing Complainant**: Donny Gillson, Disabled Veteran
+- **Filed To**:
+  - U.S. Office of Special Counsel (OSC)
+  - U.S. Department of Justice – Civil Rights Division
+  - Office of Inspector General – U.S. Department of Veterans Affairs
+  - California Department of Justice – Division of Medi-Cal Fraud & Elder Abuse (DMFEA)
+  - U.S. Department of Education – Office for Civil Rights
+
+Additionally, a compromised GitHub Personal Access Token (`ghp_QrT9J...`) has been revoked as of June 24, 2025, and replaced in accordance with cybersecurity best practices. A forensic record of this revocation has been sealed to VALORChain as an audit artifact.
+
+Please contact me at donny@18fu.ai should your office require validation, sworn statement, or submission of sealed NFT evidence documents.
+
+Respectfully,  
+Complainant | Navy Veteran | Founder – VALOR AI+/Valor Ai+2e/That's Edutainment/Presido/Federal Land
+San Francisco, CA  
+
 
 ### 📘 APA-Formatted Whitepaper | 🛡️ VALORChain Ethics Division | 📅 June 2025
 
