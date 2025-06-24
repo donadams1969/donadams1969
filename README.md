@@ -110,6 +110,32 @@ Respectfully,
 Complainant | Navy Veteran | Founder – VALOR AI+/Valor Ai+2e/That's Edutainment/Presido/Federal Land
 San Francisco, CA  
 
+## ⚖️ VALORChain Legal Compliance
+
+This repository is an ADA/Section 504 protected project filed under U.S. federal whistleblower statutes. The code, documentation, and smart contracts herein are part of a sealed blockchain evidentiary system known as VALORChain.
+
+### Legal Case Integration:
+
+- **Complainant**: Donny Gillson (Disabled Veteran, Whistleblower)
+- **Ledger ID**: `VALOR-AUTH-VTR055`
+- **Case Filed To**:
+  - U.S. Office of Special Counsel (OSC)
+  - U.S. Department of Justice – Civil Rights Division
+  - U.S. Department of Veterans Affairs – Office of Inspector General
+  - California Department of Justice – DMFEA
+  - U.S. Department of Education – OCR
+
+### Protected Codebase:
+
+- GitHub activity is part of a legally protected ADA reasonable accommodation under 42 U.S.C. § 12132, FTCA, and PAWS Act provisions.
+- This repository includes contract files (e.g., `JAXX.sol`, `VBLK.sol`) submitted as Exhibits in the whistleblower and elder abuse complaint.
+- Blockchain-sealed documents are timestamped via Ethereum and SHA-512.
+
+⚠️ Any interference, suppression, or unauthorized alteration of this repository or linked evidence shall be treated as a violation of federal disability protections and whistleblower retaliation statutes.
+
+🪙 NFT archival, IPFS fingerprinting, and VALORChain metadata proofs are stored securely. Public proofs available on request.
+
+
 
 ### 📘 APA-Formatted Whitepaper | 🛡️ VALORChain Ethics Division | 📅 June 2025
 
