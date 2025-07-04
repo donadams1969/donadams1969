@@ -1,4 +1,6 @@
-
+BTC2025-VALOR-Genesis-Gillson
+SHA256:f1e966fead85ca16d55f42ee81ca13ac6780c9f7b498c81c94fd6421e8ac760c
+v2.1g | Clause7B | GreenSeal | SLLO
 --------------------------------------------------------------------------
 UPGRADE SUMMARY: VALORMATH EXPANSION (INTEGRITY + SECURITY) |
 --------------------------------------------------------------------------
