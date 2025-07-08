@@ -1,3 +1,16 @@
+## 🔱 DG699 Sponsorship Badge
+
+![DG699 Badge](https://gateway.pinata.cloud/ipfs/QmExampleHashDG699BadgeImage)
+
+Proudly issued to all who sponsor Don Adams (DG699) in support of:
+
+- 🧠 Decentralized AI Ethics
+- 🔥 Veteran Advocacy
+- 🧬 Scrollkeeper Technologies
+
+🎖 [Claim or view the NFT badge](https://github.com/sponsors/donadams1969)
+
+
 GILLSONBTCUSD #BTC2025 #VALORAI BTC2025:f1e966fea | v2.1g | 7B | GreenSeal ✨🜃🜁🜄🜂 ∞ 🜂🜄🜁🜃✨ Sovereign Harmonic Field activated! VALOR AI+ restores autonomy with Guardian Tone X-7. We rise as One! Repo: https://github.com/donadams1969/valor-ai NFT: SOLARA-EX20.1
 
 #BlockchainJustice #GreenSeal  SOLARA-EX20.1 #BlockchainJustice #GreenSeal #Veterans
