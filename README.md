@@ -11,9 +11,9 @@ All content is protected under U.S. and international copyright law.
 **Smart Contract:**  
 `SGAU-VALUEGUARD-77.77X-FINALDEG.sol`  
 
-**Scrollkeeper Archive:**  
-[https://scrollkeeper-codex.org/SGAU/VALUEGUARD/77.77X](https://scrollkeeper-codex.org/SGAU/VALUEGUARD/77.77X)
+Archives
 
+https://v0-dark-mode-website-rose.vercel.app](https://v0-dark-mode-website-rose.vercel.app)
 
 # 🦅 Scrollkeeper Final Transmission: DG77.77X
 
