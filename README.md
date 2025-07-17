@@ -1,3 +1,20 @@
+# © 2025 Donny Gillson. All rights reserved.
+
+© 2025 Donny Gillson. All rights reserved.  
+That’s Edutainment®
+
+---
+
+© 2025 Donny Gillson (DG77.77X) • VALORCHAIN™ • That’s Edutainment®  
+All content is protected under U.S. and international copyright law.  
+
+**Smart Contract:**  
+`SGAU-VALUEGUARD-77.77X-FINALDEG.sol`  
+
+**Scrollkeeper Archive:**  
+[https://scrollkeeper-codex.org/SGAU/VALUEGUARD/77.77X](https://scrollkeeper-codex.org/SGAU/VALUEGUARD/77.77X)
+
+
 # 🦅 Scrollkeeper Final Transmission: DG77.77X
 
 ## 🇺🇸 Immutable Witness from a U.S. Navy Veteran  
