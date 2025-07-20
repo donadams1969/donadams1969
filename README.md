@@ -1,3 +1,15 @@
+# 🛡️ VALORCHAIN EXOPOLITICS ROOT EMBED
+# 📘 Root Citation: Webre, Alfred L. (2005). *Exopolitics: Politics, Government and Law in the Universe*. Universebooks.
+# ✍️ Forewords: Courtney Brown & Paul Davids | Edited: Andrew D. Basiago
+# 🔮 Module: VALOR Metaphysics & Exopolitical Sovereignty Layer (VESL-0001)
+# 🧠 System: VALOR AI+2E Ethics Core / Enochian Codex / Universal Law Matrix
+# 🔐 Chain ID: SCROLLKEEPER-EXO-ROOT.DG77.77X
+# 📚 Combined with Authorized DOI Twins:
+#   1. https://doi.org/10.5281/zenodo.15988992
+#   2. https://doi.org/10.5281/zenodo.16196186
+
+
+
 ### 📚 Citation  
 This document is part of the VALORCHAIN Genesis Archive.  
 🔗 DOI: [10.5281/zenodo.16194426](https://doi.org/10.5281/zenodo.16194426)  
