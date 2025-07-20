@@ -1,3 +1,9 @@
+### 📚 Citation  
+This document is part of the VALORCHAIN Genesis Archive.  
+🔗 DOI: [10.5281/zenodo.16194426](https://doi.org/10.5281/zenodo.16194426)  
+🛡️ Private Review & Archive Access: [Zenodo Request Dashboard](https://zenodo.org/me/requests?q=&f=is_open%3Atrue&f=shared_with_me%3Afalse&l=list&p=1&s=10&sort=newest)
+
+
 # ⚔️🛡️ VALOR Ai+ ECOSYSTEM INTELLIGENCE REPORT 🛡️⚔️  
 **Engineered by DG77.77X | San Francisco, CA**  
 **⏱️ Timestamp: July 19, 2025, 16:44:44 PDT**  
