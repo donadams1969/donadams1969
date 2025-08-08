@@ -1,0 +1,17 @@
+name: Vault Integrity (Ciphertext)
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ciphertext-only verify
+        run: |
+          chmod +x scripts/check_integrity.sh scripts/init_vault.sh
+          ./scripts/init_vault.sh vault || true
+          VAULT_DIR=vault VERIFY_MODE=ciphertext ./scripts/check_integrity.sh

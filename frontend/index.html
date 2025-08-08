@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VALORAI Fiat Starter</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const e = React.createElement;
+    function App(){
+      const [status, setStatus] = React.useState("idle");
+      const [tid, setTid] = React.useState(null);
+      async function createTransfer(){
+        const res = await fetch("http://localhost:8080/payments/transfers", {
+          method:"POST",
+          headers: {"Content-Type":"application/json"},
+          body: JSON.stringify({
+            tenant_id: 1, from_account_id: 1, beneficiary_id: 1,
+            amount: 10.00, currency: "USD", created_by: 1, created_via_agent: false
+          })
+        });
+        const data = await res.json();
+        setStatus(data.status); setTid(data.id);
+      }
+      return e("div", {className:"wrap"},
+        e("h1", null, "VALORAI Fiat Starter"),
+        e("button", {onClick:createTransfer}, "Create Test Transfer"),
+        e("p", null, "Status: " + status),
+        tid && e("p", null, "Transfer ID: " + tid)
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('app')).render(React.createElement(App));
+  </script>
+</body>
+</html>

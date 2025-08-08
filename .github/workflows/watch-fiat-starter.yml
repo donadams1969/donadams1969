@@ -1,0 +1,38 @@
+name: mirror-integrity-fiat-starter
+on:
+  schedule: [{ cron: '17 5 * * *' }]
+  workflow_dispatch: {}
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      PRIMARY:  https://scrollkeeper-codex.org/downloads/valorai-fiat-starter.zip
+      FALLBACK: https://www.skrollkeeper.org/downloads/valorai-fiat-starter.zip
+      EXPECTED: d07e2c62cc7cb3ef3e0de2b2b6683c554be6feb6166e66d17bcada4701e21872
+    steps:
+      - name: Compare mirrors + verify expected SHA-256
+        shell: bash
+        run: |
+          set -euo pipefail
+          TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
+          curl -fsSL "$PRIMARY"  -o "$TMP/a.zip"
+          curl -fsSL "$FALLBACK" -o "$TMP/b.zip"
+          HA=$(sha256sum "$TMP/a.zip" | cut -d' ' -f1)
+          HB=$(sha256sum "$TMP/b.zip" | cut -d' ' -f1)
+          echo "primary:  $HA"
+          echo "fallback: $HB"
+          test "$HA" = "$HB" || { echo "DIVERGENCE"; exit 1; }
+          test "$HA" = "$EXPECTED" || { echo "UNEXPECTED HASH"; exit 1; }
+          echo "OK: mirrors match and hash == expected"
+      - name: Open issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: "Mirror integrity FAIL: valorai-fiat-starter.zip",
+              body: "Mirrors diverged or hash != expected. Investigate codex vs skroll."
+            });

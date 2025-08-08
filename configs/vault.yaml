@@ -1,0 +1,12 @@
+retention_days: 365
+hash_algorithm: sha256
+encryption:
+  enabled: true
+  algorithm: aes-256-gcm
+  kdf: pbkdf2
+  iter: 210000
+  env_pass: VAULT_PASSPHRASE
+  delete_plaintext_after_encrypt: true
+verify:
+  mode: auto   # auto|ciphertext|plaintext
+  require_key_for_plaintext: true

@@ -1,0 +1,49 @@
+name: draft-release-fiat-starter
+on:
+  push:
+    tags:
+      - 'fiat-starter-*'
+  workflow_dispatch: {}
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gather metadata
+        id: meta
+        run: |
+          F="downloads/valorai-fiat-starter.json"
+          SHA=$(jq -r .sha256 "$F")
+          SIZE=$(jq -r .size_bytes "$F")
+          M1=$(jq -r '.mirrors[0]' "$F")
+          M2=$(jq -r '.mirrors[1]' "$F")
+          echo "sha=$SHA"  >> $GITHUB_OUTPUT
+          echo "size=$SIZE" >> $GITHUB_OUTPUT
+          echo "m1=$M1"    >> $GITHUB_OUTPUT
+          echo "m2=$M2"    >> $GITHUB_OUTPUT
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          name: "VALORAI Fiat Starter"
+          tag_name: ${{ github.ref_name }}
+          body: |
+            **VALORAI Fiat Starter**
+
+            • **SHA-256:** `${{ steps.meta.outputs.sha }}`
+            • **Size:** ${{ steps.meta.outputs.size }} bytes
+
+            **Mirrors**
+            - Primary (codex): ${{ steps.meta.outputs.m1 }}
+            - Fallback (skroll): ${{ steps.meta.outputs.m2 }}
+
+            ```bash
+            curl -fsSL ${{ steps.meta.outputs.m1 }} -o a.zip
+            sha256sum a.zip
+            # expect: ${{ steps.meta.outputs.sha }}
+            ```
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
