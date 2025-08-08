@@ -20,7 +20,7 @@ import os, hashlib, urllib.request, requests, sys, logging
 SPK_DIR = os.environ.get("SPK_DIR", "kernels")
 os.makedirs(SPK_DIR, exist_ok=True)
 
-SPK_BASEURLS = (os.environ.get("SPK_BASEURL", "https://www.skrollkeeper.org/kernels")).split(",")
+SPK_BASEURLS = (os.environ.get("SPK_BASEURL", "https://skrollkeeper.org/kernels")).split(",")
 KERNELS = (os.environ.get("SPK_LIST") or "de440.bsp,naif0012.tls").split(",")
 AUDIT_LOG = os.environ.get("SPK_AUDIT_LOG", "kernels_audit.log")
 

@@ -5,7 +5,7 @@ check-kernels:
 	python scripts/kernels_bootstrap.py
 
 deploy-reports: fix-links
-	rsync -av reports/ user@www.skrollkeeper.org:/var/www/html/reports/
+	rsync -av reports/ user@skrollkeeper.org:/var/www/html/reports/
 
 patch-reports: fix-links
 	git diff -- reports/ > reports_patch.diff

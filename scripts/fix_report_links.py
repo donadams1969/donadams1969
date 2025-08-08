@@ -1,7 +1,7 @@
 import os, re, requests, sys, logging
 
 REPORTS_DIR = os.environ.get("REPORTS_DIR", "reports")
-BASEURL = os.environ.get("REPORTS_BASEURL", "https://www.skrollkeeper.org/reports")
+BASEURL = os.environ.get("REPORTS_BASEURL", "https://skrollkeeper.org/reports")
 AUDIT_LOG = os.environ.get("REPORTS_AUDIT_LOG", "reports_audit.log")
 SUPPORTED_FORMATS = [".png", ".jpg", ".svg", ".pdf", ".html"]  # Quantum-extended
 
