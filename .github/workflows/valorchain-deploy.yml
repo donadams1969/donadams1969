@@ -1,0 +1,50 @@
+name: VALORCHAIN Quantum Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly health check
+
+jobs:
+  kernel-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch/verify SPICE kernels
+        run: python scripts/kernels_bootstrap.py --dry-run  # Dry-run in CI for safety
+
+  rewrite-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix tribunal links
+        run: python scripts/fix_report_links.py
+      - name: Commit changes if any
+        run: |
+          git config --global user.name 'VALORCHAIN Bot'
+          git config --global user.email 'bot@valorchain.com'
+          git add reports/
+          git commit -m "Auto-webify reports" || echo "No changes"
+          git push
+
+  health-alert:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Weekly health check
+        run: make health-check
+      - name: Alert on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'VALORCHAIN Health Alert: Mirror or asset issues detected!'
+            })
