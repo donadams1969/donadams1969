@@ -1,6 +1,3 @@
-# Valor Ai+ — Proprietary | SPDX-License-Identifier: LicenseRef-VALOR-AI-Private
-# © 2025 That’s Edutainment LLC (est. 2021). © 2015–2025 32D LLC. © 1991–2025 Don Adams Productions.
-
 name: valorloop-mainnet
 on: { workflow_dispatch: {} }
 
