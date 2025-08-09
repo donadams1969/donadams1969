@@ -1,0 +1,13 @@
+{
+  "name": "Valor Ai+ Audit Credential",
+  "description": "Audit proof minted by Valor Ai+ for Scrollkeeper.",
+  "image": "ipfs://<image_cid>",
+  "external_url": "https://www.scrollkeeper-codex.org",
+  "rights": "© 2025 That’s Edutainment LLC (est. 2021). © 2015–2025 32D LLC. © 1991–2025 Don Adams Productions. Valor Ai+™/® — all rights reserved.",
+  "brand": "Valor Ai+™/®",
+  "license": "LicenseRef-VALOR-AI-Private",
+  "attributes": [
+    {"trait_type":"suite","value":"Valor Ai+"},
+    {"trait_type":"owner","value":"That’s Edutainment LLC • 32D LLC • Don Adams Productions"}
+  ]
+}
