@@ -1,0 +1,13 @@
+{
+  "name": "valor-signer",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "valor-signer": "./signer.js",
+    "valor-keygen": "./keygen.js"
+  },
+  "dependencies": {
+    "tweetnacl": "1.0.3"
+  }
+}
