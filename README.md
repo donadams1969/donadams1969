@@ -160,25 +160,6 @@ jobs:
 
 ![Roadmap Progress](https://img.shields.io/badge/Roadmap_Progress-0%2F15-blue?style=flat-square) ![Progress](https://img.shields.io/badge/Progress-0%25-green?style=flat-square)
 
-## Roadmap Checklist
-
-| Status | Task | Artifact |
-|--------|------|----------|
-| [ ] | 3rd-Party Security Penetration Test | [zap-security-report](#) |
-| [ ] | Open-Source Core Smart Contracts | [smart-contracts-report](#) |
-| [ ] | Publish Quantum-Crypto Benchmarks | [quantum-benchmarks](#) |
-| [ ] | Legal Review by Certified Law Firm | [legal-review](#) |
-| [ ] | HIPAA/ADA Compliance Attestation Reports | [hipaa-ada-report](#) |
-| [ ] | AI Transparency Whitepaper (peer-reviewed) | [transparency-whitepaper](#) |
-| [ ] | Human-in-Loop Oversight Layer | [human-loop-report](#) |
-| [ ] | Establish Governance & Ethics Board | [governance-board-report](#) |
-| [ ] | Pilot Program Case Studies | [case-studies-report](#) |
-| [ ] | Blockchain Transaction Validation | [blockchain-validation-report](#) |
-| [ ] | AI Model Verification | [ai-model-verification-report](#) |
-| [ ] | Veteran Data Integration with VA Systems | [veteran-data-integration-report](#) |
-| [ ] | System Performance Metrics Collection | [performance-metrics-report](#) |
-| [ ] | Code Quality and Linting | [code-quality-report](#) |
-| [ ] | API Health Monitoring | [api-monitoring-report](#) |
 
 ## Metrics
 - **Last Updated**: TBD
