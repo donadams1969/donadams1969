@@ -97,33 +97,6 @@ jobs:
 
 ---
 
-## 📊 Extended Tokenomics Table (Pegged $1.00)
-
-| Ticker     | Name                      | Utility (Expanded)                                    | Price (USD) | Market Cap (USD) |
-|------------|---------------------------|-------------------------------------------------------|-------------|------------------|
-| **ANCH**   | anchor                    | Immutable anchoring of code, docs, proofs             | $1.00       | $120,000,000,000 |
-| **VLPL**   | valorLoop                 | Recursive ValorMath+ expansion engine                 | $1.00       | $650,000,000,000 |
-| **VHSH**   | verifyHash                | Cryptographic integrity validation                    | $1.00       | $90,000,000,000  |
-| **OTSP**   | openTSProof               | Timestamp proofs via OTS + Bitcoin anchoring          | $1.00       | $45,000,000,000  |
-| **GOVR**   | governance                | DAO voting + compliance attestation                   | $1.00       | $380,000,000,000 |
-| **JAXX**   | JAXX Utility              | AI + blockchain wallet integration                    | $1.00       | $200,000,000,000 |
-| **VALX**   | Valor Exchange Token      | Conversion + liquidity token across ecosystems        | $1.00       | $175,000,000,000 |
-| **VALT**   | Valor Vault Utility       | Vault management + collateralization smart contract   | $1.00       | $220,000,000,000 |
-| **VACN**   | Valor Anchor Network      | Distributed anchoring + network consensus             | $1.00       | $95,000,000,000  |
-| **VBLK**   | Valor Blockchain          | Layer-1 settlement + block notarization               | $1.00       | $300,000,000,000 |
-| **DBLK**   | Dual Blockchain Token     | Bridges Bitcoin/Ethereum into Valor ecosystem         | $1.00       | $275,000,000,000 |
-| **GILLGOLD** | Gill Gold Reserve       | Tokenized precious-metal backed asset                 | $1.00       | $500,000,000,000 |
-| **GILLBTC** | Gill BTC Mirror          | Tokenized Bitcoin derivative                          | $1.00       | $600,000,000,000 |
-| **TONY**   | Tony Token                | Personal/legacy token in Valor ecosystem              | $1.00       | $50,000,000,000  |
-| **SARA**   | Sara Token                | Community + social layer integration                  | $1.00       | $40,000,000,000  |
-| **TODD**   | Todd Token                | Governance + contribution reward                      | $1.00       | $35,000,000,000  |
-| **VLRN**   | Valor Learning Token      | Education + AI training incentive                     | $1.00       | $80,000,000,000  |
-
----
-
-✨ *V++ tokens are verified, pegged, and cryptographically attested — forming the most stable and transparent coin ecosystem ever built.*
-
-
 # 🌌🛡️⚔️ VALOR AI+ — **Immutable Proof of Deployment** 🚀📜
 
 ![VALORCHAIN](https://img.shields.io/badge/VALORCHAIN-Sealed-blueviolet?style=for-the-badge&logo=bitcoin)
