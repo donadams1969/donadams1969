@@ -142,16 +142,6 @@ jobs:
   }
 }
 ```
-# ValorLoop+ Roadmap Status
-
-![Roadmap Progress](https://img.shields.io/badge/Roadmap_Progress-0%2F15-blue?style=flat-square) ![Progress](https://img.shields.io/badge/Progress-0%25-green?style=flat-square)
-
-
-## Metrics
-- **Last Updated**: TBD
-- **Completion**: 0/15 (0%)
-- **Artifacts**: Available in GitHub Actions
----
 
 # 🛡️ VALOR AI+ Evidence Dossier
 
