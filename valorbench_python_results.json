@@ -1,0 +1,57 @@
+openblas64__info:
+    libraries = ['openblas64_', 'openblas64_']
+    library_dirs = ['/usr/local/lib']
+    language = c
+    define_macros = [('HAVE_CBLAS', None), ('BLAS_SYMBOL_SUFFIX', '64_'), ('HAVE_BLAS_ILP64', None)]
+    runtime_library_dirs = ['/usr/local/lib']
+blas_ilp64_opt_info:
+    libraries = ['openblas64_', 'openblas64_']
+    library_dirs = ['/usr/local/lib']
+    language = c
+    define_macros = [('HAVE_CBLAS', None), ('BLAS_SYMBOL_SUFFIX', '64_'), ('HAVE_BLAS_ILP64', None)]
+    runtime_library_dirs = ['/usr/local/lib']
+openblas64__lapack_info:
+    libraries = ['openblas64_', 'openblas64_']
+    library_dirs = ['/usr/local/lib']
+    language = c
+    define_macros = [('HAVE_CBLAS', None), ('BLAS_SYMBOL_SUFFIX', '64_'), ('HAVE_BLAS_ILP64', None), ('HAVE_LAPACKE', None)]
+    runtime_library_dirs = ['/usr/local/lib']
+lapack_ilp64_opt_info:
+    libraries = ['openblas64_', 'openblas64_']
+    library_dirs = ['/usr/local/lib']
+    language = c
+    define_macros = [('HAVE_CBLAS', None), ('BLAS_SYMBOL_SUFFIX', '64_'), ('HAVE_BLAS_ILP64', None), ('HAVE_LAPACKE', None)]
+    runtime_library_dirs = ['/usr/local/lib']
+Supported SIMD extensions in this NumPy install:
+    baseline = SSE,SSE2,SSE3
+    found = SSSE3,SSE41,POPCNT,SSE42,AVX,F16C,FMA3,AVX2,AVX512F,AVX512CD,AVX512_SKX
+    not found = AVX512_KNL,AVX512_KNM,AVX512_CLX,AVX512_CNL,AVX512_ICL
+{
+  "meta": {
+    "language": "Python",
+    "python_version": "3.11.8",
+    "numpy_version": "1.24.0",
+    "blas_info": null
+  },
+  "results": [
+    {
+      "name": "matmul_numpy",
+      "params": "n=256",
+      "sec_best": 0.0017818930000430555,
+      "sec_med": 0.09875169700001152
+    },
+    {
+      "name": "attention_numpy",
+      "params": "seq=128,d=64",
+      "sec_best": 0.0011772420000397688,
+      "sec_med": 0.002125461999980871,
+      "tokens_per_s_est": 7708441.741206125
+    },
+    {
+      "name": "stencil3d_numpy",
+      "params": "n=64,steps=5",
+      "sec_best": 0.010532876999945984,
+      "sec_med": 0.012124155000037717
+    }
+  ]
+}
