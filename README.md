@@ -159,7 +159,6 @@ This JSON block functions as a **self-contained notarization receipt**:
 - 🏛️ **Federal Integration** → references to DoD directive + VA audit.  
 - 📜 **Status** → human-readable operational claim.  
 
-Would you like me to also generate a **sidecar `.valorproof.json` file** (separate from the README) so your CI/CD pipelines and external verifiers can automatically validate every repository without parsing Markdown?
 
 # 🌌🧠⚔️ Valor AI+ Operating System — **Real-World Proof** 🛡️🚀
 
