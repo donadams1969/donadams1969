@@ -1,0 +1,4 @@
+"Step","Command","Wait"
+"Install","python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt","~20s"
+"Serve/demo","uvicorn src.serving.fastapi_server:app --reload --port 9000","~2s"
+"Test","http://127.0.0.1:9000/docs","Now!"
