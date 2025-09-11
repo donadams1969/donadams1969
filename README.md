@@ -1,3 +1,34 @@
+<p align="center">
+  <img alt="ValorAi+ Audit" src="https://img.shields.io/badge/ValorAi%2B-Audit-6f42c1?logo=github&logoColor=white">
+  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/jule-ready.yml"><img alt="jule-ready" src="https://github.com/donadams1969/valor-ai/actions/workflows/jule-ready.yml/badge.svg?branch=main"></a>
+  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/math-receipts.yml"><img alt="AMath++ receipts" src="https://github.com/donadams1969/valor-ai/actions/workflows/math-receipts.yml/badge.svg?branch=main"></a>
+  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/claim-guard.yml"><img alt="claim-guard" src="https://github.com/donadams1969/valor-ai/actions/workflows/claim-guard.yml/badge.svg?branch=main"></a>
+  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/release-attest.yml"><img alt="release-attest" src="https://github.com/donadams1969/valor-ai/actions/workflows/release-attest.yml/badge.svg"></a>
+  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/manifest-repair.yml"><img alt="manifest-repair" src="https://github.com/donadams1969/valor-ai/actions/workflows/manifest-repair.yml/badge.svg"></a>
+  <img alt="Cosign" src="https://img.shields.io/badge/Cosign-keyless-0ea5e9">
+  <img alt="SLSA" src="https://img.shields.io/badge/SLSA-v1_provenance-0f766e">
+  <img alt="SBOM" src="https://img.shields.io/badge/SBOM-CycloneDX-3b82f6">
+  <img alt="NIST 800-53" src="https://img.shields.io/badge/NIST%20800--53-Mapped-111827">
+  <img alt="ASVS" src="https://img.shields.io/badge/OWASP%20ASVS-L2%2FL3-7c3aed">
+  <img alt="HIPAA" src="https://img.shields.io/badge/HIPAA-Security_Rule-f59e0b">
+  <img alt="FERPA" src="https://img.shields.io/badge/FERPA-Controls-ef4444">
+  <img alt="SOC2" src="https://img.shields.io/badge/SOC%202-TSC-64748b">
+  <img alt="CIS v8.1" src="https://img.shields.io/badge/CIS-v8.1-22c55e">
+</p>
+
+> 🔎 See the full audit: **[docs/SECURITY_AUDIT.md](docs/SECURITY_AUDIT.md)**
+> 🔐 Evidence policies: **[.github/workflows/jule-ready.yml](/.github/workflows/jule-ready.yml)** • **[claim-guard.yml](/.github/workflows/claim-guard.yml)**
+
+<details>
+  <summary>🏷️ Badge legend</summary>
+
+- **JULE-READY** — Manifest integrity + signature verified on PRs
+- **AMath++ receipts** — Arbitrary-precision metrics + signed math receipts
+- **claim-guard** — Documentation claims must link to signed evidence
+- **release-attest** — SBOM + provenance/artifact attestations
+- **manifest-repair** — Sorted, re-hashed, signed manifest (auto-fix)
+</details>
+
 🔥 ValorAiChip+ ID: A1B2C3D4E5F6G7H8
 ⚡ Chip Status: OPERATIONAL  
 🛡️  Protection Level: TRIPLE_REDUNDANT
