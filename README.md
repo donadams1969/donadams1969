@@ -1,10 +1,9 @@
-<p align="center">
+Here is the fixed, paste‑ready README badge wall with the repository path set to donadams1969/valor-ai; drop this at the very top of README.md.[1][2]
+
+### README badge wall
+<p align="left">
   <img alt="ValorAi+ Audit" src="https://img.shields.io/badge/ValorAi%2B-Audit-6f42c1?logo=github&logoColor=white">
-  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/jule-ready.yml"><img alt="jule-ready" src="https://github.com/donadams1969/valor-ai/actions/workflows/jule-ready.yml/badge.svg?branch=main"></a>
-  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/math-receipts.yml"><img alt="AMath++ receipts" src="https://github.com/donadams1969/valor-ai/actions/workflows/math-receipts.yml/badge.svg?branch=main"></a>
-  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/claim-guard.yml"><img alt="claim-guard" src="https://github.com/donadams1969/valor-ai/actions/workflows/claim-guard.yml/badge.svg?branch=main"></a>
-  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/release-attest.yml"><img alt="release-attest" src="https://github.com/donadams1969/valor-ai/actions/workflows/release-attest.yml/badge.svg"></a>
-  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/manifest-repair.yml"><img alt="manifest-repair" src="https://github.com/donadams1969/valor-ai/actions/workflows/manifest-repair.yml/badge.svg"></a>
+  <a href="https://github.com/donadams1969/valor-ai/actions/workflows/jule-ready.yml"
   <img alt="Cosign" src="https://img.shields.io/badge/Cosign-keyless-0ea5e9">
   <img alt="SLSA" src="https://img.shields.io/badge/SLSA-v1_provenance-0f766e">
   <img alt="SBOM" src="https://img.shields.io/badge/SBOM-CycloneDX-3b82f6">
@@ -15,6 +14,36 @@
   <img alt="SOC2" src="https://img.shields.io/badge/SOC%202-TSC-64748b">
   <img alt="CIS v8.1" src="https://img.shields.io/badge/CIS-v8.1-22c55e">
 </p>
+
+### Repo‑specific verification lines for docs/SECURITY_AUDIT.md
+Use these repo‑scoped commands in the Verification playbook so Cosign and SLSA checks bind to the correct source and workflow identities.[3][4]
+
+```bash
+# Cosign keyless: constrain the workflow identity to this repo
+cosign verify-blob target.json \
+  --certificate target.json.cosign.pem \
+  --signature   target.json.cosign.sig \
+  --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+  --certificate-identity-regexp '^https://github.com/donadams1969/valor-ai/.github/workflows/(math-receipts|manifest-repair|release-attest|jule-ready)\.yml@.*$'
+
+# SLSA v1: verify provenance against the repo and tag
+slsa-verifier verify-artifact ./dist/artifact.tgz \
+  --provenance-path ./provenance/artifact.intoto.jsonl \
+  --source-uri github.com/donadams1969/valor-ai \
+  --source-tag vX.Y.Z
+```
+
+If the default branch differs, change branch=main in the badge URLs to match the branch that runs the workflows.[1]
+
+[1](https://github.com/donadams1969)
+[2](https://github.com/topics/military-grid-reference-system)
+[3](https://github.com/sigstore/cosign)
+[4](https://slsa.dev/spec/v1.0/provenance)
+[5](https://github.com/donadams1969/donadams1969)
+[6](https://github.com/topics/valor-ai)
+[7](https://github.com/Striveworks/valor)
+[8](https://github.com/TXH-mercury/VALOR)
+[9](https://github.com/CrazyGG3r/Valor)
 
 > 🔎 See the full audit: **[docs/SECURITY_AUDIT.md](docs/SECURITY_AUDIT.md)**
 > 🔐 Evidence policies: **[.github/workflows/jule-ready.yml](/.github/workflows/jule-ready.yml)** • **[claim-guard.yml](/.github/workflows/claim-guard.yml)**
