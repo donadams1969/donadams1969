@@ -1,0 +1,32 @@
+[
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "artifactHash",
+                "type": "bytes32"
+            },
+            {
+                "name": "versionTag",
+                "type": "string"
+            },
+            {
+                "name": "pqLedgerHash",
+                "type": "string"
+            },
+            {
+                "name": "multiNodeIndex",
+                "type": "string"
+            },
+            {
+                "name": "ipfsCid",
+                "type": "string"
+            }
+        ],
+        "name": "submitArtifact",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
