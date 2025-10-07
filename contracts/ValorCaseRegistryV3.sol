@@ -7,6 +7,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
+import "./VALORCHAINGPrimeValidator.sol";
 
 /// @title VALOR Case Registry v3 (Improved)
 /// @notice Enterprise-grade case management with AI integration and temporal controls
@@ -47,6 +48,8 @@ contract ValorCaseRegistryV3 is
     mapping(uint256 => uint256) public caseExpirations;
     mapping(uint256 => string) private _aiReports;
 
+    VALORCHAINGPrimeValidator public primeValidator;
+
     event CaseFiled(uint256 indexed id, address indexed submitter, string cid);
     event CaseStatusUpdated(
         uint256 indexed id,
@@ -56,6 +59,15 @@ contract ValorCaseRegistryV3 is
     );
     event CaseExpired(uint256 indexed id);
     event AIReportStored(uint256 indexed id, string cid);
+    event PrimeValidatorUpdated(address indexed validatorAddress);
+    event SystemAuditResult(bool genesisPrimeValid, bool coinbasePrimeValid);
+
+    uint256 public genesis_prime;
+    uint256 public coinbase_prime;
+
+    mapping(address => bool) public flaggedAccounts;
+
+    event AccountFlagged(address indexed account, bool isFlagged);
 
     modifier checkExpiration(uint256 id) {
         uint256 exp = caseExpirations[id];
@@ -67,9 +79,47 @@ contract ValorCaseRegistryV3 is
 
     constructor() {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        genesis_prime = 2;
+        coinbase_prime = 3;
+    }
+
+    /// @notice Audits core system variables for primality.
+    /// @return A boolean array indicating the validity of each checked variable.
+    function audit_system_variables() public view returns (bool[2] memory) {
+        require(address(primeValidator) != address(0), "Prime validator not set");
+        bool genesisValid = primeValidator.isPrime(genesis_prime);
+        bool coinbaseValid = primeValidator.isPrime(coinbase_prime);
+        // In a real scenario, we might revert or take other action.
+        // For this simulation, we'll return the results and emit an event.
+        // emit SystemAuditResult(genesisValid, coinbaseValid);
+        return [genesisValid, coinbaseValid];
+    }
+
+    /// @notice Sets the address of the prime validator contract.
+    /// @param validatorAddress The address of the VALORCHAINGPrimeValidator contract.
+    function setPrimeValidator(address validatorAddress) external onlyOwner {
+        primeValidator = VALORCHAINGPrimeValidator(validatorAddress);
+        emit PrimeValidatorUpdated(validatorAddress);
+    }
+
+    /// @notice Validates that a case ID is a prime number, reverting if it's composite.
+    /// @param id The ID of the case to validate.
+    function validateCaseIdIsPrime(uint256 id) public view {
+        require(address(primeValidator) != address(0), "Prime validator not set");
+        require(_cases[id].createdAt != 0, "Case not found");
+        require(!primeValidator.isComposite(id), "Case ID cannot be a composite number");
+    }
+
+    /// @notice Flags or unflags an account, restricting its ability to file cases.
+    /// @param account The address of the account to flag.
+    /// @param isFlagged The flag status.
+    function flagAccount(address account, bool isFlagged) external onlyOwner {
+        flaggedAccounts[account] = isFlagged;
+        emit AccountFlagged(account, isFlagged);
     }
 
     function fileCase(string calldata cid) external whenNotPaused returns (uint256) {
+        require(!flaggedAccounts[msg.sender], "Account is flagged");
         require(_isValidCID(cid), "Invalid CID");
         _caseCounter++;
         uint256 newId = _caseCounter;
