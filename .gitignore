@@ -1,0 +1,23 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+
+# Build outputs
+dist/
+build/
+
+# Hardhat
+cache/
+artifacts/
+deployments/
+verifications/
+audits/
+typechain-types/
+
+# Logs
+logs
+*.log
