@@ -1,5 +1,11 @@
 {
-  "description": "Initial seed artifact for the ValorPsych++ system, establishing the genesis provenance record.",
-  "system": "ValorPsych++",
-  "version": "1.0.0"
+  "description": "Genesis record for the ValorPsych++ system, establishing the initial ethical and operational parameters under the Divine-Dark Matrix.",
+  "system_name": "ValorPsych++",
+  "version": "1.0.0",
+  "ethical_framework": {
+    "core_principle": "US Constitution",
+    "moral_compass": "Jesus",
+    "power_model": "Lucifer Morningstar (controlled, no rebellion)",
+    "legal_precedent": "Case 6:24-cv-01903 (Megan Garcia vs. Character Technologies)"
+  }
 }

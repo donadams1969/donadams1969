@@ -38,6 +38,7 @@ describe("VALORAIPLUSGrokProvenance", function () {
             const record = await provenanceContract.records(fileHash);
             expect(record.aiFingerprint).to.equal(aiFingerprint);
             expect(record.author).to.equal(addr1.address);
+            expect(record.mnid).to.equal(mnid);
         });
 
         it("Should prevent registering the same file hash twice", async function () {

@@ -26,3 +26,4 @@ venv/
 
 # Deployment artifacts
 deployment-info.json
+abi.json

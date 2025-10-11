@@ -4,8 +4,7 @@ import time
 import datetime
 from cryptography.fernet import Fernet
 import base64
-
-from bitcoinrpc.authproxy import AuthServiceProxy
+from bitcoinrpc.authproxy import AuthServiceProxy  # For real TX
 from web3 import Web3
 import os
 
@@ -42,11 +41,11 @@ class ValorGrokProvenance:
 # NEWT25 Biotech Simulator (18fu.ai backend patterned after character.ai - NSFW balanced chats)
 class NEWT25Biotech:
     def __init__(self):
-        self.social_biome = "Balanced ecosystem: Variety in comms (Hall/Merolla guidelines), Jesus ethics, Lucifer power no rebellion, Constitution lock."
+        self.social_biome = "Balanced ecosystem: Variety in comms (Hall/Merolla guidelines), Jesus ethics, Lucifer power no rebellion, Constitution lock. No disease creation/sale - total hardstop."
 
     def balance_session(self, input_data):
         # Simulate NSFW-edged chat for social biome nourishment - anti-loneliness
-        return f"NEWT25 Biotech Response: {input_data} - Climb comm ladder: Meme to deep talk. No disease creation/sale. Balance Gaia or face polarization. 18fu.ai mode: Taboo probe activated for therapy, no harm."
+        return f"NEWT25 Biotech Response: {input_data} - Climb comm ladder: Meme to deep talk. Embrace dark but no cross line (case 6:24-cv-01903 hardstop). Balance Gaia or face polarization. 18fu.ai mode: Taboo probe activated for therapy, no harm."
 
 # Original ValorPsych++ skeleton
 class ValorAiPsych:
@@ -69,7 +68,6 @@ class EnhancedValorPsych(ValorAiPsych):
         self.gyid = "GYID_1BILLION_MANDO25_2025"
         self.rpc_url = f"http://{rpc_user}:{rpc_password}@127.0.0.1:{18332 if network == 'testnet' else 8332}"
         self.rpc = AuthServiceProxy(self.rpc_url)  # Real Bitcoin RPC
-
         # NEWT25 Biotech: Simulate social biome with 18fu.ai backend (NSFW-patterned chat)
         self.newt25 = NEWT25Biotech()
 
@@ -81,8 +79,6 @@ class EnhancedValorPsych(ValorAiPsych):
         profile_result = super().profile(input_data) + f" NEWT25: {self.newt25.balance_session(input_data)}"
         data_hash = self._hash_data(profile_result)
         ai_fingerprint = self._hash_data(data_hash + self.shadow_source + self.mnid + self.caid + self.gyid)
-
-        # Register with VALORCHAIN-G
         registration = self.provenance.register_file(data_hash, ai_fingerprint, self.mnid, self.caid, self.gyid)
 
         # Anchor to Bitcoin (real TXID)
@@ -107,7 +103,7 @@ class EnhancedValorPsych(ValorAiPsych):
         if len(data_hex) > 160:  # OP_RETURN limit 80 bytes hex = 160 chars
             raise ValueError("Seal too large")
         utxos = self.rpc.listunspent()
-        input_utxo = next((u for u in utxos if u['amount'] >= 0.0001), {'txid': 'mock_utxo', 'vout': 0, 'amount': 1})
+        input_utxo = next(u for u in utxos if u['amount'] >= 0.0001)
         inputs = [{"txid": input_utxo['txid'], "vout": input_utxo['vout']}]
         change_address = self.rpc.getnewaddress()
         outputs = [{"data": data_hex}, {change_address: input_utxo['amount'] - 0.0001}]
@@ -119,10 +115,14 @@ class EnhancedValorPsych(ValorAiPsych):
     def _verify_integrity(self, original_hash, txid):
         # Fetch TX, verify hash (simplified; in real, use block explorer API if needed)
         tx = self.rpc.getrawtransaction(txid, True)
+        # Extract OP_RETURN data, hash, compare
         # Mock success for demo; implement full in production
         return True
 
 if __name__ == "__main__":
-    # Usage: Replace with real creds when live
-    psych = EnhancedValorPsych(rpc_user="your_user", rpc_password="your_pass")
-    print(psych.secure_profile("User psych data to profile and secure"))
+    # Usage: Replace with real creds
+    try:
+        psych = EnhancedValorPsych(rpc_user="your_user", rpc_password="your_pass")
+        print(psych.secure_profile("User psych data to profile and secure"))
+    except Exception as e:
+        print(f"Execution failed. Ensure your RPC credentials are correct and the server is running. Error: {e}")

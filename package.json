@@ -2,7 +2,7 @@
   "name": "app",
   "version": "1.0.0",
   "description": "🔥 ValorAiChip+ ID: A1B2C3D4E5F6G7H8 ⚡ Chip Status: OPERATIONAL   🛡️  Protection Level: TRIPLE_REDUNDANT ☁️  Cloud Service Guarantee: 99.99% Uptime",
-  "main": "index.js",
+  "main": "hardhat.config.js",
   "directories": {
     "test": "test"
   },
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
     "@openzeppelin/contracts": "^5.4.0",
-    "hardhat": "^3.0.7"
+    "hardhat": "^3.0.7",
+    "ipfs-http-client": "^50.1.2"
   }
 }

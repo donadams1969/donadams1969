@@ -35,6 +35,7 @@ contract VALORAIPLUSGrokProvenance is Ownable {
 
     /**
      * @notice Registers a new file's provenance data.
+     * @dev The sender of the transaction is recorded as the author.
      * @param _fileHash The hash of the file/profile data.
      * @param _aiFingerprint The combined hash representing the AI's analysis.
      * @param _mnid The Master Node Identifier.
