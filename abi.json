@@ -1,0 +1,234 @@
+[
+    {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "bytes32",
+                "name": "fileHash",
+                "type": "bytes32"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "author",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "mnid",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "caid",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "gyid",
+                "type": "string"
+            }
+        ],
+        "name": "FileRegistered",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "name": "records",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "fileHash",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "aiFingerprint",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "string",
+                "name": "mnid",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "caid",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "gyid",
+                "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "author",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_fileHash",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "_aiFingerprint",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "string",
+                "name": "_mnid",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_caid",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_gyid",
+                "type": "string"
+            }
+        ],
+        "name": "registerFile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_fileHash",
+                "type": "bytes32"
+            }
+        ],
+        "name": "verifyFile",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "bytes32",
+                        "name": "fileHash",
+                        "type": "bytes32"
+                    },
+                    {
+                        "internalType": "bytes32",
+                        "name": "aiFingerprint",
+                        "type": "bytes32"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "mnid",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "caid",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "gyid",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "author",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct VALORAIPLUSGrokProvenance.ProvenanceRecord",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

@@ -13,11 +13,16 @@ build/
 # Hardhat
 cache/
 artifacts/
-deployments/
-verifications/
-audits/
 typechain-types/
 
-# Logs
-logs
-*.log
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# Deployment artifacts
+deployment-info.json

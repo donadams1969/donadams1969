@@ -2,13 +2,12 @@
   "name": "app",
   "version": "1.0.0",
   "description": "🔥 ValorAiChip+ ID: A1B2C3D4E5F6G7H8 ⚡ Chip Status: OPERATIONAL   🛡️  Protection Level: TRIPLE_REDUNDANT ☁️  Cloud Service Guarantee: 99.99% Uptime",
-  "main": "voyager-unified-cli.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "hardhat test",
-    "start": "node voyager-unified-cli.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -23,16 +22,8 @@
   },
   "homepage": "https://github.com/donadams1969/donadams1969#readme",
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
-    "@openzeppelin/contracts": "^5.0.2",
-    "axios": "^1.12.2",
-    "bitcoinjs-lib": "^7.0.0",
-    "chai": "^6.2.0",
-    "chalk": "^4.1.2",
-    "commander": "^14.0.1",
-    "dotenv": "^17.2.3",
-    "ethers": "^6.15.0",
-    "hardhat": "^3.0.7",
-    "ora": "5.4.1"
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "hardhat": "^3.0.7"
   }
 }
