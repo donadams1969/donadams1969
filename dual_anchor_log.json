@@ -1,0 +1,14 @@
+{
+  "log_id": "VALOR-DUAL-ANCHOR-LOG-TEMPLATE-V1",
+  "description": "Template for logging dual-chain anchor events.",
+  "primary_anchor": {
+    "chain": "VALORCHAIN",
+    "hash": null
+  },
+  "secondary_anchor": {
+    "chain": "IPFS",
+    "hash": null
+  },
+  "combined_hash": null,
+  "timestamp": null
+}

@@ -1,0 +1,50 @@
+{
+  "manifest_id": "VALOR-PRE-AUDIT-MANIFEST-V1",
+  "timestamp": "2025-10-11T15:41:44Z",
+  "files": [
+    {
+      "filename": "contracts/JAXX.sol",
+      "checksum": "445fda3bcd26cc3d0015dff969e05947f92299a8a8562bc50d0ff45f42ce4b08"
+    },
+    {
+      "filename": "contracts/ValorCaseRegistry.sol",
+      "checksum": "022e51366dbd2410a7d6037928d6b7e6775d0cbe63e37fe6324be9986b8988f7"
+    },
+    {
+      "filename": "contracts/VALOR_Sim.sol",
+      "checksum": "30e5e6d6baad8ba040fea13fbd144e44cb5d4cb3f4728460616b0e02d4b3bdf3"
+    },
+    {
+      "filename": "contracts/VALOR_Witness.sol",
+      "checksum": "da5c3ff4be73814bb5d7e8af2f7e207032d04c7f733d604b2ba0e37e559cdbd4"
+    },
+    {
+      "filename": "scripts/deploy.js",
+      "checksum": "2334fa770d1e6b447c70161984c238c88f7ac5bfc8dd414d355fc65319b137b0"
+    },
+    {
+      "filename": "scripts/verification_engine.py",
+      "checksum": "933c49497b929e0b91e7026c1b980f7808338305e33a9977211e0aa7ee1f7d13"
+    },
+    {
+      "filename": "scripts/valorai_mirror_orchestrator.py",
+      "checksum": "e50ba383f20daf3582ae81233fe666dff86c21c1d44fd4484a16e02c430f6d83"
+    },
+    {
+      "filename": "scripts/voyager-unified-cli.js",
+      "checksum": "f1148f8f90cf1f89ab086f38ece52e57756897c81221096f39b739fd716e6cbe"
+    },
+    {
+      "filename": "policies/llm_policy.json",
+      "checksum": "4169a663fe2a46fa858ddd21aa02667316482a0335ac33881cdf6a886f137396"
+    },
+    {
+      "filename": "dual_anchor_log.json",
+      "checksum": "17e90ab7741327205487c5d83d1c9ae4bc9541ffefd255d7bb18c94aa77ccde0"
+    },
+    {
+      "filename": "README_AUDIT_PREP.md",
+      "checksum": "9fbd5ad7ea4b2786b55118c1389a41d6db3c3bb0570662a125b807dccf533c67"
+    }
+  ]
+}

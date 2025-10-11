@@ -1,0 +1,23 @@
+{
+  "policy_id": "VALOR-LLM-POLICY-V1",
+  "description": "Verification policy for LLM-generated artifacts.",
+  "rules": [
+    {
+      "rule_id": "TRUSTED_AUTHOR",
+      "description": "Artifact must be authored by a trusted entity.",
+      "parameters": {
+        "trusted_authors": [
+          "DG77.77X",
+          "VALORAI_SYSTEM"
+        ]
+      }
+    },
+    {
+      "rule_id": "CONTAINS_HASH",
+      "description": "Artifact metadata must contain a valid content hash.",
+      "parameters": {
+        "hash_format": "sha256"
+      }
+    }
+  ]
+}
