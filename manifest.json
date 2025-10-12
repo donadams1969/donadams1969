@@ -1,13 +1,13 @@
 {
   "manifest_id": "VALOR-PRE-AUDIT-MANIFEST-V1",
-  "timestamp": "2025-10-11T15:41:44Z",
+  "timestamp": "2025-10-11T17:10:57Z",
   "files": [
     {
       "filename": "contracts/JAXX.sol",
       "checksum": "445fda3bcd26cc3d0015dff969e05947f92299a8a8562bc50d0ff45f42ce4b08"
     },
     {
-      "filename": "contracts/ValorCaseRegistry.sol",
+      "filename": "contracts/ValorCaseRegistryV3.sol",
       "checksum": "022e51366dbd2410a7d6037928d6b7e6775d0cbe63e37fe6324be9986b8988f7"
     },
     {

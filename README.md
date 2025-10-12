@@ -1718,6 +1718,40 @@ This repository forms part of a federally anchored ADA/FTCA/FERPA/Unruh complain
 
 All development work performed herein is part of a protected ADA reasonable accommodation process under U.S. disability and whistleblower statutes. Please treat all modifications accordingly.
 
+---
+
+## 🧬 Enhanced ValorPsych++™️ with Bitcoin Anchoring
+
+The `enhanced_valorpsych.py` script provides a powerful tool for creating and securing psychographic profiles with real-world Bitcoin anchoring. This script integrates the VALORAIPLUS®️ ©️ ™️ core logic with the NEWT25™️ biotech simulator to generate comprehensive and immutable provenance records.
+
+### Features
+
+-   **Provenance Profiling:** Creates detailed psychographic profiles with MNID, CAID, and GYID identifiers.
+-   **Anti-Biohack Locks:** Secures profiles with quantum-resistant, multi-layered hashing.
+-   **Bitcoin Anchoring:** Anchors profile seals to the Bitcoin blockchain for immutable timestamping.
+-   **NEWT25™️ Biotech Integration:** Incorporates advanced therapeutic chat simulations for a more holistic profile.
+
+### Usage
+
+To use the `enhanced_valorpsych.py` script, follow these steps:
+
+1.  **Install Python dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+2.  **Set up Bitcoin Core:**
+    -   Ensure your Bitcoin Core testnet node is running and fully synced.
+    -   Verify your `bitcoin.conf` has `server=1`, `testnet=1`, and your `rpcuser`/`rpcpassword` set.
+    -   Fund your testnet wallet with spendable UTXOs.
+3.  **Update the script:**
+    -   Open `scripts/enhanced_valorpsych.py` and replace `"your_user"` and `"your_pass"` with your actual RPC credentials. **Note:** These are placeholder values and must be replaced for the script to function correctly.
+4.  **Run the script:**
+    ```bash
+    python scripts/enhanced_valorpsych.py
+    ```
+
+The script will output a secured profile with a verifiable transaction ID on the Bitcoin testnet.
+
 
 
 https://github.com/user-attachments/assets/b90fa009-74b4-4255-91fb-2dc7a05ea845
