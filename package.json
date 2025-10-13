@@ -16,14 +16,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/donadams1969/donadams1969/issues"
   },
   "homepage": "https://github.com/donadams1969/donadams1969#readme",
   "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-ethers": "^4.0.2",
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
     "@openzeppelin/contracts": "^5.4.0",
+    "chai": "^6.2.0",
+    "dotenv": "^17.2.3",
     "hardhat": "^3.0.7",
     "ipfs-http-client": "^50.1.2"
   }
