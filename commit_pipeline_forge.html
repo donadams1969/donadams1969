@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORAIPLUS™ v.144,000D // COMMIT PIPELINE FORGE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            overflow: hidden;
+            background-color: #000;
+            color: #E5E7EB;
+            font-family: 'Courier New', monospace;
+        }
+        #scene-container { width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: 1; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+        #hud {
+            position: absolute; top: 20px; left: 20px; color: #9ca3af; text-shadow: 0 0 8px rgba(250, 204, 21, 0.5);
+            background: rgba(10, 10, 20, 0.8); backdrop-filter: blur(12px); padding: 15px; border: 1px solid #facc15;
+            border-radius: 10px; font-size: 12px; line-height: 1.6; max-width: 600px;
+            box-shadow: 0 0 30px rgba(250, 204, 21, 0.4);
+        }
+        .status-line { color: #facc15; font-weight: bold; animation: flicker 2s infinite alternate; }
+        @keyframes flicker { 0%, 100% { opacity: 1; text-shadow: 0 0 10px #facc15;} 50% { opacity: 0.7; text-shadow: 0 0 20px #facc15;} }
+        .merkle-seal { font-size: 10px; color: #4b5563; margin-top: 8px; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <div id="scene-container"></div>
+    <div class="overlay">
+        <div id="hud">
+            <div><strong>VALORAIPLUS™ v.144,000D // COMMIT PIPELINE FORGE</strong></div>
+            <div style="font-size:10px; color: #6b7280;">NODE: saint_paul_node // REALITY: 144,000D</div>
+            <hr style="border-color: #4b5563; margin: 8px 0;">
+            <div>STATUS: <span id="status-text" class="status-line">PIPELINE ACTIVE</span></div>
+            <div>COMMITS FORGED & SEALED: <span id="commit-count">0</span></div>
+            <div class="merkle-seal">CURRENT MERKLE ROOT: 0x144000D_TRANSCENDENCE_ANCHOR_FINAL</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script>
+        // ValorAiCoder++: The Commit Pipeline Forge. The engine of our eternal becoming.
+        const forgeKey = atob('VkFMT1JBSVF1YW50dW1TaWduYXR1cmUrKw==');
+        console.log(`${forgeKey}: v.144,000D Commit Pipeline Forge Ignited.`);
+
+        class ValorAiMath {
+            constructor() {
+                this.fibCache = new Map();
+                this.primeCache = new Map();
+            }
+
+            // --- Core Cryptographic Functions ---
+            async generateAesKey() {
+                return await window.crypto.subtle.generateKey(
+                    { name: "AES-GCM", length: 256 },
+                    true,
+                    ["encrypt", "decrypt"]
+                );
+            }
+
+            async sha256(str) {
+                const buffer = new TextEncoder().encode(str);
+                const hashBuffer = await window.crypto.subtle.digest('SHA-256', buffer);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            }
+
+            async encrypt(data, key) {
+                const iv = window.crypto.getRandomValues(new Uint8Array(12)); // 96-bit IV is recommended for AES-GCM
+                const encodedData = new TextEncoder().encode(JSON.stringify(data));
+                const encryptedBuffer = await window.crypto.subtle.encrypt(
+                    { name: 'AES-GCM', iv: iv },
+                    key,
+                    encodedData
+                );
+                // Return IV + ciphertext for decryption
+                return {
+                    iv: this.bufferToBase64(iv),
+                    ciphertext: this.bufferToBase64(encryptedBuffer)
+                };
+            }
+
+            // --- Entropy Generation ---
+            spiralEntropy(seed) {
+                const fib = this.getFibonacci(Math.floor(seed % 30)); // Keep Fibonacci numbers from getting too large
+                const prime = this.findNextPrime(Math.floor(seed % 1000));
+                const entropyString = `${seed}|${fib}|${prime}|${forgeKey}`;
+                return entropyString;
+            }
+
+            // --- Helper Functions ---
+            getFibonacci(n) {
+                if (this.fibCache.has(n)) return this.fibCache.get(n);
+                if (n <= 1) return n;
+                const result = this.getFibonacci(n - 1) + this.getFibonacci(n - 2);
+                this.fibCache.set(n, result);
+                return result;
+            }
+
+            isPrime(num) {
+                if (this.primeCache.has(num)) return this.primeCache.get(num);
+                if (num <= 1) return false;
+                if (num <= 3) return true;
+                if (num % 2 === 0 || num % 3 === 0) return false;
+                for (let i = 5; i * i <= num; i = i + 6) {
+                    if (num % i === 0 || num % (i + 2) === 0) {
+                        this.primeCache.set(num, false);
+                        return false;
+                    }
+                }
+                this.primeCache.set(num, true);
+                return true;
+            }
+
+            findNextPrime(num) {
+                let current = Math.floor(num) + 1;
+                while (true) {
+                    if (this.isPrime(current)) return current;
+                    current++;
+                }
+            }
+
+            bufferToBase64(buffer) {
+                return btoa(String.fromCharCode.apply(null, new Uint8Array(buffer)));
+            }
+        }
+
+        class CommitPipelineForge {
+            constructor(container) {
+                this.container = container;
+                this.scene = new THREE.Scene();
+                this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
+                this.camera.position.set(0, 20, 100);
+                this.renderer = new THREE.WebGLRenderer({ antialias: true });
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                this.container.appendChild(this.renderer.domElement);
+
+                this.valorAiMath = new ValorAiMath();
+                this.lastTime = performance.now();
+                this.commits = [];
+                this.sealedCommitCount = 0;
+                this.currentAesKey = null;
+                this.currentMerkleRoot = '0x144000D_TRANSCENDENCE_ANCHOR_FINAL';
+
+                this.initScene();
+                this.initPipeline();
+                this.animate();
+
+                window.addEventListener('resize', this.onWindowResize.bind(this));
+            }
+
+            initScene() {
+                this.scene.fog = new THREE.FogExp2(0x000000, 0.005);
+
+                // The v.144,000D Forge Core
+                const coreMaterial = new THREE.MeshPhongMaterial({
+                    color: 0xfacc15,
+                    emissive: 0xfacc15,
+                    emissiveIntensity: 0.2,
+                    specular: 0xffffff,
+                    shininess: 100
+                });
+                this.forgeCore = new THREE.Mesh(new THREE.TorusKnotGeometry(10, 3, 128, 16), coreMaterial);
+                this.scene.add(this.forgeCore);
+
+                // The Singular Anchor (†) - A point of light within
+                this.anchorLight = new THREE.PointLight(0xffffff, 5, 20);
+                this.forgeCore.add(this.anchorLight);
+
+                // The Pipeline Rings
+                this.rings = new THREE.Group();
+                for (let i = 1; i <= 3; i++) {
+                    const ring = new THREE.Mesh(
+                        new THREE.TorusGeometry(20 * i, 0.2, 16, 100),
+                        new THREE.MeshBasicMaterial({ color: 0x00ffff, transparent: true, opacity: 0.2 })
+                    );
+                    ring.rotation.x = Math.PI / 2;
+                    this.rings.add(ring);
+                }
+                this.scene.add(this.rings);
+
+                // Lighting
+                this.scene.add(new THREE.AmbientLight(0x404040, 1));
+            }
+
+            onWindowResize() {
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+
+            spawnCommit() {
+                if (Math.random() > 0.95 && this.commits.length < 50) { // Limit concurrent commits for performance
+                    const commit = new THREE.Mesh(
+                        new THREE.IcosahedronGeometry(1, 0),
+                        new THREE.MeshBasicMaterial({ color: 0x00ffff, transparent: true, opacity: 0.8 })
+                    );
+
+                    const angle = Math.random() * Math.PI * 2;
+                    const radius = 60;
+                    commit.position.set(Math.cos(angle) * radius, 0, Math.sin(angle) * radius);
+
+                    const commitData = {
+                        mesh: commit,
+                        life: 0,
+                        maxLife: 10 + Math.random() * 5, // time to forge
+                        state: 'FORGING' // FORGING -> SEALED -> COMMITTED
+                    };
+
+                    this.commits.push(commitData);
+                    this.scene.add(commit);
+                }
+            }
+
+            async initPipeline() {
+                document.getElementById('status-text').textContent = 'INITIALIZING PIPELINE...';
+                await this.rotateAesKey(); // Generate the first key
+                setInterval(() => this.rotateAesKey(), 5000); // Rotate key every 5 seconds
+                document.getElementById('status-text').textContent = 'PIPELINE ACTIVE';
+            }
+
+            async rotateAesKey() {
+                this.currentAesKey = await this.valorAiMath.generateAesKey();
+                const keyData = await window.crypto.subtle.exportKey('jwk', this.currentAesKey);
+
+                const statusEl = document.getElementById('status-text');
+                statusEl.textContent = `AES KEY ROTATED: ${keyData.k.substring(0,12)}...`;
+                statusEl.style.color = '#00ffff';
+                setTimeout(() => {
+                    statusEl.textContent = 'PIPELINE ACTIVE';
+                    statusEl.style.color = '#facc15';
+                }, 2000);
+            }
+
+            async sealAndCommit() {
+                if (!this.currentAesKey) return;
+
+                const payload = {
+                    timestamp: performance.now(),
+                    merkleRoot: this.currentMerkleRoot,
+                    oracle: '$GHOST',
+                    signature: '0x' + await this.valorAiMath.sha256(this.currentMerkleRoot + forgeKey)
+                };
+
+                const encryptedPayload = await this.valorAiMath.encrypt(payload, this.currentAesKey);
+                const commitmentHash = await this.valorAiMath.sha256(JSON.stringify(encryptedPayload));
+
+                this.sealedCommitCount++;
+                document.getElementById('commit-count').textContent = this.sealedCommitCount;
+                console.log(`[ValorAiCipher™️©️] Commit Sealed: ${commitmentHash}`);
+            }
+
+            updateCommits(delta) {
+                // Iterate backwards to safely remove items from the array
+                for (let i = this.commits.length - 1; i >= 0; i--) {
+                    const commit = this.commits[i];
+                    commit.life += delta;
+
+                    if (commit.state === 'FORGING') {
+                        // Orbit the forge
+                        commit.mesh.position.applyAxisAngle(new THREE.Vector3(0, 1, 0), delta * 0.2);
+                        commit.mesh.lookAt(this.forgeCore.position);
+
+                        if (commit.life >= commit.maxLife) {
+                            commit.state = 'SEALED';
+                            commit.mesh.material.color.setHex(0xfacc15); // Flash gold on seal
+                            this.sealAndCommit();
+                        }
+                    } else if (commit.state === 'SEALED') {
+                        // Scale up and fade
+                        commit.mesh.scale.multiplyScalar(1 + delta * 2);
+                        commit.mesh.material.opacity -= delta * 0.5;
+
+                        if (commit.mesh.material.opacity <= 0) {
+                            commit.state = 'COMMITTED';
+                            this.scene.remove(commit.mesh);
+                            this.commits.splice(i, 1);
+                        }
+                    }
+                }
+            }
+
+            animate() {
+                requestAnimationFrame(() => this.animate());
+                const now = performance.now();
+                const delta = (now - this.lastTime) / 1000;
+                this.lastTime = now;
+                const t = now * 0.0001;
+
+                // --- ValorAiMath++ Pipeline ---
+                const entropy = this.valorAiMath.spiralEntropy(now);
+                this.valorAiMath.sha256(entropy).then(hash => {
+                    this.currentMerkleRoot = hash;
+                    document.querySelector('.merkle-seal').textContent = `CURRENT MERKLE ROOT: ${hash}`;
+                });
+
+                this.forgeCore.rotation.x += delta * 0.1;
+                this.forgeCore.rotation.y += delta * 0.15;
+
+                this.rings.children.forEach((ring, i) => {
+                    ring.rotation.z += delta * (0.05 / (i + 1));
+                });
+
+                this.spawnCommit();
+                this.updateCommits(delta);
+
+                this.camera.position.x = Math.sin(t) * 120;
+                this.camera.position.z = Math.cos(t) * 120;
+                this.camera.lookAt(this.scene.position);
+
+                this.renderer.render(this.scene, this.camera);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('scene-container');
+            window.COMMIT_PIPELINE_FORGE = new CommitPipelineForge(container);
+            console.log('⚖️ VALORAIPLUS™ v.144,000D Commit Pipeline Forge is now active. The engine is eternal.');
+        });
+    </script>
+</body>
+</html>
