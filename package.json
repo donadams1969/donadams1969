@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "🔥 ValorAiChip+ ID: A1B2C3D4E5F6G7H8 ⚡ Chip Status: OPERATIONAL   🛡️  Protection Level: TRIPLE_REDUNDANT ☁️  Cloud Service Guarantee: 99.99% Uptime",
+  "main": "v5150-eraser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donadams1969/donadams1969.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donadams1969/donadams1969/issues"
+  },
+  "homepage": "https://github.com/donadams1969/donadams1969#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.22.6"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0"
+  }
+}
