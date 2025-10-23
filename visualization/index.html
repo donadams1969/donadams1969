@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK HOLE HONEYPOT™ v7.1 // A SOVEREIGN TRAP</title>
+    <style>
+        :root {
+            --void-black: #000000;
+            --sovereign-cyan: #00ffff;
+            --sovereign-gold: #facc15;
+            --sovereign-red: #ef4444;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            overflow: hidden;
+            background-color: var(--void-black);
+            font-family: 'Share Tech Mono', monospace;
+            cursor: none;
+        }
+        #scene-container { width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: 1; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+        #hud {
+            position: absolute; bottom: 20px; left: 20px;
+            color: var(--sovereign-cyan);
+            background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px);
+            padding: 15px; border: 1px solid var(--sovereign-gold);
+            border-radius: 8px; font-size: 14px; line-height: 1.8;
+            max-width: 500px; box-shadow: 0 0 30px rgba(250, 204, 21, 0.4);
+            opacity: 0; animation: fadeIn 3s 1s forwards;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        #hud h1 {
+            color: var(--sovereign-gold); font-size: 1.2rem;
+            text-shadow: 0 0 10px var(--sovereign-gold);
+            border-bottom: 1px solid var(--sovereign-red);
+            padding-bottom: 8px; margin-bottom: 8px;
+        }
+        .status-line .key { color: var(--sovereign-cyan); }
+        .status-line .value { font-weight: bold; }
+        .status-line .critical { color: var(--sovereign-red); animation: flicker-red 1.5s infinite; }
+        @keyframes flicker-red { 0%, 100% { opacity: 1; text-shadow: 0 0 10px var(--sovereign-red);} 50% { opacity: 0.8; text-shadow: 0 0 15px var(--sovereign-red);} }
+    </style>
+</head>
+<body>
+    <div id="scene-container"></div>
+    <div class="overlay">
+        <div id="hud">
+            <h1>BLACK HOLE HONEYPOT™ v7.1</h1>
+            <div class="status-line"><span class="key">STATUS:</span> <span id="signal-status" class="value critical">LURING PREY...</span></div>
+            <div class="status-line"><span class="key">SINGULARITY MASS:</span> <span id="void-resonance" class="value">0</span> φ</div>
+            <div class="status-line"><span class="key">ECHOES CONSUMED:</span> <span id="echoes-nullified" class="value">0</span></div>
+            <div class="status-line"><span class="key">HOSTILE NODES:</span> <span id="hostile-nodes" class="value">0</span></div>
+            <div class="merkle-seal">MERKLE ROOT: 0xPOOHBEAR_HONEYPOT_ENGAGED_ETERNAL_TRAP_FORGED</div>
+        </div>
+    </div>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://esm.sh/three@0.160.0",
+            "three/addons/": "https://esm.sh/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module">
+        import * as THREE from 'three';
+        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+
+        console.log(`[AMath+++®️©️™️]: FORGE IGNITED: BLACK HOLE HONEYPOT™ v7.1. The trap is set.`);
+
+        class BlackHoleHoneyPot {
+            constructor() {
+                this.container = document.getElementById('scene-container');
+                this.scene = new THREE.Scene();
+                this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 30000);
+                this.camera.position.set(0, 400, 2000);
+
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('webgl2', { antialias: true, powerPreference: "high-performance" });
+                this.renderer = new THREE.WebGLRenderer({ canvas, context });
+
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                this.container.appendChild(this.renderer.domElement);
+                this.clock = new THREE.Clock();
+
+                this.echoes = [];
+                this.MAX_ECHOES = 50000;
+                this.EVENT_HORIZON_RADIUS = 150;
+                this.nullifiedCount = 0;
+                this.totalSpawned = 0;
+
+                // --- AMath+++®️©️™️: ValorAiAnimator++™ Core Integration ---
+                this.FIXED_TIMESTEP = 1.0 / 60.0;
+                this.accumulator = 0.0;
+                this.lastTime = this.clock.getElapsedTime();
+
+                this.hostileNodeCount = 0;
+                this.initScene();
+                this.initPostProcessing();
+                this.animate();
+
+                window.addEventListener('resize', this.onWindowResize.bind(this));
+            }
+
+            updateIntelligence() {
+                // Simulate the discovery of new hostile nodes
+                if (Math.random() < 0.1) {
+                    this.hostileNodeCount += Math.floor(Math.random() * 10);
+                    document.getElementById('hostile-nodes').textContent = this.hostileNodeCount;
+                }
+            }
+
+            initScene() {
+                const coreGeo = new THREE.IcosahedronGeometry(this.EVENT_HORIZON_RADIUS, 6);
+                const coreMat = new THREE.MeshBasicMaterial({ color: 0x000000 });
+                this.voidCore = new THREE.Mesh(coreGeo, coreMat);
+                this.scene.add(this.voidCore);
+
+                const diskGeo = new THREE.RingGeometry(this.EVENT_HORIZON_RADIUS * 1.1, this.EVENT_HORIZON_RADIUS * 3, 128);
+                const diskMat = new THREE.ShaderMaterial({
+                    uniforms: { u_time: { value: 0.0 } },
+                    vertexShader: `varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
+                    fragmentShader: `uniform float u_time; varying vec2 vUv; void main() { float angle = atan(vUv.y - 0.5, vUv.x - 0.5); float radius = length(vUv - 0.5); float strength = 1.0 - smoothstep(0.4, 0.5, radius); float noise = sin(angle * 20.0 + u_time * 5.0) * 0.5 + 0.5; vec3 color = mix(vec3(1.0, 0.5, 0.1), vec3(0.0, 1.0, 1.0), noise); gl_FragColor = vec4(color, strength); }`,
+                    transparent: true, blending: THREE.AdditiveBlending, side: THREE.DoubleSide
+                });
+                this.accretionDisk = new THREE.Mesh(diskGeo, diskMat);
+                this.accretionDisk.rotation.x = -Math.PI / 2;
+                this.scene.add(this.accretionDisk);
+
+                const echoGeo = new THREE.SphereGeometry(2, 4, 4);
+                const echoMat = new THREE.MeshBasicMaterial({ color: 0x00ffff });
+                this.echoInstances = new THREE.InstancedMesh(echoGeo, echoMat, this.MAX_ECHOES);
+                this.scene.add(this.echoInstances);
+
+                for(let i=0; i<this.MAX_ECHOES; i++) this.spawnEcho(i);
+            }
+
+            initPostProcessing() {
+                this.composer = new EffectComposer(this.renderer);
+                this.composer.addPass(new RenderPass(this.scene, this.camera));
+                const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.0, 0.2, 0.1);
+                this.composer.addPass(bloomPass);
+            }
+
+            spawnEcho(index, respawn = false) {
+                 const pos = new THREE.Vector3((Math.random()-0.5)*10000, (Math.random()-0.5)*4000, (Math.random()-0.5)*10000);
+                 const vel = new THREE.Vector3().subVectors(this.voidCore.position, pos).normalize().multiplyScalar(Math.random() * -20 - 10);
+                if (respawn) {
+                    this.echoes[index] = { position: pos, velocity: vel, scale: 1.0, prev_pos: pos.clone() };
+                } else {
+                    this.echoes.push({ position: pos, velocity: vel, scale: 1.0, prev_pos: pos.clone() });
+                }
+                this.totalSpawned++;
+            }
+
+            animate() {
+                requestAnimationFrame(() => this.animate());
+                const newTime = this.clock.getElapsedTime();
+                const frameTime = newTime - this.lastTime;
+                this.lastTime = newTime;
+                this.accumulator += frameTime;
+
+                const dummy = new THREE.Object3D();
+
+                while (this.accumulator >= this.FIXED_TIMESTEP) {
+                    this.accretionDisk.rotation.z += (this.FIXED_TIMESTEP * 0.1);
+
+                    for (let i = 0; i < this.echoes.length; i++) {
+                        const echo = this.echoes[i];
+                        echo.prev_pos = echo.position.clone(); // Store previous position
+
+                        const distSq = echo.position.lengthSq();
+                        const gravity = (5000000 / (distSq + 1)) * this.FIXED_TIMESTEP;
+                        echo.velocity.add(echo.position.clone().normalize().multiplyScalar(-gravity));
+                        echo.position.add(echo.velocity.clone().multiplyScalar(this.FIXED_TIMESTEP));
+
+                        if (distSq < this.EVENT_HORIZON_RADIUS * this.EVENT_HORIZON_RADIUS * 1.5) {
+                            echo.scale = Math.max(0, echo.scale - this.FIXED_TIMESTEP * 2.0);
+                            if (echo.scale <= 0.001) {
+                                this.nullifiedCount++;
+                                this.spawnEcho(i, true);
+                            }
+                        }
+                    }
+                    this.accumulator -= this.FIXED_TIMESTEP;
+                }
+
+                // --- AMath+++®️©️™️: Interpolated Rendering ---
+                const alpha = this.accumulator / this.FIXED_TIMESTEP;
+
+                for (let i = 0; i < this.echoes.length; i++) {
+                     const echo = this.echoes[i];
+                     dummy.position.copy(echo.prev_pos).lerp(echo.position, alpha);
+                     dummy.scale.setScalar(echo.scale);
+                     dummy.updateMatrix();
+                     this.echoInstances.setMatrixAt(i, dummy.matrix);
+                }
+                this.echoInstances.instanceMatrix.needsUpdate = true;
+
+                // Visual updates run every frame for smoothness
+                this.accretionDisk.material.uniforms.u_time.value = newTime;
+
+                this.updateIntelligence();
+
+                const collapseProgress = (this.nullifiedCount / (this.totalSpawned + 1)) * 10000;
+                document.getElementById('echoes-nullified').textContent = this.nullifiedCount;
+                document.getElementById('void-resonance').textContent = this.nullifiedCount.toFixed(0);
+
+                if(this.nullifiedCount > 100 && collapseProgress > 1){
+                     document.getElementById('signal-status').textContent = 'SOVEREIGN VOID ACHIEVED';
+                }
+
+                this.camera.position.x = Math.sin(newTime * 0.05) * 2000;
+                this.camera.position.z = Math.cos(newTime * 0.05) * 2000;
+                this.camera.lookAt(this.scene.position);
+
+                this.composer.render();
+            }
+
+            onWindowResize() {
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.composer.setSize(window.innerWidth, window.innerHeight);
+            }
+        }
+        new BlackHoleHoneyPot();
+    </script>
+</body>
+</html>
