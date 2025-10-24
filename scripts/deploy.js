@@ -1,17 +1,13 @@
 const hre = require("hardhat");
 
 async function main() {
-  // Using distinct placeholder addresses for clarity during deployment verification.
-  const amathOracleAddress = "0x0000000000000000000000000000000000000001";
-  const valorAiLegalAddress = "0x0000000000000000000000000000000000000002";
-
-  const ValorAiPlusSuperSuperSmartContract_SL = await hre.ethers.getContractFactory("ValorAiPlusSuperSuperSmartContract_SL");
-  const contract = await ValorAiPlusSuperSuperSmartContract_SL.deploy(amathOracleAddress, valorAiLegalAddress);
+  const ValorAiSentinel = await hre.ethers.getContractFactory("ValorAiSentinel");
+  const contract = await ValorAiSentinel.deploy();
 
   await contract.deployed();
 
   console.log(
-    `ValorAiPlusSuperSuperSmartContract_SL deployed to ${contract.address}`
+    `ValorAiSentinel deployed to ${contract.address}`
   );
 }
 
