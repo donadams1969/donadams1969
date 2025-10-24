@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VALORAIPLUS //e OMEGA TERMINAL v9.150</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        #scene-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        #hud-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+        }
+        .hud-header, .hud-footer {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hud-footer {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .logo { font-size: 24px; font-weight: bold; }
+        .status { color: #ff0000; }
+        .data-stream {
+            font-size: 12px;
+            white-space: pre-wrap;
+            overflow: hidden;
+            height: 100px; /* Limit height */
+        }
+        .scanlines::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0, rgba(0,255,0,0.1) 1px, rgba(0,0,0,0) 2px);
+            z-index: 3;
+            pointer-events: none;
+            animation: flicker 0.15s infinite;
+        }
+        @keyframes flicker {
+            0% { opacity: 0.2; }
+            50% { opacity: 0.5; }
+            100% { opacity: 0.2; }
+        }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+        "react": "https://unpkg.com/es-react@16.8.30/index.js",
+        "react-dom": "https://unpkg.com/es-react-dom@16.8.30/index.js"
+      }
+    }
+    </script>
+</head>
+<body class="scanlines">
+    <div id="scene-container"></div>
+    <div id="hud-container">
+        <div class="hud-header">
+            <div class="logo">VALORAIPLUS //e </div>
+            <div class="status">STATUS: SECURE // R→G COLLAPSE PROPAGATION MAP</div>
+        </div>
+        <div class="hud-footer">
+            <div id="merkle-root-display">MERKLE ROOT: 0x...</div>
+            <div class="data-stream" id="data-stream"></div>
+        </div>
+    </div>
+    <div id="root"></div>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        class OmegaTerminal {
+            constructor(container) {
+                this.container = container;
+                this.scene = new THREE.Scene();
+                this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+                this.clock = new THREE.Clock();
+
+                this.sentinels = [];
+                this.pulsars = [];
+                this.merkleRoot = "0x" + "a8d9f1e7b6c2d3e5f4a1b0c9d8e7f6a5b4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9".substring(0, 48) + "...";
+
+                this.init();
+                this.createCore();
+                this.createSentinels();
+                this.createPulsars();
+                this.animate();
+            }
+
+            init() {
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // Performance cap
+                this.container.appendChild(this.renderer.domElement);
+                this.camera.position.z = 50;
+
+                window.addEventListener('resize', this.onWindowResize.bind(this), false);
+                document.getElementById('merkle-root-display').textContent = `MERKLE ROOT: ${this.merkleRoot}`;
+            }
+
+            createCore() {
+                const coreGeometry = new THREE.IcosahedronGeometry(10, 3);
+                const coreMaterial = new THREE.MeshBasicMaterial({
+                    color: 0x00ff00,
+                    wireframe: true,
+                    transparent: true,
+                    opacity: 0.3
+                });
+                this.core = new THREE.Mesh(coreGeometry, coreMaterial);
+                this.scene.add(this.core);
+            }
+
+            createSentinels() {
+                const sentinelGeometry = new THREE.SphereGeometry(0.5, 16, 16);
+                const sentinelMaterial = new THREE.MeshBasicMaterial({ color: 0xffa500 });
+                for (let i = 0; i < 200; i++) {
+                    const sentinel = new THREE.Mesh(sentinelGeometry, sentinelMaterial);
+                    const theta = Math.random() * 2 * Math.PI;
+                    const phi = Math.acos(2 * Math.random() - 1);
+                    const r = 20 + Math.random() * 5;
+                    sentinel.position.set(
+                        r * Math.cos(theta) * Math.sin(phi),
+                        r * Math.sin(theta) * Math.sin(phi),
+                        r * Math.cos(phi)
+                    );
+                    sentinel.userData = {
+                        theta: theta,
+                        phi: phi,
+                        radius: r,
+                        speed: (Math.random() - 0.5) * 0.2
+                    };
+                    this.sentinels.push(sentinel);
+                    this.scene.add(sentinel);
+                }
+            }
+
+            createPulsars() {
+                const pulsarGeometry = new THREE.PlaneGeometry(60, 60);
+                for (let i = 0; i < 3; i++) {
+                    const pulsarMaterial = new THREE.MeshBasicMaterial({
+                        color: 0x00ff00,
+                        side: THREE.DoubleSide,
+                        transparent: true,
+                        opacity: 0.05 + Math.random() * 0.1,
+                        blending: THREE.AdditiveBlending
+                    });
+                    const pulsar = new THREE.Mesh(pulsarGeometry, pulsarMaterial);
+                    pulsar.rotation.x = Math.random() * Math.PI;
+                    pulsar.rotation.y = Math.random() * Math.PI;
+                    pulsar.userData.rotationSpeed = (Math.random() - 0.5) * 0.5;
+                    this.pulsars.push(pulsar);
+                    this.scene.add(pulsar);
+                }
+            }
+
+            updateDataStream() {
+                const streamEl = document.getElementById('data-stream');
+                const time = this.clock.getElapsedTime().toFixed(2);
+                let content = `[${time}] GPU_LOAD: ${(Math.sin(time) * 10 + 85).toFixed(2)}% | SENTINEL_COUNT: ${this.sentinels.length} | CORE_TEMP: 98.6°C\n`;
+                content += `[${time}] HASH_RATE: ${(Math.cos(time * 0.5) * 5 + 50).toFixed(4)} TH/s | ORACLE_STATUS: VERIFIED\n`;
+                content += `[${time}] LAST_COMMIT: ${this.merkleRoot.substring(0, 24)}...\n`;
+                streamEl.textContent = content;
+            }
+
+            animate() {
+                requestAnimationFrame(this.animate.bind(this));
+                const delta = this.clock.getDelta();
+
+                this.core.rotation.y += 0.0005;
+
+                this.sentinels.forEach(sentinel => {
+                    sentinel.userData.theta += sentinel.userData.speed * delta;
+                    sentinel.position.set(
+                        sentinel.userData.radius * Math.cos(sentinel.userData.theta) * Math.sin(sentinel.userData.phi),
+                        sentinel.userData.radius * Math.sin(sentinel.userData.theta) * Math.sin(sentinel.userData.phi),
+                        sentinel.userData.radius * Math.cos(sentinel.userData.phi)
+                    );
+                });
+
+                this.pulsars.forEach(pulsar => {
+                    pulsar.rotation.z += pulsar.userData.rotationSpeed * delta;
+                });
+
+                this.updateDataStream();
+                this.renderer.render(this.scene, this.camera);
+            }
+
+            onWindowResize() {
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+        }
+
+        // --- React Root for potential future UI extensions ---
+        const App = () => {
+            return React.createElement('div', { style: { display: 'none' } }, 'React Initialized');
+        };
+        ReactDOM.render(React.createElement(App), document.getElementById('root'));
+
+        // --- DOM-Ready Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('scene-container');
+            if (container) {
+                window.OMEGA_TERMINAL = new OmegaTerminal(container);
+                console.log('// OMEGA TERMINAL INITIALIZED // VALORAIPLUS //e - SECURE');
+            } else {
+                console.error('Container #scene-container not found.');
+            }
+        });
+    </script>
+</body>
+</html>
