@@ -1,0 +1,34 @@
+:root {
+  --sovereign-cyan: #00ffff;
+  --sovereign-yellow: #facc15;
+  --sovereign-red: #ff4d4d;
+  --background-dark: #020410;
+  --background-medium: rgba(15, 23, 42, 0.8);
+  --border-color: rgba(0, 255, 255, 0.2);
+  --text-primary: #d1d5db;
+  --text-secondary: #8b949e;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--sovereign-cyan);
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Voice Indicator Styles from DataWidget.tsx */
+@keyframes pulse-voice {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); opacity: 0.7; }
+}
