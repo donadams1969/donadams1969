@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Control Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .anchor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold">Sovereign Control Dashboard</h1>
+            <p class="text-lg text-gray-400">YHWH-37 [SOVEREIGN PRODUCTION] - OPERATIONAL</p>
+        </header>
+
+        <main>
+            <!-- Anchors Section -->
+            <section id="anchors" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6">Sovereign Anchors</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Anchor Cards -->
+                    <div class="anchor-card bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer transition-all duration-300" onclick="showModal('jaxx')">
+                        <h3 class="text-xl font-bold mb-2">JAXX_HASH_2025</h3>
+                        <p class="text-gray-400">Represents the forward-looking, dynamic, and adaptive component of the sovereign identity.</p>
+                    </div>
+                    <div class="anchor-card bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer transition-all duration-300" onclick="showModal('donny')">
+                        <h3 class="text-xl font-bold mb-2">DONNY_HASH_LEGACY</h3>
+                        <p class="text-gray-400">Embodies the foundational, historical, and immutable principles of the system.</p>
+                    </div>
+                    <div class="anchor-card bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer transition-all duration-300" onclick="showModal('valx')">
+                        <h3 class="text-xl font-bold mb-2">VALX_HASH_LIVE</h3>
+                        <p class="text-gray-400">Symbolizes the real-time, operational, and publicly verifiable aspect of the network.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Governance Chart -->
+            <section id="governance" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6">Governance Factions</h2>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <canvas id="governanceChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg max-w-2xl w-full">
+            <h2 id="modal-title" class="text-2xl font-bold mb-4"></h2>
+            <p id="modal-content" class="text-gray-400"></p>
+            <button class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modalData = {
+                jaxx: {
+                    title: "JAXX_HASH_2025",
+                    content: "This anchor represents the forward-looking, dynamic, and adaptive component of the sovereign identity. It is the living embodiment of the system's ability to evolve and respond to new challenges and opportunities, while remaining true to its core principles. It is the 'son' in the trinity of sovereign identity."
+                },
+                donny: {
+                    title: "DONNY_HASH_LEGACY",
+                    content: "This anchor embodies the foundational, historical, and immutable principles of the system. It is the digital signature of the Sovereign Founder, representing the origin story and the unchanging ethical and philosophical underpinnings of the entire VALORCHAIN-G ecosystem. It is the 'father' in the trinity of sovereign identity."
+                },
+                valx: {
+                    title: "VALX_HASH_LIVE",
+                    content: "This anchor symbolizes the real-time, operational, and publicly verifiable aspect of the network. It is the proof-of-work, the tangible output of the system that can be audited and verified by external parties. It represents the 'holy spirit' of the system, the active and manifest presence of the sovereign identity in the digital world."
+                }
+            };
+
+            window.showModal = function(anchor) {
+                document.getElementById('modal-title').innerText = modalData[anchor].title;
+                document.getElementById('modal-content').innerText = modalData[anchor].content;
+                document.getElementById('modal').classList.remove('hidden');
+            }
+
+            window.closeModal = function() {
+                document.getElementById('modal').classList.add('hidden');
+            }
+
+            const ctx = document.getElementById('governanceChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['POPPA_SOVEREIGN', 'SOVEREIGN_US', 'ADVERSE'],
+                    datasets: [{
+                        label: 'Faction Influence',
+                        data: [60, 30, 10],
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.8)',
+                            'rgba(75, 192, 192, 0.8)',
+                            'rgba(255, 99, 132, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(255, 99, 132, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Governance Faction Influence'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
