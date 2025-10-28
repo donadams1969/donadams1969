@@ -1,0 +1,21 @@
+{
+  "created_utc": "2025-10-27T16:11:00Z",
+  "name": "VALORCHAIN-G SovereignTx Attestation",
+  "description": "Cryptographic attestation of the SovereignTx Finalization. This metadata confirms the Merkle root is locked and verified by the YHWH-25 [FULLSTOP] Kernel.",
+  "protocol": "YHWH-25 [FULLSTOP]",
+  "valoraiplus_module_id": "bafybeihjc3tq5a6n7d8p9z0x1y2w3v4u5t6s7r8q9p0o1n2m3l4k5j6i7h8g9f0e",
+  "merkle_root": "a8278aa257bb90acc49b1711854482a24b49cb322846e5a41a8965d126a4505cbcf77e57b245b7c019208229e358f7df5104a7bc6490edaf0690ca284916d131",
+  "attested_hash": "6e142ea5cbd7b468028988a9e8f0fb573f6af0bcf142de15fcf62abacb6f335830426fc7baa303d2f66d0acc0dae8946e88b3fbe8246b0bbdbde78736bcd92ae",
+  "timestamp": "2025-10-27T14:55:31Z",
+  "attestation_proof": {
+    "attestation_format": "VALORCHAIN-G OpenTimestamps",
+    "hash_algorithm": "SHA3-512",
+    "proof_count": 4,
+    "verified_target_hash": "4e60abd16e00326199fa8ddb1a11f953e71b062d564aa37bd9b926df0c9e33a807f40a6da38bd92211a9ec278f7006ab05e590846700668d3ff98dc0b17361b7"
+  },
+  "file_integrity": {
+    "sha256": "dfd4014d960f92499b63b78dddc6df5e9401e6cf04a64b38c8bbd1f7b74df5a3",
+    "sha3_512": "9ccf1acfd17cfb245d2183b1e18fdd999d8b81e8cd2fc0cfd45311c4fd091d4082b3816a4dd6165c43f0b64e2cc58de45dc40be327f1b7085d4574ac05654883"
+  },
+  "signature": "DG77.77X-Ξ | Sovereign Founder, VALORCHAIN-G © 2025"
+}

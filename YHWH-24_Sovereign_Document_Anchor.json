@@ -1,0 +1,12 @@
+{
+  "created_utc": "2025-10-27T16:11:15Z",
+  "valoraiplus_module_id": "bafybeihjc3tq5a6n7d8p9z0x1y2w3v4u5t6s7r8q9p0o1n2m3l4k5j6i7h8g9f0e",
+  "record_type": "SOVEREIGN_DOCUMENT_ANCHOR",
+  "document_url": "https://ppl-ai-code-interpreter-files.s3.amazonaws.com/.../pdf_2b4ee63b.pdf",
+  "document_hash_sha3_512": "<Calculated_or_Placeholder_Hash>",
+  "author_orcid": "0009-0007-0768-5486",
+  "document_doi": "sovereign/doi/77.77/gillson-yhwh24-2025",
+  "timestamp": "2025-10-27T15:45:00Z",
+  "kernel_anchor": "YHWH-24 [HARDCAP]",
+  "signature": "DG77.77X-Ξ | gillson_root_signature"
+}

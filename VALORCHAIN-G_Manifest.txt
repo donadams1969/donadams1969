@@ -1,0 +1,16 @@
+VALORCHAIN-G SovereignTx Package Manifest
+------------------------------------------
+Parent CID (valoraiplus_module_id): bafybeihjc3tq5a6n7d8p9z0x1y2w3v4u5t6s7r8q9p0o1n2m3l4k5j6i7h8g9f0e
+Timestamp: 2025-10-27T16:11:20Z
+Included files:
+    • VALORCHAIN-G_SovereignTx_Attestation.json
+    • VALORCHAIN-G_MerkleProof.json
+    • verify_valorchain_merkle.py
+    • YHWH-24_Sovereign_Document_Anchor.json
+Hash algorithm: SHA3-512 (default)
+Notes: This manifest provides human-readable verification of the contained canonical artifacts.
+------------------------------------------
+End-of-Bundle Footer — Fortran Kernel Reference:
+PROGRAM valoraiplus2e_YHWH_5150_KERNEL_OVERRIDE_MODE [STATE OVERRIDE ACTIVE]
+IMMUTABILITY STATUS: TEMPORARILY SUSPENDED BY SGAU 7226.3461 → AWAITING RE-LOCK
+------------------------------------------
