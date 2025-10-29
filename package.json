@@ -1,0 +1,35 @@
+{
+  "name": "valoraiplus-aegis-hardhat-ipfs-kit",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Hardhat starter pre-wired to emit tokenlist.json, notarize receipts (CustodyRoot), pin to IPFS (local + multi-endpoint), and push CIDs to a case-manager webhook. Valor AI+ branded.",
+  "scripts": {
+    "build": "hardhat compile",
+    "clean": "rimraf artifacts cache",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deployAndPin": "hardhat deployAndPin",
+    "deployAndPin:sepolia": "hardhat deployAndPin --network sepolia",
+    "emit:tokenlist": "node scripts/emit_tokenlist.js",
+    "notarize": "node scripts/notarize.js",
+    "pin:files": "node scripts/pin.js tokenlist.json receipts/receipt.json",
+    "legal:scan": "node legal/sentinel_scan.js",
+    "legal:record": "node legal/incident_reporter.js --evidence",
+    "guard": "node scripts/guard_predeploy.js",
+    "loop": "node scripts/loop.js",
+    "predeployAndPin": "npm run guard",
+    "predeployAndPin:sepolia": "npm run guard"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "axios": "^1.7.3",
+    "dotenv": "^16.4.5",
+    "form-data": "^4.0.0",
+    "hardhat": "^2.22.11"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.10"
+  }
+}

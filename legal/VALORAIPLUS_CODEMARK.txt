@@ -1,0 +1,2 @@
+SPECIAL_CODE=VALORAIPLUS
+This repository enforces the VALORAIPLUS codemark across notarization and legal routing.

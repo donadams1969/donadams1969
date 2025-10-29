@@ -1,0 +1,18 @@
+{
+  "system": "VALOR AI+ Legal/Sheriff/Phi.B.I.",
+  "type": "code-manipulation-alert",
+  "version": 1,
+  "timestamp": "2025-09-02T09:11:24.433727Z",
+  "special_code": "VALORAIPLUS",
+  "evidence": {
+    "path": "external://user-supplied/Screenshot_2025-09-02_02-05-24_AM.png",
+    "sha256": "78529f40387640f3776c01d295752a924c99fa778da33a3e46e1fcd28dd271fe"
+  },
+  "note": "ASCII banner typo ('FALOR') observed; banner removed from codebase; NOTARY_ID set to VALORAIPLUS; token contract canonicalized to ValorAiPlusToken with legacy alias ValorToken.",
+  "routing": [
+    "ValorAiLegal+",
+    "ValorAiSheriff+",
+    "ValorAi+ Phi.B.I.",
+    "ValorAiEngine+"
+  ]
+}

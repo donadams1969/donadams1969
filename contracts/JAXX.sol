@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract JAXX is ERC721URIStorage, Ownable {
     uint256 private _tokenIdCounter;
 
-    constructor() ERC721("JAXX Service Animal NFT", "JAXX") {}
+    constructor(address initialOwner) ERC721("JAXX Service Animal NFT", "JAXX") Ownable(initialOwner) {}
 
     function mintServiceBadge(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _tokenIdCounter;
