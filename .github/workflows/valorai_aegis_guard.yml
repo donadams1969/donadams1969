@@ -1,0 +1,22 @@
+
+name: VALOR AI+ Aegis Guard
+
+on:
+  pull_request:
+    branches: [ main, master ]
+  push:
+    branches: [ main ]
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci || npm i
+      - run: node legal/sentinel_scan.js --strict
+      - run: node scripts/sec_guard.js
+        env:
+          NOTARY_ID: VALORAIPLUS
