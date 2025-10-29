@@ -183,4 +183,3 @@ contract ValorCaseRegistryV3 is
         return super.supportsInterface(interfaceId);
     }
 }
-

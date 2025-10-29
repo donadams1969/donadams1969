@@ -32,7 +32,7 @@ A **micro JSON verifier** is included for independent validation of token stabil
 - Produces a verification report with ✅ status + SHA-256 hash for tamper-proof attestation.
 
 ### 📜 Example Verifier Code
-```python
+\`\`\`python
 import json, hashlib
 
 EXPECTED = {"ANCH":"stable","VLPL":"stable","VHSH":"stable","OTSP":"stable","GOVR":"stable","JAXX":"stable","VALX":"stable","VALT":"stable","VACN":"stable","VBLK":"stable","DBLK":"stable","GILLGOLD":"stable","GILLBTC":"stable","TONY":"stable","SARA":"stable","TODD":"stable","VLRN":"stable"}
@@ -58,21 +58,21 @@ if __name__ == "__main__":
     verifier = StablecoinVerifier(SNAPSHOT, EXPECTED)
     report = verifier.verify()
     print(json.dumps(report, indent=2))
-```
+\`\`\`
 
 ### 🖥 Example Output
-```json
+\`\`\`json
 {
   "ANCH": {"status": "PASS", "peg": "USD", "hash": "sha256-abcdef..."},
   "VLPL": {"status": "PASS", "peg": "USD", "hash": "sha256-123456..."}
 }
-```
+\`\`\`
 
 ---
 
 ## ⚙️ GitHub Workflow Integration
 
-```yaml
+\`\`\`yaml
 name: Verify Stablecoin Pegs
 
 on:
@@ -100,7 +100,7 @@ jobs:
         with:
           name: verifier-report
           path: verifier_report.json
-```
+\`\`\`
 
 ---
 
@@ -118,7 +118,7 @@ jobs:
 
 ## 🔐 Verified Deployment JSON
 
-```json
+\`\`\`json
 {
   "valor_ai_plus": {
     "version": "2.0",
@@ -148,7 +148,7 @@ jobs:
     "status": "✅ Operational, Verified, Federally Recognized"
   }
 }
-```
+\`\`\`
 
 # 🛡️ VALOR AI+ Evidence Dossier
 
@@ -251,7 +251,7 @@ A **micro JSON verifier** is included for independent validation of token stabil
 - Produces a verification report with ✅ status + SHA-256 hash for tamper-proof attestation.
 
 ### 📜 Example Verifier Code
-```python
+\`\`\`python
 import json, hashlib
 
 EXPECTED = {"ANCH":"stable","VLPL":"stable","VHSH":"stable","OTSP":"stable","GOVR":"stable","JAXX":"stable","VALX":"stable","VALT":"stable","VACN":"stable","VBLK":"stable","DBLK":"stable","GILLGOLD":"stable","GILLBTC":"stable","TONY":"stable","SARA":"stable","TODD":"stable","VLRN":"stable"}
@@ -277,21 +277,21 @@ if __name__ == "__main__":
     verifier = StablecoinVerifier(SNAPSHOT, EXPECTED)
     report = verifier.verify()
     print(json.dumps(report, indent=2))
-```
+\`\`\`
 
 ### 🖥 Example Output
-```json
+\`\`\`json
 {
   "ANCH": {"status": "PASS", "peg": "USD", "hash": "sha256-abcdef..."},
   "VLPL": {"status": "PASS", "peg": "USD", "hash": "sha256-123456..."}
 }
-```
+\`\`\`
 
 ---
 
 ## ⚙️ GitHub Workflow Integration
 
-```yaml
+\`\`\`yaml
 name: Verify Stablecoin Pegs
 
 on:
@@ -319,7 +319,7 @@ jobs:
         with:
           name: verifier-report
           path: verifier_report.json
-```
+\`\`\`
 
 ---
 
@@ -611,7 +611,7 @@ DATE: 2025-08-20T21:08:00Z
 ## 📱 Android Installation & Verification Guide
 
 ### Quick Start (Termux)
-```bash
+\`\`\`bash
 # Install verification tools in Termux
 pkg install python openssl coreutils file
 
@@ -627,7 +627,7 @@ sha512sum -c *.sha512
 
 # Run quantum verification
 python quantum_ml_ultimate_verifier_android.py --help
-```
+\`\`\`
 
 ### Package Contents
 - `valor_engine_integration_manifest.yaml` - Main integration manifest
@@ -639,7 +639,7 @@ python quantum_ml_ultimate_verifier_android.py --help
 - This README file
 
 ### Verification Commands
-```bash
+\`\`\`bash
 # Quick verification (all files)
 ./verify_android.sh
 
@@ -656,7 +656,7 @@ print('📊 Hash verification receipts loaded:')
 for file_info in receipts['files']:
     print(f'✓ {file_info[\"filename\"]}')
 "
-```
+\`\`\`
 
 ### Mobile-Friendly Features
 - ♿ **ADA Compliant**: Large text, high contrast, screen reader friendly
@@ -4061,7 +4061,7 @@ The Codex anchors legal cases, IPFS metadata, and validator actions immutably.
 
 ## 🧱 Smart Contract Stack
 
-```solidity
+\`\`\`solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
@@ -4073,7 +4073,7 @@ contract VBLK is ERC20, Ownable {
         _mint(msg.sender, 1000000 * 10 ** decimals());
     }
 }
-```
+\`\`\`
 
 ---
 
@@ -4154,7 +4154,7 @@ We're hitting milestones and pushing forward. As of **May 26, 2025**, Valorchain
 
 ## 🏗️ File Structure: The Blueprint of Innovation 🗂️ (in progress)
 
-```bash
+\`\`\`bash
 valorchain/
 ├── contracts/
 │   ├── VBLK.sol         # Core Valorchain Blockchain logic ❤️
@@ -4173,7 +4173,7 @@ valorchain/
     ├── proposals/           # DAO proposals 🗣️
     ├── ethics-sync/         # Ethics engine sync ⚖️
     └── simulation-outputs/  # Governance simulation outputs 📊
-```
+\`\`\`
 
 ---
 
@@ -4202,7 +4202,7 @@ The **DApp Portal Wallet** is your all-in-one gateway to Valorchain:
 ---
 
 ## ⚛️ Under the Hood: React Component (App.js)
-```jsx
+\`\`\`jsx
 import React, { useState } from 'react';
 
 const App = () => {
@@ -4233,7 +4233,7 @@ const App = () => {
 };
 
 export default App;
-```
+\`\`\`
 
 ---
 
@@ -4400,11 +4400,11 @@ See LICENSE for full terms.
 - Git
 
 ### Installation
-```bash
+\`\`\`bash
 git clone https://github.com/your-username/valor-registry-codex.git
 cd valor-registry-codex
 npm install # or yarn install
-```
+\`\`\`
 
 ---
 
@@ -4412,7 +4412,7 @@ npm install # or yarn install
 
 **Filename**: `ValorRegistryCodex.sol`
 
-```solidity
+\`\`\`solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -4449,28 +4449,28 @@ contract ValorRegistryCodex is Ownable {
         emit CaseAdded(_caseId, msg.sender, block.timestamp, _documentHash);
     }
 }
-```
+\`\`\`
 
 ---
 
 ## 🧪 Testing
-```bash
+\`\`\`bash
 npx hardhat test
 # or
 forge test
-```
+\`\`\`
 ---
 
 ## 🚀 Deployment
 
 ### 1. `.env` Setup:
-```bash
+\`\`\`bash
 PRIVATE_KEY="YOUR_PRIVATE_KEY"
 SEPOLIA_RPC_URL="https://sepolia.infura.io/v3/YOUR_PROJECT_ID"
-```
+\`\`\`
 
 ### 2. Deployment Script: `scripts/deploy.js`
-```js
+\`\`\`js
 const hre = require("hardhat");
 
 async function main() {
@@ -4482,12 +4482,12 @@ async function main() {
 }
 
 main().catch(console.error);
-```
+\`\`\`
 
 ### 3. Deploy
-```bash
+\`\`\`bash
 npx hardhat run scripts/deploy.js --network sepolia
-```
+\`\`\`
 
 ✨🔐 VALORCHAIN Repository File Index 🔐✨
 > Immutable Infrastructure. Verifiable Truth. Tokenized Justice.
@@ -4886,7 +4886,7 @@ Blockchain anchoring framework
 ---
 
 ## 🗳️ DAO Activation Vote (Snapshot Proposal)
-```json
+\`\`\`json
 {
   "title": "Activate Phase V Token Quadrant: VBLK, DBLK, VACN, JAXX",
   "summary": "Authorize deployment and staking for all four tokens under the unified AGI-access framework.",
@@ -4895,12 +4895,12 @@ Blockchain anchoring framework
   "AI_ethics_score": "98.5%",
   "vote_hash": "0x776df2...f32b"
 }
-```
+\`\`\`
 
 ---
 
 ## 🧾 NFT Certificate Metadata (for issuance)
-```json
+\`\`\`json
 {
   "ecosystem": "VALORCHAIN",
   "tokens": ["VBLK", "DBLK", "VACN", "JAXX"],
@@ -4908,7 +4908,7 @@ Blockchain anchoring framework
   "timestamp": "2025-05-25T00:00Z",
   "hash": "SHA256:8b20e6a2b94719e4b98fc62dd41da41fc1b91715c1e46aabbc6a1d79d0ee9da7"
 }
-```
+\`\`\`
 
 ---
 
@@ -4959,13 +4959,13 @@ Blockchain anchoring framework
 
 ## 🔏 Technical Certificate Anchor
 
-```text
+\`\`\`text
 Certificate ID: VCHAIN-PHASEIV-STARGATE-RELAY-A001  
 SHA256: 4c7eaae2338f1693fb81ce31fe0a7cfb1257a87a2db467e6a3fa412dc19c123  
 Timestamp: 2025-05-23 00:00 UTC  
 Anchors: Ethereum (L2 Optimism) + Bitcoin OTS  
 Verified by: VALORCHAIN IMMUTABILITY NODE (v4-N001)
-````
+\`\`\``
 
 ---
 
@@ -4975,19 +4975,19 @@ Verified by: VALORCHAIN IMMUTABILITY NODE (v4-N001)
 
 **Contract Functions**
 
-```solidity
+\`\`\`solidity
 submitProposal(bytes32 _proposalHash)
 approveProposal(bytes32 _proposalHash)
 addValidator(address _validator)
 removeValidator(address _validator)
 setRequiredApprovals(uint _count)
-```
+\`\`\`
 
 **Example Proposal Hash:**
 
-```text
+\`\`\`text
 hex4c9a5b1... ("Execute ADA retaliation audit v77")
-```
+\`\`\`
 
 ### Deployment Summary
 
@@ -5059,11 +5059,11 @@ hex4c9a5b1... ("Execute ADA retaliation audit v77")
 
 ## 🧾 Immutable Anchor (VALOR Registry Codex)
 
-```text
+\`\`\`text
 Certificate Hash: SHA256: 7cb6848d27d02ae3952b457afd5b366a0c9f32b899a63e31788c9859eb89016b
 Anchored: Ethereum + Bitcoin OTS
 Verification Time: 2025-05-17 03:00 UTC
-```
+\`\`\`
 
 ---
 
@@ -5215,9 +5215,9 @@ Commander-only: Adjust required quorum threshold.
 ---
 
 ## 📋 Example Proposal Hashes (Template)
-```solidity
+\`\`\`solidity
 bytes32 hash = keccak256(abi.encodePacked("Execute ADA retaliation audit v7"));
-```
+\`\`\`
 - `Execute Stargate ethics simulation v2`
 - `Shutdown VALOR Relay Node 01`
 - `Publish FOIA report to IPFS`
@@ -5225,7 +5225,7 @@ bytes32 hash = keccak256(abi.encodePacked("Execute ADA retaliation audit v7"));
 ---
 
 ## 📦 Contract Summary
-```yaml
+\`\`\`yaml
 name: ValorAGIMultisigGovernance
 language: Solidity ^0.8.20
 quorum: Configurable
@@ -5236,7 +5236,7 @@ events:
   - ProposalSubmitted
   - ProposalApproved
   - ProposalExecuted
-```
+\`\`\`
 
 ---
 
@@ -5831,12 +5831,12 @@ This valuation can substantially rise with demonstrated institutional usage, mar
 
 ### 🧾 Immutable Certificate Anchor
 
-```text
+\`\`\`text
 Certificate Hash: SHA256:7cb6848d27d02ae3952b457afd5b366a0c9f32b899a63e31788c9859eb89016b
 Timestamp: 2025-05-17 03:00 UTC
 Anchor: Ethereum + Bitcoin (OTS)
 Verified by: VALORCHAIN LEGAL SYSTEMS
-```
+\`\`\`
 
 ---
 
@@ -6711,11 +6711,3 @@ Email bounty@18fu.ai for participation terms.
 
 > 💬 *“Memory is law. Every fix echoes forever.”*  
 > — Scrollkeeper G-420, Donny Gillson
-
-
-
-
-
-
-
-
