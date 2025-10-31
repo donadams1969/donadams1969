@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  valorcloud_anchor:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./../:/app  # Map the entire project root to the app directory
+      - ./../data/audit/anchors:/app/data/audit/anchors:rw
+      - ./../valoraiplus2025lsecrets.py:/app/valoraiplus2025lsecrets.py:ro
