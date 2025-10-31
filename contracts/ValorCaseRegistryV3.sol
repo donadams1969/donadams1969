@@ -91,7 +91,7 @@ contract ValorCaseRegistryV3 is
         bool coinbaseValid = primeValidator.isPrime(coinbase_prime);
         // In a real scenario, we might revert or take other action.
         // For this simulation, we'll return the results and emit an event.
-        // emit SystemAuditResult(genesisValid, coinbaseValid);
+        emit SystemAuditResult(genesisValid, coinbaseValid);
         return [genesisValid, coinbaseValid];
     }
 
@@ -123,6 +123,7 @@ contract ValorCaseRegistryV3 is
         require(_isValidCID(cid), "Invalid CID");
         _caseCounter++;
         uint256 newId = _caseCounter;
+
         _cases[newId] = Case({
             id: newId,
             cid: cid,

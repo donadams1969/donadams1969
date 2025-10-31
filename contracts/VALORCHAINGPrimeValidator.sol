@@ -27,9 +27,7 @@ contract VALORCHAINGPrimeValidator {
     /// @param n The number to check.
     /// @return true if the number is composite, false otherwise.
     function isComposite(uint256 n) public pure returns (bool) {
-        if (n <= 3) {
-            return false;
-        }
+        require(n > 1, "Numbers <= 1 are not composite");
         return !isPrime(n);
     }
 }
