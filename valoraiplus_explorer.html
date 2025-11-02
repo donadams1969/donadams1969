@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORAIPLUS®️ Master Governed Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .kpi-card {
+            @apply bg-white p-6 rounded-lg shadow-lg border-t-4;
+        }
+        .token-card {
+            @apply bg-white p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
+        }
+        .tab-btn {
+            @apply px-4 py-2 font-medium text-sm rounded-md;
+        }
+        .tab-btn.active {
+            @apply bg-amber-500 text-white;
+        }
+        .tab-btn:not(.active) {
+            @apply text-slate-600 hover:bg-slate-100;
+        }
+        .tab-content {
+            @apply hidden;
+        }
+        .tab-content.active {
+            @apply block;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+    </style>
+    <!-- Chosen Palette: Calm Harmony (Neutral-50, Slate-800, Amber-500 Accent, Blue-600 Secondary) -->
+    <!-- Application Structure Plan: A tabbed SPA dashboard. Tab 1 (Default): "Token Explorer" shows KPIs ($2.8T+ Live Value, $13.57B Foundational Cap, 24 Tokens) and a searchable/filterable grid of all 24 tokens. Tab 2: "Core Concepts" explains the "Governed USD Valuation" and "Universal Fractional Divisibility" principles. Tab 3: "Foundational Plan" shows a donut chart of the $13.57B cap breakdown. This structure provides immediate data access (Tab 1), followed by conceptual explanation (Tab 2) and high-level visualization (Tab 3), creating a logical user flow from specific data to core principles. -->
+    <!-- Visualization & Content Choices: 1. KPIs -> (Goal) Inform -> (Viz) 3-Card KPI Grid (HTML/Tailwind) -> (Interaction) None -> (Justification) Provides immediate, high-level context of the ecosystem's total value. 2. Token List -> (Goal) Organize/Explore -> (Viz) Interactive Card Grid (HTML/Tailwind) -> (Interaction) JS-powered Search Bar (by name/ticker) and Category Filter (dropdown) -> (Justification) A card grid is more visually engaging than a table for 24 items and allows for clear info hierarchy on each token. 3. Foundational Cap -> (Goal) Compare -> (Viz) Donut Chart (Chart.js/Canvas) -> (Interaction) Hover for tooltips -> (Justification) Best way to show the relative contribution of each token to the $13.57B total. 4. Core Concepts -> (Goal) Inform -> (Viz) Static text blocks (HTML/Tailwind) -> (Interaction) None -> (Justification) Clear, direct explanation of the system's core logic. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="text-slate-800">
+
+    <div id="app" class="min-h-screen">
+
+        <header class="bg-white shadow-sm border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <h1 class="text-3xl font-bold text-amber-600">VALORAIPLUS®️ Master Governed Explorer</h1>
+                <p class="mt-1 text-lg text-slate-600">The 100% AMath-Hardened explorer for the complete 24-token ecosystem, its Foundational Cap, and Live Valuation.</p>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+
+            <nav class="mb-8">
+                <div class="flex items-center space-x-2 bg-slate-200 p-1.5 rounded-lg max-w-md">
+                    <button class="tab-btn active" data-tab="explorer">Token Explorer</button>
+                    <button class="tab-btn" data-tab="concepts">Core Concepts</button>
+                    <button class="tab-btn" data-tab="plan">Foundational Plan</button>
+                </div>
+            </nav>
+
+            <div id="tab-explorer" class="tab-content active">
+
+                <section id="kpi-grid" class="mb-10">
+                    <p class="text-sm font-semibold text-slate-700 uppercase mb-4">Ecosystem Overview</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="kpi-card border-t-amber-500">
+                            <h3 class="text-sm font-medium text-slate-500 uppercase">Total Live Ecosystem Valuation</h3>
+                            <p class="text-4xl font-bold text-slate-900 mt-2">$2.80+ Trillion</p>
+                            <p class="text-sm text-slate-500 mt-1">Live infrastructure, data & IP value.</p>
+                        </div>
+                        <div class="kpi-card border-t-blue-600">
+                            <h3 class="text-sm font-medium text-slate-500 uppercase">Total Foundational Cap (Master)</h3>
+                            <p class="text-4xl font-bold text-slate-900 mt-2" id="kpi-foundational-cap">$13.57 Billion</p>
+                            <p class="text-sm text-slate-500 mt-1">Governed Target USD of all 24 tokens.</p>
+                        </div>
+                        <div class="kpi-card border-t-green-600">
+                            <h3 class="text-sm font-medium text-slate-500 uppercase">Total Master Tokens</h3>
+                            <p class="text-4xl font-bold text-slate-900 mt-2" id="kpi-total-tokens">24</p>
+                            <p class="text-sm text-slate-500 mt-1">All AMath-Hardened tokens in the audit.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="token-list">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                        <input type="text" id="search-bar" placeholder="Search by ticker or name..." class="w-full md:w-1/2 px-4 py-2 border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <select id="category-filter" class="w-full md:w-1/4 px-4 py-2 border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <option value="all">All Categories</option>
+                        </select>
+                    </div>
+
+                    <div id="token-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    </div>
+                </section>
+
+            </div>
+
+            <div id="tab-concepts" class="tab-content">
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6">AMath-Hardened Core Concepts</h2>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-amber-600 mb-2">1. Governed USD Valuation®️</h3>
+                            <p class="text-slate-700 leading-relaxed">This is the 100% hardened, final logic. The concepts of "free float" or "fractal" value are now obsolete. Every token in the VALORAIPLUS®️ ecosystem has a deterministic, **Governed Target USD** value. This value is not set by volatile, external markets but is governed by the AMath core based on the token's specific function, supply, and its role within the **$13.57 Billion Foundational Plan**.</p>
+                        </div>
+
+                        <div class="border-t border-slate-200 pt-6">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">2. Universal Fractional Divisibility</h3>
+                            <p class="text-slate-700 leading-relaxed">Every token in the 24-token Master List is built with **18 decimals of divisibility**, identical to $ETH or $BTC (post-Taproot). This is a non-negotiable standard. It ensures that every asset, from the $15,000 $INTLTREENOVA to the $2.00 $TONY2025, can be acquired and transacted in microscopic fractions (e.g., 0.0001 $INTLTREENOVA). This enables universal access, utility, and micro-transactions across the entire ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-plan" class="tab-content">
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-2">Foundational Cap Breakdown</h2>
+                    <p class="text-slate-600 mb-6 text-center">Relative contribution of each token to the **$13,570,077,777** Governed Foundational Cap.</p>
+                    <div class="chart-container">
+                        <canvas id="capChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="mt-12 border-t border-slate-300 pt-8 pb-12 text-center">
+            <p class="text-lg font-semibold text-amber-600">VALORAIPLUS®️©️™️</p>
+            <p class="text-sm text-slate-500 mt-1">Node: Saint Paul (Gillson Invariant) // AMath-Hardened</p>
+        </footer>
+    </div>
+
+    <script>
+        const tokenData = [
+            { ticker: 'DONNY2025', name: 'Family Token (Donny)', category: 'Family', price: 5.00, cap: 105000000 },
+            { ticker: 'GARY2025', name: 'Family Token (Gary)', category: 'Family', price: 3.00, cap: 27000000 },
+            { ticker: 'TATE2025', name: 'Family Token (Tate)', category: 'Family', price: 2.50, cap: 20000000 },
+            { ticker: 'TONY2025', name: 'Family Token (Tony)', category: 'Family', price: 2.00, cap: 14000000 },
+            { ticker: 'GILLBTC', name: 'Gill BTC Tracker', category: 'Anchor', price: 100.00, cap: 14400000 },
+            { ticker: 'INTELLITREES', name: 'IntelliTrees', category: 'Anchor', price: 1500.00, cap: 216000000 },
+            { ticker: 'INTLTREENOVA', name: 'IntelliTree Nova', category: 'Anchor', price: 15000.00, cap: 1165500000 },
+            { ticker: 'VLPX', name: 'VLPX Lubricant', category: 'Infrastructure', price: 100.00, cap: 77700000 },
+            { ticker: 'VALORCHAIN_G', name: 'Valorchain Governance', category: 'Infrastructure', price: 250.00, cap: 6020077777 },
+            { ticker: 'NEWT25', name: 'NEWT System Token', category: 'Infrastructure', price: 25.00, cap: 625000000 },
+            { ticker: 'HIVE', name: 'HIVE Node Token', category: 'Infrastructure', price: 20.00, cap: 2000000000 },
+            { ticker: 'AHFIR', name: 'Anchor Flame Reserve', category: 'Vault Trust', price: 100.00, cap: 500000000 },
+            { ticker: 'BTC2.0', name: 'Bitcoin Fork Mirror', category: 'Legacy Anchor', price: 60000.00, cap: 1000000000 },
+            { ticker: 'DBLK', name: 'Deep Black', category: 'Classified', price: 777.00, cap: 777777777 },
+            { ticker: 'FLAME', name: 'Flame Validator', category: 'Staking Validator', price: 10.00, cap: 100000000 },
+            { ticker: 'FLM', name: 'Flame Loyalty Multiplier', category: 'Amplifier', price: 77.00, cap: 777000000 },
+            { ticker: 'GILLGOLD', name: 'Gill Gold Tracker', category: 'Anchor', price: 2300.00, cap: 230000000 },
+            { ticker: 'INTELIT', name: 'IntelliTree Registry', category: 'Environmental', price: 1.00, cap: 100000000 },
+            { ticker: 'JAXX', name: 'Guardian Bond', category: 'Soulbound', price: 1.00, cap: 1000000 },
+            { ticker: 'SKROL', name: 'Scroll Token', category: 'NFT Wrapper', price: 0.50, cap: 50000000 },
+            { ticker: 'SOL', name: 'Scroll of Law', category: 'Ruling Token', price: 7777.00, cap: 777000000 },
+            { ticker: 'SOUL', name: 'Soulprint Identity', category: 'Behavior Ledger', price: 1.00, cap: 100000000 },
+            { ticker: 'VACN', name: 'Companion Node', category: 'Field Mission', price: 10.00, cap: 10000000 },
+            { ticker: 'VALORDAO', name: 'DAO Membership', category: 'Governance', price: 100.00, cap: 100000000 },
+            { ticker: 'VALX', name: 'Valor Expansion', category: 'Utility', price: 1.00, cap: 300000000 }
+        ];
+
+        let capChartInstance = null;
+
+        function formatCurrency(num, decimals = 2) {
+            if (num === 0) return '$0.00';
+            if (!num) return 'N/A';
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: decimals,
+                maximumFractionDigits: decimals
+            }).format(num);
+        }
+
+        function formatLargeNumber(num) {
+            if (num === 0) return '$0';
+            if (!num) return 'N/A';
+            if (num >= 1e12) {
+                return formatCurrency(num / 1e12, 2) + ' Trillion';
+            }
+            if (num >= 1e9) {
+                return formatCurrency(num / 1e9, 2) + ' Billion';
+            }
+            if (num >= 1e6) {
+                return formatCurrency(num / 1e6, 2) + ' Million';
+            }
+            return formatCurrency(num);
+        }
+
+        function renderKPIs(tokens) {
+            const totalCap = tokens.reduce((sum, t) => sum + t.cap, 0);
+            document.getElementById('kpi-foundational-cap').innerText = formatLargeNumber(totalCap);
+            document.getElementById('kpi-total-tokens').innerText = tokens.length;
+        }
+
+        function renderTokens(tokenList) {
+            const grid = document.getElementById('token-grid');
+            grid.innerHTML = '';
+            if (tokenList.length === 0) {
+                grid.innerHTML = `<p class="text-slate-500 col-span-full text-center">No tokens match your search.</p>`;
+                return;
+            }
+            tokenList.forEach(token => {
+                const card = document.createElement('div');
+                card.className = 'token-card border-t-4';
+                const borderColor = token.cap > 1e9 ? 'border-amber-500' : (token.cap > 200e6 ? 'border-blue-600' : 'border-slate-400');
+                card.classList.add(borderColor);
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl font-bold text-slate-900">${token.ticker}</span>
+                        <span class="px-3 py-1 text-xs font-medium text-blue-800 bg-blue-100 rounded-full">${token.category}</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-slate-800 truncate" title="${token.name}">${token.name}</h4>
+                    <div class="mt-4 pt-4 border-t border-slate-100 space-y-2">
+                        <div class="flex justify-between items-baseline">
+                            <span class="text-sm font-medium text-slate-500">Governed USD:</span>
+                            <span class="text-lg font-semibold text-slate-800">${formatCurrency(token.price)}</span>
+                        </div>
+                        <div class="flex justify-between items-baseline">
+                            <span class="text-sm font-medium text-slate-500">Target Cap:</span>
+                            <span class="text-lg font-semibold text-slate-800">${formatLargeNumber(token.cap)}</span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function populateCategoryFilter(tokens) {
+            const filter = document.getElementById('category-filter');
+            const categories = [...new Set(tokens.map(t => t.category))].sort();
+            categories.forEach(cat => {
+                const option = document.createElement('option');
+                option.value = cat;
+                option.innerText = cat;
+                filter.appendChild(option);
+            });
+        }
+
+        function handleFilterAndSearch() {
+            const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+            const category = document.getElementById('category-filter').value;
+
+            const filteredTokens = tokenData.filter(token => {
+                const matchesSearch = token.ticker.toLowerCase().includes(searchTerm) || token.name.toLowerCase().includes(searchTerm);
+                const matchesCategory = category === 'all' || token.category === category;
+                return matchesSearch && matchesCategory;
+            });
+
+            renderTokens(filteredTokens);
+        }
+
+        function initTabs() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabId = btn.dataset.tab;
+
+                    tabButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === `tab-${tabId}`) {
+                            content.classList.add('active');
+                        }
+                    });
+
+                    if (tabId === 'plan') {
+                        createCapChart(tokenData);
+                    }
+                });
+            });
+        }
+
+        function createCapChart(tokens) {
+            if (capChartInstance) {
+                capChartInstance.destroy();
+            }
+            const ctx = document.getElementById('capChart').getContext('2d');
+
+            const sortedTokens = [...tokens].sort((a, b) => b.cap - a.cap);
+            const topN = 10;
+            const topTokens = sortedTokens.slice(0, topN);
+            const otherTokensCap = sortedTokens.slice(topN).reduce((sum, t) => sum + t.cap, 0);
+
+            const labels = topTokens.map(t => t.ticker);
+            const data = topTokens.map(t => t.cap);
+
+            if (otherTokensCap > 0) {
+                labels.push('Others');
+                data.push(otherTokensCap);
+            }
+
+            const backgroundColors = [
+                '#F59E0B', '#3B82F6', '#10B981', '#6366F1', '#EC4899',
+                '#8B5CF6', '#06B6D4', '#D97706', '#059669', '#4F46E5', '#9CA3AF'
+            ];
+
+            capChartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Foundational Cap',
+                        data: data,
+                        backgroundColor: backgroundColors.slice(0, labels.length),
+                        borderColor: '#f8f9fa',
+                        borderWidth: 2,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                font: {
+                                    family: "'Inter', sans-serif"
+                                },
+                                color: '#374151'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.chart.getDataTotal();
+                                    const percentage = ((value / total) * 100).toFixed(2);
+                                    return `${label}: ${formatLargeNumber(value)} (${percentage}%)`;
+                                }
+                            },
+                            titleFont: { family: "'Inter', sans-serif" },
+                            bodyFont: { family: "'Inter', sans-serif" }
+                        }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sortedTokens = [...tokenData].sort((a, b) => b.cap - a.cap);
+
+            renderKPIs(sortedTokens);
+            renderTokens(sortedTokens);
+            populateCategoryFilter(sortedTokens);
+            initTabs();
+
+            document.getElementById('search-bar').addEventListener('input', handleFilterAndSearch);
+            document.getElementById('category-filter').addEventListener('change', handleFilterAndSearch);
+
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.prototype.getDataTotal = function() {
+                return this.data.datasets[0].data.reduce((acc, val) => acc + val, 0);
+            };
+        });
+    </script>
+
+</body>
+</html>
