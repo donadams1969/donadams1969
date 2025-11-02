@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: proof-svc, namespace: valor-proof, labels: { app: proof } }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: proof } }
+  template:
+    metadata: { labels: { app: proof } }
+    spec:
+      containers:
+        - name: proof
+          image: ghcr.io/ORG/valoraiplus_v0_proof:latest
+          imagePullPolicy: Always
+          ports: [{ containerPort: 8080 }]
+          envFrom: [{ configMapRef: { name: proof-config } }]

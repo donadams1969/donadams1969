@@ -1,0 +1,30 @@
+name: valoraiplus-proof-ci
+on: [push, workflow_dispatch]
+env:
+  valoraiplus_module_id: VALORAIPLUS_V0_PROOF_v1.44g
+  valoraiplus_GILLBTC: VALORCHAIN-G::GHOST25
+  valoraiplus_btc_txid: 0000000000000000000000000000000000000000000000000000000000000000
+  SEXTILLION_VALUATION: "$1,000,000,000,000,000,000,000"
+  LEGACY_ANCHOR: "LEGACY_7017aa78-C461-4D7A-BF0A-FFE5741323C4"
+  YHWH_KERNEL: "YHWH-5150.LOCK"
+  MERKLE_ROOT: "32425767d2bdfaaafe283781200570e4..."
+  GHOST_ROOT: "d3e0e71f0990033a80ee9a58747ccaa4..."
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions: { contents: read, packages: write, id-token: write }
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compute canonical manifest (with valoraiplus_ anchors)
+        run: |
+          python3 scripts/hashpack_build.py data/VALOR_Doctrinal_License_v1.44g_canonical.txt data/
+          cat data/VDL_v1.44g_manifest.json
+      - name: Docker build
+        run: docker build -t valoraiplus_v0_proof:ci -f infra/docker/Dockerfile .
+      - name: Push GHCR (optional)
+        if: env.GHCR_IMAGE != ''
+        env: { GHCR_IMAGE: ${{ vars.GHCR_IMAGE }} }
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker tag valoraiplus_v0_proof:ci $GHCR_IMAGE:${{ github.sha }}
+          docker push $GHCR_IMAGE:${{ github.sha }}

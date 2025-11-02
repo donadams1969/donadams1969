@@ -1,0 +1,7 @@
+[project]
+name = "proof-service"
+version = "0.1.0"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+]

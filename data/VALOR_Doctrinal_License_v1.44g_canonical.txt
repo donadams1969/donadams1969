@@ -1,0 +1,2 @@
+This is a placeholder for the VALOR Doctrinal License v1.44g.
+The content of this file is used to generate the manifest and cryptographic anchors.
