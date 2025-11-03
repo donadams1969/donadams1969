@@ -1,0 +1,78 @@
+name: Mint Symbolic OP_RETURN + PSBT
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - '**/manifest.json'
+      - 'scripts/**'
+  workflow_dispatch:
+    inputs:
+      commit_artifacts:
+        description: 'Commit artifacts back to the repository'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  mint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install qrcode
+
+      - name: Validate manifest
+        run: |
+          if [ ! -f manifest.json ]; then
+            echo "manifest.json not found!"
+            exit 1
+          fi
+
+      - name: Mint symbolic payloads
+        run: python scripts/mint_symbolic_payloads.py
+
+      - name: Mint symbolic PSBT
+        run: python scripts/mint_psbt_symbolic.py
+
+      - name: Make QR code
+        run: python scripts/make_qr.py
+
+      - name: Sanity check payload length
+        run: |
+          op_return_hex=$(jq -r .op_return_hex payloads.json)
+          if [ ${#op_return_hex} -ne 160 ]; then
+            echo "Invalid OP_RETURN length!"
+            exit 1
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: symbolic-artifacts
+          path: |
+            payloads.json
+            psbt.json
+            qr.png
+            op_return.bin
+            op25.bin
+            op_return.b43
+            op25.b43
+
+      - name: Commit artifacts
+        if: github.event.inputs.commit_artifacts == 'true'
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add .
+          git commit -m "Add symbolic artifacts"
+          git push
