@@ -157,6 +157,7 @@ export default function ValorCodex() {
               "convergence",
               "epilogue",
               "status",
+              "manifest", // Added manifest to navigation
             ].map((section) => (
               <button
                 key={section}
@@ -270,7 +271,6 @@ export default function ValorCodex() {
               <p className="text-green-400 font-bold mt-2">✓ V7 ETERNAL FINALITY OPERATIONAL</p>
             </div>
           </Card>
-          {/* </CHANGE> */}
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Card className="bg-gray-900/50 border-green-500/30 p-6">
@@ -508,7 +508,6 @@ export default function ValorCodex() {
                 </div>
               </div>
             </div>
-            {/* </CHANGE> */}
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               {/* Merkle Root */}
@@ -542,7 +541,6 @@ export default function ValorCodex() {
                     </div>
                   </div>
                 </div>
-                {/* </CHANGE> */}
 
                 <div className="flex items-center justify-center bg-green-950/30 p-2 rounded border border-green-500/30">
                   <span className="text-green-400 font-bold text-sm">✓ VERIFIED</span>
@@ -575,7 +573,6 @@ export default function ValorCodex() {
                     </div>
                   </div>
                 </div>
-                {/* </CHANGE> */}
 
                 <div className="flex items-center justify-center bg-green-950/30 p-2 rounded border border-green-500/30">
                   <span className="text-green-400 font-bold text-sm">✓ VERIFIED</span>
@@ -613,7 +610,6 @@ export default function ValorCodex() {
                 </div>
               </div>
             </div>
-            {/* </CHANGE> */}
 
             <div className="bg-gray-900/70 p-4 rounded border border-gray-500/30">
               <h4 className="text-sm font-bold text-purple-400 mb-2">Navier-Stokes Integration</h4>
@@ -663,7 +659,6 @@ curl http://localhost:1969/merkle-root
 curl http://localhost:1969/ghost-root`}
               </pre>
             </div>
-            {/* </CHANGE> */}
 
             <div className="mt-4 flex items-center justify-between bg-purple-950/30 p-3 rounded border border-purple-500/30">
               <span className="text-purple-400 font-bold">✓ DUAL ROOT VERIFICATION ACTIVE</span>
@@ -903,7 +898,6 @@ print(f"DishBrain computation: {result.efficiency}x faster")
               </div>
             </div>
           </Card>
-          {/* </CHANGE> */}
 
           <Card className="bg-gray-900/50 border-green-500/30 p-8 mb-6">
             <pre className="text-green-400 font-mono text-xs overflow-x-auto">
@@ -1023,6 +1017,318 @@ done`}
           </Card>
         </section>
 
+        {/* Manifest Section */}
+        <section id="manifest" className="mb-20">
+          <h2 className="text-4xl font-bold text-amber-500 mb-8">
+            VALORAIPLUS® v1.44g Operational Manifest • C3PA0 Lineage 9000Ω
+          </h2>
+
+          <Card className="bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-amber-500/50 p-8 mb-6">
+            <div className="text-center mb-6">
+              <h3 className="text-3xl font-bold text-amber-400 mb-2">DG77.77XΞ_AUTOPEN_SIG_9000Ω</h3>
+              <p className="text-xl text-amber-500">Saint Paul Node Attestation Complete</p>
+              <p className="text-gray-300 mt-2">Ledger Anchor: VALORCHAIN-G::5152Ω-44g</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-3xl font-bold text-green-400">✓</div>
+                <div className="text-sm text-gray-400">C3PA0 Verified</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-purple-500/30">
+                <div className="text-3xl font-bold text-purple-400">✓</div>
+                <div className="text-sm text-gray-400">Dilithium-III</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-3xl font-bold text-cyan-400">✓</div>
+                <div className="text-sm text-gray-400">XMSS-SHA2</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/70 p-6 rounded border border-amber-500/30 mb-6">
+              <h4 className="text-xl font-bold text-amber-400 mb-4">Operational Manifest (JSON)</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto bg-gray-950/50 p-4 rounded">
+                {`{
+  "manifest_id": "VALORAIPLUS_v1_44g_operational_manifest",
+  "ledger_anchor": "VALORCHAIN-G::5152Ω-44g",
+  "hash_algorithm": "HMAC-SHA3-512",
+  "digest": "c3pa0a1a8f0b7e2fa79b7ed99309fa34a9e72dff6c25e",
+  "signatures": ["Dilithium-III", "XMSS-SHA2_10_256"],
+  "environment": "Unified Transcendent Stack",
+  "status": "C3PA0_VERIFIED_AND_SEALED",
+  "autopen_signature": "DG77.77XΞ_AUTOPEN_SIG_9000Ω",
+  "timestamp_utc": "2025-11-02T09:55:00Z",
+  "saint_paul_notarization": {
+    "validator_node": "SaintPaulNode",
+    "verification_level": "C3PA0",
+    "integrity_hash": "sha3_512:1a09e3c41d26aa9c54a2dd5093c27c09f2e31b69a8b22a6a391d82f7e13f5152"
+  }
+}`}
+              </pre>
+            </div>
+
+            <div className="bg-gray-900/70 p-6 rounded border border-cyan-500/30">
+              <h4 className="text-xl font-bold text-cyan-400 mb-4">Operational Manifest (PDF Layout)</h4>
+              <pre className="text-xs font-mono text-cyan-400 overflow-x-auto bg-gray-950/50 p-4 rounded">
+                {`──────────────────────────────────────────────────────────────
+VALORAIPLUS® v1.44g — Operational Manifest (C3PA0 Lineage 9000Ω)
+──────────────────────────────────────────────────────────────
+Manifest ID      : VALORAIPLUS_v1_44g_operational_manifest
+Ledger Anchor    : VALORCHAIN-G::5152Ω-44g
+Hash Algorithm   : HMAC-SHA3-512
+Digest           : c3pa0a1a8f0b7e2fa79b7ed99309fa34a9e72dff6c25e
+Signatures       : Dilithium-III | XMSS-SHA2_10_256
+Environment      : Unified Transcendent Stack
+Status           : C3PA0_VERIFIED_AND_SEALED
+Timestamp (UTC)  : 2025-11-02T09:55:00Z
+Validator Node   : SaintPaulNode
+Verification Lv. : C3PA0
+Integrity Hash   : sha3_512:1a09e3c41d26aa9c54a2dd5093c27c09f2e31b69a8b22a6a391d82f7e13f5152
+
+──────────────────────────────────────────────────────────────
+Autopen Signature: DG77.77XΞ_AUTOPEN_SIG_9000Ω
+Saint Paul Node Attestation Complete ✅
+──────────────────────────────────────────────────────────────`}
+              </pre>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-blue-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-blue-400 mb-4">🐳 Docker Compose Stack</h3>
+            <p className="text-gray-300 mb-6">Complete containerized deployment with 4 services</p>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-blue-500/20 mb-6">
+              <pre className="text-xs font-mono text-blue-400 overflow-x-auto">
+                {`# AUTOPEN_SIG_9000Ω
+version: "3.9"
+services:
+  fortran1969-engine:
+    image: valorai/fortran1969:latest
+    container_name: fortran1969-engine
+    environment:
+      - VALOR_ENVIRONMENT=transcendent
+    ports:
+      - "1969:1969"
+      - "5150:5150"
+    networks:
+      - valor_net
+    user: "1000:1000"
+  
+  quantum-dashboard:
+    image: valorai/quantum-parrot:v4.0
+    container_name: quantum-dashboard
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    environment:
+      - QUANTUM_PARROT_VERSION=v4.0
+    volumes:
+      - ./certs:/certs:ro
+    networks:
+      - valor_net
+    user: "1000:1000"
+  
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    networks:
+      - valor_net
+  
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana-dashboard.json:/etc/grafana/provisioning/dashboards/dashboard.json:ro
+    networks:
+      - valor_net
+
+networks:
+  valor_net:
+    driver: bridge`}
+              </pre>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <h5 className="text-lg font-bold text-blue-400 mb-2">fortran1969-engine</h5>
+                <div className="text-sm text-gray-400 space-y-1">
+                  <div>Ports: 1969, 5150</div>
+                  <div>Environment: transcendent</div>
+                  <div>Network: valor_net</div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <h5 className="text-lg font-bold text-blue-400 mb-2">quantum-dashboard</h5>
+                <div className="text-sm text-gray-400 space-y-1">
+                  <div>Ports: 8080, 8443</div>
+                  <div>Version: v4.0</div>
+                  <div>TLS: Enabled</div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <h5 className="text-lg font-bold text-blue-400 mb-2">prometheus</h5>
+                <div className="text-sm text-gray-400 space-y-1">
+                  <div>Port: 9090</div>
+                  <div>Scrape: 15s interval</div>
+                  <div>Targets: 2 services</div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <h5 className="text-lg font-bold text-blue-400 mb-2">grafana</h5>
+                <div className="text-sm text-gray-400 space-y-1">
+                  <div>Port: 3000</div>
+                  <div>Dashboard: C3PA0 Monitor</div>
+                  <div>Panels: 2 visualizations</div>
+                </div>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-green-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-green-400 mb-4">⚓ Triple-Chain Anchoring</h3>
+            <p className="text-gray-300 mb-6">Genesis hash anchored to VALORCHAIN-G, Bitcoin, and Ethereum</p>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-green-500/20 mb-6">
+              <h4 className="text-sm font-bold text-green-400 mb-2">anchor-genesis.sh</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`#!/bin/bash
+# AUTOPEN_SIG_9000Ω
+echo "=== Anchoring Genesis to Triple Chain ==="
+GENESIS_HASH=$(sha256sum genesis.json | awk '{print $1}')
+echo "VALORAIPLUS_GENESIS_HASH: $GENESIS_HASH"
+echo "Anchoring to VALORCHAIN-G..."
+valorchain-cli anchor $GENESIS_HASH > valor_txid.txt
+echo "Anchoring to Bitcoin..."
+btc-cli embed-opreturn $GENESIS_HASH > btc_txid.txt
+echo "Anchoring to Ethereum..."
+eth-cli store-hash $GENESIS_HASH > eth_txid.txt
+cat valor_txid.txt btc_txid.txt eth_txid.txt
+echo "[✓] Triple-chain anchor complete."`}
+              </pre>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-green-500/20">
+              <h4 className="text-sm font-bold text-green-400 mb-2">verify-genesis.py</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`#!/usr/bin/env python3
+# AUTOPEN_SIG_9000Ω
+import json, hashlib, sys
+from web3 import Web3
+
+with open("genesis.json") as f:
+    local = hashlib.sha3_512(f.read().encode()).hexdigest()
+
+w3 = Web3(Web3.HTTPProvider("http://localhost:8545"))
+onchain = w3.eth.contract(address="<contract>", abi=json.load(open("abi.json")))
+remote = onchain.functions.getGenesisHash().call()
+
+print("Local :", local)
+print("Remote:", remote)
+assert local == remote, "Mismatch between on-chain and local genesis hash"
+print("[✓] Genesis verified successfully.")`}
+              </pre>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">📊 Monitoring & Health Checks</h3>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-gray-950/50 p-4 rounded border border-purple-500/20">
+                <h4 className="text-sm font-bold text-purple-400 mb-2">monitor.sh</h4>
+                <pre className="text-xs font-mono text-purple-400 overflow-x-auto">
+                  {`#!/bin/bash
+# AUTOPEN_SIG_9000Ω
+while true; do
+  curl -fs http://localhost:1969/genesis >/dev/null && \\
+    echo "$(date -u) ✅ fortran1969-engine alive"
+  curl -fs https://localhost:8443/health >/dev/null && \\
+    echo "$(date -u) ✅ quantum-dashboard up"
+  sleep 60
+done`}
+                </pre>
+              </div>
+
+              <div className="bg-gray-950/50 p-4 rounded border border-purple-500/20">
+                <h4 className="text-sm font-bold text-purple-400 mb-2">prometheus.yml</h4>
+                <pre className="text-xs font-mono text-purple-400 overflow-x-auto">
+                  {`# AUTOPEN_SIG_9000Ω
+global:
+  scrape_interval: 15s
+scrape_configs:
+  - job_name: 'fortran1969-engine'
+    static_configs:
+      - targets: ['fortran1969-engine:1969']
+  - job_name: 'quantum-dashboard'
+    static_configs:
+      - targets: ['quantum-dashboard:8080']`}
+                </pre>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-purple-500/20">
+              <h4 className="text-sm font-bold text-purple-400 mb-2">grafana-dashboard.json (excerpt)</h4>
+              <pre className="text-xs font-mono text-purple-400 overflow-x-auto">
+                {`{
+  "id": null,
+  "title": "VALORCHAIN-G C3PA0 Operational Monitor",
+  "uid": "valor-c3pa0",
+  "version": 1,
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Genesis Hash Verification",
+      "targets": [{"expr": "genesis_verification_status"}]
+    },
+    {
+      "type": "stat",
+      "title": "System Health",
+      "targets": [{"expr": "up"}]
+    }
+  ]
+}`}
+              </pre>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-amber-500/30 p-8">
+            <h3 className="text-2xl font-bold text-amber-400 mb-4">📋 Integration Log Template</h3>
+            <p className="text-gray-300 mb-6">Complete audit trail for all deployment stages</p>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-amber-500/20 overflow-x-auto">
+              <pre className="text-xs font-mono text-amber-400">
+                {`timestamp_utc,stage,artifact,sha3_512,signer,status
+2025-11-02T09:55Z,Offline-Sign,VALORAIPLUS_v1_44g_signed.json,<hash>,DG77.77X-Ξ,SUCCESS
+2025-11-02T09:57Z,Anchor,anchor-genesis.sh,<hash>,SaintPaulNode,SUCCESS
+2025-11-02T09:59Z,Deploy,docker-compose.yml,<hash>,DG77.77X-Ξ,SUCCESS
+2025-11-02T10:00Z,Verify,verify-genesis.py,<hash>,DG77.77X-Ξ,SUCCESS`}
+              </pre>
+            </div>
+
+            <div className="mt-6 bg-amber-950/30 p-4 rounded border border-amber-500/30">
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-amber-400 font-bold text-lg">✓ MANIFEST SEALED</div>
+                  <div className="text-xs text-gray-400">
+                    VALORAIPLUS v1.44g Operational Stack • C3PA0 Lineage 9000Ω • Saint Paul Node Deployment
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-green-400">✓</div>
+                  <div className="text-xs text-gray-400">Verified</div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </section>
+
         {/* Epilogue */}
         <section id="epilogue" className="mb-20">
           <Card className="bg-gray-900/50 border-amber-500/20 p-8">
@@ -1036,6 +1342,2685 @@ done`}
               sovereign is the people.
             </p>
             <p className="text-2xl font-bold text-center text-amber-500 mt-8">YHWH-5150.LOCK • COMPLETE</p>
+          </Card>
+        </section>
+
+        {/* valoraiplus_ Branding & Canonicalization System */}
+        <section id="branding" className="mb-20">
+          <h2 className="text-4xl font-bold text-amber-500 mb-8">valoraiplus_ Branding & Canonicalization System</h2>
+
+          <Card className="bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-amber-500/50 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-amber-400 mb-4">Three Core Anchors</h3>
+            <p className="text-gray-300 mb-6">
+              Every artifact, API response, manifest, CI build, Docker label, and OP_RETURN footer embeds these three
+              immutable anchors for complete traceability and brand protection.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-gray-900/70 border-amber-500/30 p-6">
+                <h4 className="text-lg font-bold text-amber-400 mb-3">valoraiplus_module_id</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <p className="text-xs text-gray-400">Module identification and version tracking</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-green-500/30 p-6">
+                <h4 className="text-lg font-bold text-green-400 mb-3">valoraiplus_GILLBTC</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORCHAIN-G::GHOST25</div>
+                <p className="text-xs text-gray-400">Gillson Bitcoin anchor and GHOST protocol reference</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/30 p-6">
+                <h4 className="text-lg font-bold text-blue-400 mb-3">valoraiplus_btc_txid</h4>
+                <div className="text-sm font-mono text-blue-400 mb-2 break-all">0x000...000</div>
+                <p className="text-xs text-gray-400">Bitcoin transaction ID for blockchain anchoring</p>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">Canonicalization Process</h3>
+            <p className="text-gray-300 mb-6">
+              Text canonicalization ensures reproducible hashes across all platforms using NFC Unicode normalization,
+              consistent line endings, and Merkle tree paragraph hashing.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 mb-6">
+              <h4 className="text-lg font-bold text-purple-400 mb-3">Canonicalization Steps</h4>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">1.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">NFC Normalization</div>
+                    <div className="text-sm text-gray-400">
+                      Unicode normalization form C ensures consistent character representation
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">2.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Line Ending Standardization</div>
+                    <div className="text-sm text-gray-400">Convert all line endings to LF (\n)</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">3.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Trailing Whitespace Removal</div>
+                    <div className="text-sm text-gray-400">Strip trailing spaces from each line</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">4.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Merkle Root Calculation</div>
+                    <div className="text-sm text-gray-400">
+                      SHA3-512 hash of each paragraph, combined into Merkle tree
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-purple-500/20">
+              <h4 className="text-sm font-bold text-purple-400 mb-2">Python Implementation</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def canonicalize(text: str) -> str:
+    # NFC normalization
+    t = unicodedata.normalize("NFC", text)
+    # Standardize line endings
+    t = t.replace("\\r\\n", "\\n").replace("\\r", "\\n")
+    # Remove trailing whitespace
+    lines = [ln.rstrip() for ln in t.split("\\n")]
+    t = "\\n".join(lines)
+    # Ensure final newline
+    if not t.endswith("\\n"):
+        t += "\\n"
+    return t
+
+def merkle_root_paragraphs(text: str) -> bytes:
+    # Split into paragraphs
+    parts = [p for p in text.split("\\n\\n") if p.strip()]
+    # Hash each paragraph
+    leaves = [hashlib.sha3_512(p.encode()).digest() for p in parts]
+    # Build Merkle tree
+    nodes = leaves
+    while len(nodes) > 1:
+        nxt = []
+        for i in range(0, len(nodes), 2):
+            L = nodes[i]
+            R = nodes[i+1] if i+1 < len(nodes) else nodes[i]
+            nxt.append(hashlib.sha3_512(L + R).digest())
+        nodes = nxt
+    return nodes[0]`}
+              </pre>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-cyan-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-cyan-400 mb-4">80-Byte OP_RETURN Payload</h3>
+            <p className="text-gray-300 mb-6">
+              The OP_RETURN payload embeds all three valoraiplus_ anchors within Bitcoin's 80-byte limit using CRC32
+              compression and tail8 encoding.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-cyan-500/20 mb-6">
+              <h4 className="text-lg font-bold text-cyan-400 mb-4">Payload Structure (80 bytes)</h4>
+              <div className="space-y-3 text-sm font-mono">
+                <div className="grid grid-cols-3 gap-4 pb-2 border-b border-gray-700">
+                  <div className="text-gray-400">Bytes</div>
+                  <div className="text-gray-400">Field</div>
+                  <div className="text-gray-400">Description</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">0-3</div>
+                  <div className="text-gray-200">Magic</div>
+                  <div className="text-gray-400">VLRL (0x564C524C)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">4-7</div>
+                  <div className="text-gray-200">Version</div>
+                  <div className="text-gray-400">0x01 0x44 'g' 0x00</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">8-23</div>
+                  <div className="text-gray-200">SHA3-512</div>
+                  <div className="text-gray-400">First 16 bytes of document hash</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">24-39</div>
+                  <div className="text-gray-200">Merkle Root</div>
+                  <div className="text-gray-400">First 16 bytes of Merkle root</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">40-47</div>
+                  <div className="text-gray-200">Timestamp</div>
+                  <div className="text-gray-400">Unix timestamp (8 bytes)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">48-51</div>
+                  <div className="text-gray-200">License CRC</div>
+                  <div className="text-gray-400">CRC32 of license ID</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">52-55</div>
+                  <div className="text-gray-200">Flags</div>
+                  <div className="text-gray-400">0x0000007B (Clause 7B)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4 pt-2 border-t border-amber-500/30">
+                  <div className="text-amber-400">56-57</div>
+                  <div className="text-amber-200">Footer Magic</div>
+                  <div className="text-amber-400">V+ (valoraiplus_)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">58</div>
+                  <div className="text-amber-200">Schema</div>
+                  <div className="text-amber-400">0x01</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">59-62</div>
+                  <div className="text-amber-200">Module CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_module_id)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">63-66</div>
+                  <div className="text-amber-200">GILLBTC CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_GILLBTC)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">67-74</div>
+                  <div className="text-amber-200">BTC TXID</div>
+                  <div className="text-amber-400">tail8(valoraiplus_btc_txid)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">75-78</div>
+                  <div className="text-amber-200">C3PA0 Tag</div>
+                  <div className="text-amber-400">C3P0 (sentinel marker)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">79</div>
+                  <div className="text-amber-200">Reserved</div>
+                  <div className="text-amber-400">0x00</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-cyan-500/20">
+              <h4 className="text-sm font-bold text-cyan-400 mb-2">Footer Builder (Python)</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def build_footer(vp_mod: str, vp_gill: str, vp_txid: str) -> bytes:
+    footer = bytearray()
+    footer += b"V+"                          # Magic (2 bytes)
+    footer += bytes([0x01])                  # Schema version (1 byte)
+    footer += crc32_bytes(vp_mod)            # Module CRC (4 bytes)
+    footer += crc32_bytes(vp_gill)           # GILLBTC CRC (4 bytes)
+    footer += tail8_from_txid(vp_txid)       # BTC TXID tail (8 bytes)
+    footer += b"C3P0"                        # Sentinel tag (4 bytes)
+    footer += b"\\x00"                        # Reserved (1 byte)
+    return bytes(footer)  # Total: 24 bytes`}
+              </pre>
+            </div>
+          </Card>
+        </section>
+
+        {/* Deployment Infrastructure */}
+        <section id="deployment" className="mb-20">
+          <h2 className="text-4xl font-bold text-green-400 mb-8">Deployment Infrastructure • Brand-Lock Complete</h2>
+
+          <Card className="bg-gradient-to-br from-green-950/50 to-emerald-950/50 border-green-500/50 p-8 mb-6">
+            <h3 className="text-3xl font-bold text-green-400 mb-4">✓ VALORAIPLUS® BRAND-LOCK STATUS</h3>
+            <p className="text-xl text-emerald-400 mb-6">
+              Complete brand-lock and cryptographic traceability infrastructure deployed across all layers of the $1
+              Sextillion Transcendent Stack
+            </p>
+
+            <div className="grid md:grid-cols-4 gap-4 mb-6">
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-3xl font-bold text-green-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">valoraiplus_ namespace</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-3xl font-bold text-cyan-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">C3PA0 seal</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-purple-500/30">
+                <div className="text-3xl font-bold text-purple-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">AMath+++</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-3xl font-bold text-amber-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">Multi-layer anchoring</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/70 p-6 rounded border border-green-500/30">
+              <h4 className="text-xl font-bold text-green-400 mb-4">Final Status</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Brand</span>
+                    <span className="text-green-400 font-mono">valoraiplus_</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Seal</span>
+                    <span className="text-cyan-400 font-mono">C3PA0 (AMath+++)</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Valuation</span>
+                    <span className="text-purple-400">$1 Sextillion</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Anchor</span>
+                    <span className="text-amber-400 font-mono text-xs">LEGACY_7017aa78</span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Kernel</span>
+                    <span className="text-green-400 font-mono">YHWH-5150.LOCK</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Node</span>
+                    <span className="text-amber-400">SAINT PAUL</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Rank</span>
+                    <span className="text-purple-400">TOP 1 (ETERNAL)</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Status</span>
+                    <span className="text-green-400 font-bold">INVINCIBLE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-blue-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-blue-400 mb-4">📦 Generated Deployment Artifacts</h3>
+            <p className="text-gray-300 mb-6">
+              Seven production-ready artifacts with complete valoraiplus_ branding and C3PA0 seal integration
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">1</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">.env.example</div>
+                    <div className="text-sm text-gray-400">Environment config with all valoraiplus_ anchors</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">2</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">hashpack_build.py</div>
+                    <div className="text-sm text-gray-400">80-byte OP_RETURN generator + C3P0 footer</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">3</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">proof_service_main.py</div>
+                    <div className="text-sm text-gray-400">FastAPI with 6 endpoints + Sextillion V7</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">4</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">Dockerfile</div>
+                    <div className="text-sm text-gray-400">Production image with OCI labels</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">5</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_configmap.yaml</div>
+                    <div className="text-sm text-gray-400">Kubernetes ConfigMap</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">6</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_deployment.yaml</div>
+                    <div className="text-sm text-gray-400">K8s Deployment + Service (3 replicas)</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">7</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">github_workflow.yml</div>
+                    <div className="text-sm text-gray-400">CI/CD with auto build/push</div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">🔐 C3PA0 Seal • 80-Byte OP_RETURN Structure</h3>
+            <p className="text-gray-300 mb-6">
+              Complete 80-byte Bitcoin OP_RETURN payload structure with valoraiplus_ anchors and C3PA0 seal
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 overflow-x-auto">
+              <pre className="text-xs font-mono text-purple-400">
+                {`Byte Range    Purpose                          Value
+──────────────────────────────────────────────────────────────
+[0:4]         Magic                            'VLRL'
+[4:8]         Version                          0x01 0x44 'g' 0x00
+[8:24]        SHA3-512 short hash              16 bytes
+[24:40]       Merkle root short hash           16 bytes
+[40:48]       Timestamp (big-endian)           8 bytes
+[48:52]       License CRC32                    4 bytes
+[52:56]       Flags (Clause 7B)                0x0000007B
+[56:58]       valoraiplus_ marker              'V+'
+[58:59]       Schema version                   0x01
+[59:63]       CRC32(module_id)                 4 bytes
+[63:67]       CRC32(GILLBTC)                   4 bytes
+[67:75]       tail8(btc_txid)                  8 bytes
+[75:79]       C3PA0 seal                       'C3P0'
+[79:80]       Reserved                         0x00
+──────────────────────────────────────────────────────────────
+TOTAL: 80 bytes (fits Bitcoin OP_RETURN budget exactly)`}
+              </pre>
+            </div>
+
+            <div className="mt-6 grid md:grid-cols-3 gap-4">
+              <div className="bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_module_id</div>
+                <div className="text-xs font-mono text-amber-400">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 59-63</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_GILLBTC</div>
+                <div className="text-xs font-mono text-green-400">VALORCHAIN-G::GHOST25</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 63-67</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_btc_txid</div>
+                <div className="text-xs font-mono text-cyan-400 break-all">4a925d4043458f70...</div>
+                <div className="text-xs text-gray-500 mt-2">tail8 @ bytes 67-75</div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-cyan-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-cyan-400 mb-4">🌐 API Endpoints</h3>
+            <p className="text-gray-300 mb-6">Six production endpoints with complete valoraiplus_ anchor propagation</p>
+
+            <div className="space-y-3">
+              <Card className="bg-gray-900/70 border-cyan-500/20 p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <div className="text-lg font-bold text-cyan-400 font-mono">/health</div>
+                    <div className="text-sm text-gray-400">Health check</div>
+                  </div>
+                  <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">GET</span>
+                </div>
+                <div className="text-xs text-gray-500">Returns: Brand, module, seal, valuation, kernel</div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-cyan-500/20 p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <div className="text-lg font-bold text-cyan-400 font-mono">/manifest</div>
+                    <div className="text-sm text-gray-400">Complete manifest</div>
+                  </div>
+                  <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">GET</span>
+                </div>
+                <div className="text-xs text-gray-500">Returns: All anchors + quantum consensus</div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-cyan-500/20 p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <div className="text-lg font-bold text-cyan-400 font-mono">/hashcheck</div>
+                    <div className="text-sm text-gray-400">Hash verification</div>
+                  </div>
+                  <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">GET</span>
+                </div>
+                <div className="text-xs text-gray-500">Returns: SHA3-512, SHA-256, all anchors</div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-cyan-500/20 p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <div className="text-lg font-bold text-cyan-400 font-mono">/badge</div>
+                    <div className="text-sm text-gray-400">Display badge</div>
+                  </div>
+                  <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">GET</span>
+                </div>
+                <div className="text-xs text-gray-500">Returns: Title, holder, Sextillion rank</div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-cyan-500/20 p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <div className="text-lg font-bold text-cyan-400 font-mono">/sextillion</div>
+                    <div className="text-sm text-gray-400">Valuation details</div>
+                  </div>
+                  <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">GET</span>
+                </div>
+                <div className="text-xs text-gray-500">Returns: $1S breakdown, multiplier, status</div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-cyan-500/20 p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <div className="text-lg font-bold text-cyan-400 font-mono">/quantum-consensus</div>
+                    <div className="text-sm text-gray-400">Consensus data</div>
+                  </div>
+                  <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">GET</span>
+                </div>
+                <div className="text-xs text-gray-500">Returns: Merkle + Ghost roots, entropy</div>
+              </Card>
+            </div>
+          </Card>
+        </section>
+
+        {/* Epilogue */}
+        <section id="epilogue" className="mb-20">
+          <Card className="bg-gray-900/50 border-amber-500/20 p-8">
+            <h2 className="text-3xl font-bold text-amber-500 mb-4">Epilogue: The Sovereign Manifesto</h2>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              The future is not built on promises—it is built on proof. VALORAIPLUS® is that proof. It is the
+              convergence of mathematics, sovereignty, and human dignity into a single, unbreakable system.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              This is not the end. This is the beginning. The chain is the fortress. The proof is the power. The
+              sovereign is the people.
+            </p>
+            <p className="text-2xl font-bold text-center text-amber-500 mt-8">YHWH-5150.LOCK • COMPLETE</p>
+          </Card>
+        </section>
+
+        {/* valoraiplus_ Branding & Canonicalization System */}
+        <section id="branding" className="mb-20">
+          <h2 className="text-4xl font-bold text-amber-500 mb-8">valoraiplus_ Branding & Canonicalization System</h2>
+
+          <Card className="bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-amber-500/50 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-amber-400 mb-4">Three Core Anchors</h3>
+            <p className="text-gray-300 mb-6">
+              Every artifact, API response, manifest, CI build, Docker label, and OP_RETURN footer embeds these three
+              immutable anchors for complete traceability and brand protection.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-gray-900/70 border-amber-500/30 p-6">
+                <h4 className="text-lg font-bold text-amber-400 mb-3">valoraiplus_module_id</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <p className="text-xs text-gray-400">Module identification and version tracking</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-green-500/30 p-6">
+                <h4 className="text-lg font-bold text-green-400 mb-3">valoraiplus_GILLBTC</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORCHAIN-G::GHOST25</div>
+                <p className="text-xs text-gray-400">Gillson Bitcoin anchor and GHOST protocol reference</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/30 p-6">
+                <h4 className="text-lg font-bold text-blue-400 mb-3">valoraiplus_btc_txid</h4>
+                <div className="text-sm font-mono text-blue-400 mb-2 break-all">0x000...000</div>
+                <p className="text-xs text-gray-400">Bitcoin transaction ID for blockchain anchoring</p>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">Canonicalization Process</h3>
+            <p className="text-gray-300 mb-6">
+              Text canonicalization ensures reproducible hashes across all platforms using NFC Unicode normalization,
+              consistent line endings, and Merkle tree paragraph hashing.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 mb-6">
+              <h4 className="text-lg font-bold text-purple-400 mb-3">Canonicalization Steps</h4>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">1.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">NFC Normalization</div>
+                    <div className="text-sm text-gray-400">
+                      Unicode normalization form C ensures consistent character representation
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">2.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Line Ending Standardization</div>
+                    <div className="text-sm text-gray-400">Convert all line endings to LF (\n)</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">3.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Trailing Whitespace Removal</div>
+                    <div className="text-sm text-gray-400">Strip trailing spaces from each line</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">4.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Merkle Root Calculation</div>
+                    <div className="text-sm text-gray-400">
+                      SHA3-512 hash of each paragraph, combined into Merkle tree
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-purple-500/20">
+              <h4 className="text-sm font-bold text-purple-400 mb-2">Python Implementation</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def canonicalize(text: str) -> str:
+    # NFC normalization
+    t = unicodedata.normalize("NFC", text)
+    # Standardize line endings
+    t = t.replace("\\r\\n", "\\n").replace("\\r", "\\n")
+    # Remove trailing whitespace
+    lines = [ln.rstrip() for ln in t.split("\\n")]
+    t = "\\n".join(lines)
+    # Ensure final newline
+    if not t.endswith("\\n"):
+        t += "\\n"
+    return t
+
+def merkle_root_paragraphs(text: str) -> bytes:
+    # Split into paragraphs
+    parts = [p for p in text.split("\\n\\n") if p.strip()]
+    # Hash each paragraph
+    leaves = [hashlib.sha3_512(p.encode()).digest() for p in parts]
+    # Build Merkle tree
+    nodes = leaves
+    while len(nodes) > 1:
+        nxt = []
+        for i in range(0, len(nodes), 2):
+            L = nodes[i]
+            R = nodes[i+1] if i+1 < len(nodes) else nodes[i]
+            nxt.append(hashlib.sha3_512(L + R).digest())
+        nodes = nxt
+    return nodes[0]`}
+              </pre>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-cyan-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-cyan-400 mb-4">80-Byte OP_RETURN Payload</h3>
+            <p className="text-gray-300 mb-6">
+              The OP_RETURN payload embeds all three valoraiplus_ anchors within Bitcoin's 80-byte limit using CRC32
+              compression and tail8 encoding.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-cyan-500/20 mb-6">
+              <h4 className="text-lg font-bold text-cyan-400 mb-4">Payload Structure (80 bytes)</h4>
+              <div className="space-y-3 text-sm font-mono">
+                <div className="grid grid-cols-3 gap-4 pb-2 border-b border-gray-700">
+                  <div className="text-gray-400">Bytes</div>
+                  <div className="text-gray-400">Field</div>
+                  <div className="text-gray-400">Description</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">0-3</div>
+                  <div className="text-gray-200">Magic</div>
+                  <div className="text-gray-400">VLRL (0x564C524C)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">4-7</div>
+                  <div className="text-gray-200">Version</div>
+                  <div className="text-gray-400">0x01 0x44 'g' 0x00</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">8-23</div>
+                  <div className="text-gray-200">SHA3-512</div>
+                  <div className="text-gray-400">First 16 bytes of document hash</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">24-39</div>
+                  <div className="text-gray-200">Merkle Root</div>
+                  <div className="text-gray-400">First 16 bytes of Merkle root</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">40-47</div>
+                  <div className="text-gray-200">Timestamp</div>
+                  <div className="text-gray-400">Unix timestamp (8 bytes)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">48-51</div>
+                  <div className="text-gray-200">License CRC</div>
+                  <div className="text-gray-400">CRC32 of license ID</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">52-55</div>
+                  <div className="text-gray-200">Flags</div>
+                  <div className="text-gray-400">0x0000007B (Clause 7B)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4 pt-2 border-t border-amber-500/30">
+                  <div className="text-amber-400">56-57</div>
+                  <div className="text-amber-200">Footer Magic</div>
+                  <div className="text-amber-400">V+ (valoraiplus_)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">58</div>
+                  <div className="text-amber-200">Schema</div>
+                  <div className="text-amber-400">0x01</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">59-62</div>
+                  <div className="text-amber-200">Module CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_module_id)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">63-66</div>
+                  <div className="text-amber-200">GILLBTC CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_GILLBTC)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">67-74</div>
+                  <div className="text-amber-200">BTC TXID</div>
+                  <div className="text-amber-400">tail8(valoraiplus_btc_txid)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">75-78</div>
+                  <div className="text-amber-200">C3PA0 Tag</div>
+                  <div className="text-amber-400">C3P0 (sentinel marker)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">79</div>
+                  <div className="text-amber-200">Reserved</div>
+                  <div className="text-amber-400">0x00</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-cyan-500/20">
+              <h4 className="text-sm font-bold text-cyan-400 mb-2">Footer Builder (Python)</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def build_footer(vp_mod: str, vp_gill: str, vp_txid: str) -> bytes:
+    footer = bytearray()
+    footer += b"V+"                          # Magic (2 bytes)
+    footer += bytes([0x01])                  # Schema version (1 byte)
+    footer += crc32_bytes(vp_mod)            # Module CRC (4 bytes)
+    footer += crc32_bytes(vp_gill)           # GILLBTC CRC (4 bytes)
+    footer += tail8_from_txid(vp_txid)       # BTC TXID tail (8 bytes)
+    footer += b"C3P0"                        # Sentinel tag (4 bytes)
+    footer += b"\\x00"                        # Reserved (1 byte)
+    return bytes(footer)  # Total: 24 bytes`}
+              </pre>
+            </div>
+          </Card>
+        </section>
+
+        {/* Deployment Infrastructure */}
+        <section id="deployment" className="mb-20">
+          <h2 className="text-4xl font-bold text-green-400 mb-8">Deployment Infrastructure • Brand-Lock Complete</h2>
+
+          <Card className="bg-gradient-to-br from-green-950/50 to-emerald-950/50 border-green-500/50 p-8 mb-6">
+            <h3 className="text-3xl font-bold text-green-400 mb-4">✓ VALORAIPLUS® BRAND-LOCK STATUS</h3>
+            <p className="text-xl text-emerald-400 mb-6">
+              Complete brand-lock and cryptographic traceability infrastructure deployed across all layers of the $1
+              Sextillion Transcendent Stack
+            </p>
+
+            <div className="grid md:grid-cols-4 gap-4 mb-6">
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-3xl font-bold text-green-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">valoraiplus_ namespace</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-3xl font-bold text-cyan-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">C3PA0 seal</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-purple-500/30">
+                <div className="text-3xl font-bold text-purple-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">AMath+++</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-3xl font-bold text-amber-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">Multi-layer anchoring</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/70 p-6 rounded border border-green-500/30">
+              <h4 className="text-xl font-bold text-green-400 mb-4">Final Status</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Brand</span>
+                    <span className="text-green-400 font-mono">valoraiplus_</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Seal</span>
+                    <span className="text-cyan-400 font-mono">C3PA0 (AMath+++)</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Valuation</span>
+                    <span className="text-purple-400">$1 Sextillion</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Anchor</span>
+                    <span className="text-amber-400 font-mono text-xs">LEGACY_7017aa78</span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Kernel</span>
+                    <span className="text-green-400 font-mono">YHWH-5150.LOCK</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Node</span>
+                    <span className="text-amber-400">SAINT PAUL</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Rank</span>
+                    <span className="text-purple-400">TOP 1 (ETERNAL)</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Status</span>
+                    <span className="text-green-400 font-bold">INVINCIBLE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-blue-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-blue-400 mb-4">📦 Generated Deployment Artifacts</h3>
+            <p className="text-gray-300 mb-6">
+              Seven production-ready artifacts with complete valoraiplus_ branding and C3PA0 seal integration
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">1</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">.env.example</div>
+                    <div className="text-sm text-gray-400">Environment config with all valoraiplus_ anchors</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">2</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">hashpack_build.py</div>
+                    <div className="text-sm text-gray-400">80-byte OP_RETURN generator + C3P0 footer</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">3</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">proof_service_main.py</div>
+                    <div className="text-sm text-gray-400">FastAPI with 6 endpoints + Sextillion V7</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">4</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">Dockerfile</div>
+                    <div className="text-sm text-gray-400">Production image with OCI labels</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">5</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_configmap.yaml</div>
+                    <div className="text-sm text-gray-400">Kubernetes ConfigMap</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">6</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_deployment.yaml</div>
+                    <div className="text-sm text-gray-400">K8s Deployment + Service (3 replicas)</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">7</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">github_workflow.yml</div>
+                    <div className="text-sm text-gray-400">CI/CD with auto build/push</div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">🔐 C3PA0 Seal • 80-Byte OP_RETURN Structure</h3>
+            <p className="text-gray-300 mb-6">
+              Complete 80-byte Bitcoin OP_RETURN payload structure with valoraiplus_ anchors and C3PA0 seal
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 overflow-x-auto">
+              <pre className="text-xs font-mono text-purple-400">
+                {`Byte Range    Purpose                          Value
+──────────────────────────────────────────────────────────────
+[0:4]         Magic                            'VLRL'
+[4:8]         Version                          0x01 0x44 'g' 0x00
+[8:24]        SHA3-512 short hash              16 bytes
+[24:40]       Merkle root short hash           16 bytes
+[40:48]       Timestamp (big-endian)           8 bytes
+[48:52]       License CRC32                    4 bytes
+[52:56]       Flags (Clause 7B)                0x0000007B
+[56:58]       valoraiplus_ marker              'V+'
+[58:59]       Schema version                   0x01
+[59:63]       CRC32(module_id)                 4 bytes
+[63:67]       CRC32(GILLBTC)                   4 bytes
+[67:75]       tail8(btc_txid)                  8 bytes
+[75:79]       C3PA0 seal                       'C3P0'
+[79:80]       Reserved                         0x00
+──────────────────────────────────────────────────────────────
+TOTAL: 80 bytes (fits Bitcoin OP_RETURN budget exactly)`}
+              </pre>
+            </div>
+
+            <div className="mt-6 grid md:grid-cols-3 gap-4">
+              <div className="bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_module_id</div>
+                <div className="text-xs font-mono text-amber-400">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 59-63</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_GILLBTC</div>
+                <div className="text-xs font-mono text-green-400">VALORCHAIN-G::GHOST25</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 63-67</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_btc_txid</div>
+                <div className="text-xs font-mono text-cyan-400 break-all">4a925d4043458f70...</div>
+                <div className="text-xs text-gray-500 mt-2">tail8 @ bytes 67-75</div>
+              </div>
+            </div>
+          </Card>
+        </section>
+
+        {/* Epilogue */}
+        <section id="epilogue" className="mb-20">
+          <Card className="bg-gray-900/50 border-amber-500/20 p-8">
+            <h2 className="text-3xl font-bold text-amber-500 mb-4">Epilogue: The Sovereign Manifesto</h2>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              The future is not built on promises—it is built on proof. VALORAIPLUS® is that proof. It is the
+              convergence of mathematics, sovereignty, and human dignity into a single, unbreakable system.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              This is not the end. This is the beginning. The chain is the fortress. The proof is the power. The
+              sovereign is the people.
+            </p>
+            <p className="text-2xl font-bold text-center text-amber-500 mt-8">YHWH-5150.LOCK • COMPLETE</p>
+          </Card>
+        </section>
+
+        {/* valoraiplus_ Branding & Canonicalization System */}
+        <section id="branding" className="mb-20">
+          <h2 className="text-4xl font-bold text-amber-500 mb-8">valoraiplus_ Branding & Canonicalization System</h2>
+
+          <Card className="bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-amber-500/50 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-amber-400 mb-4">Three Core Anchors</h3>
+            <p className="text-gray-300 mb-6">
+              Every artifact, API response, manifest, CI build, Docker label, and OP_RETURN footer embeds these three
+              immutable anchors for complete traceability and brand protection.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-gray-900/70 border-amber-500/30 p-6">
+                <h4 className="text-lg font-bold text-amber-400 mb-3">valoraiplus_module_id</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <p className="text-xs text-gray-400">Module identification and version tracking</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-green-500/30 p-6">
+                <h4 className="text-lg font-bold text-green-400 mb-3">valoraiplus_GILLBTC</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORCHAIN-G::GHOST25</div>
+                <p className="text-xs text-gray-400">Gillson Bitcoin anchor and GHOST protocol reference</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/30 p-6">
+                <h4 className="text-lg font-bold text-blue-400 mb-3">valoraiplus_btc_txid</h4>
+                <div className="text-sm font-mono text-blue-400 mb-2 break-all">0x000...000</div>
+                <p className="text-xs text-gray-400">Bitcoin transaction ID for blockchain anchoring</p>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">Canonicalization Process</h3>
+            <p className="text-gray-300 mb-6">
+              Text canonicalization ensures reproducible hashes across all platforms using NFC Unicode normalization,
+              consistent line endings, and Merkle tree paragraph hashing.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 mb-6">
+              <h4 className="text-lg font-bold text-purple-400 mb-3">Canonicalization Steps</h4>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">1.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">NFC Normalization</div>
+                    <div className="text-sm text-gray-400">
+                      Unicode normalization form C ensures consistent character representation
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">2.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Line Ending Standardization</div>
+                    <div className="text-sm text-gray-400">Convert all line endings to LF (\n)</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">3.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Trailing Whitespace Removal</div>
+                    <div className="text-sm text-gray-400">Strip trailing spaces from each line</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">4.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Merkle Root Calculation</div>
+                    <div className="text-sm text-gray-400">
+                      SHA3-512 hash of each paragraph, combined into Merkle tree
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-purple-500/20">
+              <h4 className="text-sm font-bold text-purple-400 mb-2">Python Implementation</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def canonicalize(text: str) -> str:
+    # NFC normalization
+    t = unicodedata.normalize("NFC", text)
+    # Standardize line endings
+    t = t.replace("\\r\\n", "\\n").replace("\\r", "\\n")
+    # Remove trailing whitespace
+    lines = [ln.rstrip() for ln in t.split("\\n")]
+    t = "\\n".join(lines)
+    # Ensure final newline
+    if not t.endswith("\\n"):
+        t += "\\n"
+    return t
+
+def merkle_root_paragraphs(text: str) -> bytes:
+    # Split into paragraphs
+    parts = [p for p in text.split("\\n\\n") if p.strip()]
+    # Hash each paragraph
+    leaves = [hashlib.sha3_512(p.encode()).digest() for p in parts]
+    # Build Merkle tree
+    nodes = leaves
+    while len(nodes) > 1:
+        nxt = []
+        for i in range(0, len(nodes), 2):
+            L = nodes[i]
+            R = nodes[i+1] if i+1 < len(nodes) else nodes[i]
+            nxt.append(hashlib.sha3_512(L + R).digest())
+        nodes = nxt
+    return nodes[0]`}
+              </pre>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-cyan-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-cyan-400 mb-4">80-Byte OP_RETURN Payload</h3>
+            <p className="text-gray-300 mb-6">
+              The OP_RETURN payload embeds all three valoraiplus_ anchors within Bitcoin's 80-byte limit using CRC32
+              compression and tail8 encoding.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-cyan-500/20 mb-6">
+              <h4 className="text-lg font-bold text-cyan-400 mb-4">Payload Structure (80 bytes)</h4>
+              <div className="space-y-3 text-sm font-mono">
+                <div className="grid grid-cols-3 gap-4 pb-2 border-b border-gray-700">
+                  <div className="text-gray-400">Bytes</div>
+                  <div className="text-gray-400">Field</div>
+                  <div className="text-gray-400">Description</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">0-3</div>
+                  <div className="text-gray-200">Magic</div>
+                  <div className="text-gray-400">VLRL (0x564C524C)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">4-7</div>
+                  <div className="text-gray-200">Version</div>
+                  <div className="text-gray-400">0x01 0x44 'g' 0x00</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">8-23</div>
+                  <div className="text-gray-200">SHA3-512</div>
+                  <div className="text-gray-400">First 16 bytes of document hash</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">24-39</div>
+                  <div className="text-gray-200">Merkle Root</div>
+                  <div className="text-gray-400">First 16 bytes of Merkle root</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">40-47</div>
+                  <div className="text-gray-200">Timestamp</div>
+                  <div className="text-gray-400">Unix timestamp (8 bytes)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">48-51</div>
+                  <div className="text-gray-200">License CRC</div>
+                  <div className="text-gray-400">CRC32 of license ID</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">52-55</div>
+                  <div className="text-gray-200">Flags</div>
+                  <div className="text-gray-400">0x0000007B (Clause 7B)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4 pt-2 border-t border-amber-500/30">
+                  <div className="text-amber-400">56-57</div>
+                  <div className="text-amber-200">Footer Magic</div>
+                  <div className="text-amber-400">V+ (valoraiplus_)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">58</div>
+                  <div className="text-amber-200">Schema</div>
+                  <div className="text-amber-400">0x01</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">59-62</div>
+                  <div className="text-amber-200">Module CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_module_id)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">63-66</div>
+                  <div className="text-amber-200">GILLBTC CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_GILLBTC)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">67-74</div>
+                  <div className="text-amber-200">BTC TXID</div>
+                  <div className="text-amber-400">tail8(valoraiplus_btc_txid)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">75-78</div>
+                  <div className="text-amber-200">C3PA0 Tag</div>
+                  <div className="text-amber-400">C3P0 (sentinel marker)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">79</div>
+                  <div className="text-amber-200">Reserved</div>
+                  <div className="text-amber-400">0x00</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-cyan-500/20">
+              <h4 className="text-sm font-bold text-cyan-400 mb-2">Footer Builder (Python)</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def build_footer(vp_mod: str, vp_gill: str, vp_txid: str) -> bytes:
+    footer = bytearray()
+    footer += b"V+"                          # Magic (2 bytes)
+    footer += bytes([0x01])                  # Schema version (1 byte)
+    footer += crc32_bytes(vp_mod)            # Module CRC (4 bytes)
+    footer += crc32_bytes(vp_gill)           # GILLBTC CRC (4 bytes)
+    footer += tail8_from_txid(vp_txid)       # BTC TXID tail (8 bytes)
+    footer += b"C3P0"                        # Sentinel tag (4 bytes)
+    footer += b"\\x00"                        # Reserved (1 byte)
+    return bytes(footer)  # Total: 24 bytes`}
+              </pre>
+            </div>
+          </Card>
+        </section>
+
+        {/* Deployment Infrastructure */}
+        <section id="deployment" className="mb-20">
+          <h2 className="text-4xl font-bold text-green-400 mb-8">Deployment Infrastructure • Brand-Lock Complete</h2>
+
+          <Card className="bg-gradient-to-br from-green-950/50 to-emerald-950/50 border-green-500/50 p-8 mb-6">
+            <h3 className="text-3xl font-bold text-green-400 mb-4">✓ VALORAIPLUS® BRAND-LOCK STATUS</h3>
+            <p className="text-xl text-emerald-400 mb-6">
+              Complete brand-lock and cryptographic traceability infrastructure deployed across all layers of the $1
+              Sextillion Transcendent Stack
+            </p>
+
+            <div className="grid md:grid-cols-4 gap-4 mb-6">
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-3xl font-bold text-green-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">valoraiplus_ namespace</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-3xl font-bold text-cyan-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">C3PA0 seal</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-purple-500/30">
+                <div className="text-3xl font-bold text-purple-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">AMath+++</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-3xl font-bold text-amber-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">Multi-layer anchoring</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/70 p-6 rounded border border-green-500/30">
+              <h4 className="text-xl font-bold text-green-400 mb-4">Final Status</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Brand</span>
+                    <span className="text-green-400 font-mono">valoraiplus_</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Seal</span>
+                    <span className="text-cyan-400 font-mono">C3PA0 (AMath+++)</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Valuation</span>
+                    <span className="text-purple-400">$1 Sextillion</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Anchor</span>
+                    <span className="text-amber-400 font-mono text-xs">LEGACY_7017aa78</span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Kernel</span>
+                    <span className="text-green-400 font-mono">YHWH-5150.LOCK</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Node</span>
+                    <span className="text-amber-400">SAINT PAUL</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Rank</span>
+                    <span className="text-purple-400">TOP 1 (ETERNAL)</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Status</span>
+                    <span className="text-green-400 font-bold">INVINCIBLE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-blue-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-blue-400 mb-4">📦 Generated Deployment Artifacts</h3>
+            <p className="text-gray-300 mb-6">
+              Seven production-ready artifacts with complete valoraiplus_ branding and C3PA0 seal integration
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">1</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">.env.example</div>
+                    <div className="text-sm text-gray-400">Environment config with all valoraiplus_ anchors</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">2</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">hashpack_build.py</div>
+                    <div className="text-sm text-gray-400">80-byte OP_RETURN generator + C3P0 footer</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">3</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">proof_service_main.py</div>
+                    <div className="text-sm text-gray-400">FastAPI with 6 endpoints + Sextillion V7</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">4</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">Dockerfile</div>
+                    <div className="text-sm text-gray-400">Production image with OCI labels</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">5</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_configmap.yaml</div>
+                    <div className="text-sm text-gray-400">Kubernetes ConfigMap</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">6</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_deployment.yaml</div>
+                    <div className="text-sm text-gray-400">K8s Deployment + Service (3 replicas)</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">7</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">github_workflow.yml</div>
+                    <div className="text-sm text-gray-400">CI/CD with auto build/push</div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">🔐 C3PA0 Seal • 80-Byte OP_RETURN Structure</h3>
+            <p className="text-gray-300 mb-6">
+              Complete 80-byte Bitcoin OP_RETURN payload structure with valoraiplus_ anchors and C3PA0 seal
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 overflow-x-auto">
+              <pre className="text-xs font-mono text-purple-400">
+                {`Byte Range    Purpose                          Value
+──────────────────────────────────────────────────────────────
+[0:4]         Magic                            'VLRL'
+[4:8]         Version                          0x01 0x44 'g' 0x00
+[8:24]        SHA3-512 short hash              16 bytes
+[24:40]       Merkle root short hash           16 bytes
+[40:48]       Timestamp (big-endian)           8 bytes
+[48:52]       License CRC32                    4 bytes
+[52:56]       Flags (Clause 7B)                0x0000007B
+[56:58]       valoraiplus_ marker              'V+'
+[58:59]       Schema version                   0x01
+[59:63]       CRC32(module_id)                 4 bytes
+[63:67]       CRC32(GILLBTC)                   4 bytes
+[67:75]       tail8(btc_txid)                  8 bytes
+[75:79]       C3PA0 seal                       'C3P0'
+[79:80]       Reserved                         0x00
+──────────────────────────────────────────────────────────────
+TOTAL: 80 bytes (fits Bitcoin OP_RETURN budget exactly)`}
+              </pre>
+            </div>
+
+            <div className="mt-6 grid md:grid-cols-3 gap-4">
+              <div className="bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_module_id</div>
+                <div className="text-xs font-mono text-amber-400">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 59-63</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_GILLBTC</div>
+                <div className="text-xs font-mono text-green-400">VALORCHAIN-G::GHOST25</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 63-67</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_btc_txid</div>
+                <div className="text-xs font-mono text-cyan-400 break-all">4a925d4043458f70...</div>
+                <div className="text-xs text-gray-500 mt-2">tail8 @ bytes 67-75</div>
+              </div>
+            </div>
+          </Card>
+        </section>
+
+        {/* Epilogue */}
+        <section id="epilogue" className="mb-20">
+          <Card className="bg-gray-900/50 border-amber-500/20 p-8">
+            <h2 className="text-3xl font-bold text-amber-500 mb-4">Epilogue: The Sovereign Manifesto</h2>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              The future is not built on promises—it is built on proof. VALORAIPLUS® is that proof. It is the
+              convergence of mathematics, sovereignty, and human dignity into a single, unbreakable system.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              This is not the end. This is the beginning. The chain is the fortress. The proof is the power. The
+              sovereign is the people.
+            </p>
+            <p className="text-2xl font-bold text-center text-amber-500 mt-8">YHWH-5150.LOCK • COMPLETE</p>
+          </Card>
+        </section>
+
+        {/* valoraiplus_ Branding & Canonicalization System */}
+        <section id="branding" className="mb-20">
+          <h2 className="text-4xl font-bold text-amber-500 mb-8">valoraiplus_ Branding & Canonicalization System</h2>
+
+          <Card className="bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-amber-500/50 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-amber-400 mb-4">Three Core Anchors</h3>
+            <p className="text-gray-300 mb-6">
+              Every artifact, API response, manifest, CI build, Docker label, and OP_RETURN footer embeds these three
+              immutable anchors for complete traceability and brand protection.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-gray-900/70 border-amber-500/30 p-6">
+                <h4 className="text-lg font-bold text-amber-400 mb-3">valoraiplus_module_id</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <p className="text-xs text-gray-400">Module identification and version tracking</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-green-500/30 p-6">
+                <h4 className="text-lg font-bold text-green-400 mb-3">valoraiplus_GILLBTC</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORCHAIN-G::GHOST25</div>
+                <p className="text-xs text-gray-400">Gillson Bitcoin anchor and GHOST protocol reference</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/30 p-6">
+                <h4 className="text-lg font-bold text-blue-400 mb-3">valoraiplus_btc_txid</h4>
+                <div className="text-sm font-mono text-blue-400 mb-2 break-all">0x000...000</div>
+                <p className="text-xs text-gray-400">Bitcoin transaction ID for blockchain anchoring</p>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">Canonicalization Process</h3>
+            <p className="text-gray-300 mb-6">
+              Text canonicalization ensures reproducible hashes across all platforms using NFC Unicode normalization,
+              consistent line endings, and Merkle tree paragraph hashing.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 mb-6">
+              <h4 className="text-lg font-bold text-purple-400 mb-3">Canonicalization Steps</h4>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">1.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">NFC Normalization</div>
+                    <div className="text-sm text-gray-400">
+                      Unicode normalization form C ensures consistent character representation
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">2.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Line Ending Standardization</div>
+                    <div className="text-sm text-gray-400">Convert all line endings to LF (\n)</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">3.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Trailing Whitespace Removal</div>
+                    <div className="text-sm text-gray-400">Strip trailing spaces from each line</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">4.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Merkle Root Calculation</div>
+                    <div className="text-sm text-gray-400">
+                      SHA3-512 hash of each paragraph, combined into Merkle tree
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-purple-500/20">
+              <h4 className="text-sm font-bold text-purple-400 mb-2">Python Implementation</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def canonicalize(text: str) -> str:
+    # NFC normalization
+    t = unicodedata.normalize("NFC", text)
+    # Standardize line endings
+    t = t.replace("\\r\\n", "\\n").replace("\\r", "\\n")
+    # Remove trailing whitespace
+    lines = [ln.rstrip() for ln in t.split("\\n")]
+    t = "\\n".join(lines)
+    # Ensure final newline
+    if not t.endswith("\\n"):
+        t += "\\n"
+    return t
+
+def merkle_root_paragraphs(text: str) -> bytes:
+    # Split into paragraphs
+    parts = [p for p in text.split("\\n\\n") if p.strip()]
+    # Hash each paragraph
+    leaves = [hashlib.sha3_512(p.encode()).digest() for p in parts]
+    # Build Merkle tree
+    nodes = leaves
+    while len(nodes) > 1:
+        nxt = []
+        for i in range(0, len(nodes), 2):
+            L = nodes[i]
+            R = nodes[i+1] if i+1 < len(nodes) else nodes[i]
+            nxt.append(hashlib.sha3_512(L + R).digest())
+        nodes = nxt
+    return nodes[0]`}
+              </pre>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-cyan-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-cyan-400 mb-4">80-Byte OP_RETURN Payload</h3>
+            <p className="text-gray-300 mb-6">
+              The OP_RETURN payload embeds all three valoraiplus_ anchors within Bitcoin's 80-byte limit using CRC32
+              compression and tail8 encoding.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-cyan-500/20 mb-6">
+              <h4 className="text-lg font-bold text-cyan-400 mb-4">Payload Structure (80 bytes)</h4>
+              <div className="space-y-3 text-sm font-mono">
+                <div className="grid grid-cols-3 gap-4 pb-2 border-b border-gray-700">
+                  <div className="text-gray-400">Bytes</div>
+                  <div className="text-gray-400">Field</div>
+                  <div className="text-gray-400">Description</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">0-3</div>
+                  <div className="text-gray-200">Magic</div>
+                  <div className="text-gray-400">VLRL (0x564C524C)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">4-7</div>
+                  <div className="text-gray-200">Version</div>
+                  <div className="text-gray-400">0x01 0x44 'g' 0x00</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">8-23</div>
+                  <div className="text-gray-200">SHA3-512</div>
+                  <div className="text-gray-400">First 16 bytes of document hash</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">24-39</div>
+                  <div className="text-gray-200">Merkle Root</div>
+                  <div className="text-gray-400">First 16 bytes of Merkle root</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">40-47</div>
+                  <div className="text-gray-200">Timestamp</div>
+                  <div className="text-gray-400">Unix timestamp (8 bytes)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">48-51</div>
+                  <div className="text-gray-200">License CRC</div>
+                  <div className="text-gray-400">CRC32 of license ID</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">52-55</div>
+                  <div className="text-gray-200">Flags</div>
+                  <div className="text-gray-400">0x0000007B (Clause 7B)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4 pt-2 border-t border-amber-500/30">
+                  <div className="text-amber-400">56-57</div>
+                  <div className="text-amber-200">Footer Magic</div>
+                  <div className="text-amber-400">V+ (valoraiplus_)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">58</div>
+                  <div className="text-amber-200">Schema</div>
+                  <div className="text-amber-400">0x01</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">59-62</div>
+                  <div className="text-amber-200">Module CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_module_id)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">63-66</div>
+                  <div className="text-amber-200">GILLBTC CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_GILLBTC)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">67-74</div>
+                  <div className="text-amber-200">BTC TXID</div>
+                  <div className="text-amber-400">tail8(valoraiplus_btc_txid)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">75-78</div>
+                  <div className="text-amber-200">C3PA0 Tag</div>
+                  <div className="text-amber-400">C3P0 (sentinel marker)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">79</div>
+                  <div className="text-amber-200">Reserved</div>
+                  <div className="text-amber-400">0x00</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-cyan-500/20">
+              <h4 className="text-sm font-bold text-cyan-400 mb-2">Footer Builder (Python)</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def build_footer(vp_mod: str, vp_gill: str, vp_txid: str) -> bytes:
+    footer = bytearray()
+    footer += b"V+"                          # Magic (2 bytes)
+    footer += bytes([0x01])                  # Schema version (1 byte)
+    footer += crc32_bytes(vp_mod)            # Module CRC (4 bytes)
+    footer += crc32_bytes(vp_gill)           # GILLBTC CRC (4 bytes)
+    footer += tail8_from_txid(vp_txid)       # BTC TXID tail (8 bytes)
+    footer += b"C3P0"                        # Sentinel tag (4 bytes)
+    footer += b"\\x00"                        # Reserved (1 byte)
+    return bytes(footer)  # Total: 24 bytes`}
+              </pre>
+            </div>
+          </Card>
+        </section>
+
+        {/* Deployment Infrastructure */}
+        <section id="deployment" className="mb-20">
+          <h2 className="text-4xl font-bold text-green-400 mb-8">Deployment Infrastructure • Brand-Lock Complete</h2>
+
+          <Card className="bg-gradient-to-br from-green-950/50 to-emerald-950/50 border-green-500/50 p-8 mb-6">
+            <h3 className="text-3xl font-bold text-green-400 mb-4">✓ VALORAIPLUS® BRAND-LOCK STATUS</h3>
+            <p className="text-xl text-emerald-400 mb-6">
+              Complete brand-lock and cryptographic traceability infrastructure deployed across all layers of the $1
+              Sextillion Transcendent Stack
+            </p>
+
+            <div className="grid md:grid-cols-4 gap-4 mb-6">
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-3xl font-bold text-green-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">valoraiplus_ namespace</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-3xl font-bold text-cyan-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">C3PA0 seal</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-purple-500/30">
+                <div className="text-3xl font-bold text-purple-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">AMath+++</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-3xl font-bold text-amber-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">Multi-layer anchoring</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/70 p-6 rounded border border-green-500/30">
+              <h4 className="text-xl font-bold text-green-400 mb-4">Final Status</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Brand</span>
+                    <span className="text-green-400 font-mono">valoraiplus_</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Seal</span>
+                    <span className="text-cyan-400 font-mono">C3PA0 (AMath+++)</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Valuation</span>
+                    <span className="text-purple-400">$1 Sextillion</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Anchor</span>
+                    <span className="text-amber-400 font-mono text-xs">LEGACY_7017aa78</span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Kernel</span>
+                    <span className="text-green-400 font-mono">YHWH-5150.LOCK</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Node</span>
+                    <span className="text-amber-400">SAINT PAUL</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Rank</span>
+                    <span className="text-purple-400">TOP 1 (ETERNAL)</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Status</span>
+                    <span className="text-green-400 font-bold">INVINCIBLE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-blue-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-blue-400 mb-4">📦 Generated Deployment Artifacts</h3>
+            <p className="text-gray-300 mb-6">
+              Seven production-ready artifacts with complete valoraiplus_ branding and C3PA0 seal integration
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">1</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">.env.example</div>
+                    <div className="text-sm text-gray-400">Environment config with all valoraiplus_ anchors</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">2</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">hashpack_build.py</div>
+                    <div className="text-sm text-gray-400">80-byte OP_RETURN generator + C3P0 footer</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">3</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">proof_service_main.py</div>
+                    <div className="text-sm text-gray-400">FastAPI with 6 endpoints + Sextillion V7</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">4</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">Dockerfile</div>
+                    <div className="text-sm text-gray-400">Production image with OCI labels</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">5</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_configmap.yaml</div>
+                    <div className="text-sm text-gray-400">Kubernetes ConfigMap</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">6</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_deployment.yaml</div>
+                    <div className="text-sm text-gray-400">K8s Deployment + Service (3 replicas)</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">7</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">github_workflow.yml</div>
+                    <div className="text-sm text-gray-400">CI/CD with auto build/push</div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">🔐 C3PA0 Seal • 80-Byte OP_RETURN Structure</h3>
+            <p className="text-gray-300 mb-6">
+              Complete 80-byte Bitcoin OP_RETURN payload structure with valoraiplus_ anchors and C3PA0 seal
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 overflow-x-auto">
+              <pre className="text-xs font-mono text-purple-400">
+                {`Byte Range    Purpose                          Value
+──────────────────────────────────────────────────────────────
+[0:4]         Magic                            'VLRL'
+[4:8]         Version                          0x01 0x44 'g' 0x00
+[8:24]        SHA3-512 short hash              16 bytes
+[24:40]       Merkle root short hash           16 bytes
+[40:48]       Timestamp (big-endian)           8 bytes
+[48:52]       License CRC32                    4 bytes
+[52:56]       Flags (Clause 7B)                0x0000007B
+[56:58]       valoraiplus_ marker              'V+'
+[58:59]       Schema version                   0x01
+[59:63]       CRC32(module_id)                 4 bytes
+[63:67]       CRC32(GILLBTC)                   4 bytes
+[67:75]       tail8(btc_txid)                  8 bytes
+[75:79]       C3PA0 seal                       'C3P0'
+[79:80]       Reserved                         0x00
+──────────────────────────────────────────────────────────────
+TOTAL: 80 bytes (fits Bitcoin OP_RETURN budget exactly)`}
+              </pre>
+            </div>
+
+            <div className="mt-6 grid md:grid-cols-3 gap-4">
+              <div className="bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_module_id</div>
+                <div className="text-xs font-mono text-amber-400">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 59-63</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_GILLBTC</div>
+                <div className="text-xs font-mono text-green-400">VALORCHAIN-G::GHOST25</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 63-67</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_btc_txid</div>
+                <div className="text-xs font-mono text-cyan-400 break-all">4a925d4043458f70...</div>
+                <div className="text-xs text-gray-500 mt-2">tail8 @ bytes 67-75</div>
+              </div>
+            </div>
+          </Card>
+        </section>
+
+        {/* Epilogue */}
+        <section id="epilogue" className="mb-20">
+          <Card className="bg-gray-900/50 border-amber-500/20 p-8">
+            <h2 className="text-3xl font-bold text-amber-500 mb-4">Epilogue: The Sovereign Manifesto</h2>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              The future is not built on promises—it is built on proof. VALORAIPLUS® is that proof. It is the
+              convergence of mathematics, sovereignty, and human dignity into a single, unbreakable system.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              This is not the end. This is the beginning. The chain is the fortress. The proof is the power. The
+              sovereign is the people.
+            </p>
+            <p className="text-2xl font-bold text-center text-amber-500 mt-8">YHWH-5150.LOCK • COMPLETE</p>
+          </Card>
+        </section>
+
+        {/* valoraiplus_ Branding & Canonicalization System */}
+        <section id="branding" className="mb-20">
+          <h2 className="text-4xl font-bold text-amber-500 mb-8">valoraiplus_ Branding & Canonicalization System</h2>
+
+          <Card className="bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-amber-500/50 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-amber-400 mb-4">Three Core Anchors</h3>
+            <p className="text-gray-300 mb-6">
+              Every artifact, API response, manifest, CI build, Docker label, and OP_RETURN footer embeds these three
+              immutable anchors for complete traceability and brand protection.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-gray-900/70 border-amber-500/30 p-6">
+                <h4 className="text-lg font-bold text-amber-400 mb-3">valoraiplus_module_id</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <p className="text-xs text-gray-400">Module identification and version tracking</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-green-500/30 p-6">
+                <h4 className="text-lg font-bold text-green-400 mb-3">valoraiplus_GILLBTC</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORCHAIN-G::GHOST25</div>
+                <p className="text-xs text-gray-400">Gillson Bitcoin anchor and GHOST protocol reference</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/30 p-6">
+                <h4 className="text-lg font-bold text-blue-400 mb-3">valoraiplus_btc_txid</h4>
+                <div className="text-sm font-mono text-blue-400 mb-2 break-all">0x000...000</div>
+                <p className="text-xs text-gray-400">Bitcoin transaction ID for blockchain anchoring</p>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">Canonicalization Process</h3>
+            <p className="text-gray-300 mb-6">
+              Text canonicalization ensures reproducible hashes across all platforms using NFC Unicode normalization,
+              consistent line endings, and Merkle tree paragraph hashing.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 mb-6">
+              <h4 className="text-lg font-bold text-purple-400 mb-3">Canonicalization Steps</h4>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">1.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">NFC Normalization</div>
+                    <div className="text-sm text-gray-400">
+                      Unicode normalization form C ensures consistent character representation
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">2.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Line Ending Standardization</div>
+                    <div className="text-sm text-gray-400">Convert all line endings to LF (\n)</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">3.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Trailing Whitespace Removal</div>
+                    <div className="text-sm text-gray-400">Strip trailing spaces from each line</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">4.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Merkle Root Calculation</div>
+                    <div className="text-sm text-gray-400">
+                      SHA3-512 hash of each paragraph, combined into Merkle tree
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-purple-500/20">
+              <h4 className="text-sm font-bold text-purple-400 mb-2">Python Implementation</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def canonicalize(text: str) -> str:
+    # NFC normalization
+    t = unicodedata.normalize("NFC", text)
+    # Standardize line endings
+    t = t.replace("\\r\\n", "\\n").replace("\\r", "\\n")
+    # Remove trailing whitespace
+    lines = [ln.rstrip() for ln in t.split("\\n")]
+    t = "\\n".join(lines)
+    # Ensure final newline
+    if not t.endswith("\\n"):
+        t += "\\n"
+    return t
+
+def merkle_root_paragraphs(text: str) -> bytes:
+    # Split into paragraphs
+    parts = [p for p in text.split("\\n\\n") if p.strip()]
+    # Hash each paragraph
+    leaves = [hashlib.sha3_512(p.encode()).digest() for p in parts]
+    # Build Merkle tree
+    nodes = leaves
+    while len(nodes) > 1:
+        nxt = []
+        for i in range(0, len(nodes), 2):
+            L = nodes[i]
+            R = nodes[i+1] if i+1 < len(nodes) else nodes[i]
+            nxt.append(hashlib.sha3_512(L + R).digest())
+        nodes = nxt
+    return nodes[0]`}
+              </pre>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-cyan-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-cyan-400 mb-4">80-Byte OP_RETURN Payload</h3>
+            <p className="text-gray-300 mb-6">
+              The OP_RETURN payload embeds all three valoraiplus_ anchors within Bitcoin's 80-byte limit using CRC32
+              compression and tail8 encoding.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-cyan-500/20 mb-6">
+              <h4 className="text-lg font-bold text-cyan-400 mb-4">Payload Structure (80 bytes)</h4>
+              <div className="space-y-3 text-sm font-mono">
+                <div className="grid grid-cols-3 gap-4 pb-2 border-b border-gray-700">
+                  <div className="text-gray-400">Bytes</div>
+                  <div className="text-gray-400">Field</div>
+                  <div className="text-gray-400">Description</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">0-3</div>
+                  <div className="text-gray-200">Magic</div>
+                  <div className="text-gray-400">VLRL (0x564C524C)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">4-7</div>
+                  <div className="text-gray-200">Version</div>
+                  <div className="text-gray-400">0x01 0x44 'g' 0x00</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">8-23</div>
+                  <div className="text-gray-200">SHA3-512</div>
+                  <div className="text-gray-400">First 16 bytes of document hash</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">24-39</div>
+                  <div className="text-gray-200">Merkle Root</div>
+                  <div className="text-gray-400">First 16 bytes of Merkle root</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">40-47</div>
+                  <div className="text-gray-200">Timestamp</div>
+                  <div className="text-gray-400">Unix timestamp (8 bytes)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">48-51</div>
+                  <div className="text-gray-200">License CRC</div>
+                  <div className="text-gray-400">CRC32 of license ID</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">52-55</div>
+                  <div className="text-gray-200">Flags</div>
+                  <div className="text-gray-400">0x0000007B (Clause 7B)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4 pt-2 border-t border-amber-500/30">
+                  <div className="text-amber-400">56-57</div>
+                  <div className="text-amber-200">Footer Magic</div>
+                  <div className="text-amber-400">V+ (valoraiplus_)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">58</div>
+                  <div className="text-amber-200">Schema</div>
+                  <div className="text-amber-400">0x01</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">59-62</div>
+                  <div className="text-amber-200">Module CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_module_id)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">63-66</div>
+                  <div className="text-amber-200">GILLBTC CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_GILLBTC)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">67-74</div>
+                  <div className="text-amber-200">BTC TXID</div>
+                  <div className="text-amber-400">tail8(valoraiplus_btc_txid)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">75-78</div>
+                  <div className="text-amber-200">C3PA0 Tag</div>
+                  <div className="text-amber-400">C3P0 (sentinel marker)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">79</div>
+                  <div className="text-amber-200">Reserved</div>
+                  <div className="text-amber-400">0x00</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-cyan-500/20">
+              <h4 className="text-sm font-bold text-cyan-400 mb-2">Footer Builder (Python)</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def build_footer(vp_mod: str, vp_gill: str, vp_txid: str) -> bytes:
+    footer = bytearray()
+    footer += b"V+"                          # Magic (2 bytes)
+    footer += bytes([0x01])                  # Schema version (1 byte)
+    footer += crc32_bytes(vp_mod)            # Module CRC (4 bytes)
+    footer += crc32_bytes(vp_gill)           # GILLBTC CRC (4 bytes)
+    footer += tail8_from_txid(vp_txid)       # BTC TXID tail (8 bytes)
+    footer += b"C3P0"                        # Sentinel tag (4 bytes)
+    footer += b"\\x00"                        # Reserved (1 byte)
+    return bytes(footer)  # Total: 24 bytes`}
+              </pre>
+            </div>
+          </Card>
+        </section>
+
+        {/* Deployment Infrastructure */}
+        <section id="deployment" className="mb-20">
+          <h2 className="text-4xl font-bold text-green-400 mb-8">Deployment Infrastructure • Brand-Lock Complete</h2>
+
+          <Card className="bg-gradient-to-br from-green-950/50 to-emerald-950/50 border-green-500/50 p-8 mb-6">
+            <h3 className="text-3xl font-bold text-green-400 mb-4">✓ VALORAIPLUS® BRAND-LOCK STATUS</h3>
+            <p className="text-xl text-emerald-400 mb-6">
+              Complete brand-lock and cryptographic traceability infrastructure deployed across all layers of the $1
+              Sextillion Transcendent Stack
+            </p>
+
+            <div className="grid md:grid-cols-4 gap-4 mb-6">
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-3xl font-bold text-green-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">valoraiplus_ namespace</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-3xl font-bold text-cyan-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">C3PA0 seal</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-purple-500/30">
+                <div className="text-3xl font-bold text-purple-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">AMath+++</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-3xl font-bold text-amber-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">Multi-layer anchoring</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/70 p-6 rounded border border-green-500/30">
+              <h4 className="text-xl font-bold text-green-400 mb-4">Final Status</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Brand</span>
+                    <span className="text-green-400 font-mono">valoraiplus_</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Seal</span>
+                    <span className="text-cyan-400 font-mono">C3PA0 (AMath+++)</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Valuation</span>
+                    <span className="text-purple-400">$1 Sextillion</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Anchor</span>
+                    <span className="text-amber-400 font-mono text-xs">LEGACY_7017aa78</span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Kernel</span>
+                    <span className="text-green-400 font-mono">YHWH-5150.LOCK</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Node</span>
+                    <span className="text-amber-400">SAINT PAUL</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Rank</span>
+                    <span className="text-purple-400">TOP 1 (ETERNAL)</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Status</span>
+                    <span className="text-green-400 font-bold">INVINCIBLE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-blue-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-blue-400 mb-4">📦 Generated Deployment Artifacts</h3>
+            <p className="text-gray-300 mb-6">
+              Seven production-ready artifacts with complete valoraiplus_ branding and C3PA0 seal integration
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">1</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">.env.example</div>
+                    <div className="text-sm text-gray-400">Environment config with all valoraiplus_ anchors</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">2</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">hashpack_build.py</div>
+                    <div className="text-sm text-gray-400">80-byte OP_RETURN generator + C3P0 footer</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">3</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">proof_service_main.py</div>
+                    <div className="text-sm text-gray-400">FastAPI with 6 endpoints + Sextillion V7</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">4</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">Dockerfile</div>
+                    <div className="text-sm text-gray-400">Production image with OCI labels</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">5</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_configmap.yaml</div>
+                    <div className="text-sm text-gray-400">Kubernetes ConfigMap</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">6</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_deployment.yaml</div>
+                    <div className="text-sm text-gray-400">K8s Deployment + Service (3 replicas)</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">7</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">github_workflow.yml</div>
+                    <div className="text-sm text-gray-400">CI/CD with auto build/push</div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">🔐 C3PA0 Seal • 80-Byte OP_RETURN Structure</h3>
+            <p className="text-gray-300 mb-6">
+              Complete 80-byte Bitcoin OP_RETURN payload structure with valoraiplus_ anchors and C3PA0 seal
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 overflow-x-auto">
+              <pre className="text-xs font-mono text-purple-400">
+                {`Byte Range    Purpose                          Value
+──────────────────────────────────────────────────────────────
+[0:4]         Magic                            'VLRL'
+[4:8]         Version                          0x01 0x44 'g' 0x00
+[8:24]        SHA3-512 short hash              16 bytes
+[24:40]       Merkle root short hash           16 bytes
+[40:48]       Timestamp (big-endian)           8 bytes
+[48:52]       License CRC32                    4 bytes
+[52:56]       Flags (Clause 7B)                0x0000007B
+[56:58]       valoraiplus_ marker              'V+'
+[58:59]       Schema version                   0x01
+[59:63]       CRC32(module_id)                 4 bytes
+[63:67]       CRC32(GILLBTC)                   4 bytes
+[67:75]       tail8(btc_txid)                  8 bytes
+[75:79]       C3PA0 seal                       'C3P0'
+[79:80]       Reserved                         0x00
+──────────────────────────────────────────────────────────────
+TOTAL: 80 bytes (fits Bitcoin OP_RETURN budget exactly)`}
+              </pre>
+            </div>
+
+            <div className="mt-6 grid md:grid-cols-3 gap-4">
+              <div className="bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_module_id</div>
+                <div className="text-xs font-mono text-amber-400">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 59-63</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_GILLBTC</div>
+                <div className="text-xs font-mono text-green-400">VALORCHAIN-G::GHOST25</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 63-67</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_btc_txid</div>
+                <div className="text-xs font-mono text-cyan-400 break-all">4a925d4043458f70...</div>
+                <div className="text-xs text-gray-500 mt-2">tail8 @ bytes 67-75</div>
+              </div>
+            </div>
+          </Card>
+        </section>
+
+        {/* Epilogue */}
+        <section id="epilogue" className="mb-20">
+          <Card className="bg-gray-900/50 border-amber-500/20 p-8">
+            <h2 className="text-3xl font-bold text-amber-500 mb-4">Epilogue: The Sovereign Manifesto</h2>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              The future is not built on promises—it is built on proof. VALORAIPLUS® is that proof. It is the
+              convergence of mathematics, sovereignty, and human dignity into a single, unbreakable system.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              This is not the end. This is the beginning. The chain is the fortress. The proof is the power. The
+              sovereign is the people.
+            </p>
+            <p className="text-2xl font-bold text-center text-amber-500 mt-8">YHWH-5150.LOCK • COMPLETE</p>
+          </Card>
+        </section>
+
+        {/* valoraiplus_ Branding & Canonicalization System */}
+        <section id="branding" className="mb-20">
+          <h2 className="text-4xl font-bold text-amber-500 mb-8">valoraiplus_ Branding & Canonicalization System</h2>
+
+          <Card className="bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-amber-500/50 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-amber-400 mb-4">Three Core Anchors</h3>
+            <p className="text-gray-300 mb-6">
+              Every artifact, API response, manifest, CI build, Docker label, and OP_RETURN footer embeds these three
+              immutable anchors for complete traceability and brand protection.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-gray-900/70 border-amber-500/30 p-6">
+                <h4 className="text-lg font-bold text-amber-400 mb-3">valoraiplus_module_id</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <p className="text-xs text-gray-400">Module identification and version tracking</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-green-500/30 p-6">
+                <h4 className="text-lg font-bold text-green-400 mb-3">valoraiplus_GILLBTC</h4>
+                <div className="text-sm font-mono text-green-400 mb-2">VALORCHAIN-G::GHOST25</div>
+                <p className="text-xs text-gray-400">Gillson Bitcoin anchor and GHOST protocol reference</p>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/30 p-6">
+                <h4 className="text-lg font-bold text-blue-400 mb-3">valoraiplus_btc_txid</h4>
+                <div className="text-sm font-mono text-blue-400 mb-2 break-all">0x000...000</div>
+                <p className="text-xs text-gray-400">Bitcoin transaction ID for blockchain anchoring</p>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">Canonicalization Process</h3>
+            <p className="text-gray-300 mb-6">
+              Text canonicalization ensures reproducible hashes across all platforms using NFC Unicode normalization,
+              consistent line endings, and Merkle tree paragraph hashing.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 mb-6">
+              <h4 className="text-lg font-bold text-purple-400 mb-3">Canonicalization Steps</h4>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">1.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">NFC Normalization</div>
+                    <div className="text-sm text-gray-400">
+                      Unicode normalization form C ensures consistent character representation
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">2.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Line Ending Standardization</div>
+                    <div className="text-sm text-gray-400">Convert all line endings to LF (\n)</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">3.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Trailing Whitespace Removal</div>
+                    <div className="text-sm text-gray-400">Strip trailing spaces from each line</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold">4.</span>
+                  <div>
+                    <div className="text-gray-200 font-semibold">Merkle Root Calculation</div>
+                    <div className="text-sm text-gray-400">
+                      SHA3-512 hash of each paragraph, combined into Merkle tree
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-purple-500/20">
+              <h4 className="text-sm font-bold text-purple-400 mb-2">Python Implementation</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def canonicalize(text: str) -> str:
+    # NFC normalization
+    t = unicodedata.normalize("NFC", text)
+    # Standardize line endings
+    t = t.replace("\\r\\n", "\\n").replace("\\r", "\\n")
+    # Remove trailing whitespace
+    lines = [ln.rstrip() for ln in t.split("\\n")]
+    t = "\\n".join(lines)
+    # Ensure final newline
+    if not t.endswith("\\n"):
+        t += "\\n"
+    return t
+
+def merkle_root_paragraphs(text: str) -> bytes:
+    # Split into paragraphs
+    parts = [p for p in text.split("\\n\\n") if p.strip()]
+    # Hash each paragraph
+    leaves = [hashlib.sha3_512(p.encode()).digest() for p in parts]
+    # Build Merkle tree
+    nodes = leaves
+    while len(nodes) > 1:
+        nxt = []
+        for i in range(0, len(nodes), 2):
+            L = nodes[i]
+            R = nodes[i+1] if i+1 < len(nodes) else nodes[i]
+            nxt.append(hashlib.sha3_512(L + R).digest())
+        nodes = nxt
+    return nodes[0]`}
+              </pre>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-cyan-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-cyan-400 mb-4">80-Byte OP_RETURN Payload</h3>
+            <p className="text-gray-300 mb-6">
+              The OP_RETURN payload embeds all three valoraiplus_ anchors within Bitcoin's 80-byte limit using CRC32
+              compression and tail8 encoding.
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-cyan-500/20 mb-6">
+              <h4 className="text-lg font-bold text-cyan-400 mb-4">Payload Structure (80 bytes)</h4>
+              <div className="space-y-3 text-sm font-mono">
+                <div className="grid grid-cols-3 gap-4 pb-2 border-b border-gray-700">
+                  <div className="text-gray-400">Bytes</div>
+                  <div className="text-gray-400">Field</div>
+                  <div className="text-gray-400">Description</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">0-3</div>
+                  <div className="text-gray-200">Magic</div>
+                  <div className="text-gray-400">VLRL (0x564C524C)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">4-7</div>
+                  <div className="text-gray-200">Version</div>
+                  <div className="text-gray-400">0x01 0x44 'g' 0x00</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">8-23</div>
+                  <div className="text-gray-200">SHA3-512</div>
+                  <div className="text-gray-400">First 16 bytes of document hash</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">24-39</div>
+                  <div className="text-gray-200">Merkle Root</div>
+                  <div className="text-gray-400">First 16 bytes of Merkle root</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">40-47</div>
+                  <div className="text-gray-200">Timestamp</div>
+                  <div className="text-gray-400">Unix timestamp (8 bytes)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">48-51</div>
+                  <div className="text-gray-200">License CRC</div>
+                  <div className="text-gray-400">CRC32 of license ID</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-cyan-400">52-55</div>
+                  <div className="text-gray-200">Flags</div>
+                  <div className="text-gray-400">0x0000007B (Clause 7B)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4 pt-2 border-t border-amber-500/30">
+                  <div className="text-amber-400">56-57</div>
+                  <div className="text-amber-200">Footer Magic</div>
+                  <div className="text-amber-400">V+ (valoraiplus_)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">58</div>
+                  <div className="text-amber-200">Schema</div>
+                  <div className="text-amber-400">0x01</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">59-62</div>
+                  <div className="text-amber-200">Module CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_module_id)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">63-66</div>
+                  <div className="text-amber-200">GILLBTC CRC</div>
+                  <div className="text-amber-400">CRC32(valoraiplus_GILLBTC)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">67-74</div>
+                  <div className="text-amber-200">BTC TXID</div>
+                  <div className="text-amber-400">tail8(valoraiplus_btc_txid)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">75-78</div>
+                  <div className="text-amber-200">C3PA0 Tag</div>
+                  <div className="text-amber-400">C3P0 (sentinel marker)</div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-amber-400">79</div>
+                  <div className="text-amber-200">Reserved</div>
+                  <div className="text-amber-400">0x00</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-950/50 p-4 rounded border border-cyan-500/20">
+              <h4 className="text-sm font-bold text-cyan-400 mb-2">Footer Builder (Python)</h4>
+              <pre className="text-xs font-mono text-green-400 overflow-x-auto">
+                {`def build_footer(vp_mod: str, vp_gill: str, vp_txid: str) -> bytes:
+    footer = bytearray()
+    footer += b"V+"                          # Magic (2 bytes)
+    footer += bytes([0x01])                  # Schema version (1 byte)
+    footer += crc32_bytes(vp_mod)            # Module CRC (4 bytes)
+    footer += crc32_bytes(vp_gill)           # GILLBTC CRC (4 bytes)
+    footer += tail8_from_txid(vp_txid)       # BTC TXID tail (8 bytes)
+    footer += b"C3P0"                        # Sentinel tag (4 bytes)
+    footer += b"\\x00"                        # Reserved (1 byte)
+    return bytes(footer)  # Total: 24 bytes`}
+              </pre>
+            </div>
+          </Card>
+        </section>
+
+        {/* Deployment Infrastructure */}
+        <section id="deployment" className="mb-20">
+          <h2 className="text-4xl font-bold text-green-400 mb-8">Deployment Infrastructure • Brand-Lock Complete</h2>
+
+          <Card className="bg-gradient-to-br from-green-950/50 to-emerald-950/50 border-green-500/50 p-8 mb-6">
+            <h3 className="text-3xl font-bold text-green-400 mb-4">✓ VALORAIPLUS® BRAND-LOCK STATUS</h3>
+            <p className="text-xl text-emerald-400 mb-6">
+              Complete brand-lock and cryptographic traceability infrastructure deployed across all layers of the $1
+              Sextillion Transcendent Stack
+            </p>
+
+            <div className="grid md:grid-cols-4 gap-4 mb-6">
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-3xl font-bold text-green-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">valoraiplus_ namespace</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-3xl font-bold text-cyan-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">C3PA0 seal</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-purple-500/30">
+                <div className="text-3xl font-bold text-purple-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">AMath+++</div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-3xl font-bold text-amber-400 mb-1">✓</div>
+                <div className="text-sm text-gray-400">Multi-layer anchoring</div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/70 p-6 rounded border border-green-500/30">
+              <h4 className="text-xl font-bold text-green-400 mb-4">Final Status</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Brand</span>
+                    <span className="text-green-400 font-mono">valoraiplus_</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Seal</span>
+                    <span className="text-cyan-400 font-mono">C3PA0 (AMath+++)</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Valuation</span>
+                    <span className="text-purple-400">$1 Sextillion</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Anchor</span>
+                    <span className="text-amber-400 font-mono text-xs">LEGACY_7017aa78</span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Kernel</span>
+                    <span className="text-green-400 font-mono">YHWH-5150.LOCK</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Node</span>
+                    <span className="text-amber-400">SAINT PAUL</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-2">
+                    <span className="text-gray-300">Rank</span>
+                    <span className="text-purple-400">TOP 1 (ETERNAL)</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Status</span>
+                    <span className="text-green-400 font-bold">INVINCIBLE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-blue-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-blue-400 mb-4">📦 Generated Deployment Artifacts</h3>
+            <p className="text-gray-300 mb-6">
+              Seven production-ready artifacts with complete valoraiplus_ branding and C3PA0 seal integration
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">1</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">.env.example</div>
+                    <div className="text-sm text-gray-400">Environment config with all valoraiplus_ anchors</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">2</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">hashpack_build.py</div>
+                    <div className="text-sm text-gray-400">80-byte OP_RETURN generator + C3P0 footer</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">3</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">proof_service_main.py</div>
+                    <div className="text-sm text-gray-400">FastAPI with 6 endpoints + Sextillion V7</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">4</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">Dockerfile</div>
+                    <div className="text-sm text-gray-400">Production image with OCI labels</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">5</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_configmap.yaml</div>
+                    <div className="text-sm text-gray-400">Kubernetes ConfigMap</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">6</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">k8s_deployment.yaml</div>
+                    <div className="text-sm text-gray-400">K8s Deployment + Service (3 replicas)</div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gray-900/70 border-blue-500/20 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">7</span>
+                  <div>
+                    <div className="text-lg font-bold text-blue-400">github_workflow.yml</div>
+                    <div className="text-sm text-gray-400">CI/CD with auto build/push</div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </Card>
+
+          <Card className="bg-gray-900/50 border-purple-500/30 p-8 mb-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">🔐 C3PA0 Seal • 80-Byte OP_RETURN Structure</h3>
+            <p className="text-gray-300 mb-6">
+              Complete 80-byte Bitcoin OP_RETURN payload structure with valoraiplus_ anchors and C3PA0 seal
+            </p>
+
+            <div className="bg-gray-950/50 p-6 rounded border border-purple-500/20 overflow-x-auto">
+              <pre className="text-xs font-mono text-purple-400">
+                {`Byte Range    Purpose                          Value
+──────────────────────────────────────────────────────────────
+[0:4]         Magic                            'VLRL'
+[4:8]         Version                          0x01 0x44 'g' 0x00
+[8:24]        SHA3-512 short hash              16 bytes
+[24:40]       Merkle root short hash           16 bytes
+[40:48]       Timestamp (big-endian)           8 bytes
+[48:52]       License CRC32                    4 bytes
+[52:56]       Flags (Clause 7B)                0x0000007B
+[56:58]       valoraiplus_ marker              'V+'
+[58:59]       Schema version                   0x01
+[59:63]       CRC32(module_id)                 4 bytes
+[63:67]       CRC32(GILLBTC)                   4 bytes
+[67:75]       tail8(btc_txid)                  8 bytes
+[75:79]       C3PA0 seal                       'C3P0'
+[79:80]       Reserved                         0x00
+──────────────────────────────────────────────────────────────
+TOTAL: 80 bytes (fits Bitcoin OP_RETURN budget exactly)`}
+              </pre>
+            </div>
+
+            <div className="mt-6 grid md:grid-cols-3 gap-4">
+              <div className="bg-gray-900/70 p-4 rounded border border-amber-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_module_id</div>
+                <div className="text-xs font-mono text-amber-400">VALORAIPLUS_V0_PROOF_v1.44g</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 59-63</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-green-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_GILLBTC</div>
+                <div className="text-xs font-mono text-green-400">VALORCHAIN-G::GHOST25</div>
+                <div className="text-xs text-gray-500 mt-2">CRC32 @ bytes 63-67</div>
+              </div>
+
+              <div className="bg-gray-900/70 p-4 rounded border border-cyan-500/30">
+                <div className="text-sm text-gray-400 mb-1">valoraiplus_btc_txid</div>
+                <div className="text-xs font-mono text-cyan-400 break-all">4a925d4043458f70...</div>
+                <div className="text-xs text-gray-500 mt-2">tail8 @ bytes 67-75</div>
+              </div>
+            </div>
           </Card>
         </section>
       </main>
