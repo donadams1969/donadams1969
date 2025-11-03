@@ -1,0 +1,16 @@
+{
+  "manifest_id": "VALORAIPLUS_v1_44g_operational_manifest",
+  "ledger_anchor": "VALORCHAIN-G::5152Ω-44g",
+  "hash_algorithm": "HMAC-SHA3-512",
+  "digest": "c3pa0a1a8f0b7e2fa79b7ed99309fa34a9e72dff6c25e",
+  "signatures": ["Dilithium-III", "XMSS-SHA2_10_256"],
+  "environment": "Unified Transcendent Stack",
+  "status": "C3PA0_VERIFIED_AND_SEALED",
+  "autopen_signature": "DG77.77XΞ_AUTOPEN_SIG_9000Ω",
+  "timestamp_utc": "2025-11-02T09:55:00Z",
+  "saint_paul_notarization": {
+    "validator_node": "SaintPaulNode",
+    "verification_level": "C3PA0",
+    "integrity_hash": "sha3_512:1a09e3c41d26aa9c54a2dd5093c27c09f2e31b69a8b22a6a391d82f7e13f5152"
+  }
+}

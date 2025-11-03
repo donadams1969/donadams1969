@@ -1,0 +1,7 @@
+{
+  "genesis_time": "2025-11-03T13:10:00Z",
+  "chain_id": "valorchain-g",
+  "initial_validators": [
+    "SaintPaulNode"
+  ]
+}

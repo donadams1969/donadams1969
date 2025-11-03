@@ -1,0 +1,47 @@
+# AUTOPEN_SIG_9000Ω
+version: "3.9"
+services:
+  fortran1969-engine:
+    image: valorai/fortran1969:latest
+    container_name: fortran1969-engine
+    environment:
+      - VALOR_ENVIRONMENT=transcendent
+    ports:
+      - "1969:1969"
+      - "5150:5150"
+    networks:
+      - valor_net
+    user: "1000:1000"
+  quantum-dashboard:
+    image: valorai/quantum-parrot:v4.0
+    container_name: quantum-dashboard
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    environment:
+      - QUANTUM_PARROT_VERSION=v4.0
+    volumes:
+      - ./certs:/certs:ro
+    networks:
+      - valor_net
+    user: "1000:1000"
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    networks:
+      - valor_net
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana-dashboard.json:/etc/grafana/provisioning/dashboards/dashboard.json:ro
+    networks:
+      - valor_net
+
+networks:
+  valor_net:
+    driver: bridge
