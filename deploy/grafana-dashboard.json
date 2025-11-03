@@ -1,0 +1,22 @@
+{
+  "id": null,
+  "title": "VALORCHAIN-G C3PA0 Operational Monitor",
+  "uid": "valor-c3pa0",
+  "version": 1,
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Genesis Hash Verification",
+      "targets": [
+        {"expr": "genesis_verification_status"}
+      ]
+    },
+    {
+      "type": "stat",
+      "title": "System Health",
+      "targets": [
+        {"expr": "up"}
+      ]
+    }
+  ]
+}

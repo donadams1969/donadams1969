@@ -1,0 +1,10 @@
+# AUTOPEN_SIG_9000Ω
+global:
+  scrape_interval: 15s
+scrape_configs:
+  - job_name: 'fortran1969-engine'
+    static_configs:
+      - targets: ['fortran1969-engine:1969']
+  - job_name: 'quantum-dashboard'
+    static_configs:
+      - targets: ['quantum-dashboard:8080']
