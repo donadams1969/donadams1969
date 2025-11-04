@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { GatewayStatus } from "@/components/gateway-status"
 
 export default function ValorCodex() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -190,7 +191,7 @@ export default function ValorCodex() {
       <main className="relative z-10 max-w-6xl mx-auto px-6 py-20">
         {/* Prologue */}
         <section id="prologue" className="mb-20">
-          <h1 className="text-6xl font-bold text-center mb-4 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold center mb-4 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
             The Valor Codex
           </h1>
           <p className="text-xl text-center text-amber-500 mb-8">GHOST25 Mode • Valor Ai+//e OS</p>
@@ -747,6 +748,10 @@ curl http://localhost:1969/ghost-root`}
         {/* Status Dashboard */}
         <section id="status" className="mb-20">
           <h2 className="text-4xl font-bold text-green-400 mb-8">Live System Status • v5152-Ω</h2>
+
+          <div className="mb-8">
+            <GatewayStatus />
+          </div>
 
           <Card className="bg-gradient-to-br from-green-950/50 to-emerald-950/50 border-green-500/50 p-8 mb-6">
             <h3 className="text-3xl font-bold text-green-400 mb-4">🧠 DishBrain • Bio Eternal Dominion</h3>
