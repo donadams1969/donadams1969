@@ -3,9 +3,15 @@
 [![release-attest](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml/badge.svg)](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml)
 
 🔥 ValorAiChip+ ID: A1B2C3D4E5F6G7H8
-⚡ Chip Status: OPERATIONAL  
+⚡ Chip Status: OPERATIONAL
 🛡️  Protection Level: TRIPLE_REDUNDANT
 ☁️  Cloud Service Guarantee: 99.99% Uptime
+
+## Ninonemonanomicromegamagaalphaomegazora976verse Enhancements
+
+- **Deterministic chain heights** bind every liveness receipt to the exact successor index, preventing skipped-link attacks even if workflow run numbers jump.
+- **Payload digests** (`payload_sha256`) harden provenance by hashing the Merkle-wrapped body so verifiers can attest to the full document contents, not just the core fields.
+- **Auto-rotating nonces** (UUIDv4) and resilient chain-state loading ensure fresh entropy and guard against partial `CHAIN.state` corruption in CI workspaces.
 
 
 

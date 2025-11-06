@@ -29,32 +29,44 @@ jobs:
       - name: Prepare receipt (canonical + merkle + link)
         id: gen
         run: |
-          export PREV_ROOT="$(jq -r '.merkle_root // ""' receipts/CHAIN.state 2>/dev/null || true)"
-          export NONCE="$(cat /proc/sys/kernel/random/uuid)"
           python - <<'PY'
-import json, os, hashlib, pathlib
+import json, os, hashlib, pathlib, uuid
 
-def h(x):
-    import hashlib
-    return hashlib.sha256(x).hexdigest()
+state_path = pathlib.Path("receipts/CHAIN.state")
+default_state = {"run_number": 0, "merkle_root": "", "chain_height": 0, "payload_sha256": ""}
+if state_path.exists():
+    try:
+        with state_path.open("r", encoding="utf-8") as fh:
+            stored = json.load(fh)
+    except json.JSONDecodeError:
+        stored = {}
+else:
+    stored = {}
+state = {**default_state, **stored}
 
-now = os.environ["NOW"]
 core = {
-    "iso_time": now,
+    "iso_time": os.environ["NOW"],
     "workflow": os.environ["GITHUB_WORKFLOW"],
     "run_id": os.environ["GITHUB_RUN_ID"],
     "run_number": int(os.environ["GITHUB_RUN_NUMBER"]),
     "commit_sha": os.environ["GITHUB_SHA"],
     "actor": os.environ["GITHUB_ACTOR"],
     "repo": os.environ["GITHUB_REPOSITORY"],
-    "run_nonce": os.environ["NONCE"],
-    "prev_chain_root": os.environ.get("PREV_ROOT", ""),
+    "run_nonce": uuid.uuid4().hex,
+    "prev_chain_root": state.get("merkle_root", ""),
+    "chain_height": int(state.get("chain_height", 0)) + 1,
 }
+
+def h(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
 core_json = json.dumps(core, separators=(",", ":"), sort_keys=True).encode()
 doc = dict(core)
 doc["merkle_root"] = h(core_json)
+body_json = json.dumps(doc, separators=(",", ":"), sort_keys=True).encode()
+doc["payload_sha256"] = h(body_json)
 pathlib.Path("artifacts").mkdir(exist_ok=True)
-open("artifacts/liveness.json", "wb").write(
+pathlib.Path("artifacts/liveness.json").write_bytes(
     json.dumps(doc, separators=(",", ":"), sort_keys=True).encode()
 )
 PY
@@ -81,7 +93,7 @@ PY
           pip install rfc3161-client
           python - <<'PY'
 from rfc3161_client import RemoteTimestamper
-import hashlib, json
+import hashlib
 
 data = open("artifacts/liveness.json", "rb").read()
 ts = RemoteTimestamper("${{ secrets.RFC3161_TSA_URL }}").timestamp(data=hashlib.sha256(data).digest())
