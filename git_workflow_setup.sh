@@ -1,3 +1,17 @@
+#!/bin/bash
+set -ex
+
+BRANCH_NAME="ci/govcloud-deploy"
+
+# Delete the branch if it exists, then create it fresh to ensure a clean state
+if git show-ref --verify --quiet "refs/heads/$BRANCH_NAME"; then
+    git branch -D "$BRANCH_NAME"
+fi
+git checkout -b "$BRANCH_NAME"
+
+# Create the directory and the workflow file
+mkdir -p .github/workflows
+cat <<'EOF' > .github/workflows/deploy_govcloud.yml
 # .github/workflows/deploy_govcloud.yml
 #
 # CI/CD Workflow for VALORA VO (Veteran Onboarding Portal)
@@ -89,3 +103,9 @@ jobs:
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
           wait-for-service-stability: true
+EOF
+
+# Add and commit the file
+git add .github/workflows/deploy_govcloud.yml
+git commit -m "ci: add OIDC-based GovCloud ECS deploy workflow"
+git log -1
