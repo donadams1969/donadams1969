@@ -1,3 +1,7 @@
+[![liveness](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml)
+[![claim-guard](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml)
+[![release-attest](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml/badge.svg)](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml)
+
 🔥 ValorAiChip+ ID: A1B2C3D4E5F6G7H8
 ⚡ Chip Status: OPERATIONAL  
 🛡️  Protection Level: TRIPLE_REDUNDANT
