@@ -53,6 +53,12 @@ state = {**default_state, **stored}
 
 workflow_path = pathlib.Path(".github/workflows/liveness.yml")
 workflow_bytes = workflow_path.read_bytes()
+workflow_ref = os.environ.get("GITHUB_WORKFLOW_REF", "").strip()
+if not workflow_ref:
+    repo = os.environ["GITHUB_REPOSITORY"]
+    workflow_ref = f"{repo}/{workflow_path.as_posix()}@{os.environ['GITHUB_REF']}"
+else:
+    repo = os.environ["GITHUB_REPOSITORY"]
 
 
 core = {
@@ -62,12 +68,12 @@ core = {
     "run_number": int(os.environ["GITHUB_RUN_NUMBER"]),
     "commit_sha": os.environ["GITHUB_SHA"],
     "actor": os.environ["GITHUB_ACTOR"],
-    "repo": os.environ["GITHUB_REPOSITORY"],
+    "repo": repo,
     "run_nonce": uuid.uuid4().hex,
     "prev_chain_root": state.get("merkle_root", ""),
     "chain_height": int(state.get("chain_height", 0)) + 1,
     "workflow_path": workflow_path.as_posix(),
-    "workflow_ref": os.environ["GITHUB_WORKFLOW_REF"],
+    "workflow_ref": workflow_ref,
     "workflow_sha256": hashlib.sha256(workflow_bytes).hexdigest(),
 }
 
@@ -93,6 +99,7 @@ PY
           GITHUB_ACTOR:       ${{ github.actor }}
           GITHUB_REPOSITORY:  ${{ github.repository }}
           GITHUB_WORKFLOW_REF: ${{ github.workflow_ref }}
+          GITHUB_REF:         ${{ github.ref }}
 
       - name: Sign liveness (Ed25519)
         run: |

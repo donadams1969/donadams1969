@@ -63,6 +63,9 @@ def validate_workflow_path(path_value: str) -> pathlib.Path:
     path = pathlib.Path(path_value)
     if path.is_absolute() or any(part == ".." for part in path.parts):
         sys.exit("workflow_path must be a relative path without .. components")
+    # Constrain receipts to CI workflow definitions only
+    if len(path.parts) < 3 or path.parts[0] != ".github" or path.parts[1] != "workflows":
+        sys.exit("workflow_path must reside within .github/workflows")
     return path
 
 
@@ -160,6 +163,9 @@ def update_chain_state(doc: Dict[str, Any], chain_state: str = "receipts/CHAIN.s
         sys.exit(f"Chain height mismatch (expected {expected_height})")
     if doc["prev_chain_root"] != last_root:
         sys.exit("Chain link mismatch")
+    last_payload = state.get("payload_sha256", "")
+    if last_payload and doc["payload_sha256"] == last_payload:
+        sys.exit("payload_sha256 reused from previous run")
     next_state = {
         "run_number": doc["run_number"],
         "merkle_root": doc["merkle_root"],
@@ -168,8 +174,11 @@ def update_chain_state(doc: Dict[str, Any], chain_state: str = "receipts/CHAIN.s
         "workflow_sha256": doc["workflow_sha256"],
         "workflow_ref": doc["workflow_ref"],
     }
-    with p.open("w", encoding="utf-8") as f:
+    p.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path = p.with_name(p.name + ".tmp")
+    with tmp_path.open("w", encoding="utf-8") as f:
         json.dump(next_state, f, separators=(",", ":"), sort_keys=True)
+    tmp_path.replace(p)
 
 
 if __name__ == "__main__":

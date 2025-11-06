@@ -1,0 +1,18 @@
+# Build and dependency directories
+node_modules/
+dist/
+artifacts/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# macOS metadata
+.DS_Store
+
+# Receipt verifier state backups
+receipts/CHAIN.state.bak
