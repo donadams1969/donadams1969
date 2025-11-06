@@ -1,0 +1,12 @@
+version: 1
+require:
+  - check: "claim-guard"
+  - artifact: "liveness-receipts/liveness.json"
+  - signature:
+      algo: "Ed25519"
+      public_key_path: "keys/public.key"
+  - provenance:
+      issuer: "https://token.actions.githubusercontent.com"
+      identity_regex: "^https://github.com/donadams1969/donadams1969/.github/workflows/(liveness|release-attest)\\.yml@refs/heads/main$"
+  - sbom:
+      path: "release-attestation/sbom.cdx.json"

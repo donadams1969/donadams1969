@@ -1,0 +1,102 @@
+name: liveness
+on:
+  push: { branches: [ "main" ] }
+  workflow_dispatch: {}
+permissions:
+  id-token: write
+  contents: read
+  actions: read
+jobs:
+  prove-live:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: UTC timestamp
+        id: ts
+        run: echo "now=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install pynacl
+
+      - name: Restore signer
+        run: |
+          mkdir -p keys artifacts receipts
+          echo "${RECEIPT_PRIV_B64}" | base64 -d > keys/private.key
+        env: { RECEIPT_PRIV_B64: ${{ secrets.RECEIPT_PRIV_B64 }} }
+
+      - name: Prepare receipt (canonical + merkle + link)
+        id: gen
+        run: |
+          export PREV_ROOT="$(jq -r '.merkle_root // ""' receipts/CHAIN.state 2>/dev/null || true)"
+          export NONCE="$(cat /proc/sys/kernel/random/uuid)"
+          python - <<'PY'
+import json, os, hashlib, pathlib
+
+def h(x):
+    import hashlib
+    return hashlib.sha256(x).hexdigest()
+
+now = os.environ["NOW"]
+core = {
+    "iso_time": now,
+    "workflow": os.environ["GITHUB_WORKFLOW"],
+    "run_id": os.environ["GITHUB_RUN_ID"],
+    "run_number": os.environ["GITHUB_RUN_NUMBER"],
+    "commit_sha": os.environ["GITHUB_SHA"],
+    "actor": os.environ["GITHUB_ACTOR"],
+    "repo": os.environ["GITHUB_REPOSITORY"],
+    "run_nonce": os.environ["NONCE"],
+    "prev_chain_root": os.environ.get("PREV_ROOT", ""),
+}
+core_json = json.dumps(core, separators=(",", ":"), sort_keys=True).encode()
+doc = dict(core)
+doc["merkle_root"] = h(core_json)
+pathlib.Path("artifacts").mkdir(exist_ok=True)
+open("artifacts/liveness.json", "wb").write(
+    json.dumps(doc, separators=(",", ":"), sort_keys=True).encode()
+)
+PY
+        env:
+          NOW:                ${{ steps.ts.outputs.now }}
+          GITHUB_WORKFLOW:    ${{ github.workflow }}
+          GITHUB_RUN_ID:      ${{ github.run_id }}
+          GITHUB_RUN_NUMBER:  ${{ github.run_number }}
+          GITHUB_SHA:         ${{ github.sha }}
+          GITHUB_ACTOR:       ${{ github.actor }}
+          GITHUB_REPOSITORY:  ${{ github.repository }}
+
+      - name: Sign liveness (Ed25519)
+        run: |
+          python tools/ed25519_sign.py sign \
+            --priv keys/private.key \
+            --file artifacts/liveness.json \
+            --out artifacts/liveness.json.sig
+
+      - name: RFC3161 timestamp token (optional)
+        if: ${{ secrets.RFC3161_TSA_URL != '' }}
+        run: |
+          sudo apt-get update && sudo apt-get install -y libmozilla-psm
+          pip install rfc3161-client
+          python - <<'PY'
+from rfc3161_client import RemoteTimestamper
+import hashlib, json
+
+data = open("artifacts/liveness.json", "rb").read()
+ts = RemoteTimestamper("${{ secrets.RFC3161_TSA_URL }}").timestamp(data=hashlib.sha256(data).digest())
+open("artifacts/liveness.rfc3161.tsr", "wb").write(ts)
+PY
+
+      - name: OpenTimestamps (fallback, optional)
+        if: ${{ secrets.RFC3161_TSA_URL == '' }}
+        run: |
+          pip install opentimestamps-client
+          ots stamp artifacts/liveness.json || true
+          [ -f artifacts/liveness.json.ots ] && mv artifacts/liveness.json.ots artifacts/liveness.ots || true
+
+      - name: Upload receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: liveness-receipts
+          path: artifacts/*
