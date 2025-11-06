@@ -7,9 +7,9 @@ import { GatewayStatus } from "@/components/gateway-status"
 
 export default function ValorCodex() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState("prologue")
+  const [, setActiveSection] = useState("prologue")
   const [twoTierMode, setTwoTierMode] = useState<"jo" | "dg">("dg")
-  const [selectedProblem, setSelectedProblem] = useState<string | null>(null)
+  const [, setSelectedProblem] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All")
 
