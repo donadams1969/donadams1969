@@ -6,6 +6,7 @@ import hashlib
 import base64
 import pathlib
 import calendar
+import subprocess
 from typing import Any, Dict
 from nacl.signing import VerifyKey
 from nacl.exceptions import BadSignatureError
@@ -22,6 +23,9 @@ REQUIRED_FIELDS = [
     "run_nonce",
     "prev_chain_root",
     "chain_height",
+    "workflow_path",
+    "workflow_ref",
+    "workflow_sha256",
     "merkle_root",
     "payload_sha256",
 ]
@@ -55,6 +59,27 @@ def ensure_string(doc: Dict[str, Any], key: str) -> None:
         sys.exit(f"{key} must be a non-empty string")
 
 
+def validate_workflow_path(path_value: str) -> pathlib.Path:
+    path = pathlib.Path(path_value)
+    if path.is_absolute() or any(part == ".." for part in path.parts):
+        sys.exit("workflow_path must be a relative path without .. components")
+    return path
+
+
+def git_show(commit_sha: str, rel_path: pathlib.Path) -> bytes:
+    git_path = rel_path.as_posix().lstrip("./")
+    try:
+        result = subprocess.run(
+            ["git", "show", f"{commit_sha}:{git_path}"],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+    except subprocess.CalledProcessError as exc:
+        sys.exit(f"Unable to load workflow from commit {commit_sha}: {exc.stderr.decode().strip()}")
+    return result.stdout
+
+
 def verify_schema_and_merkle(doc: Dict[str, Any]) -> None:
     for k in REQUIRED_FIELDS:
         if k not in doc:
@@ -73,6 +98,9 @@ def verify_schema_and_merkle(doc: Dict[str, Any]) -> None:
     ensure_string(doc, "actor")
     ensure_string(doc, "repo")
     ensure_string(doc, "run_nonce")
+    ensure_string(doc, "workflow_path")
+    ensure_string(doc, "workflow_ref")
+    ensure_string(doc, "workflow_sha256")
     # Merkle over canonical core (deterministic)
     core_keys = [
         "iso_time",
@@ -85,6 +113,9 @@ def verify_schema_and_merkle(doc: Dict[str, Any]) -> None:
         "run_nonce",
         "prev_chain_root",
         "chain_height",
+        "workflow_path",
+        "workflow_ref",
+        "workflow_sha256",
     ]
     core = {k: doc[k] for k in core_keys}
     cj = json.dumps(core, separators=(",", ":"), sort_keys=True).encode()
@@ -97,11 +128,26 @@ def verify_schema_and_merkle(doc: Dict[str, Any]) -> None:
     if sha256(body_json) != doc["payload_sha256"]:
         sys.exit("payload_sha256 mismatch")
 
+    rel_path = validate_workflow_path(doc["workflow_path"])
+    expected_ref = f"{doc['repo']}/{rel_path.as_posix()}@refs/heads/main"
+    if doc["workflow_ref"] != expected_ref:
+        sys.exit("workflow_ref mismatch")
+    workflow_bytes = git_show(doc["commit_sha"], rel_path)
+    if sha256(workflow_bytes) != doc["workflow_sha256"]:
+        sys.exit("workflow_sha256 mismatch")
+
 
 def update_chain_state(doc: Dict[str, Any], chain_state: str = "receipts/CHAIN.state") -> None:
     # Ensure monotonic run_number and consistent linkage
     p = pathlib.Path(chain_state)
-    state = {"run_number": 0, "merkle_root": "", "chain_height": 0, "payload_sha256": ""}
+    state = {
+        "run_number": 0,
+        "merkle_root": "",
+        "chain_height": 0,
+        "payload_sha256": "",
+        "workflow_sha256": "",
+        "workflow_ref": "",
+    }
     if p.exists():
         state.update(load_json(p))
     last_n = int(state.get("run_number", 0))
@@ -119,6 +165,8 @@ def update_chain_state(doc: Dict[str, Any], chain_state: str = "receipts/CHAIN.s
         "merkle_root": doc["merkle_root"],
         "chain_height": doc["chain_height"],
         "payload_sha256": doc["payload_sha256"],
+        "workflow_sha256": doc["workflow_sha256"],
+        "workflow_ref": doc["workflow_ref"],
     }
     with p.open("w", encoding="utf-8") as f:
         json.dump(next_state, f, separators=(",", ":"), sort_keys=True)

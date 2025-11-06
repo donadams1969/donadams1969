@@ -33,7 +33,14 @@ jobs:
 import json, os, hashlib, pathlib, uuid
 
 state_path = pathlib.Path("receipts/CHAIN.state")
-default_state = {"run_number": 0, "merkle_root": "", "chain_height": 0, "payload_sha256": ""}
+default_state = {
+    "run_number": 0,
+    "merkle_root": "",
+    "chain_height": 0,
+    "payload_sha256": "",
+    "workflow_sha256": "",
+    "workflow_ref": "",
+}
 if state_path.exists():
     try:
         with state_path.open("r", encoding="utf-8") as fh:
@@ -43,6 +50,10 @@ if state_path.exists():
 else:
     stored = {}
 state = {**default_state, **stored}
+
+workflow_path = pathlib.Path(".github/workflows/liveness.yml")
+workflow_bytes = workflow_path.read_bytes()
+
 
 core = {
     "iso_time": os.environ["NOW"],
@@ -55,6 +66,9 @@ core = {
     "run_nonce": uuid.uuid4().hex,
     "prev_chain_root": state.get("merkle_root", ""),
     "chain_height": int(state.get("chain_height", 0)) + 1,
+    "workflow_path": workflow_path.as_posix(),
+    "workflow_ref": os.environ["GITHUB_WORKFLOW_REF"],
+    "workflow_sha256": hashlib.sha256(workflow_bytes).hexdigest(),
 }
 
 def h(data: bytes) -> str:
@@ -78,6 +92,7 @@ PY
           GITHUB_SHA:         ${{ github.sha }}
           GITHUB_ACTOR:       ${{ github.actor }}
           GITHUB_REPOSITORY:  ${{ github.repository }}
+          GITHUB_WORKFLOW_REF: ${{ github.workflow_ref }}
 
       - name: Sign liveness (Ed25519)
         run: |

@@ -12,6 +12,8 @@
 - **Deterministic chain heights** bind every liveness receipt to the exact successor index, preventing skipped-link attacks even if workflow run numbers jump.
 - **Payload digests** (`payload_sha256`) harden provenance by hashing the Merkle-wrapped body so verifiers can attest to the full document contents, not just the core fields.
 - **Auto-rotating nonces** (UUIDv4) and resilient chain-state loading ensure fresh entropy and guard against partial `CHAIN.state` corruption in CI workspaces.
+- **Workflow binding** (`workflow_path`, `workflow_ref`, `workflow_sha256`) locks each receipt to the exact workflow file and branch ref that produced it, preventing forged identities or rogue job swaps.
+- **Historical replay defense** leverages `git show` verification during claim-guard to recompute workflow hashes from the recorded commit, so even PRs that modify CI files cannot spoof prior attestations.
 
 
 
