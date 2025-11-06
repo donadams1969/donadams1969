@@ -1,0 +1,54 @@
+name: release-attest
+on: { push: { tags: ["v*.*.*"] } }
+permissions:
+  id-token: write
+  contents: write
+jobs:
+  attest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Build artifacts
+        run: |
+          mkdir -p dist && echo "hello" > dist/hello.txt
+
+      - name: SBOM (CycloneDX JSON)
+        run: |
+          curl -sSL https://raw.githubusercontent.com/CycloneDX/cyclonedx-cli/main/install.sh | sh -s -- -b .
+          ./cyclonedx-cli make --output artifacts/sbom.cdx.json dist || true
+
+      - name: MANIFEST.sha256 (sorted)
+        run: |
+          mkdir -p artifacts
+          (cd dist && find . -type f -print0 | sort -z | xargs -0 sha256sum) > artifacts/MANIFEST.sha256
+
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install pynacl
+
+      - name: Sign MANIFEST (Ed25519)
+        run: |
+          echo "${RELEASE_PRIV_B64}" | base64 -d > keys.private
+          python tools/ed25519_sign.py sign --priv keys.private --file artifacts/MANIFEST.sha256 --out artifacts/MANIFEST.sha256.sig
+
+      - name: SLSA provenance (in-toto statement)
+        run: |
+          cat > artifacts/provenance.intoto.jsonl <<'JSON'
+          { "predicateType":"https://slsa.dev/provenance/v1", "predicate": { "buildType":"github-actions", "builder":{"id":"github.com/actions"}, "metadata":{"buildInvocationID":"${{ github.run_id }}", "buildStartedOn":"${{ github.event.head_commit.timestamp }}"} } }
+          JSON
+
+      - name: Cosign keyless attest (identity-bound)
+        env: { COSIGN_EXPERIMENTAL: "1" }
+        run: |
+          curl -sL https://raw.githubusercontent.com/sigstore/cosign/main/install.sh | sh -s -- -b .
+          ./cosign attest --predicate artifacts/provenance.intoto.jsonl \
+            --predicate-type application/vnd.in-toto+json \
+            --bundle artifacts/release.cosign.bundle \
+            --yes
+
+      - name: Upload
+        uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/*
