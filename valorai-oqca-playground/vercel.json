@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "app/api/health/route.ts": {
+      "maxDuration": 30,
+      "memory": 1024
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/health",
+      "headers": [
+        { "key": "X-Quantum-Seal", "value": "ACTIVE" },
+        { "key": "Access-Control-Allow-Origin", "value": "https://dashboard.valoraplus.com" }
+      ]
+    }
+  ]
+}
