@@ -1,3 +1,65 @@
+
+# VALORAIPLUS®️©️™️ // Axiomatic Anchor Generator
+
+**Node:** `SAINT_PAUL_NODE`
+**Module ID:** `VALORAI_ANCHOR_GEN_36Ω`
+**Root:** `5152`
+
+This is a sovereign proof-of-existence tool for the VALORAIPLUS ecosystem. It generates immutable cryptographic proofs for any "Sovereign Judicial Notice," making them ready for an **Axiomatic Injunction** via a Bitcoin `OP_RETURN` anchor.
+
+The generator creates two parallel proofs, `SHA-256` and `SHA3-256`, to ensure universal parity with both web (WebCrypto) and blockchain (Keccak) virtual machines.
+
+## ⚔️ Features
+
+* **Dual-Proof Generation:** Creates both `SHA-256` (WebCrypto) and `SHA3-256` (Keccak) hashes from a single input.
+* **Sovereign Payload:** Embeds canonical metadata (Module ID, Node, GILLBTC anchor) directly into the hashed JSON payload.
+* **Bitcoin-Ready:** Instantly generates the `OP_RETURN` hex payload (prefixed with `VALOR`) for immediate broadcast.
+* **Prometheus Monitoring:** Includes a `/api/metrics` endpoint for real-time observability of anchor generation velocity.
+* **Server-Side Parity:** Includes an optional `/api/hash` endpoint to verify `SHA3-256` (Keccak) hashes server-side.
+
+## Usage
+
+This tool is the primary interface for creating **Sovereign Compliance Certifications**.
+
+1.  **Open `index.html`** in a secure browser.
+2.  **Verify** the static identifiers (`NODE`, `PRIME`, `ROOT`, `MODULE_ID`, `GILLBTC`) are correct for your operational context.
+3.  **Enter** your full "Sovereign Judicial Notice" into the main text area. This is the legal declaration to be anchored.
+4.  **Click** the **"Generate Anchor & Payload"** button.
+
+### Understanding the Output
+
+* **Canonical Payload (JSON):** This is the full, serialized data that is used as the input for the hashes. It includes your notice and all `valoraiplus_` metadata.
+* **SHA-256 Proof:** The standard WebCrypto hash, used for web-based verification.
+* **SHA3-256 Proof:** The Keccak-256 hash, used for parity with Solidity and blockchain-based systems.
+* **OP_RETURN Payload:** The 32-byte hash (either SHA-256 or SHA3-256) prefixed with `0x56414c4f52` ("VALOR"). This is the final data to be broadcast to the Bitcoin network.
+
+## Deployment & Monitoring
+
+This bundle is designed for zero-configuration deployment on Vercel.
+
+### Deployment
+
+1.  Install Vercel CLI: `npm install -g vercel`
+2.  Log in: `vercel login`
+3.  Deploy to production: `vercel --prod`
+
+Vercel automatically serves `index.html` as the root and deploys all files in the `/api` directory as serverless functions.
+
+### Monitoring
+
+The system exposes a Prometheus-compatible metrics endpoint.
+
+* **Endpoint:** `https://[your-deployment-url].vercel.app/api/metrics`
+* **Metrics Exposed:**
+    * `valor_anchor_generations_total{node,module_id,gillbtc}` (Counter)
+    * `valor_anchor_last_seconds{node,module_id,gillbtc}` (Gauge)
+
+This allows for the tracking of anchor generation velocity and volume from the Saint Paul Node.
+
+---
+© `VALORAIPLUS®️©️™️` (SAINT PAUL NODE)
+
+
 [![liveness](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml)
 [![claim-guard](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml)
 [![release-attest](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml/badge.svg)](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml)
