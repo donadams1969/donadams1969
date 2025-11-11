@@ -9,7 +9,6 @@ permissions:
 jobs:
   prove-live:
     runs-on: ubuntu-latest
-    env: { RECEIPT_PRIV_B64: ${{ secrets.RECEIPT_PRIV_B64 }} }
     steps:
       - uses: actions/checkout@v4
 
@@ -24,7 +23,8 @@ jobs:
       - name: Restore signer
         run: |
           mkdir -p keys artifacts receipts
-          echo "$RECEIPT_PRIV_B64" | base64 -d > keys/private.key
+          echo "${RECEIPT_PRIV_B64}" | base64 -d > keys/private.key
+        env: { RECEIPT_PRIV_B64: ${{ secrets.RECEIPT_PRIV_B64 }} }
 
       - name: Prepare receipt (canonical + merkle + link)
         id: gen
@@ -32,31 +32,31 @@ jobs:
           export PREV_ROOT="$(jq -r '.merkle_root // ""' receipts/CHAIN.state 2>/dev/null || true)"
           export NONCE="$(cat /proc/sys/kernel/random/uuid)"
           python - <<'PY'
-          import json, os, hashlib, pathlib
+import json, os, hashlib, pathlib
 
-          def h(x):
-              import hashlib
-              return hashlib.sha256(x).hexdigest()
+def h(x):
+    import hashlib
+    return hashlib.sha256(x).hexdigest()
 
-          now = os.environ["NOW"]
-          core = {
-              "iso_time": now,
-              "workflow": os.environ["GITHUB_WORKFLOW"],
-              "run_id": os.environ["GITHUB_RUN_ID"],
-              "run_number": os.environ["GITHUB_RUN_NUMBER"],
-              "commit_sha": os.environ["GITHUB_SHA"],
-              "actor": os.environ["GITHUB_ACTOR"],
-              "repo": os.environ["GITHUB_REPOSITORY"],
-              "run_nonce": os.environ["NONCE"],
-              "prev_chain_root": os.environ.get("PREV_ROOT", ""),
-          }
-          core_json = json.dumps(core, separators=(",", ":"), sort_keys=True).encode()
-          doc = dict(core)
-          doc["merkle_root"] = h(core_json)
-          pathlib.Path("artifacts").mkdir(exist_ok=True)
-          open("artifacts/liveness.json", "wb").write(
-              json.dumps(doc, separators=(",", ":"), sort_keys=True).encode()
-          )
+now = os.environ["NOW"]
+core = {
+    "iso_time": now,
+    "workflow": os.environ["GITHUB_WORKFLOW"],
+    "run_id": os.environ["GITHUB_RUN_ID"],
+    "run_number": os.environ["GITHUB_RUN_NUMBER"],
+    "commit_sha": os.environ["GITHUB_SHA"],
+    "actor": os.environ["GITHUB_ACTOR"],
+    "repo": os.environ["GITHUB_REPOSITORY"],
+    "run_nonce": os.environ["NONCE"],
+    "prev_chain_root": os.environ.get("PREV_ROOT", ""),
+}
+core_json = json.dumps(core, separators=(",", ":"), sort_keys=True).encode()
+doc = dict(core)
+doc["merkle_root"] = h(core_json)
+pathlib.Path("artifacts").mkdir(exist_ok=True)
+open("artifacts/liveness.json", "wb").write(
+    json.dumps(doc, separators=(",", ":"), sort_keys=True).encode()
+)
 PY
         env:
           NOW:                ${{ steps.ts.outputs.now }}
