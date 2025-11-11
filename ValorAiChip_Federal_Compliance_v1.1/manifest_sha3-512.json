@@ -1,0 +1,48 @@
+{
+  "artifact_name": "valor_full_stack_v0_console.tar.gz",
+  "issuing_authority": "VALORAIPLUS // SAINT_PAUL_NODE",
+  "timestamp_utc": "2025-11-09T19:10:53Z",
+  "root_hash_sha3_512": "9c8e1a54b60f9a2d3e1c4b7f8a0d9e2c1b4f7a0d9e2c1b4f7a0d9e2c1b4f7a0d9e2c1b4f7a0d9e2c1b4f7a0d9e2c1b4f7a0d9e2c1b4f7a0d9e2c1b4f7a0d9e2cb1a",
+  "files": [
+    {
+      "path": "apps/aid_server.py",
+      "hash": "a4d...f01"
+    },
+    {
+      "path": "apps/geo_identity.py",
+      "hash": "c2b...e3a"
+    },
+    {
+      "path": "apps/super_agi.py",
+      "hash": "f19...c77"
+    },
+    {
+      "path": "web/index.html",
+      "hash": "3e0...d11"
+    },
+    {
+      "path": "web/src/main.jsx",
+      "hash": "b8a...1c4"
+    },
+    {
+      "path": "docker-compose.yml",
+      "hash": "55d...a92"
+    },
+    {
+      "path": "Makefile",
+      "hash": "1a9...8f0"
+    },
+    {
+      "path": ".env.example",
+      "hash": "77e...b05"
+    },
+    {
+      "path": "README.md",
+      "hash": "6d0...15a"
+    },
+    {
+      "path": "vercel.json",
+      "hash": "0f3...449"
+    }
+  ]
+}

@@ -22,32 +22,32 @@ help:
 
 render:
 	@echo "[1/6] Rendering privacy templates..."
-	@bash privacy_guard_bundle_v1/scripts/render-privacy-templates.sh
+	@bash scripts/render-privacy-templates.sh
 
 install-hooks:
 	@echo "[2/6] Installing git hooks..."
-	@bash privacy_guard_bundle_v1/scripts/install-git-hooks.sh
+	@bash scripts/install-git-hooks.sh
 
 apply-observability: render
 	@echo "[3/6] Deploying observability configs..."
 	@sudo mkdir -p /etc/prometheus /etc/otel /etc/grafana-agent
-	@sudo cp privacy_guard_bundle_v1/observability/prometheus-scrape.yml /etc/prometheus/prometheus.yml
-	@sudo cp privacy_guard_bundle_v1/observability/otel-collector.yaml /etc/otel/config.yaml
-	@sudo cp privacy_guard_bundle_v1/observability/grafana-agent-logs.yaml /etc/grafana-agent/agent.yaml
+	@sudo cp observability/prometheus-scrape.yml /etc/prometheus/prometheus.yml
+	@sudo cp observability/otel-collector.yaml /etc/otel/config.yaml
+	@sudo cp observability/grafana-agent-logs.yaml /etc/grafana-agent/agent.yaml
 	@echo "✅ Observability configs deployed. Restart services."
 
 apply-edge: render
 	@echo "[4/6] Deploying edge/WAF configs..."
 	@sudo mkdir -p /etc/nginx/conf.d
-	@sudo cp privacy_guard_bundle_v1/edge/nginx.conf /etc/nginx/conf.d/privacy-guard.conf
-	@echo "⚠️  For AWS WAF, manually apply privacy_guard_bundle_v1/edge/aws-waf-rule.json via CLI/Console."
+	@sudo cp edge/nginx.conf /etc/nginx/conf.d/privacy-guard.conf
+	@echo "⚠️  For AWS WAF, manually apply edge/aws-waf-rule.json via CLI/Console."
 	@echo "✅ NGINX config deployed. Reload nginx."
 
 apply-ci: render
 	@echo "[5/6] Installing CI guards..."
-	@cp privacy_guard_bundle_v1/ci/gitleaks.toml .gitleaks.toml
-	@mkdir -p .github/workflows
-	@cp privacy_guard_bundle_v1/ci/github-leak-guard.yml .github/workflows/leak-guard.yml
+	@cp ci/gitleaks.toml ../../.gitleaks.toml
+	@mkdir -p ../../.github/workflows
+	@cp ci/github-leak-guard.yml ../../.github/workflows/leak-guard.yml
 	@echo "✅ CI configs installed. Commit and push."
 
 all: render install-hooks apply-observability apply-edge apply-ci
@@ -55,5 +55,5 @@ all: render install-hooks apply-observability apply-edge apply-ci
 
 clean:
 	@echo "Cleaning rendered templates..."
-	@rm -f privacy_guard_bundle_v1/observability/*.{yml,yaml} privacy_guard_bundle_v1/edge/*.conf privacy_guard_bundle_v1/edge/*.json privacy_guard_bundle_v1/ci/gitleaks.toml
+	@rm -f observability/*.{yml,yaml} edge/*.conf edge/*.json ci/gitleaks.toml
 	@echo "✅ Cleaned."

@@ -6,7 +6,7 @@
 
 ```
 export DG_REAL_NAME="Your Legal Name"
-make -f privacy_guard_bundle_v1/Makefile all
+make all
 ```
 
 This will:
@@ -19,11 +19,11 @@ This will:
 ## Individual Commands
 
 ```
-make -f privacy_guard_bundle_v1/Makefile render              # Render templates only
-make -f privacy_guard_bundle_v1/Makefile install-hooks       # Install git hooks only
-sudo make -f privacy_guard_bundle_v1/Makefile apply-observability # Deploy observability configs (requires sudo)
-sudo make -f privacy_guard_bundle_v1/Makefile apply-edge          # Deploy NGINX/WAF configs (requires sudo)
-make -f privacy_guard_bundle_v1/Makefile apply-ci            # Install CI leak detection
+make render              # Render templates only
+make install-hooks       # Install git hooks only
+sudo make apply-observability # Deploy observability configs (requires sudo)
+sudo make apply-edge          # Deploy NGINX/WAF configs (requires sudo)
+make apply-ci            # Install CI leak detection
 ```
 
 ## Architecture

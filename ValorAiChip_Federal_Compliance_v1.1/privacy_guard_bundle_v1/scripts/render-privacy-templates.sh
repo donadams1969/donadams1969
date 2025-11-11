@@ -16,7 +16,7 @@ DG_REAL_NAME_LITERAL="$(printf '%s' "$DG_REAL_NAME" | sed 's/[.[\*^$(){}+?|\-]/\
 export DG_REAL_NAME_REGEX DG_REAL_NAME_REGEX_LOWER DG_REAL_NAME_LITERAL DG_PSEUDONYM
 
 # Render all .tpl files
-for tpl in $(find privacy_guard_bundle_v1 -name "*.tpl"); do
+for tpl in $(find . -name "*.tpl"); do
   out="${tpl%.tpl}"
   echo "  → $tpl → $out"
   envsubst '$DG_REAL_NAME_REGEX $DG_REAL_NAME_REGEX_LOWER $DG_REAL_NAME_LITERAL $DG_PSEUDONYM' < "$tpl" > "$out"

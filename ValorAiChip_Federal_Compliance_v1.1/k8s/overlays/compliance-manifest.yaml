@@ -1,0 +1,15 @@
+# Declarative FedRAMP-Compliant Labels for Kubernetes Workloads
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: valorapp
+  labels:
+    gov.fedramp.low: "true"
+    gov.cisa.cdm: "true"
+spec:
+  template:
+    metadata:
+      labels:
+        gov.fedramp.low: "true"
+        gov.cisa.cdm: "true"

@@ -7,8 +7,8 @@ echo "🪝 Installing git hooks..."
 GIT_DIR="$(git rev-parse --git-dir)"
 HOOKS_DIR="$GIT_DIR/hooks"
 
-cp "privacy_guard_bundle_v1/git-hooks/pre-commit" "$HOOKS_DIR/pre-commit"
-cp "privacy_guard_bundle_v1/git-hooks/pre-push" "$HOOKS_DIR/pre-push"
+cp "git-hooks/pre-commit" "$HOOKS_DIR/pre-commit"
+cp "git-hooks/pre-push" "$HOOKS_DIR/pre-push"
 chmod +x "$HOOKS_DIR/pre-commit" "$HOOKS_DIR/pre-push"
 
 echo "✅ Git hooks installed."
