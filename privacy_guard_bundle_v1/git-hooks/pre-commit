@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REAL_NAME="${DG_REAL_NAME:-}"
+if [[ -z "$REAL_NAME" ]]; then
+  echo "⚠️  DG_REAL_NAME not set; skipping leak check." >&2
+  exit 0
+fi
+
+pattern="$(printf '%s' "$REAL_NAME" | sed 's/[.[\*^$(){}+?|\-]/\\&/g')"
+
+if git diff --cached -U0 | grep -Eiq -- "$pattern"; then
+  echo "🚫 Commit blocked: Detected real name in staged changes." >&2
+  echo "   Use pseudonym 'DG77.77X-Ξ' only." >&2
+  exit 1
+fi
+
+echo "✅ Pre-commit: No leaks detected."
