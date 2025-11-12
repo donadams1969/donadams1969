@@ -25,3 +25,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# valorchain
+VALORAIPLUS_TRIDENT_v0_DUAL_PROOF.sha3
+locked_v2_ed25519_priv.pem
