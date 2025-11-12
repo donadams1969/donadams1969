@@ -9,8 +9,6 @@
 <!-- [![Auto-Attestation](https://github.com/donadams1969/donadams1969/actions/workflows/auto-attestation.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/auto-attestation.yml) -->
 
 
-> **Getting “failing” badges?** Make sure the workflows have actually been executed on `main` (dispatch them once manually), and confirm any referenced secrets exist in **Settings → Secrets and variables → Actions**. The Valorchain-G pack only reads the optional `GENESIS_ENDPOINT` secret for API posting, so it is safe to leave unset.
-
 > **Saint-Paul Genesis Node → VALORCHAIN-G Integrity Constant (FedRAMP-Tier Ready)**
 > `Verified by Gillson Root Signature // VALORMATH+ v∞`
 
