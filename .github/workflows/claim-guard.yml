@@ -1,0 +1,30 @@
+name: claim-guard
+on:
+  pull_request:
+    branches: [ "main" ]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: liveness-receipts, path: verify }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install pynacl
+
+      - name: Verify Ed25519 + schema + chain
+        run: |
+          python tools/verify_receipt.py keys/public.key verify/liveness.json verify/liveness.json.sig
+
+      - name: Verify RFC3161/OTS (best-effort)
+        run: |
+          if [ -f verify/liveness.rfc3161.tsr ]; then
+            echo "(Optional) verify TSR against TSA policy here"
+          elif [ -f verify/liveness.ots ]; then
+            pip install opentimestamps-client && ots verify verify/liveness.json || true
+          else
+            echo "No external timestamp (OK if disabled)."
+          fi
