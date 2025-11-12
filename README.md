@@ -2,7 +2,6 @@
 # 🚀🛡️ VALORCHAIN / VALORCHAIN-G / VALORAIPLUS
 ### Unified Integrity Architecture  
 ### Live Operational Integrity Matrix  
-### Authorized by Commander DG77.77X-Ξ
 
 Welcome to the **unified integrity framework** that combines:
 
