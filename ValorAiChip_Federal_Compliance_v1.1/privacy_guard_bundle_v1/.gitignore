@@ -1,6 +1,0 @@
-# Ignore rendered template files
-*.yml
-*.yaml
-*.conf
-*.json
-gitleaks.toml
