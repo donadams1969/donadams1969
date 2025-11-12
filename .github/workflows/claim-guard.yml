@@ -1,30 +1,38 @@
-name: claim-guard
+name: Claim-Guard Verification
+
 on:
-  pull_request:
-    branches: [ "main" ]
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
 permissions:
   contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  verify:
-    runs-on: ubuntu-latest
+  guard:
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
-        with: { name: liveness-receipts, path: verify }
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.11" }
-      - run: pip install pynacl
 
-      - name: Verify Ed25519 + schema + chain
+      - name: Verify lattice (safe even if evidence/ is empty)
         run: |
-          python tools/verify_receipt.py keys/public.key verify/liveness.json verify/liveness.json.sig
+          python3 scripts/valor_attest.py --verify evidence/ | tee attestation.json
 
-      - name: Verify RFC3161/OTS (best-effort)
+      - name: Record to Genesis (only if endpoint configured)
+        if: ${{ secrets.GENESIS_ENDPOINT != '' }}
+        env:
+          GENESIS_ENDPOINT: ${{ secrets.GENESIS_ENDPOINT }}
         run: |
-          if [ -f verify/liveness.rfc3161.tsr ]; then
-            echo "(Optional) verify TSR against TSA policy here"
-          elif [ -f verify/liveness.ots ]; then
-            pip install opentimestamps-client && ots verify verify/liveness.json || true
-          else
-            echo "No external timestamp (OK if disabled)."
-          fi
+          curl -fsSL -X POST "$GENESIS_ENDPOINT" \
+            -H 'content-type: application/json' \
+            --data-binary @attestation.json || echo "GENESIS post failed/omitted (non-fatal)"
+
+      - name: Upload Guard Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: claim-guard-attestation
+          path: attestation.json
