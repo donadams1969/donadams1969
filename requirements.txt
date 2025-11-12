@@ -1,0 +1,4 @@
+pynacl
+reportlab
+python-pptx
+qrcode[pil]

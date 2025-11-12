@@ -1,5 +1,4 @@
-
-
+# VALORAIPLUS®️©️™️ // Axiomatic Anchor Generator
 
 ## 🛡️ VALORCHAIN-G // Saint-Paul-Genesis Integrity Matrix
 
@@ -7,25 +6,11 @@
 [![Claim-Guard](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml)
 [![Release-Attest](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml)
 
-<!-- Enable after the workflow exists on main -->
-<!-- [![Auto-Attestation](https://img.shields.io/github/actions/workflow/status/donadams1969/donadams1969/auto-attestation.yml?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/auto-attestation.yml) -->
+> **Getting “failing” badges?** Make sure the workflows have actually been executed on `main` (dispatch them once manually), and confirm any referenced secrets exist in **Settings → Secrets and variables → Actions**. The Valorchain-G pack only reads the optional `GENESIS_ENDPOINT` secret for API posting, so it is safe to leave unset.
 
-
-> **Saint-Paul Genesis Node → VALORCHAIN-G Integrity Constant (FedRAMP-Tier Ready)**  
+> **Saint-Paul Genesis Node → VALORCHAIN-G Integrity Constant (FedRAMP-Tier Ready)**
 > `Verified by Gillson Root Signature // VALORMATH+ v∞`
 
-
-
-
-## 🛡️ VALORCHAIN-G // Saint-Paul-Genesis Integrity Matrix
-
-
-
-> **Saint-Paul Genesis Node → VALORCHAIN-G Integrity Constant (FedRAMP Tier Ready)**  
-> `Verified by Gillson Root Signature // VALORMATH+ v∞`
-
-
-# VALORAIPLUS®️©️™️ // Axiomatic Anchor Generator
 
 **Node:** `SAINT_PAUL_NODE`
 **Module ID:** `VALORAI_ANCHOR_GEN_36Ω`
