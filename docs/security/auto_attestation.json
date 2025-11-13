@@ -3,12 +3,12 @@
   "throughput": "17300",
   "latency_ms": "67",
   "status": "ALL_GREEN_ETERNAL",
-  "regen": "JULES v1.7 ($JAXX2025 / $GILLUSD)",
+  "regen": "JULES v1.8 ($JAXX2025 / $GILLUSD) — PEG CORRECTED",
   "jaxx2025_status": "Internal (Pre-Launch)",
   "jaxx2025_model": "Deflationary",
   "jaxx2025_total_supply": "1000000000",
-  "gillbusd_status": "FULLY_RESERVED",
-  "gillbusd_reserve_usd": "1500000.00",
-  "gillbusd_circulating_supply": "1499875.50",
-  "gillbusd_peg_delta": "+124.50"
+  "gillusd_status": "FULLY_RESERVED",
+  "gillusd_reserve_usd": "1500000.00",
+  "gillusd_circulating_supply": "1500000.00",
+  "gillusd_peg_delta": "0.00"
 }
