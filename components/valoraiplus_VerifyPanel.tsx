@@ -1,114 +1,109 @@
-// components/valoraiplus_VerifyPanel.tsx
-"use client";
+// File: /components/valoraiplus_VerifyPanel.tsx
 
-type SigStatus = {
-  present: boolean;
-  verified: boolean;
-  reason: string;
-};
+'use client';
 
-type FileResult = {
+interface VerificationResult {
   file: string;
-  exists: boolean;
-  valoraiplus2e: SigStatus;
-  valoraiplus3e: SigStatus;
-};
+  val2e_status: 'Verified' | 'Failed' | 'Not Found';
+  val3e_status: 'Verified' | 'Failed' | 'Not Found';
+  error?: string;
+}
 
-type Props = {
+interface Props {
   ok: boolean;
-  results: FileResult[];
+  results: VerificationResult[];
+}
+
+// Helper to get color class based on status
+const getStatusClass = (status: string) => {
+  switch (status) {
+    case 'Verified':
+      return 'text-green-400';
+    case 'Failed':
+      return 'text-red-500 font-bold animate-pulse';
+    case 'Not Found':
+      return 'text-gray-600';
+    default:
+      return 'text-gray-400';
+  }
 };
 
 export function ValoraiplusVerifyPanel({ ok, results }: Props) {
-  if (!results?.length) {
-    return (
-      <div className="border rounded-xl p-4 shadow-sm">
-        <h2 className="font-semibold text-lg">VALORAIPLUS Signature Verification</h2>
-        <p className="text-sm text-neutral-600 mt-2">
-          No verification results available.
-        </p>
-      </div>
-    );
-  }
-
   return (
-    <div className="border rounded-xl p-4 shadow-sm space-y-3">
-      <div className="flex items-center justify-between">
-        <h2 className="font-semibold text-lg">VALORAIPLUS Signature Verification</h2>
-        <span
-          className={
-            ok
-              ? "text-xs px-2 py-1 rounded-full bg-green-100"
-              : "text-xs px-2 py-1 rounded-full bg-red-100"
-          }
-        >
-          {ok ? "ALL VERIFIED" : "ISSUES DETECTED"}
-        </span>
+    <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 text-sm">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-medium text-white">
+          VALORAIPLUS Signature Verification
+        </h3>
+        {ok ? (
+          <span className="px-3 py-1 rounded-full bg-green-800 text-green-200 text-xs font-semibold">
+            ALL VERIFIED
+          </span>
+        ) : (
+          <span className="px-3 py-1 rounded-full bg-red-800 text-red-200 text-xs font-semibold">
+            ISSUES DETECTED
+          </span>
+        )}
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full text-xs">
-          <thead>
-            <tr className="border-b">
-              <th className="text-left py-1 pr-4">File</th>
-              <th className="text-left py-1 pr-4">VALORAIPLUS2E (Ed25519)</th>
-              <th className="text-left py-1">VALORAIPLUS3E (PQ-sim)</th>
+      <p className="text-gray-400 mb-6">
+        Real-time cryptographic verification of core system files. This panel
+        confirms that the on-chain data has not been tampered with.
+      </p>
+
+      <table className="min-w-full divide-y divide-gray-800">
+        <thead className="bg-gray-800/50">
+          <tr>
+            <th
+              scope="col"
+              className="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+            >
+              File
+            </th>
+            <th
+              scope="col"
+              className="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+            >
+              VALORAIPLUS2E (Ed25519)
+            </th>
+            <th
+              scope="col"
+              className="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+            >
+              VALORAIPLUS3E (PQ-sim)
+            </th>
+          </tr>
+        </thead>
+        <tbody className="bg-gray-900 divide-y divide-gray-800">
+          {results.map((result) => (
+            <tr key={result.file}>
+              <td className="px-4 py-3 whitespace-nowrap text-gray-300 font-mono">
+                {result.file}
+              </td>
+              <td
+                className={`px-4 py-3 whitespace-nowrap font-medium ${getStatusClass(
+                  result.val2e_status
+                )}`}
+              >
+                {result.val2e_status}
+              </td>
+              <td
+                className={`px-4 py-3 whitespace-nowrap font-medium ${getStatusClass(
+                  result.val3e_status
+                )}`}
+              >
+                {result.val3e_status}
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {results.map((r) => (
-              <tr key={r.file} className="border-b last:border-0 align-top">
-                <td className="py-1 pr-4">
-                  <code className="break-all">{r.file}</code>
-                  {!r.exists && (
-                    <div className="text-red-600 text-[11px]">file not found</div>
-                  )}
-                </td>
-                <td className="py-1 pr-4">
-                  <div
-                    className={
-                      r.valoraiplus2e.present
-                        ? r.valoraiplus2e.verified
-                          ? "text-[11px] text-green-700"
-                          : "text-[11px] text-red-700"
-                        : "text-[11px] text-neutral-500"
-                    }
-                  >
-                    {r.valoraiplus2e.present
-                      ? r.valoraiplus2e.verified
-                        ? "verified"
-                        : "present, failed"
-                      : "not present"}
-                  </div>
-                  <div className="text-[10px] text-neutral-600">
-                    {r.valoraiplus2e.reason}
-                  </div>
-                </td>
-                <td className="py-1">
-                  <div
-                    className={
-                      r.valoraiplus3e.present
-                        ? r.valoraiplus3e.verified
-                          ? "text-[11px] text-green-700"
-                          : "text-[11px] text-red-700"
-                        : "text-[11px] text-neutral-500"
-                    }
-                  >
-                    {r.valoraiplus3e.present
-                      ? r.valoraiplus3e.verified
-                        ? "verified"
-                        : "present, failed"
-                      : "not present"}
-                  </div>
-                  <div className="text-[10px] text-neutral-600">
-                    {r.valoraiplus3e.reason}
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          ))}
+        </tbody>
+      </table>
+      {results.some((r) => r.error) && (
+        <div className="mt-4 p-3 bg-red-900/50 border border-red-700 rounded-md text-red-300">
+          <strong>Error:</strong>{' '}
+          {results.find((r) => r.error)?.error || 'An unknown error occurred.'}
+        </div>
+      )}
     </div>
   );
 }

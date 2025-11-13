@@ -1,68 +1,105 @@
-// app/explorer/page.tsx
-import { ValoraiplusParityPanel } from "@/components/valoraiplus_ParityPanel";
-import { ValoraiplusVerifyPanel } from "@/components/valoraiplus_VerifyPanel";
+// File: /app/explorer/page.tsx
 
-async function valoraiplusFetchAudit() {
-  const res = await fetch("/api/audit/latest", {
-    cache: "no-store",
-  });
-  if (!res.ok) return null;
-  return res.json();
+import { Suspense } from 'react';
+import { ValoraiplusVerifyPanel } from '@/components/valoraiplus_VerifyPanel';
+import { OtherExplorerComponents } from '@/components/OtherExplorerComponents'; // Placeholder
+
+// --- Data Fetching ---
+
+interface VerificationResult {
+  file: string;
+  val2e_status: 'Verified' | 'Failed' | 'Not Found';
+  val3e_status: 'Verified' | 'Failed' | 'Not Found';
+  error?: string;
 }
 
-async function valoraiplusFetchHistory() {
-  const res = await fetch("/api/explorer/history", {
-    cache: "no-store",
-  });
-  if (!res.ok) return null;
-  return res.json();
+interface VerifyApiResponse {
+  ok: boolean;
+  results: VerificationResult[];
 }
 
-async function valoraiplusFetchVerify() {
-  const res = await fetch("/api/audit/verify", {
-    cache: "no-store",
-  });
-  if (!res.ok) return null;
-  return res.json();
+// Fetches verification status from our new API endpoint
+async function valoraiplusFetchVerify(): Promise<VerifyApiResponse> {
+  try {
+    // This fetch runs on the server (RSC)
+    // We use an absolute URL or configure the base URL
+    const res = await fetch(`${process.env.APP_URL}/api/audit/verify`, {
+      cache: 'no-store', // Ensure we always get the latest status
+    });
+
+    if (!res.ok) {
+      return {
+        ok: false,
+        results: [],
+      };
+    }
+    return res.json();
+  } catch (error) {
+    console.error('Failed to fetch verification status:', error);
+    return {
+      ok: false,
+      results: [],
+    };
+  }
 }
 
-export default async function ValoraiplusExplorerPage() {
-  const [audit, history, verify] = await Promise.all([
-    valoraiplusFetchAudit(),
-    valoraiplusFetchHistory(),
-    valoraiplusFetchVerify(),
+// Placeholder for other data fetching functions
+async function fetchOtherData() {
+  // ... logic to fetch blocks, transactions, etc.
+  return { someData: '...' };
+}
+
+// --- Server Component for Verification Panel ---
+async function VerificationPanelLoader() {
+  const { ok, results } = await valoraiplusFetchVerify();
+  return <ValoraiplusVerifyPanel ok={ok} results={results} />;
+}
+
+
+// --- Main Page Component ---
+
+export default async function ExplorerPage() {
+  // Fetch data in parallel
+  const [otherData] = await Promise.all([
+    fetchOtherData(),
+    // The verification data is fetched inside its own loader
   ]);
 
   return (
-    <main className="max-w-5xl mx-auto py-10 space-y-6">
-      <h1 className="text-3xl font-bold">VALORAIPLUS Fort Explorer</h1>
-      <p className="text-sm text-neutral-600">
-        Real-time view of VALORAIPLUS L1/L2 parity, Merkle attestation, OP_RETURN anchors,
-        and signature verification status.
-      </p>
+    <main className="container mx-auto p-8 space-y-8">
+      <h1 className="text-4xl font-bold text-white">
+        VALORAIPLUS Fort Explorer
+      </h1>
 
-      <ValoraiplusParityPanel ledger={audit?.ledger} />
+      {/* The new VALORAIPLUS Verification Panel.
+        We wrap it in a <Suspense> so the rest of the page
+        can load while verification is performed.
+      */}
+      <Suspense fallback={<VerificationLoadingSkeleton />}>
+        <VerificationPanelLoader />
+      </Suspense>
 
-      <section className="space-y-2">
-        <h2 className="font-semibold text-lg">VALORAIPLUS Attestation Runs</h2>
-        {!history?.runs?.length && (
-          <p className="text-sm text-neutral-600">No attestation history yet.</p>
-        )}
-        {history?.runs?.length > 0 && (
-          <ul className="text-sm list-disc pl-5">
-            {history.runs.map((r: any) => (
-              <li key={r.id}>{r.file}</li>
-            ))}
-          </ul>
-        )}
-      </section>
-
-      <section>
-        <ValoraiplusVerifyPanel
-          ok={verify?.ok ?? false}
-          results={verify?.results ?? []}
-        />
-      </section>
+      {/* Placeholder for other explorer components */}
+      <OtherExplorerComponents data={otherData} />
     </main>
+  );
+}
+
+// Loading Skeleton component
+function VerificationLoadingSkeleton() {
+  return (
+    <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 text-sm animate-pulse">
+      <div className="flex justify-between items-center mb-4">
+        <div className="h-6 bg-gray-700 rounded w-1/3"></div>
+        <div className="h-6 bg-gray-700 rounded w-1/4"></div>
+      </div>
+      <div className="h-4 bg-gray-700 rounded w-full mb-6"></div>
+      <div className="space-y-3">
+        <div className="h-8 bg-gray-800 rounded w-full"></div>
+        <div className="h-8 bg-gray-800/50 rounded w-full"></div>
+        <div className="h-8 bg-gray-800/50 rounded w-full"></div>
+        <div className="h-8 bg-gray-800/50 rounded w-full"></div>
+      </div>
+    </div>
   );
 }
