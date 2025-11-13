@@ -78,9 +78,9 @@ function verifyEd25519(data: any): [boolean, string] {
 
   try {
     const ok = nacl.sign.detached.verify(
-      new UintArray(msg),
-      new UintArray(signature),
-      new UintArray(pubkey)
+        new Uint8Array(msg),
+        new Uint8Array(signature),
+        new Uint8Array(pubkey)
     );
     if (!ok) {
       return [false, "Ed25519 verification failed (bad signature)"];
@@ -96,7 +96,7 @@ function recomputePqSim(payload: any): string {
   const raw = canonicalBytes(payload);
   const h = crypto.createHash("sha3-512");
   h.update("VALORAIPLUS3E_PQ_SIM");
-  h.update(raw);
+  h.update(new Uint8Array(raw));
   return h.digest("hex");
 }
 
