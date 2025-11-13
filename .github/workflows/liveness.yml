@@ -15,19 +15,21 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-22.04
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
       - name: Compute SHA3-512 of HEAD (pure Python)
         run: |
           python3 - <<'PY'
-import hashlib, subprocess, json, time, sys
+import hashlib, subprocess, json, time
 head = subprocess.check_output(["git","rev-parse","HEAD"]).decode().strip()
 digest = hashlib.sha3_512(head.encode()).hexdigest()
 out = {"ts": int(time.time()), "commit": head, "sha3_512": digest}
-open("liveness.log","w").write(json.dumps(out)+"\n")
+open("liveness.log","w").write(json.dumps(out) + "\n")
 print(out)
 PY
 
