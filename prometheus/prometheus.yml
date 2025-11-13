@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'saint-paul-node'
+    static_configs:
+      - targets: ['saint_paul_node:8080']
