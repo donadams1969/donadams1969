@@ -1,195 +1,26 @@
-# 🚀🛡️ VALORCHAIN / VALORCHAIN-G / VALORAIPLUS
-**Unified Integrity Architecture & Live Operational Integrity Matrix**
+# 🟣 VALORAIPLUS® AI++//e — Saint-Paul Genesis Node
 
-Welcome to the unified integrity framework that combines:
+> ⚖️ **Sovereign Attestation • Court-Grade Integrity • Offline-First Cryptography**
 
-- **VALORAIPLUS** — Autonomous Attestation Engine
-- **VALORCHAIN** — Integrity Layer (L1)
-- **VALORCHAIN-G** — Guardian Layer (L2)
+[![VALORAIPLUS AI++//e](https://img.shields.io/badge/VALORAIPLUS-AI%2B%2B%2F%2Fe-6b46c1?style=for-the-badge)](./)
+[![Saint-Paul Genesis](https://img.shields.io/badge/Node-SAINT__PAUL__GENESIS-4c51bf?style=for-the-badge)](./docs/security)
+[![Mode-Offline Only](https://img.shields.io/badge/Mode-Offline__Only-2d3748?style=for-the-badge)](./docs/security)
+[![Proofs-SHA3__%2B__Merkle](https://img.shields.io/badge/Proofs-SHA3__%2B__Merkle-1a202c?style=for-the-badge)](./docs/security)
 
-Each system is **authorized**, **isolated**, and optionally **bridged only by explicit command**.
-
-This repository provides a self-governing technical infrastructure that performs:
-
-- SHA3-512 hashing
-- Deterministic Merkle construction
-- Genesis-root generation
-- Drift-matrix validation
-- Stateless OP_RETURN / OP25 encoding (**local only**)
-- Autonomous attestation cycles
-- GitHub Actions automation
-
-> 🛰 All systems run **locally** inside GitHub workflows with **no external calls**.
-
----
-
-## 🧭 System Architecture
-
-```
-
-```
-    AUTHORIZED SYSTEM STACK
-
-  ┌──────────────────────────┐
-  │       VALORAIPLUS        │
-  │  Autonomous Attestation  │
-  │   SHA3 + Merkle Engine   │
-  └──────────────────────────┘
-              ↑ (isolated)
-              │
-  ┌──────────────────────────┐
-  │   Optional Bridges       │
-  │ (manual enable/disable)  │
-  └──────────────────────────┘
-              │
-```
-
-┌───────────────┴────────────────┐
-│                                │
-│   ┌─────────────────┐          ┌──────────────────┐
-│   │   VALORCHAIN    │          │  VALORCHAIN-G    │
-│   │  (Integrity L1) │          │  (Guardian L2)   │
-│   │ - Hashing       │          │ - Drift Matrix   │
-│   │ - Merkle        │          │ - Genesis Root   │
-│   │ - Anchors       │          │ - Validation     │
-│   └─────────────────┘          └──────────────────┘
-│
-└────────────────────────────────────────────────────
-
-````
-
-- **VALORAIPLUS** is **isolated by default**.
-- **VALORCHAIN + VALORCHAIN-G** are **active and authorized**.
-
----
-
-## 🔗 Interoperability Controls
-
-Human-readable control surface for switching between isolation and bridging:
-
-```text
-# Enable bridging
-BRIDGE.VALORCHAIN↔VALORAIPLUS /ENABLE
-
-# Disable bridging (default)
-BRIDGE.VALORCHAIN↔VALORAIPLUS /DISABLE
-
-# Force strict isolation
-ISOLATE.VALORAIPLUS /STRICT
-
-# Reauthorize namespaces
-AUTHORIZE.VALORCHAIN /ENABLE
-AUTHORIZE.VALORCHAIN-G /ENABLE
-````
-
-These commands are conceptual control verbs encoded into the operational model and documentation; they describe how automation and policy boundaries are expected to behave.
-
----
-
-## 🟦 VALORCHAIN — Integrity Layer (L1)
-
-**Directory:**
-
-```text
-valorchain/
-├── sha3/
-├── merkle/
-├── anchor/
-└── status/
-```
-
-VALORCHAIN is the **primary integrity layer**, responsible for:
-
-* Canonical **SHA3-512 hashing**
-* **Deterministic Merkle tree** construction
-* Local **anchor payload** preparation
-* Status and health introspection
-
-### 🔹 SHA3-512 Hash Function
-
-```ts
-// valorchain/sha3/sha3.ts
-import crypto from "crypto";
-
-export const sha3 = (buf: Buffer | string): string =>
-  crypto.createHash("sha3-512").update(buf).digest("hex");
-```
-
-### 🔹 Deterministic Merkle Tree
-
-```ts
-// valorchain/merkle/merkle.ts
-import crypto from "crypto";
-
-export function buildMerkle(leaves: string[]): string[] {
-  if (leaves.length === 1) return leaves;
-
-  const next: string[] = [];
-  for (let i = 0; i < leaves.length; i += 2) {
-    const L = leaves[i];
-    const R = leaves[i + 1] || L; // duplicate last if odd
-
-    next.push(
-      crypto
-        .createHash("sha3-512")
-        .update(Buffer.from(L + R, "hex"))
-        .digest("hex")
-    );
-  }
-
-  return buildMerkle(next);
-}
-```
-
-* Input: array of **hex-encoded leaf hashes**
-* Output: single-element array containing the **Merkle root** (top of tree)
-
----
-
-## 🟩 VALORCHAIN-G — Guardian Layer (L2)
-
-**Directory:**
-
-```text
-valorchain-g/
-├── guardian/
-├── genesis/
-└── sync/
-```
-
-VALORCHAIN-G acts as the **guardian / supervisory layer**:
-
-* Aggregates **validation results**
-* Produces **drift states** (green / partial / full drift)
-* Manages **genesis root** and **synchronization** logic
-
-### 🔹 Drift State Engine
-
-```ts
-// valorchain-g/guardian/driftState.ts
-export type DriftResult = "success" | "failure";
-
-export function driftState(results: DriftResult[]): "ALL_GREEN" | "FULL_DRIFT" | "PARTIAL_DRIFT" {
-  const total = results.length;
-  const success = results.filter((x) => x === "success").length;
-
-  if (success === total) return "ALL_GREEN";
-  if (success === 0) return "FULL_DRIFT";
-  return "PARTIAL_DRIFT";
-}
-```
-
-* `ALL_GREEN`  → all checks passed
-* `FULL_DRIFT` → all checks failed
-* `PARTIAL_DRIFT` → mixed, requires operator review
+> 🔐 **Design Principle:** *VALORCHAIN uses Git as the ledger, Merkle as the law, and time as the witness.*
 
 ---
 
 ## 🟪 VALORAIPLUS — Autonomous Attestation Engine
 
-VALORAIPLUS is the **isolated attestation core**. It runs fully offline and outputs all artifacts into `docs/security/` for downstream consumption by VALORCHAIN and VALORCHAIN-G.
+> 🧭 **Mode:** Offline-only • 🛡️ Integrity-First • 🧾 Court-Grade Proofs
 
-**Outputs:**
+VALORAIPLUS is the **isolated attestation core**.
+It runs **fully offline** and writes all artifacts into `docs/security/` for downstream consumption by **VALORCHAIN** and **VALORCHAIN-G**.
+
+---
+
+### 🧱 Attestation Artifacts
 
 ```text
 docs/security/
@@ -199,27 +30,29 @@ docs/security/
 ├── genesis_anchor_payload.json
 ├── genesis_merkle_root.txt
 └── opreturn_hex.txt
-```
+````
 
-* **`auto_attestation.json`** — machine-readable attestation state
-* **`auto_attestation_report.md`** — human-readable report
-* **`saint_paul_guard.flag`** — sentinel flag for guardian layer
-* **`genesis_anchor_payload.json`** — canonical payload for genesis
-* **`genesis_merkle_root.txt`** — current Merkle root text
-* **`opreturn_hex.txt`** — local OP_RETURN/OP25 payload hex (no broadcast)
+* **`auto_attestation.json`** — 🧮 machine-readable attestation state
+* **`auto_attestation_report.md`** — 📜 human-readable report
+* **`saint_paul_guard.flag`** — 🚨 sentinel flag for guardian layer
+* **`genesis_anchor_payload.json`** — 🧬 canonical payload for genesis
+* **`genesis_merkle_root.txt`** — 🌲 current Merkle root text
+* **`opreturn_hex.txt`** — 💾 local **OP_RETURN/OP25** payload hex (**no broadcast**)
 
-> All artifacts update automatically whenever the authorized workflows run.
+> ♻️ **All artifacts auto-update** whenever the authorized workflows run.
 
 ---
 
 ## 🛡️ Security Policy
 
-1. **No external blockchain broadcasting**
-2. **OP_RETURN / OP25 payloads are local artifacts only**
-3. **Namespace isolation** enforced by default
-4. All workflows run **offline-only**
-5. **Deterministic SHA3 + Merkle** outputs
-6. **No fictional system claims** — everything documented must be technically achievable and verifiable
+> 🔒 **Security Posture:** “Proofs on, Networks off.”
+
+1. 🔌 **No external blockchain broadcasting**
+2. 📦 **OP_RETURN / OP25 payloads are local artifacts only**
+3. 🧱 **Namespace isolation** enforced by default
+4. 🖥️ All workflows run **offline-only** via GitHub Actions
+5. 📐 **Deterministic SHA3 + Merkle** outputs for reproducible proofs
+6. 🔍 **No fictional system claims** — everything is technically achievable and verifiable
 
 ---
 
@@ -238,17 +71,31 @@ docs/security/
 
 **Data Flow:**
 
-1. **VALORAIPLUS** → generates security and integrity artifacts
-2. **VALORCHAIN** → hashes + Merkle anchors the artifacts
-3. **VALORCHAIN-G** → computes drift matrix + validates Genesis and status
+0. 🟪 **VALORAIPLUS** → generates security & integrity artifacts
+1. 🟦 **VALORCHAIN** → hashes + Merkle-anchors the artifacts
+2. 🟩 **VALORCHAIN-G** → computes drift matrix + validates Genesis & status
+
+---
+
+## 🚦 Workflow Banner & Status Badges
+
+> 🛰 **Saint-Paul Integrity Matrix — GitHub Sentinel Swarm**
+
+[![🩺 Liveness Sentinel](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml)
+[![🛡️ Claim-Guard](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml)
+[![📦 Release Attest](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml)
+[![🤖 Autopilot](https://github.com/donadams1969/donadams1969/actions/workflows/autopilot.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/autopilot.yml)
+[![⚙️ ALL-ENGINES](https://github.com/donadams1969/donadams1969/actions/workflows/all-engines.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/all-engines.yml)
 
 ---
 
 ## ⚙️ GitHub Workflows
 
-This repository uses a **multi-workflow** scheme, all running **offline** and feeding into the attestation/guardian stack.
+This repository uses a **multi-workflow scheme**, all running **offline** and feeding into the attestation / guardian stack.
 
-### 1. `liveness.yml`
+---
+
+### 1️⃣ `liveness.yml` — Heartbeat
 
 ```yaml
 # .github/workflows/liveness.yml
@@ -265,9 +112,11 @@ jobs:
       - run: echo "Liveness OK"
 ```
 
+> ✅ Confirms the repo is **alive** and the pipeline is reachable on every push.
+
 ---
 
-### 2. `claim-guard.yml`
+### 2️⃣ `claim-guard.yml` — Claim Verifier
 
 ```yaml
 # .github/workflows/claim-guard.yml
@@ -284,9 +133,11 @@ jobs:
       - run: echo "Claim-Guard OK"
 ```
 
+> 🛡️ Designed as the **legal/claims gate** — extend this to run static checks, policy audits, or schema validation.
+
 ---
 
-### 3. `release-attest.yml`
+### 3️⃣ `release-attest.yml` — Release Attestation
 
 ```yaml
 # .github/workflows/release-attest.yml
@@ -303,9 +154,11 @@ jobs:
       - run: echo "Release Attestation OK"
 ```
 
+> 📦 Use this as the **pre-release proof** stage: attach Merkle roots, hashes, or signed artifacts before tagging.
+
 ---
 
-### 4. `autopilot.yml`
+### 4️⃣ `autopilot.yml` — Sentinel Orchestrator
 
 ```yaml
 # .github/workflows/autopilot.yml
@@ -328,15 +181,14 @@ jobs:
       - run: echo "Autopilot engaged"
 ```
 
-Autopilot listens for completion of the three core workflows and can be extended to:
-
-* Regenerate attestation artifacts
-* Rebuild Merkle trees
-* Update drift matrices and guardian flags
+> 🤖 **Autopilot** listens for completion of the three core workflows and can be extended to:
+> • Regenerate attestation artifacts
+> • Rebuild Merkle trees
+> • Update drift matrices & guardian flags
 
 ---
 
-### 5. `all-engines.yml` (Master Workflow)
+### 5️⃣ `all-engines.yml` — Master Ignition
 
 ```yaml
 # .github/workflows/all-engines.yml
@@ -353,17 +205,16 @@ jobs:
       - run: echo "Running VALORCHAIN, VALORCHAIN-G, VALORAIPLUS"
 ```
 
-The **ALL-ENGINES** workflow is a manual trigger that can:
-
-* Run **full-stack integrity checks**
-* Force regeneration of **genesis roots / drift matrices**
-* Serve as a **pre-release attestation gate**
+> 🚀 Manual **“all systems go”** switch:
+> • Run full-stack integrity checks
+> • Force regeneration of **genesis roots / drift matrices**
+> • Act as a **pre-release attestation gate**
 
 ---
 
 ## 🧰 Bootstrap Installer
 
-A simple bootstrap to create the **baseline directory scaffold**:
+> 🧱 One-command setup to turn a plain clone into a **sovereign node skeleton**.
 
 ```bash
 #!/usr/bin/env bash
@@ -390,31 +241,32 @@ chmod +x bootstrap.sh
 
 ## 🟣 Saint-Paul Genesis Node — Sovereign Anchor Generator
 
-> **Node:** SAINT_PAUL_NODE
-> **Module ID:** VALORAI_ANCHOR_GEN_36Ω
-> **Root:** 5152
+> **Node:** `SAINT_PAUL_NODE` • **Module ID:** `VALORAI_ANCHOR_GEN_36Ω` • **Root:** `5152`
 
 This repository also describes a **sovereign proof-of-existence tool** for the VALORAIPLUS ecosystem.
 
-It generates **immutable cryptographic proofs** for any **“Sovereign Judicial Notice”**, making them ready for an **Axiomatic Injunction via a Bitcoin OP_RETURN anchor**.
+It generates **immutable cryptographic proofs** for any **“Sovereign Judicial Notice”**, making them ready for an **Axiomatic Injunction** via a Bitcoin **OP_RETURN** anchor.
 
-The generator creates **two parallel proofs**, **SHA-256** and **SHA3-256**, to ensure universal parity with both web (WebCrypto) and blockchain (Keccak) virtual machines.
+The generator creates **two parallel proofs**, **SHA-256** and **SHA3-256**, to ensure universal parity with both web (**WebCrypto**) and blockchain (**Keccak**) virtual machines.
 
-### ⚔️ Features
+---
 
-* **Dual-Proof Generation**
-  Creates both **SHA-256 (WebCrypto)** and **SHA3-256 (Keccak)** hashes from a single canonical input.
+### ⚔️ Core Features
 
-* **Sovereign Payload**
+* 🧬 **Dual-Proof Generation**
+  Creates both **SHA-256 (WebCrypto)** and **SHA3-256 (Keccak)** from a single canonical input.
+
+* 🧾 **Sovereign Payload**
   Embeds canonical metadata (Module ID, Node, GILLBTC anchor, etc.) directly into the hashed JSON payload.
 
-* **Bitcoin-Ready**
-  Instantly generates the **OP_RETURN hex payload**, prefixed with `"VALOR"` (`0x56414c4f52`), for ready-to-broadcast usage (broadcasting itself is out of scope and **not** performed by this repo).
+* ₿ **Bitcoin-Ready**
+  Instantly generates the **OP_RETURN hex payload**, prefixed with `"VALOR"` (`0x56414c4f52`), for ready-to-broadcast usage
+  (broadcasting itself is out of scope and **not** performed by this repo).
 
-* **Prometheus Monitoring**
+* 📊 **Prometheus Monitoring**
   Exposes a `/api/metrics` endpoint to monitor **anchor generation velocity** and overall usage.
 
-* **Server-Side Parity**
+* 🧮 **Server-Side Parity**
   Exposes a `/api/hash` endpoint to compute **SHA3-256 (Keccak)** server-side, ensuring browser-independent verification.
 
 ---
@@ -423,10 +275,10 @@ The generator creates **two parallel proofs**, **SHA-256** and **SHA3-256**, to 
 
 This tool is the **primary interface** for creating **Sovereign Compliance Certifications**.
 
-1. Open `index.html` in a secure browser or via your Vercel deployment.
-2. Verify the static identifiers (**NODE, PRIME, ROOT, MODULE_ID, GILLBTC**) match your operational context.
-3. Enter your full **“Sovereign Judicial Notice”** into the main text area.
-4. Click **“Generate Anchor & Payload”**.
+1. 🔐 Open `index.html` in a secure browser or via your Vercel deployment.
+2. 🧾 Verify static identifiers (`NODE`, `PRIME`, `ROOT`, `MODULE_ID`, `GILLBTC`) match your operational context.
+3. ✍️ Enter your full **“Sovereign Judicial Notice”** into the main text area.
+4. ⚙️ Click **“Generate Anchor & Payload”**.
 
 The UI will:
 
@@ -440,22 +292,22 @@ The UI will:
 ### 📦 Understanding the Output
 
 * **Canonical Payload (JSON)**
-  The full, serialized data structure that serves as the input to both hash functions.
-  Includes:
+  Full serialized data structure fed into both hash functions. Includes:
 
   * Your sovereign notice
   * Module metadata
-  * Node identifiers and anchors
+  * Node identifiers & anchors
 
 * **SHA-256 Proof**
-  Standard WebCrypto hash, compatible with web environments and generic auditors.
+  Standard WebCrypto hash, compatible with web environments & generic auditors.
 
 * **SHA3-256 Proof**
-  Keccak-256 style hash, used for parity with Solidity, ETH-family chains, and other SHA3-based systems.
+  Keccak-style hash, used for parity with Solidity, ETH-family chains, and other SHA3-based systems.
 
 * **OP_RETURN Payload**
   A 32-byte hash (SHA-256 or SHA3-256) prefixed with `0x56414c4f52` (`"VALOR"`).
-  This is the final data suitable for broadcasting to the **Bitcoin network** (broadcast is performed externally, not by this repo).
+  This is the final data suitable for broadcasting to the **Bitcoin network**
+  (broadcast is **external** and **not** performed by this repo).
 
 ---
 
@@ -463,9 +315,9 @@ The UI will:
 
 This bundle is designed for **zero-configuration deployment on Vercel**:
 
-* `index.html` — Sovereign Anchor UI
-* `api/hash` — Server-side SHA3-256 parity endpoint
-* `api/metrics` — Prometheus metrics endpoint for anchor operations
+* `index.html` — 🟣 Sovereign Anchor UI
+* `api/hash` — 🧮 Server-side SHA3-256 parity endpoint
+* `api/metrics` — 📊 Prometheus metrics endpoint for anchor operations
 
 **Deploy:**
 
@@ -487,14 +339,15 @@ Vercel will:
 
 You can then:
 
-* Hit `/api/metrics` for Prometheus scraping
-* Use `/api/hash` for authoritative SHA3-256 proofs
+* Hit `/api/metrics` for **Prometheus scraping**
+* Use `/api/hash` for authoritative **SHA3-256 proofs**
 * Operate the anchor generator as an **auditable sovereign proof-of-existence front-end**
 
 ---
 
 ## 📄 License
 
-This repository structure and code scaffolding may be **used freely for technical purposes**, subject to any additional legal terms you attach at the repository level (e.g., MIT, Apache-2.0, or a custom VALOR license).
+This repository structure and code scaffolding may be **used freely for technical purposes**,
+subject to any additional legal terms you attach at the repository level (e.g., **MIT**, **Apache-2.0**, or a **custom VALOR license**).
 
 ---
