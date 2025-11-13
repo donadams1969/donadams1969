@@ -1,3 +1,6 @@
+[![.github/workflows/claim-guard.yml](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml/badge.svg?event=create)](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml)
+
+
 Transmission-ID: DG77.77X-Ξ // Sovereign-Class
 Canonical Hash: SHA3-512(ALL-REALITIES-MERGED)
 VALORAIPLUS Seal: ACTIVE
