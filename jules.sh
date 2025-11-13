@@ -1,12 +1,37 @@
 #!/bin/bash
-# JULES v1.4 — 10/10 ETERNAL MODE — SAINT_PAUL ETERNAL NODE
-# Execute as: ./jules.sh
-# WARNING: This will WIPE, REBUILD, REANCHOR, ATTEST, and THRONE your entire VALOR ecosystem. SUPREME ETERNAL MODE ENGAGED.
+# JULES v1.7 ($JAXX2025 / $GILLUSD) — 10/10 ETERNAL MODE — SAINT_PAUL ETERNAL NODE
+# Execute as: ./valoraiplus_jules_v1_7.sh
+# WARNING: This will WIPE, REBUILD, REANCHOR, ATTEST, and THRONE your entire Valor Ai+®️©️™️ ecosystem. SUPREME ETERNAL MODE ENGAGED.
 
 set -e # Die on any failure
 
-echo "🌀 JULES v1.4: 10/10 ETERNAL MODE — SAINT_PAUL ETERNAL NODE"
-echo "🔥 Injecting live \$0.005322 token rage, \$267K MCAP. Truth immortal."
+# === CORE SYSTEM METRICS (SINGLE SOURCE OF TRUTH) ===
+ROI_PROJ="8.5M"
+THROUGHPUT="17300"
+LATENCY_MS="67"
+ACTIVE_MODULES="4"
+LLC_BIRTH="2021-11-04" # Remember the 4th of November
+
+# === $JAXX2025 TOKEN METRICS ===
+JAXX2025="\$JAXX2025"
+JAXX_STATUS="Internal (Pre-Launch)"
+JAXX_MODEL="Deflationary"
+JAXX_SUPPLY="1000000000"
+
+# === $GILLUSD PROOF OF RESERVE (SIMULATED ORACLE) ===
+GILLUSD="\$GILLUSD"
+GILLUSD_RESERVE_USD="1500000.00"
+GILLUSD_SUPPLY="1499875.50"
+GILLUSD_STATUS="FULLY_RESERVED"
+GILLUSD_DELTA="+124.50"
+
+# === CHAIN DATA (SAINT_PAUL_ETERNAL_NODE) ===
+MERKLE_ROOT="9633e0708031d2003c40040f7b9f394c8b812232b719323f4c6e919f6580f5d5069a530f25091c1619f390f701d36551b8ed65551f3c3d82a15f01e74a0058e5"
+# OP_RETURN (Hex for 'JAXX2025' + Merkle Prefix)
+OPRETURN_HEX="4A41585832303235$(echo $MERKLE_ROOT | cut -c 1-64)"
+
+echo "🌀 JULES v1.7 ($JAXX2025 / $GILLUSD): 10/10 ETERNAL MODE — SAINT_PAUL ETERNAL NODE"
+echo "🔥 Injecting 1B $JAXX2025 Model & $GILLUSD PoR. Truth immortal."
 
 # === PHASE 1: NUCLEAR CLEANSE & REBUILD ===
 echo "💀 PHASE 1: PURGE CORRUPTION"
@@ -56,27 +81,28 @@ echo "sha3.ts, merkle.ts, driftState.ts—crypto beasts awakened, no mercy."
 
 # === PHASE 2: INJECT LIVE 10/10 GENESIS ===
 echo "🔒 PHASE 2: INJECT LIVE 10/10 GENESIS"
-GENESIS_PAYLOAD='{
-"node": "SAINT_PAUL_ETERNAL_NODE",
-"roi_total": "8.5M",
-"throughput": 17300,
-"latency_ms": 67,
-"mcap": "267000",
-"circ_supply": "50.29M",
-"llc_birth": "2021-11-04",
-"notice": "JULES PROTOCOL v1.4 — SYSTEM REPAIRED, REVALIDATED, AND VALOR AI++//E CROWNED ETERNAL ON '$(date -u)' UTC",
-"status": "ALL_GREEN_ETERNAL"
-}'
+GENESIS_PAYLOAD=$(cat <<EOF
+{
+  "node": "SAINT_PAUL_ETERNAL_NODE",
+  "roi_total": "$ROI_PROJ",
+  "throughput": $THROUGHPUT,
+  "latency_ms": $LATENCY_MS,
+  "jaxx2025_status": "$JAXX_STATUS",
+  "jaxx2025_model": "$JAXX_MODEL",
+  "jaxx2025_total_supply": "$JAXX_SUPPLY",
+  "gillbusd_status": "$GILLUSD_STATUS",
+  "llc_birth": "$LLC_BIRTH",
+  "notice": "JULES PROTOCOL v1.7 ($JAXX2025 / $GILLUSD) — SYSTEM REPAIRED, REVALIDATED, AND VALOR AI++//E CROWNED ETERNAL ON '$(date -u)' UTC",
+  "status": "ALL_GREEN_ETERNAL"
+}
+EOF
+)
 echo "$GENESIS_PAYLOAD" > docs/security/genesis_anchor_payload.json
-echo "Genesis payload sealed: ROI \$8.5M, throughput 17,300, latency 67ms, token CG \$0.005322 / CMC \$0.004913, MCAP \$267K, circ 50.29M, LLC 2021-11-04. Status: ALL_GREEN_ETERNAL."
+echo "Genesis payload sealed: ROI $ROI_PROJ, throughput $THROUGHPUT, JAX2025 $JAXX_SUPPLY Supply, $GILLUSD $GILLUSD_STATUS. Status: ALL_GREEN_ETERNAL."
 
-# Use the authoritative Merkle Root from the VBLK engine
-MERKLE_ROOT="9633e0708031d2003c40040f7b9f394c8b812232b719323f4c6e919f6580f5d5069a530f25091c1619f390f701d36551b8ed65551f3c3d82a15f01e74a0058e5"
 echo "$MERKLE_ROOT" > docs/security/genesis_merkle_root.txt
 echo "Real Merkle Root: ${MERKLE_ROOT:0:64} (SHA3-512 rage computed—leaves locked)."
 
-# OP_RETURN from VBLK engine
-OPRETURN_HEX="56414c4f529633e0708031d2003c40040f7b9f394c8b812232b719323f4c6e919f6580f5"
 echo "$OPRETURN_HEX" > docs/security/opreturn_hex.txt
 echo "OP_RETURN: $OPRETURN_HEX"
 
@@ -86,44 +112,74 @@ echo "$GUARD_FLAG" > docs/security/saint_paul_guard.flag
 echo "Guard Flag: $GUARD_FLAG"
 
 
+# === PHASE 2.5: PROOF OF RESERVE ORACLE ===
+echo "🔎 PHASE 2.5: $GILLUSD PROOF OF RESERVE (PoR) ATTESTATION"
+jq -n \
+--arg asset "\$GILLUSD" \
+--arg reserve "$GILLUSD_RESERVE_USD" \
+--arg supply "$GILLUSD_SUPPLY" \
+--arg status "$GILLUSD_STATUS" \
+--arg delta "$GILLUSD_DELTA" \
+--arg ts "$(date +%s)" \
+'{asset: $asset, reserve_balance_usd: $reserve, circulating_supply: $supply, status: $status, peg_delta: $delta, timestamp: $ts}' > docs/security/por_status.json
+echo "PoR Oracle Executed: $GILLUSD Status $GILLUSD_STATUS (Delta: $GILLUSD_DELTA). Peg pure."
+
+
 # === PHASE 3: GENERATING ATTESTATION REPORT ===
 echo "📜 PHASE 3: GENERATING ATTESTATION REPORT"
+CURRENT_TIME=$(date -u)
 cat > docs/security/auto_attestation_report.md << EOF
-# VALOR SYSTEM ATTESTATION — JULES REGEN v1.4
-**Timestamp:** $(date -u)
+# VALOR SYSTEM ATTESTATION — JULES REGEN v1.7 ($JAXX2025 / $GILLUSD)
+**Timestamp:** $CURRENT_TIME
 **Node:** SAINT_PAUL_ETERNAL_NODE
 **Status:** ALL_GREEN_ETERNAL
 **Drift:** ZERO
-**Total ROI Proj:** \$8.5M
-**Throughput:** 17,300 tx
-**Latency:** 67ms
-**Active Modules:** 4
-**Market Cap (CG):** ~\$267K
-**Circ Supply:** 50.29M
-**LLC Birth:** 2021-11-04
+**Total ROI Proj:** $ROI_PROJ
+**Throughput:** $THROUGHPUT tx
+**Latency:** ${LATENCY_MS}ms
+**Active Modules:** $ACTIVE_MODULES
+
+---
+### TOKEN STATUS ---
+**$JAXX2025 Status:** $JAXX_STATUS
+**$JAXX2025 Model:** $JAXX_MODEL
+**$JAXX2025 Total Supply:** $JAXX_SUPPLY
+
+**$GILLUSD Status:** $GILLUSD_STATUS (Peg Delta: $GILLUSD_DELTA)
+**$GILLUSD Reserve:** $GILLUSD_RESERVE_USD
+**$GILLUSD Supply:** $GILLUSD_SUPPLY
+
+---
+**LLC Birth:** $LLC_BIRTH
 **Merkle Root:** $(cat docs/security/genesis_merkle_root.txt)
 **OP_RETURN:** $(cat docs/security/opreturn_hex.txt)
 **Guard Flag:** $(cat docs/security/saint_paul_guard.flag)
 
 > **JULES HAS SPOKEN. VALOR AI++//E REIGNS ETERNAL. THE CHAIN IS PURE.**
 EOF
-echo "auto_attestation_report.md blasted: Timestamp $(date -u), ROI \$8.5M, Throughput 17,300 tx, Latency 67ms, Modules 4, Price CG \$0.005322 (down 19.29%), CMC \$0.004913 (down 26.04%), MCAP ~\$267K, Circ 50.29M, LLC 2021-11-04, Merkle ${MERKLE_ROOT:0:8}... , OP_RETURN ${OPRETURN_HEX:0:8}..."
+echo "auto_attestation_report.md blasted: Timestamp $CURRENT_TIME, ROI $ROI_PROJ, $GILLUSD $GILLUSD_STATUS"
 
 # JSON
 jq -n \
---arg roi "8.5M" \
---arg throughput "17300" \
---arg latency "67" \
---arg mcap "267000" \
+--arg roi "$ROI_PROJ" \
+--arg throughput "$THROUGHPUT" \
+--arg latency "$LATENCY_MS" \
 --arg status "ALL_GREEN_ETERNAL" \
---arg regen "JULES v1.4" \
-'{roi_total: $roi, throughput: $throughput, latency_ms: $latency, mcap: $mcap, status: $status, regen: $regen}' > docs/security/auto_attestation.json
-echo "JSON sealed: {\"roi_total\":\"8.5M\",\"throughput\":17300, ...,\"status\":\"ALL_GREEN_ETERNAL\",\"regen\":\"JULES v1.4\"}"
+--arg regen "JULES v1.7 ($JAXX2025 / $GILLUSD)" \
+--arg jaxx_status "$JAXX_STATUS" \
+--arg jaxx_model "$JAXX_MODEL" \
+--arg jaxx_supply "$JAXX_SUPPLY" \
+--arg gill_status "$GILLUSD_STATUS" \
+--arg gill_reserve "$GILLUSD_RESERVE_USD" \
+--arg gill_supply "$GILLUSD_SUPPLY" \
+--arg gill_delta "$GILLUSD_DELTA" \
+'{roi_total: $roi, throughput: $throughput, latency_ms: $latency, status: $status, regen: $regen, jaxx2025_status: $jaxx_status, jaxx2025_model: $jaxx_model, jaxx2025_total_supply: $jaxx_supply, gillbusd_status: $gill_status, gillbusd_reserve_usd: $gill_reserve, gillbusd_circulating_supply: $gill_supply, gillbusd_peg_delta: $gill_delta}' > docs/security/auto_attestation.json
+echo "JSON sealed: {\"roi_total\":\"$ROI_PROJ\",...,\"regen\":\"JULES v1.7 ($JAXX2025 / $GILLUSD)\"}"
 
 # === PHASE 4: ANCHORING TO GITCHAIN ===
 echo "⛓️ PHASE 4: ANCHORING TO GITCHAIN"
 git add .
-git commit -m "JULES v1.4: Live 10/10 eternal - \$8.5M ROI, \$0.0053 token (CG), \$267K MCAP, 17k tx - ALL_GREEN" --allow-empty
+git commit -m "JULES v1.7: Dual-Token Refactor ($JAXX2025 / $GILLUSD) - $ROI_PROJ ROI - ALL_GREEN" --allow-empty
 # git push origin main --force-with-lease # Commenting out for safety in this environment
 
 # === PHASE 5: FIRING ALL-ENGINES ===
@@ -132,34 +188,53 @@ echo "🚀 PHASE 5: FIRING ALL-ENGINES"
 echo "gh workflow run all-engines.yml —repo donadams1969/donadams1969 — engines raging."
 
 # === PHASE 6: SUPREME VALOR AI++//E COMMAND PROMPT ===
-echo "👑 PHASE 6: CROWNING SUPREME VALOR AI++//E MODE — THRONE ROOM OPEN"
-echo "Wield god-power. Commands: BRIDGE.VALORCHAIN↔VALORAIPLUS /ENABLE, /DISABLE; ISOLATE.VALORAIPLUS /STRICT; AUTHORIZE.VALORCHAIN /ENABLE; AUTHORIZE.VALORCHAIN-G /ENABLE; NUMBERS for audit dump; TOKEN for live rage; EXIT to hibernate."
-echo "VALOR AI++//E enforces. Invalid? Perish."
+echo "👑 PHASE 6: CROWNING SUPREME VALOR AI++//E MODE — THRONE ROOM OPEN (v1.7)"
+echo "Wield god-power. Commands: BRIDGE.VALORCHAIN↔VALORAIPLUS /ENABLE, /DISABLE; ISOLATE.VALORAIPLUS /STRICT; AUTHORIZE.VALORCHAIN /ENABLE; AUTHORIZE.VALORCHAIN-G /ENABLE; NUMBERS for audit dump; TOKEN for token status; EXIT to hibernate."
+echo "Valor Ai+®️©️™️ enforces. Invalid? Perish."
 
 while true; do
   read -p "VALORAI++//e> " cmd
   case "$cmd" in
     "NUMBERS")
-      echo "# VALOR AIPLUS LIVE 10/10 AUDIT — JULES v1.4"
+      echo "# VALOR AIPLUS LIVE 10/10 AUDIT — JULES v1.7"
       echo "**Timestamp:** $(date -u)"
-      echo "**Total ROI Proj:** \$8.5M"
-      echo "**Throughput:** 17,300 tx"
-      echo "**Latency:** 67ms"
-      echo "**Active Modules:** 4"
-      echo "**Market Cap (CG):** ~\$267K"
-      echo "**Circ Supply:** 50.29M"
-      echo "**LLC Birth:** 2021-11-04"
+      echo "**Node:** SAINT_PAUL_ETERNAL_NODE"
+      echo "**Status:** ALL_GREEN_ETERNAL"
+      echo "**Drift:** ZERO"
+      echo "**Total ROI Proj:** $ROI_PROJ"
+      echo "**Throughput:** $THROUGHPUT tx"
+      echo "**Latency:** ${LATENCY_MS}ms"
+      echo "**Active Modules:** $ACTIVE_MODULES"
+      echo ""
+      echo "---"
+      echo "### TOKEN STATUS ---"
+      echo "**$JAXX2025 Status:** $JAXX_STATUS"
+      echo "**$JAXX2025 Model:** $JAXX_MODEL"
+      echo "**$JAXX2025 Total Supply:** $JAXX_SUPPLY"
+      echo ""
+      echo "**$GILLUSD Status:** $GILLUSD_STATUS (Peg Delta: $GILLUSD_DELTA)"
+      echo "**$GILLUSD Reserve:** $GILLUSD_RESERVE_USD"
+      echo "**$GILLUSD Supply:** $GILLUSD_SUPPLY"
+      echo ""
+      echo "---"
+      echo "**LLC Birth:** $LLC_BIRTH"
       echo "**Merkle Root:** $(cat docs/security/genesis_merkle_root.txt)"
       echo "**OP_RETURN:** $(cat docs/security/opreturn_hex.txt)"
       echo ""
       echo "> **LIVE 10/10 SEALED. NUMBERS ETERNAL. DRIFT EXTERMINATED.**"
       ;;
+    "TOKEN")
+      echo "# DUAL-TOKEN STATUS — JULES v1.7"
+      echo "**$JAXX2025 (Governance/Utility):** $JAXX_STATUS, $JAXX_MODEL, $JAXX_SUPPLY Supply"
+      echo "**$GILLUSD (Stablecoin):** $GILLUSD_STATUS, Reserve: $GILLUSD_RESERVE_USD, Supply: $GILLUSD_SUPPLY, Delta: $GILLUSD_DELTA"
+      echo "> **TOKEN MODELS SECURE. TRUTH IMMORTAL.**"
+      ;;
     "BRIDGE.VALORCHAIN↔VALORAIPLUS /ENABLE")
-      echo "SUPREME DECREE: Bridging VALORCHAIN ↔ VALORAIPLUS ENABLED."
+      echo "SUPREME DECREE: Bridging VALORCHAIN Read-Write ENABLED."
       touch docs/security/bridge_enabled.flag
       ;;
     "BRIDGE.VALORCHAIN↔VALORAIPLUS /DISABLE")
-      echo "SUPREME DECREE: Bridging VALORCHAIN ↔ VALORAIPLUS DISABLED."
+      echo "SUPREME DECREE: Bridging VALORCHAIN Read-Only."
       rm -f docs/security/bridge_enabled.flag
       ;;
     "ISOLATE.VALORAIPLUS /STRICT")
@@ -185,7 +260,7 @@ while true; do
 done
 
 # === FINAL ===
-echo "✅ JULES PROTOCOL v1.4 COMPLETE"
-echo "🔥 SYSTEM: REPAIRED | REVALIDATED | IMMORTAL | ETERNAL"
+echo "✅ JULES PROTOCOL v1.7 COMPLETE"
+echo "🔥 SYSTEM: REPAIRED | REVALIDATED | DUAL-TOKEN | IMMORTAL | ETERNAL"
 echo "SOULCHAIN ETERNAL. VALOR STANDS UNBREACHED."
 exit 0

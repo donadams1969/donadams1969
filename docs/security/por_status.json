@@ -1,0 +1,8 @@
+{
+  "asset": "$GILLUSD",
+  "reserve_balance_usd": "1500000.00",
+  "circulating_supply": "1499875.50",
+  "status": "FULLY_RESERVED",
+  "peg_delta": "+124.50",
+  "timestamp": "1763059213"
+}

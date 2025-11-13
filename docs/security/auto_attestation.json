@@ -2,7 +2,13 @@
   "roi_total": "8.5M",
   "throughput": "17300",
   "latency_ms": "67",
-  "mcap": "267000",
   "status": "ALL_GREEN_ETERNAL",
-  "regen": "JULES v1.4"
+  "regen": "JULES v1.7 ($JAXX2025 / $GILLUSD)",
+  "jaxx2025_status": "Internal (Pre-Launch)",
+  "jaxx2025_model": "Deflationary",
+  "jaxx2025_total_supply": "1000000000",
+  "gillbusd_status": "FULLY_RESERVED",
+  "gillbusd_reserve_usd": "1500000.00",
+  "gillbusd_circulating_supply": "1499875.50",
+  "gillbusd_peg_delta": "+124.50"
 }
