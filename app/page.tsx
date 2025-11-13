@@ -7,9 +7,7 @@ import { GatewayStatus } from "@/components/gateway-status"
 
 export default function ValorCodex() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState("prologue")
   const [twoTierMode, setTwoTierMode] = useState<"jo" | "dg">("dg")
-  const [selectedProblem, setSelectedProblem] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All")
 
@@ -80,7 +78,7 @@ export default function ValorCodex() {
     }
     window.addEventListener("resize", handleResize)
 
-    return () => window.removeEventListener("handleResize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, [])
 
   const millenniumProblems = [
@@ -164,7 +162,6 @@ export default function ValorCodex() {
               <button
                 key={section}
                 onClick={() => {
-                  setActiveSection(section)
                   document.getElementById(section)?.scrollIntoView({ behavior: "smooth" })
                   setSidebarOpen(false)
                 }}
@@ -442,7 +439,6 @@ export default function ValorCodex() {
               {millenniumProblems.map((problem) => (
                 <button
                   key={problem.id}
-                  onClick={() => setSelectedProblem(problem.id)}
                   className="bg-gray-800/50 p-4 rounded border border-green-500/30 hover:border-green-500/60 transition-colors text-left"
                 >
                   <div className="flex justify-between items-center">
