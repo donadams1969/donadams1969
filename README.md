@@ -77,7 +77,7 @@ Preserve long-term stability of:
 
 - **💻 Host System:** `100D Matrix`  
 - **🧬 Kernel Core:** `14D Core`  
-- **👤 Authorized Governor:** `donnygillson.eth`  
+- **👤 Authorized Governor:** `donadams1969.eth`  
 - **🏦 Authorized Treasury:** `valoraiplus.eth`  
 - **🛡️ Override Active:** `SGAU-VALUEGUARD-77.77X-FINALDEG.SOL`  
 
