@@ -41,7 +41,7 @@ Preserve long-term stability of:
 
 ---
 
-## 🛰️ **LIVE SYSTEM LINKS & STATUS (SIMULATION MODEL)**
+## 🛰️ **LIVE SYSTEM LINKS & STATUS **
 
 | Component            | Designation         | Live Status                               | Kernel Link  |
 |----------------------|---------------------|-------------------------------------------|--------------|
