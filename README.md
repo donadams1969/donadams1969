@@ -10,7 +10,6 @@
 [](https://www.google.com/search?q=https://)
 [](https://www.google.com/search?q=https://)
 
-\</div\>
 
 -----
 
@@ -38,8 +37,6 @@ Entropy: QuantumMAX Enhanced
 -----
 
 ### 🔄 Live Feed Indicators
-
-\<div align="center"\>
 
 [](https://www.google.com/search?q=https://)
 [](https://www.google.com/search?q=https://)
@@ -141,11 +138,6 @@ Saint Paul Node: Merkle tree anchoring
 
 ---
 
-## 🛠️ **Required Secrets**
-
-<div align="center">
-
-![Secrets Required](https://img.shields.io/badge/5_Secrets_Required-Critical-FF6B6B?style=for-the-badge)
 
 </div>
 
