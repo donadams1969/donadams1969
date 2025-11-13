@@ -1,0 +1,28 @@
+{
+  "name": "JAXX2025",
+  "symbol": "JAXX2025",
+  "decimals": 18,
+  "totalSupply": "1000000000000000000000000000",
+  "allocations": {
+    "ecosystemTreasury": {
+      "address": "0x4E4A0c62A5bE3132E1C9A1A4A0A1A2A6A3A8A9A0",
+      "amount": "400000000000000000000000000"
+    },
+    "stakingRewards": {
+      "address": "0x9c8B6A4d2E3F4A5B6C7D8E9F0A1B2C3D4E5F6A7B",
+      "amount": "250000000000000000000000000"
+    },
+    "foundingTeamAndAdvisors": {
+      "address": "0x1a2B3c4D5e6F7a8B9c0D1e2F3a4B5c6D7e8F9a0B",
+      "amount": "150000000000000000000000000"
+    },
+    "communityAndVetAirdrops": {
+      "address": "0x5d6E7f8A9b0C1d2E3f4A5b6C7d8E9f0A1b2C3d4E",
+      "amount": "100000000000000000000000000"
+    },
+    "publicSaleAndLiquidity": {
+      "address": "0xfA1b2C3d4E5f6A7b8C9d0E1f2A3b4C5d6E7f8A9B",
+      "amount": "100000000000000000000000000"
+    }
+  }
+}

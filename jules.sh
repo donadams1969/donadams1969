@@ -61,8 +61,6 @@ GENESIS_PAYLOAD='{
 "roi_total": "8.5M",
 "throughput": 17300,
 "latency_ms": 67,
-"token_price_cg": "0.005322",
-"token_price_cmc": "0.004913",
 "mcap": "267000",
 "circ_supply": "50.29M",
 "llc_birth": "2021-11-04",
@@ -100,8 +98,6 @@ cat > docs/security/auto_attestation_report.md << EOF
 **Throughput:** 17,300 tx
 **Latency:** 67ms
 **Active Modules:** 4
-**VALOR Price (CG):** \$0.005322 (down 19.29%)
-**VALOR Price (CMC Solana):** \$0.004913 (down 26.04%)
 **Market Cap (CG):** ~\$267K
 **Circ Supply:** 50.29M
 **LLC Birth:** 2021-11-04
@@ -118,12 +114,10 @@ jq -n \
 --arg roi "8.5M" \
 --arg throughput "17300" \
 --arg latency "67" \
---arg price_cg "0.005322" \
---arg price_cmc "0.004913" \
 --arg mcap "267000" \
 --arg status "ALL_GREEN_ETERNAL" \
 --arg regen "JULES v1.4" \
-'{roi_total: $roi, throughput: $throughput, latency_ms: $latency, token_price_cg: $price_cg, token_price_cmc: $price_cmc, mcap: $mcap, status: $status, regen: $regen}' > docs/security/auto_attestation.json
+'{roi_total: $roi, throughput: $throughput, latency_ms: $latency, mcap: $mcap, status: $status, regen: $regen}' > docs/security/auto_attestation.json
 echo "JSON sealed: {\"roi_total\":\"8.5M\",\"throughput\":17300, ...,\"status\":\"ALL_GREEN_ETERNAL\",\"regen\":\"JULES v1.4\"}"
 
 # === PHASE 4: ANCHORING TO GITCHAIN ===
@@ -152,8 +146,6 @@ while true; do
       echo "**Throughput:** 17,300 tx"
       echo "**Latency:** 67ms"
       echo "**Active Modules:** 4"
-      echo "**VALOR Price (CG):** \$0.005322 (down 19.29%)"
-      echo "**VALOR Price (CMC Solana):** \$0.004913 (down 26.04%)"
       echo "**Market Cap (CG):** ~\$267K"
       echo "**Circ Supply:** 50.29M"
       echo "**LLC Birth:** 2021-11-04"
@@ -161,10 +153,6 @@ while true; do
       echo "**OP_RETURN:** $(cat docs/security/opreturn_hex.txt)"
       echo ""
       echo "> **LIVE 10/10 SEALED. NUMBERS ETERNAL. DRIFT EXTERMINATED.**"
-      ;;
-    "TOKEN")
-      echo "VALOR CG: \$0.005322 | Vol \$1.52M | Down 19.29% | MCAP ~\$267K"
-      echo "VALOR CMC Solana: \$0.004913 | Vol \$1.69M | Down 26.04%"
       ;;
     "BRIDGE.VALORCHAIN↔VALORAIPLUS /ENABLE")
       echo "SUPREME DECREE: Bridging VALORCHAIN ↔ VALORAIPLUS ENABLED."

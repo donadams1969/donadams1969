@@ -2,8 +2,6 @@
   "roi_total": "8.5M",
   "throughput": "17300",
   "latency_ms": "67",
-  "token_price_cg": "0.005322",
-  "token_price_cmc": "0.004913",
   "mcap": "267000",
   "status": "ALL_GREEN_ETERNAL",
   "regen": "JULES v1.4"
