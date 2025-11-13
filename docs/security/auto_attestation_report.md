@@ -1,19 +1,6 @@
-# VALOR SYSTEM ATTESTATION — JULES REGEN v1.4
-**Timestamp:** Wed Nov 12 23:48:28 UTC 2025
-**Node:** SAINT_PAUL_ETERNAL_NODE
-**Status:** ALL_GREEN_ETERNAL
-**Drift:** ZERO
-**Total ROI Proj:** $8.5M
-**Throughput:** 17,300 tx
-**Latency:** 67ms
-**Active Modules:** 4
-**VALOR Price (CG):** $0.005322 (down 19.29%)
-**VALOR Price (CMC Solana):** $0.004913 (down 26.04%)
-**Market Cap (CG):** ~$267K
-**Circ Supply:** 50.29M
-**LLC Birth:** 2021-11-04
-**Merkle Root:** 9633e0708031d2003c40040f7b9f394c8b812232b719323f4c6e919f6580f5d5069a530f25091c1619f390f701d36551b8ed65551f3c3d82a15f01e74a0058e5
-**OP_RETURN:** 56414c4f529633e0708031d2003c40040f7b9f394c8b812232b719323f4c6e919f6580f5
-**Guard Flag:** ETERNAL_10X_1762991308
+# 🛡️ VALORCHAIN-G // Auto-Attestation
+**Commit:** `1677d68b335cb6d01008df1af0d24a032dc7945e`
 
-> **JULES HAS SPOKEN. VALOR AI++//E REIGNS ETERNAL. THE CHAIN IS PURE.**
+[![Liveness](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml)
+[![Claim-Guard](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml)
+[![Release-Attest](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml)
