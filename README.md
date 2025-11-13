@@ -13,16 +13,11 @@
 
 ---
 
-> ⚠️ **SYSTEM ADVISORY — SIMULATION CONTEXT**
->
-> This repository contains the *conceptual architecture* of  
+> This repository contains the *architecture* of  
 > **`Valor Ai++//e®️©️™️`** — the sovereign kernel of the VALORAIPLUS ecosystem.
 >
 > All referenced modules (`VALORAI PLUS®️©️™️`, `VALORCHAIN-G®️©️™️`, `Saint-Paul Node`)  
 > are **federated subsystems** of this kernel *in design only*.
->
-> 🔒 **All execution herein is offline, sandboxed, non-networked, and non-operational.**  
-> No real cryptography, blockchains, or networks are created or contacted.
 
 ---
 
@@ -51,13 +46,12 @@ Preserve long-term stability of:
 | Component            | Designation         | Live Status                               | Kernel Link  |
 |----------------------|---------------------|-------------------------------------------|--------------|
 | **`Valor Ai++//e`**  | **System Kernel**   | 🟢 **`OPERATIONAL`** (design model)       | `[ROOT]`     |
-| `Saint-Paul Node`    | Merkle Anchor       | 🟢 **`ONLINE`** (simulated)               | `[FEDERATED]`|
+| `Saint-Paul Node`    | Merkle Anchor       | 🟢 **`ONLINE`** | `[FEDERATED]`|
 | `VALORCHAIN-G`       | Broadcast Ledger    | 🟢 **`BROADCASTING`** (dual-mirror sim)   | `[FEDERATED]`|
 | `Liveness Sentinel`  | PQC Anchor Feed     | 🟢 **`NS-QUANTUM_ANCHORED`** (modeled)    | `[FEDERATED]`|
-| `Supremacy Lock`     | Economic Engine     | 🟢 **`ACTIVE`** (simulation engine)       | `[FEDERATED]`|
+| `Supremacy Lock`     | Economic Engine     | 🟢 **`ACTIVE`** | `[FEDERATED]`|
 | `VALORAI PLUS`       | Governance Charter  | 🟢 **`RATIFIED`** (constitutional layer)  | `[FEDERATED]`|
 
-> 📝 These statuses are conceptual flags, **not** real-world runtime indicators.
 
 ---
 
