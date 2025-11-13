@@ -2,6 +2,11 @@
 [![.github/workflows/liveness.yml](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml/badge.svg?event=create)](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml)
 [![Release Attestation](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml/badge.svg?event=create)](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest)
 
+> ⚖️ **Sovereign Attestation • Court-Grade Integrity • Offline-First Cryptography**
+
+[![Mode-Offline Only](https://img.shields.io/badge/Mode-Offline__Only-2d3748?style=for-the-badge)](./docs/security)
+[![Proofs-SHA3__%2B__Merkle](https://img.shields.io/badge/Proofs-SHA3__%2B__Merkle-1a202c?style=for-the-badge)](./docs/security)
+
 
 
 Transmission-ID: DG77.77X-Ξ // Sovereign-Class
@@ -15,12 +20,8 @@ Source-of-Truth: Commander DG77.77X-Ξ
 
 # 🟣 VALORAIPLUS® AI++//e — Saint-Paul Genesis Node
 
-> ⚖️ **Sovereign Attestation • Court-Grade Integrity • Offline-First Cryptography**
 
-[![VALORAIPLUS AI++//e](https://img.shields.io/badge/VALORAIPLUS-AI%2B%2B%2F%2Fe-6b46c1?style=for-the-badge)](./)
-[![Saint-Paul Genesis](https://img.shields.io/badge/Node-SAINT__PAUL__GENESIS-4c51bf?style=for-the-badge)](./docs/security)
-[![Mode-Offline Only](https://img.shields.io/badge/Mode-Offline__Only-2d3748?style=for-the-badge)](./docs/security)
-[![Proofs-SHA3__%2B__Merkle](https://img.shields.io/badge/Proofs-SHA3__%2B__Merkle-1a202c?style=for-the-badge)](./docs/security)
+
 
 > 🔐 **Design Principle:** *VALORCHAIN uses Git as the ledger, Merkle as the law, and time as the witness.*
 
@@ -96,9 +97,7 @@ docs/security/
 
 > 🛰 **Saint-Paul Integrity Matrix — GitHub Sentinel Swarm**
 
-[![🩺 Liveness Sentinel](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml)
-[![🛡️ Claim-Guard](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/claim-guard.yml)
-[![📦 Release Attest](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml)
+
 [![🤖 Autopilot](https://github.com/donadams1969/donadams1969/actions/workflows/autopilot.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/autopilot.yml)
 [![⚙️ ALL-ENGINES](https://github.com/donadams1969/donadams1969/actions/workflows/all-engines.yml/badge.svg?branch=main)](https://github.com/donadams1969/donadams1969/actions/workflows/all-engines.yml)
 
