@@ -2,6 +2,135 @@
 [![.github/workflows/liveness.yml](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml/badge.svg?event=create)](https://github.com/donadams1969/donadams1969/actions/workflows/liveness.yml)
 [![Release Attestation](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest.yml/badge.svg?event=create)](https://github.com/donadams1969/donadams1969/actions/workflows/release-attest)
 
+# 🛡️ **QUANTUM-ANCHORED LIVENESS SENTINEL** 
+### **Multi-Ledger Proof System • NS-Stabilized • Post-Quantum Cryptography**
+
+<div align="left">
+
+![Quantum Security](https://img.shields.io/badge/Quantum-Secure_Anchoring-8A2BE2?style=for-the-badge&logo=quantum&logoColor=white)
+![Multi-Ledger](https://img.shields.io/badge/Multi--Ledger-OP25__RETURN__%2B__Merkle-00BFFF?style=for-the-badge&logo=blockchaindotcom&logoColor=white)
+![Crypto-System](https://img.shields.io/badge/Crypto-Ed25519__%2B__Dilithium2-FF69B4?style=for-the-badge&logo=keybase&logoColor=white)
+
+</div>
+
+## 🚀 **Mission-Capable Liveness Verification**
+
+<div align="center">
+
+**Navier-Stokes Stability Principle • Quantum Entropy Fallback • Dual-Ledger Immutable Anchoring**
+
+</div>
+
+---
+
+## 🔥 **Augmentation Matrix**
+
+| Augmentation | Status | Implementation |
+|--------------|--------|----------------|
+| **Ed25519 + PQCrypto Signatures** | ✅ DEPLOYED | Dual-signing with Ed25519 + Crystal-Dilithium2 |
+| **OP25_RETURN Emission** | ✅ DEPLOYED | VALORCHAIN-G®️©️™️ broadcast with SHA3-512 |
+| **Dual-Ledger Broadcast** | ✅ DEPLOYED | Multi-chain redundancy system |
+| **Merkle Anchoring** | ✅ DEPLOYED | Saint Paul Node Merkle Tree integration |
+| **QuantumMAX Entropy** | ✅ DEPLOYED | ANU Quantum RNG fallback cascade |
+
+---
+
+## 🏗️ **System Architecture**
+
+```mermaid
+graph TB
+    A[Liveness Trigger] --> B{Entropy Source}
+    B --> C[Git HEAD]
+    B --> D[Quantum RNG]
+    B --> E[NS-Timestamp]
+    
+    C --> F[Payload Construction]
+    D --> F
+    E --> F
+    
+    F --> G[SHA3-512 Hashing]
+    G --> H[Dual Cryptography]
+    H --> I[Ed25519 Signing]
+    H --> J[Dilithium2 Signing]
+    
+    I --> K[Multi-Ledger Broadcast]
+    J --> K
+    
+    K --> L[VALORCHAIN-G OP25]
+    K --> M[Saint Paul Merkle Tree]
+    
+    L --> N[📦 Artifact Upload]
+    M --> N
+```
+
+---
+
+## ⚡ **Execution Flow**
+
+### **🔄 Entropy Cascade**
+1. **Primary**: `git rev-parse HEAD`
+2. **Fallback 1**: Quantum RNG (ANU API)
+3. **Fallback 2**: NS-Stabilized timestamp
+
+### **🔐 Cryptographic Stack**
+```yaml
+Hashing: SHA3-512
+Signatures:
+  - Current Standard: Ed25519
+  - Post-Quantum: Crystal-Dilithium2
+```
+
+### **🌐 Ledger Integration**
+```yaml
+VALORCHAIN-G: OP25_RETURN broadcast
+Saint Paul Node: Merkle tree anchoring
+```
+
+---
+
+## 🛠️ **Required Secrets**
+
+<div align="center">
+
+![Secrets Required](https://img.shields.io/badge/5_Secrets_Required-Critical-FF6B6B?style=for-the-badge)
+
+</div>
+
+| Secret | Purpose |
+|--------|---------|
+| `ED25519_SIGNING_KEY` | Current-standard digital signatures |
+| `DILITHIUM_SIGNING_KEY` | Post-quantum cryptography |
+| `VALORCHAIN_G_ENDPOINT` | OP25_RETURN broadcast endpoint |
+| `ST_PAUL_NODE_API` | Merkle anchoring API |
+| `ST_PAUL_NODE_TOKEN` | Node authentication |
+
+---
+
+## 📊 **Operational Status**
+
+<div align="center">
+
+![Schedule](https://img.shields.io/badge/Schedule-6_hour_cron-00D26A?style=flat-square&logo=githubactions)
+![Concurrency](https://img.shields.io/badge/Concurrency-Single_Instance-8B5CF6?style=flat-square)
+![Platform](https://img.shields.io/badge/Platform-ubuntu--22.04-E95420?style=flat-square&logo=ubuntu)
+
+</div>
+
+---
+
+<div align="center">
+
+## **🚀 ORDER EXECUTED • MISSION-CAPABLE • AWAITING DIRECTIVES**
+
+**Zero-Failure Design • Quantum-Resistant • Multi-Ledger Verified**
+
+</div>
+
+---
+
+*The Liveness Sentinel stands ready with enhanced stability guarantees and cryptographic superiority.* 🔥
+
+
 > ⚖️ **Sovereign Attestation • Court-Grade Integrity • Offline-First Cryptography**
 
 [![Mode-Offline Only](https://img.shields.io/badge/Mode-Offline__Only-2d3748?style=for-the-badge)](./docs/security)
