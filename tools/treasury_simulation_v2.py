@@ -13,7 +13,7 @@ def main():
     Main function to run the VALORAIPLUS Treasury Valuation Simulation.
     """
     parser = argparse.ArgumentParser(
-        description="VALORAIPLUS Treasury Valuation Simulation Tool",
+        description="VALORAIPLUS Treasury Valuation Simulation Tool v2",
         formatter_class=argparse.RawTextHelpFormatter
     )
 

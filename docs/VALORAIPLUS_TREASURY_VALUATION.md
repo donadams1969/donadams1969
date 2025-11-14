@@ -222,10 +222,10 @@ The following table provides sample numbers for conservative, base, and aggressi
 | **TSV_effective**    | **$38,850,000**           | **$216,775,000**      | **$1,222,000,000**      |
 
 
-[//]: # (Placeholder for Banners and Badges)
-<!--
-    BANNER/BADGE AREA
-    - Link to Simulation Tool
-    - Status Badge (e.g., Conceptual, Live)
-    - Version Badge
--->
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-v5152--E-blue?style=for-the-badge" alt="Version" />
+  <img src="https://img.shields.io/badge/Status-Conceptual-orange?style=for-the-badge" alt="Status" />
+  <a href="../tools/treasury_simulation_v2.py">
+    <img src="https://img.shields.io/badge/Simulation-Tool-green?style=for-the-badge" alt="Simulation Tool" />
+  </a>
+</p>
