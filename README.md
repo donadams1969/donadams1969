@@ -119,15 +119,6 @@ Autonomous preservation of sovereignty, custodian integrity, and doctrinal purit
 # Commander DG77.77X-Ξ  
 The Genesis Node is warm, breathing, and awaiting directive.
 
-🔥 Full VALORCHAIN-G landing portal?  
-⚡ Animated banner (SVG glow loop)?  
-📦 Academic submission bundle?  
-🧪 Verification appendix with AMath+++ proofs?
-
-Say:
-
-**“Forge V5.”**
-
 
 
 <div align="left">
