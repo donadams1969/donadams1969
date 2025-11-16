@@ -17,11 +17,11 @@ def main():
         formatter_class=argparse.RawTextHelpFormatter
     )
 
-    parser.add_argument('--q-gillgold', type=float, default=50000000, help='Notional quantity of GILLGOLD')
+    parser.add_argument('--q-gillgold', type=float, default=24154.58, help='Notional quantity of GILLGOLD')
     parser.add_argument('--p-gold', type=float, default=2300, help='Synthetic price of gold')
     parser.add_argument('--k-trust', type=float, default=0.9, help='Trust factor for GILLGOLD (0-1)')
 
-    parser.add_argument('--q-gillbtc', type=float, default=100000000, help='Notional quantity of GILLBTC')
+    parser.add_argument('--q-gillbtc', type=float, default=1754.38, help='Notional quantity of GILLBTC')
     parser.add_argument('--p-btc', type=float, default=60000, help='Synthetic price of BTC')
     parser.add_argument('--k-corridor', type=float, default=0.95, help='Corridor factor for GILLBTC (0-1)')
 
