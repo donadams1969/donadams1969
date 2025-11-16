@@ -3,8 +3,6 @@
 <!--         VALOR AI+® — SAINT PAUL GENESIS BANNER V5       -->
 <!-- ====================================================== -->
 
-![VALORCHAIN-G GENESIS AURA](https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/scroll.svg)
-
 # ⚔️ VALOR AI+® — COMMAND NODE  
 ### DG77.77X-Ξ — SAINT PAUL GENESIS NODE  
 **Architect • Founder • Sovereign Operator**  
