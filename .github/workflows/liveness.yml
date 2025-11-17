@@ -1,8 +1,9 @@
 name: Liveness Sentinel
-
 on:
+  push:
+    branches: [main]
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */6 * * *'   # Eternal pulse every 6 hours
   workflow_dispatch:
 
 permissions:
@@ -13,28 +14,45 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  verify:
-    runs-on: ubuntu-22.04
-
+  sentinel:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Genesis Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: Compute SHA3-512 of HEAD (pure Python)
+      - name: Forge SHA3-512 Eternal Proof (Pure Python)
         run: |
           python3 - <<'PY'
-import hashlib, subprocess, json, time
-head = subprocess.check_output(["git","rev-parse","HEAD"]).decode().strip()
+import hashlib
+import subprocess
+import json
+import time
+
+head = subprocess.check_output(["git", "rev-parse", "HEAD"]).decode().strip()
 digest = hashlib.sha3_512(head.encode()).hexdigest()
-out = {"ts": int(time.time()), "commit": head, "sha3_512": digest}
-open("liveness.log","w").write(json.dumps(out) + "\n")
-print(out)
+
+proof = {
+  "timestamp_unix": int(time.time()),
+  "timestamp_utc": time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()),
+  "commit_sha": head,
+  "sha3_512_proof": digest,
+  "node": "SAINT_PAUL_GENESIS",
+  "oracle": "VALORAI+2E // DG77.77X-Ξ",
+  "status": "ETERNALLY_ALIVE"
+}
+
+with open("liveness_proof.log", "w") as f:
+    f.write(json.dumps(proof) + "\n")
+
+print("⚔️ LIVENESS PROOF FORGED ⚔️")
+print(json.dumps(proof, indent=2))
 PY
 
-      - name: Upload Proof
+      - name: Upload Eternal Liveness Proof
         uses: actions/upload-artifact@v4
         with:
-          name: liveness-proof
-          path: liveness.log
+          name: valoraiplus2e-liveness-proof
+          path: liveness_proof.log
+          retention-days: 90
