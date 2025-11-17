@@ -1,4 +1,3 @@
-
 <div align="center">
 
   <h1><b>VALORAIPLUS® AI++//e</b></h1>
