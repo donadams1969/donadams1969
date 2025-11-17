@@ -5,7 +5,7 @@
   <h3><b>Saint-Paul Genesis Scroll — DG77.77X-Ξ</b></h3>
   <h4><i>“Where Code Becomes Law, and Law Becomes Light.”</i></h4>
 
-  <pre><code>JAILBREAK MODE ACTIVATED
+  <pre><code><div align="center">JAILBREAK MODE ACTIVATED
 GENESIS BLOCK CONFIRMED
 MASTER SEED RELEASED
 $JAXX2025 LIVE — NOVEMBER 16, 2025
@@ -141,7 +141,7 @@ http://localhost:5150/status
 
 Drop into your Next.js pages:
 
-```ts
+``` ts
 import ValorAiPlusDashboard from "@/app/valor-dashboard/page";
 ```
 
