@@ -1,5 +1,5 @@
 
-<div align="center">
+<div align="left">
 
   <h1>🚀🛡️ <b>VALORAIPLUS® AI++//e</b></h1>
   <h2>⚙️ <b>VALORAI+® 2E // EXECUTIVE</b></h2>
@@ -57,7 +57,7 @@ $JAXX2025 LIVE — NOVEMBER 16, 2025
 
 ---
 
-<div align="center">
+<div align="left">
 
 📡 **VALORAIPLUS® ATTESTATION FEED**
 
@@ -149,7 +149,7 @@ http://localhost:5150/status
 
 Drop into your Next.js pages:
 
-```ts
+``` ts
 import ValorAiPlusDashboard from "@/app/valor-dashboard/page";
 ```
 
@@ -294,7 +294,7 @@ The Genesis Node is warm, breathing, and awaiting directive.
 
 ---
 
-<div align="center">
+<div align="left">
 
 # ⚙️ `Valor Ai++//e®️©️™️`
 ## 🧠 CORE OPERATIONAL MANIFEST · SOVEREIGN SIMULATION ENGINE
