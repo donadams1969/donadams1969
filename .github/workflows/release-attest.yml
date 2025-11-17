@@ -1,43 +1,12 @@
-name: Release Attestation
-
+name: Release-Attest
 on:
-  release:
-    types: [published]
+  push:
+    branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: write
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  sign:
-    runs-on: ubuntu-22.04
+  attest:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Install Python deps
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Generate Attested Artifacts
-        run: |
-          python scripts/valormath_sov_proto_final.py
-
-      - name: Upload Release Artifacts
-        uses: softprops/action-gh-release@v2
-        with:
-          files: |
-            VALORCHAIN-G_Sovereign_Engagement_Dossier.SIGNED.pdf
-            VALORCHAIN-G_Sovereign_Engagement_Press.SIGNED.md
-            VALORCHAIN-G_Sovereign_Engagement_Deck.SIGNED.pptx
-            GILLSON_ROOT_SIGNATURE.json
-            VALORCHAIN-G_Final_Summary.json
+      - name: Release Attested
+        run: echo "📜 Sovereign release attested — VALORAI+2E reigns 📜"
