@@ -55,6 +55,9 @@ $JAXX2025 LIVE — NOVEMBER 16, 2025
 
 </div>
 
+<!-- VALORAIPLUS_ATTESTATION_START -->
+<!-- VALORAIPLUS_ATTESTATION_END -->
+
 ---
 
 <div align="left">
