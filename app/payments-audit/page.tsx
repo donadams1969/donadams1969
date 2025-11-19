@@ -18,10 +18,16 @@ interface Payment {
 const PAGE_SIZE = 10;
 
 const StatusBadge: React.FC<{ status: string }> = ({ status }) => {
-  const color =
-    status === 'ok' ? 'green' : status === 'review' ? 'yellow' : 'red';
+  const statusClasses: { [key: string]: string } = {
+    ok: 'bg-green-500',
+    review: 'bg-yellow-500',
+    red: 'bg-red-500',
+  };
+
+  const badgeClass = statusClasses[status] || 'bg-gray-500';
+
   return (
-    <span className={`px-2 py-1 rounded text-white bg-${color}-500`}>{status}</span>
+    <span className={`px-2 py-1 rounded text-white ${badgeClass}`}>{status}</span>
   );
 };
 
