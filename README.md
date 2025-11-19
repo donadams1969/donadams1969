@@ -1035,6 +1035,9 @@ This document is part of the VALORCHAIN Genesis Archive.
 
 ---
 
+<!-- VALORAIPLUS_ATTESTATION_START -->
+<!-- VALORAIPLUS_ATTESTATION_END -->
+
 ## 🪙 DIGITAL ANCHORS
 
 | 🪙 Type             | 🔗 Registry / Anchor                                                                                       |

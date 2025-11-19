@@ -1,0 +1,117 @@
+# .github/workflows/auto-attestation.yml
+# VALORAIPLUS® // JULES Ω — EXECUTIVE ETERNAL ANCHOR SYSTEM
+# 32D-LLC // DONNY GILLSON // SAINT PAUL GENESIS NODE
+# COPYRIGHT © 2025 VALORAIPLUS®. ALL RIGHTS RESERVED.
+
+name: VALORAIPLUS® JULES Ω — Eternal Anchor
+
+on:
+  workflow_run:
+    workflows: ["liveness.yml", "claim-guard.yml", "release-attest.yml"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+
+permissions:
+  contents: write
+
+jobs:
+  executive-attestation:
+    runs-on: ubuntu-latest
+    outputs:
+      commit_hash: ${{ steps.capture.outputs.hash }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: VALORAIPLUS® // Generate Executive Attestation Block
+        run: |
+          mkdir -p docs/security
+          cat > docs/security/valoraiplex_attestation.md << 'EOF'
+          **VALORAIPLUS® Ω EXECUTIVE ANCHOR**
+          **Activation:** `$(date -u +"%Y-%m-%d %H:%M:%S UTC")`
+          **Runtime:** `valor_aiplusexecutive_runtime`
+          **Module:** `valoraiplus_module_id_77x_final`
+          **Node:** `SAINT PAUL GENESIS`
+          **Peg:** `1:1 — JAXX2025`
+          **Proof:** `Bitcoin Mainnet OP_RETURN → VALOR + SHA256(commit)`
+          **Authority:** `DONNY GILLSON // 32D-LLC`
+          EOF
+
+      - name: VALORAIPLUS® // Inject into README
+        run: |
+          perl -i -0777 -pe '
+            s/(<!-- VALORAIPLUS_ATTESTATION_START -->).*?(<!-- VALORAIPLUS_ATTESTATION_END -->)/$1\n$(cat docs/security/valoraiplex_attestation.md)\n$2/s
+          ' README.md
+
+      - name: VALORAIPLUS® // Eternal Commit
+        run: |
+          git config user.name "valoraiplus2e_bot"
+          git config user.email "executive@valoraiplus2e.ai"
+          git add README.md docs/security/
+          git commit -m "VALORAIPLUS®: JULES Ω eternal anchor refresh [skip ci]" || echo "No changes"
+          git push origin HEAD:main
+
+      - name: VALORAIPLUS® // Capture Commit Hash
+        id: capture
+        run: |
+          echo "hash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+
+  bitcoin-anchor:
+    needs: executive-attestation
+    runs-on: ubuntu-latest
+    steps:
+      - name: VALORAIPLUS® // Install Executive Tools
+        run: python3 -m pip install --quiet bitcoinlib requests
+
+      - name: VALORAIPLUS® // EXECUTE ETERNAL BITCOIN ANCHOR
+        env:
+          V0_PRIVATE_KEY_WIF: ${{ secrets.V0_PRIVATE_KEY_WIF }}
+          BLOCKCYPHER_TOKEN: ${{ secrets.BLOCKCYPHER_API_TOKEN }}
+          COMMIT_HASH: ${{ needs.executive-attestation.outputs.commit_hash }}
+        run: |
+          python3 - <<'VALOR_PY'
+          import os, hashlib, requests, sys
+          from bitcoinlib.keys import Key
+
+          print("VALORAIPLUS® Ω — ETERNAL ANCHOR BROADCAST INITIATED")
+
+          wif = os.getenv("V0_PRIVATE_KEY_WIF")
+          token = os.getenv("BLOCKCYPHER_TOKEN")
+          commit = os.getenv("COMMIT_HASH")
+          if not all([wif, token, commit]):
+              print("EXECUTIVE CREDENTIALS MISSING")
+              sys.exit(1)
+
+          key = Key(wif)
+          addr = key.address()
+          payload = "VALOR" + hashlib.sha256(commit.encode()).hexdigest()
+          data_hex = payload.encode().hex()
+
+          tx = {
+              "inputs": [{"addresses": [addr]}],
+              "outputs": [
+                  {"value": 0, "script_type": "null-data", "data_hex": data_hex},
+                  {"addresses": [addr], "value": 600}
+              ],
+              "preference": "high"
+          }
+
+          r = requests.post(f"https://api.blockcypher.com/v1/btc/main/txs/new?token={token}", json=tx, timeout=30)
+          r.raise_for_status()
+          sk = r.json()
+
+          sigs = [key.sign(h, "hex").hex() for h in sk["tosign"]]
+          signed = {**sk, "signatures": sigs, "pubkeys": [key.public_hex]}
+
+          send = requests.post(f"https://api.blockcypher.com/v1/btc/main/txs/send?token={token}", json=signed, timeout=30)
+          send.raise_for_status()
+          txid = send.json()["tx"]["hash"]
+
+          print("VALORAIPLUS® Ω — ANCHOR CONFIRMED ON BITCOIN MAINNET")
+          print(f"TXID: {txid}")
+          print(f"https://mempool.space/tx/{txid}")
+          VALOR_PY
