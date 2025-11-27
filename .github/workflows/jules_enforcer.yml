@@ -1,0 +1,41 @@
+name: "Jules Protocol: VALOR AI+ Branding Enforcement"
+
+on:
+  push:
+    branches: [ "main", "master", "develop" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch: # Allows manual trigger for retroactive fixes
+
+permissions:
+  contents: write  # Grants Jules permission to rename files
+
+jobs:
+  enforce-branding:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for retroactive checks
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Execute Jules Retroactive Fix
+        run: |
+          python3 .github/scripts/branding_retrofix.py
+        env:
+          # Strict branding prefixes defined here
+          BRANDING_PREFIXES: "valoraiplus_module_id,valoraiplus_,valoraiplus2e_,valoraiplus3e_"
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "Jules-Enforcer"
+          git config --global user.email "jules@valoraiplus.ai"
+          git add .
+          # Only commit if changes were made
+          git diff-index --quiet HEAD || git commit -m "VALOR AI+ Branding Retroactive Fix [Jules]"
+          git push
