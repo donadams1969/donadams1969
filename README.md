@@ -454,11 +454,6 @@ graph TB
     L --> N[📦 Artifact Upload]
     M --> N
 ```
-````
-
-If you want a **super-minimal “top 40 lines only” variant** for the very top of the repo and this as `docs/GENESIS.md`, I can carve that next.
-
----
 
 ## ⚡ **Execution Flow**
 
