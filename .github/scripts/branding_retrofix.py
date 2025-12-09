@@ -26,7 +26,11 @@ IGNORE_FILES = {
     "next.config.mjs",
     "hardhat.config.mjs",
     "tsconfig.json",
-    "jules.sh"
+    "jules.sh",
+    "pnpm-lock.yaml",
+    "postcss.config.mjs",
+    "next-env.d.ts",
+    "components.json"
 }
 
 def is_branded(filename):
