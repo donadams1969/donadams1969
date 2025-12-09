@@ -15,7 +15,23 @@ DEFAULT_PREFIX = "valoraiplus_"
 
 # Directories to ignore (System/Git files)
 IGNORE_DIRS = {".git", ".github", "__pycache__", "node_modules", "venv", "env"}
-IGNORE_FILES = {"README.md", ".gitignore", "LICENSE", "branding_retrofix.py", "requirements.txt"}
+# CRITICAL: Ignore build and framework config files to prevent breakage
+IGNORE_FILES = {
+    "README.md",
+    ".gitignore",
+    "LICENSE",
+    "branding_retrofix.py",
+    "requirements.txt",
+    "package.json",
+    "next.config.mjs",
+    "hardhat.config.mjs",
+    "tsconfig.json",
+    "jules.sh",
+    "pnpm-lock.yaml",
+    "postcss.config.mjs",
+    "next-env.d.ts",
+    "components.json"
+}
 
 def is_branded(filename):
     """Checks if the file already complies with strict guidelines."""
