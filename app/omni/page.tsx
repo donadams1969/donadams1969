@@ -23,6 +23,8 @@ Server,
 Search
 } from "lucide-react";
 
+import KeychainVault from '../../components/KeychainVault';
+
 // CUSTOM BRAIN ICON — MOVED TO TOP FOR PERFECT HOISTING
 const BrainIcon = (props: React.SVGProps<SVGSVGElement>) => (
 <svg
@@ -204,31 +206,7 @@ return (
 }
 
 // MAIN PAGE WITH VERIFICATION INTEGRATED
-interface VerificationResult {
-  txidOk: boolean;
-  valorOk: boolean;
-  status: string;
-  message: string;
-}
-
 export default function ValoraiplusOmegaDashboard() {
-const [txidInput, setTxidInput] = useState('');
-const [verification, setVerification] = useState<VerificationResult | null>(null);
-const [loading, setLoading] = useState(false);
-
-const checkAnchor = async () => {
-const txid = txidInput.trim();
-if (!txid) return;
-
-setLoading(true);
-await new Promise(r => setTimeout(r, 1200));
-
-// For demo: any 64-hex = pending → verified (real broadcast will auto-fill)
-const simulatedOpReturn = isValidBitcoinTxid(txid) ? "56414c4f52..." : "";
-setVerification(verifyJulesAnchor(txid, simulatedOpReturn));
-setLoading(false);
-};
-
 return (
 <div className="min-h-screen bg-black text-white font-sans flex flex-col items-center justify-center p-4 relative overflow-hidden">
 <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-40"></div>
@@ -252,37 +230,8 @@ EXECUTIVE OMNI DASHBOARD // SAINT PAUL GENESIS
 {/* Omni Panel */}
 <ValorAiOmniPanel />
 
-{/* TXID Verification Section — Ω TRUTH GUARD */}
-<div className="w-full max-w-5xl bg-black/30 border border-purple-500/30 rounded-2xl p-6 shadow-2xl backdrop-blur-sm">
-<div className="flex flex-col md:flex-row gap-4 items-center">
-<input
-type="text"
-className="flex-1 px-6 py-4 bg-black/50 border border-purple-500/50 rounded-xl focus:border-purple-400 outline-none font-mono text-lg placeholder-gray-500"
-placeholder="Paste 64-character Bitcoin TXID..."
-value={txidInput}
-onChange={(e) => setTxidInput(e.target.value)}
-onKeyDown={(e) => e.key === 'Enter' && checkAnchor()}
-/>
-<button
-onClick={checkAnchor}
-disabled={loading || !txidInput.trim()}
-className="px-8 py-4 bg-purple-800 hover:bg-purple-700 rounded-xl font-bold tracking-wider"
->
-{loading ? 'VERIFYING...' : 'Ω VERIFY ANCHOR'}
-</button>
-</div>
-
-{verification && (
-<div className="mt-6 p-4 rounded-lg bg-black/40 border border-purple-500/40 text-center">
-<p className={`text-2xl font-bold ${verification.status.includes('VERIFIED') ? 'text-green-400' : 'text-yellow-400'}`}>{verification.status}</p>
-<p className="text-purple-300 mt-2">{verification.message}</p>
-<div className="mt-4 pt-4 border-t border-purple-500/20 font-mono text-sm text-gray-400 space-y-2">
-<p className="truncate">TXID: {txidInput}</p>
-<a href={`https://mempool.space/tx/${txidInput}`} target="_blank" rel="noopener noreferrer" className="text-teal-400 hover:underline">View on mempool.space →</a>
-</div>
-</div>
-)}
-</div>
+{/* Keychain Vault — OMEGA ANCHOR DEPLOYMENT */}
+<KeychainVault />
 
 </div>
 
