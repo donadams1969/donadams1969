@@ -1,6 +1,6 @@
 {
   "name": "valor-ai-sovereign-dashboard",
-  "version": "2.3.0",
+  "version": "2.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,30 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "lucide-react": "^0.378.0",
+    "@vercel/analytics": "^1.6.1",
     "clsx": "^2.1.1",
-    "tailwind-merge": "^2.3.0",
-    "framer-motion": "^11.2.0",
     "date-fns": "^3.6.0",
-    "keccak": "^3.0.4",
-    "secp256k1": "^5.0.0"
+    "framer-motion": "^11.2.0",
+    "lucide-react": "^0.378.0",
+    "next": "14.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.19",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5",
-    "autoprefixer": "^10.4.19"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "keccak",
-      "secp256k1"
-    ]
+    "typescript": "^5"
   }
 }
