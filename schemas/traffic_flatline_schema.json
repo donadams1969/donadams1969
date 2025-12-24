@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VALORAIPLUS Traffic Flatline Report v0",
+  "type": "object",
+  "required": ["schema_id", "version", "node", "context", "flatline_observation"],
+  "properties": {
+    "schema_id": { "type": "string" },
+    "version": { "type": "string" },
+    "node": {
+      "type": "object",
+      "required": ["name", "location", "encapsulation"],
+      "properties": {
+        "name": { "type": "string" },
+        "location": { "type": "string" },
+        "encapsulation": { "type": "string" }
+      }
+    },
+    "context": {
+      "type": "object",
+      "required": ["date_local", "label"],
+      "properties": {
+        "date_local": { "type": "string" },
+        "label": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "flatline_observation": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": { "enum": ["OBSERVED_BY_USER", "UNCONFIRMED", "RESOLVED"] },
+        "description": { "type": "string" }
+      }
+    }
+  }
+}

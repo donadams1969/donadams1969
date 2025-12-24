@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "POS-77.77X-LEGAL-ANCHOR v0",
+  "type": "object",
+  "required": ["schema_id", "version", "node", "root_identity", "math_stamp"],
+  "properties": {
+    "schema_id": { "type": "string", "const": "POS-77.77X-LEGAL-ANCHOR" },
+    "version": { "type": "string", "const": "v0" },
+    "node": {
+      "type": "object",
+      "required": ["name", "encapsulation", "location"],
+      "properties": {
+        "name": { "type": "string" },
+        "encapsulation": { "type": "string" },
+        "location": { "type": "string" }
+      }
+    },
+    "root_identity": {
+      "type": "object",
+      "required": ["name", "id"],
+      "properties": {
+        "name": { "type": "string" },
+        "id": { "type": "string" },
+        "aliases": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "math_stamp": {
+      "type": "object",
+      "required": ["checksum", "digital_root", "mod9_residue", "status"],
+      "properties": {
+        "checksum": { "type": "number" },
+        "digital_root": { "type": "number", "maximum": 9 },
+        "mod9_residue": { "type": "number", "maximum": 9 },
+        "status": { "type": "string" }
+      }
+    }
+  }
+}
