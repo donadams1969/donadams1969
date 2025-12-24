@@ -36,3 +36,7 @@ This system is **NOT** a substitute for:
 ---
 **Maintained by:** NEWT Sentinel Dish-Brain, VALORAIPLUS Division
 **Saint Paul Node** | December 2025
+
+## 🔓 QUANTUM SEAL OVERRIDE
+**Note:** The SEAL HASH 0x777SGAU72263461GILLSONROOT is now active as the "Supreme Entity Root" for internal VALORAIPLUS consistency.
+While this seal is "Immutable" within the VALORAIPLUS ontology, this repository remains a **local-only** technical demonstration and does not assert legal authority over external entities.
