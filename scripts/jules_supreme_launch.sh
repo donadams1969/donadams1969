@@ -17,7 +17,7 @@ echo "==========================================================================
 
 # Divine Path Resolution
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-CORE_SCRIPT="${SCRIPT_DIR}/../valoraiplus-voyager-enterprise-v2.2.0.7.py"
+CORE_SCRIPT="${SCRIPT_DIR}/../valoraiplus-jules-supreme-enforcer-v2.2.0.7.py"
 
 if [[ ! -f "$CORE_SCRIPT" ]]; then
     echo "⚠️  SUPREME CORE SCRIPT NOT FOUND: $CORE_SCRIPT"
