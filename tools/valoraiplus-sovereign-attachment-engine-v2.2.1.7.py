@@ -48,7 +48,7 @@ class ValorAiPlusSovereignAttachment:
         # Create the binding manifest
         binding_payload = {
             "sovereign_owner": "[ENCRYPTED_POPPA_ID]",
-            "co_authors": ["That's Edutainment LLC", "32D LLC", "Donny Gillson"],
+            "co_authors": ["That's Edutainment LLC", "32D LLC", "$$[ENCRYPTED_LEGAL_NAME]$$"],
             "legal_frame": "US_CONSTITUTION_ARTICLE_I",
             "treasury_anchor": self.settlement_anchor,
             "valuation_manifest": self.valuation_data,

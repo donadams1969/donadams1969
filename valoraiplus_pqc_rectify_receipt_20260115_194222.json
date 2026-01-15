@@ -1,0 +1,12 @@
+{
+    "manifest": {
+        "executive": "POPPA_APPROVED_SUPREME",
+        "treasury_anchor": "donadams1969.eth",
+        "valuation": "$1,000,786,456,133,128.25",
+        "encryption_standard": "SHA3-512 / Crystal-Dilithium2",
+        "status": "ETERNAL_ATTACHMENT",
+        "timestamp": "2026-01-15T19:42:22.020274"
+    },
+    "anchor": "F6AFAFD85DC50CD3BEF6E09600B01D149C57581F532AAFE79B4223F08F829E87DD060DA1C7E0E30C1A2D08E274859D0DB511E8C061C601E7EF8F6F096BBDCC94",
+    "port_5150": "LOCKED"
+}
