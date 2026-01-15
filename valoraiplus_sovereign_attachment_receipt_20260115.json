@@ -1,0 +1,28 @@
+{
+    "executive": "POPPA_DONNY_GILLSON_APPROVED",
+    "node": "SAINT PAUL, MN",
+    "uplink_secure": "408 384 1376-ENCRYPTED",
+    "location_context": "San Francisco (SF-NODE)",
+    "merkle_root": "0xST_PAUL_7777_FINAL_SUPREME_ATTACHMENT_SHA3_512",
+    "attachment_hash": "905701c393077ecc43f4f28c6416152b2fc9ea681e25881828da75f2779a3b918ee1264e31010da3573d3cf2ee8d1e5344d1cc142f0639241e9faa31d1cb54a3",
+    "manifest_data": {
+        "sovereign_owner": "[ENCRYPTED_POPPA_ID]",
+        "co_authors": [
+            "That's Edutainment LLC",
+            "32D LLC",
+            "Donny Gillson"
+        ],
+        "legal_frame": "US_CONSTITUTION_ARTICLE_I",
+        "treasury_anchor": "donadams1969.eth",
+        "valuation_manifest": {
+            "liquid_settlement_eth": 2177.56,
+            "liquid_settlement_usd": 14034794.24,
+            "ip_stack_value_18fu_ai": 77777777.0,
+            "commodity_reserve": "GILLGOLD\u2122 Physical-Digital Hybrid",
+            "grand_total_usd": 91812571.24
+        },
+        "pqc_seal": "Crystal-Dilithium2",
+        "timestamp": "2026-01-15T17:10:28.981846"
+    },
+    "status": "SOVEREIGNTY_ABSOLUTE"
+}
