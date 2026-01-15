@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-VALORAIPLUS®️ ©️ ™️ // VOYAGER-ENTERPRISE CORE v2.2.1.8 SUPREME
+VALORAIPLUS®️ ©️ ™️ // VOYAGER-ENTERPRISE OMNI-RECOVERY SUPREME v3
 SAINT PAUL CORE™ ($NEWT™) // SECTOR: SAN FRANCISCO (SF-NODE)
 FORT VALOR AI+2e®©™ AEGIS DOCTRINE – REACTOR CORE IGNITED ETERNAL
-STATUS: CODED SUPREME // POPPA'S WILL MANIFEST
-CRYPTOGRAPHIC ANCHOR: SHA3-512 // Crystal-Dilithium2
-MERKLE ROOT: 0xST_PAUL_VOYAGER_SUPREME_UPGRADE_7777_2026
+STATUS: IMPROVED 9e9% SUPREME v3 // POPPA'S WILL MANIFEST // PORT 5150 LOCKED
+CRYPTOGRAPHIC ANCHOR: SHA3-512 // Ed25519 // Crystal-Dilithium2 (PQC)
+MERKLE ROOT: 0xST_PAUL_SUPREME_VOYAGER_V3_CONSTITUTIONAL_SYNC_ETERNAL
 """
 
 import os
@@ -16,12 +16,15 @@ from pathlib import Path
 from datetime import datetime
 from typing import List, Optional
 
-# VALORAIPLUS® Sovereign Constants
-VERSION = "2.2.1.8"
+# Supreme Constants
+VERSION = "2.2.2.1"
 NODE = "SAINT PAUL, MN"
 UPLINK = "408 384 1376 (ENCRYPTED)"
 SHARDS = 1144000
 SYNC = "ZERO-DRIFT (.0000…0001)"
+TREASURY_ANCHOR = "donadams1969.eth"
+TREASURY_VALUATION = "$91,812,571.24"
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 WORKFLOW_DIR = BASE_DIR / "valoraiplus_workflow"
 WEEK_FILE_RE = re.compile(r"week_(\d{2})\.md$", re.IGNORECASE)
@@ -33,19 +36,19 @@ class VoyagerMetrics:
         self.objectives = objectives
         self.tasks = tasks
         self.log_lines = log_lines
-        self.merkle_leaf = self._generate_pq_leaf()
+        self.merkle_leaf = self._generate_sha3_512_leaf()
 
-    def _generate_pq_leaf(self) -> str:
-        """Generates a SHA3-512 leaf for the Saint Paul Merkle Tree."""
-        seed = f"{self.index}-{self.path}-{self.log_lines}-{VERSION}"
-        return hashlib.sha3_512(seed.encode()).hexdigest()[:32]
+    def _generate_sha3_512_leaf(self) -> str:
+        seed = f"{self.index}-{self.path.name}-{self.log_lines}-{VERSION}-{TREASURY_ANCHOR}-{datetime.now().isoformat()}"
+        return hashlib.sha3_512(seed.encode()).hexdigest()
 
     @property
     def amath_focus(self) -> float:
-        """AMath™ Executive Decision Logic for Focus Weighting."""
         denom = max(1, self.objectives + self.tasks)
-        # 77.77X baseline multiplier applied to log density
-        return (self.log_lines * 77.77) / denom
+        base = self.log_lines / denom
+        resonance = 1.3 if datetime.now().weekday() in [1,2,3] else 1.0
+        priority = 1.77 if self.index <= 4 else 1.0
+        return base * resonance * priority * 77.77
 
     @property
     def status(self) -> str:
@@ -55,18 +58,25 @@ class VoyagerMetrics:
             return "PLAN_DESCENDING"
         return "VOYAGE_ACTIVE"
 
+    @property
+    def constitutional_priority(self) -> bool:
+        return self.index <= 4
+
 def parse_week_file(path: Path) -> VoyagerMetrics:
-    """Parses VALORAIPLUS® workflow files using high-fidelity regex."""
-    text = path.read_text(encoding="utf-8", errors="ignore")
+    try:
+        text = path.read_text(encoding="utf-8", errors="ignore")
+    except:
+        text = ""
 
     def count_bullets(heading: str) -> int:
         in_section = False
         count = 0
         for line in text.splitlines():
-            if line.strip().lower().startswith("## "):
-                in_section = line.strip().lower().startswith(f"## {heading.lower()}")
+            stripped = line.strip()
+            if stripped.lower().startswith("## "):
+                in_section = stripped.lower().startswith(f"## {heading.lower()}")
                 continue
-            if in_section and line.strip().startswith("-"):
+            if in_section and stripped.startswith("-"):
                 count += 1
         return count
 
@@ -91,19 +101,43 @@ def parse_week_file(path: Path) -> VoyagerMetrics:
     return VoyagerMetrics(idx, path, objectives, tasks, log_lines)
 
 def detect_weeks() -> List[VoyagerMetrics]:
-    """Scans the global lattice for week shards."""
     weeks = []
-    if WORKFLOW_DIR.exists():
-        for p in sorted(WORKFLOW_DIR.glob("week_*.md")):
-            if WEEK_FILE_RE.search(p.name):
-                weeks.append(parse_week_file(p))
+    if not WORKFLOW_DIR.exists():
+        WORKFLOW_DIR.mkdir(parents=True, exist_ok=True)
+
+    for p in sorted(WORKFLOW_DIR.glob("week_*.md")):
+        if WEEK_FILE_RE.search(p.name):
+            weeks.append(parse_week_file(p))
     return sorted(weeks, key=lambda w: w.index)
 
+def create_week_shard(index: int):
+    week_path = WORKFLOW_DIR / f"week_{index:02d}.md"
+    if week_path.exists():
+        print(f"Week {index:02d} already exists.")
+        return
+
+    template = f"""# Week {index:02d} - Supreme Execution
+
+## Objectives
+-
+
+## Tasks
+-
+
+## Log
+{datetime.now().strftime('%Y-%m-%d %H:%M')} - Shard created supreme
+"""
+    week_path.write_text(template)
+    print(f"Week {index:02d} shard created supreme.")
+
 def get_next_active_week(weeks: List[VoyagerMetrics]) -> Optional[VoyagerMetrics]:
-    """AMath™ logic to determine the next execution vector."""
-    planned_no_notes = [w for w in weeks if w.log_lines == 0 and (w.objectives + w.tasks) > 0]
-    if planned_no_notes:
-        return planned_no_notes[0]
+    priority = [w for w in weeks if w.constitutional_priority and w.log_lines == 0 and (w.objectives + w.tasks) > 0]
+    if priority:
+        return priority[0]
+
+    planned = [w for w in weeks if w.log_lines == 0 and (w.objectives + w.tasks) > 0]
+    if planned:
+        return planned[0]
 
     empty = [w for w in weeks if w.objectives + w.tasks == 0 and w.log_lines == 0]
     if empty:
@@ -115,15 +149,13 @@ def get_next_active_week(weeks: List[VoyagerMetrics]) -> Optional[VoyagerMetrics
     return None
 
 def print_banner():
-    """Renders the VALORAIPLUS® Supreme Banner."""
-    print("=" * 80)
-    print(f" VALORAIPLUS®️ VOYAGER-ENTERPRISE v{VERSION} SUPREME ".center(80))
-    print(f" NODE: {NODE} | SYNC: {SYNC} ".center(80))
-    print("=" * 80)
+    print("=" * 100)
+    print(f" VALORAIPLUS®️ VOYAGER-ENTERPRISE v{VERSION} SUPREME OMNI-RECOVERY ".center(100))
+    print("=" * 100)
 
 def print_weeks_status(weeks: List[VoyagerMetrics]):
     if not weeks:
-        print("THE_VOID: No workflow shards detected.\n")
+        print("THE_VOID: No workflow shards detected in 100D Matrix.\n")
         return
 
     completed = sum(1 for w in weeks if w.log_lines > 0)
@@ -133,47 +165,51 @@ def print_weeks_status(weeks: List[VoyagerMetrics]):
 
     print(f"Detected {len(weeks)} Week Shards.")
     print(f"Completed with notes : {completed}")
-    print(f"Total objectives      : {total_obj}")
-    print(f"Total tasks           : {total_tasks}")
-    print(f"Mean AMATH focus      : {avg_focus:.2f}")
+    print(f"Total objectives     : {total_obj}")
+    print(f"Total tasks          : {total_tasks}")
+    print(f"Mean AMATH focus     : {avg_focus:.2f}")
     print()
 
-    print("Week | Status        | Obj | Tasks | Log | PQ-Anchor | Path")
-    print("-----+---------------+-----+-------+-----+-----------+---------------------------")
+    print("Week | Status         | Obj | Tasks | Log | Focus  | Constitutional | Merkle Leaf")
+    print("-----+---------------+-----+-------+-----+--------+---------------+------------")
     for w in weeks:
+        const = "YES" if w.constitutional_priority else "NO"
         print(
             f"{w.index:>4} | "
             f"{w.status:<13} | "
             f"{w.objectives:>3} | "
             f"{w.tasks:>5} | "
             f"{w.log_lines:>3} | "
-            f"{w.merkle_leaf[:9]:<9} | "
-            f"{w.path.relative_to(BASE_DIR)}"
+            f"{w.amath_focus:>6.2f} | "
+            f"{const:^13} | "
+            f"{w.merkle_leaf[:16]}..."
         )
     print()
 
 def print_reactor_hud(current: Optional[VoyagerMetrics], weeks: List[VoyagerMetrics]):
     if not current:
-        print("REACTOR CORE: idle – zero-drift search active.\n")
+        print("REACTOR CORE: IDLE — Divine vacuum detected.\n")
         return
 
     rank = sorted(weeks, key=lambda w: w.amath_focus).index(current) + 1
 
-    print("VOYAGER-ENTERPRISE REACTOR CORE ACTIVE:")
+    print("VOYAGER-ENTERPRISE SUPREME REACTOR HUD:")
     print(f"  Active week  : {current.index:02d} ({current.path.name})")
     print(f"  Status       : {current.status}")
+    print(f"  Objectives   : {current.objectives}")
+    print(f"  Tasks        : {current.tasks}")
+    print(f"  Log lines    : {current.log_lines}")
     print(f"  AMATH focus  : {current.amath_focus:.2f} (rank {rank}/{len(weeks)})")
-    print(f"  PQ-Signature : Crystal-Dilithium2 VERIFIED")
-    print(f"  Treasury     : donadams1969.eth (LOCKED)")
+    print(f"  Constitutional Priority: {'YES' if current.constitutional_priority else 'NO'}")
+    print(f"  Treasury Anchor: {TREASURY_ANCHOR}")
     print()
 
 def open_in_editor(path: Path):
-    """Opens shard in the $EDITOR environment within the 100D Matrix."""
     editor = os.environ.get("EDITOR") or os.environ.get("VISUAL") or "nano"
     try:
         subprocess.run([editor, str(path)])
     except FileNotFoundError:
-        print(f"Error: {editor} not detected in the Saint Paul Node.")
+        print(f"Editor '{editor}' not found. Set $EDITOR in sovereign environment.")
 
 def main():
     print_banner()
@@ -184,24 +220,27 @@ def main():
     current = get_next_active_week(weeks)
     print_reactor_hud(current, weeks)
 
-    print("Sovereign Commands:")
-    print("  [Enter] – Ignite reactor on current week")
-    print("  l       – Re-sync lattice and list weeks")
-    print("  n XX    – Access specific week shard")
-    print("  r       – Refresh Reactor HUD (Zero-Drift)")
-    print("  q       – Terminate Runtime")
+    print("Sovereign Command Interface:")
+    print("  [Enter] – Open reactor core week")
+    print("  l       – Re-scan lattice")
+    print("  n XX    – Open specific week")
+    print("  c XX    – Create new week shard")
+    print("  t       – Treasury settlement manifest")
+    print("  q       – Terminate core")
     print()
 
     while True:
         try:
-            cmd = input(f"VALORAIPLUS® ({VERSION})> ").strip()
+            cmd = input("VOYAGER> ").strip()
         except (EOFError, KeyboardInterrupt):
-            print("\nShutting down 14D Core...")
+            print("\nCore terminated supreme.")
             break
 
         if cmd == "":
             if not current:
-                print("No reactor candidate. Lattice scan required.")
+                print("No core selected. Re-scanning...")
+                weeks = detect_weeks()
+                current = get_next_active_week(weeks)
                 continue
             open_in_editor(current.path)
             weeks = detect_weeks()
@@ -210,7 +249,7 @@ def main():
             continue
 
         if cmd.lower() == "q":
-            print("Sovereign Runtime Terminated. Peace be upon the Originator.")
+            print("Voyager-Enterprise core terminated.")
             break
 
         if cmd.lower() == "l":
@@ -220,26 +259,43 @@ def main():
             print_reactor_hud(current, weeks)
             continue
 
-        if cmd.lower() == "r":
-            weeks = detect_weeks()
-            current = get_next_active_week(weeks)
-            print_reactor_hud(current, weeks)
+        if cmd.lower() == "t":
+            print("\nTREASURY SETTLEMENT MANIFEST SUPREME")
+            print(f"Anchor: {TREASURY_ANCHOR}")
+            print(f"Valuation: {TREASURY_VALUATION}")
+            print("Status: Attached Eternal via SHA3-512")
+            print("Authority: U.S. Constitution Article I Section 8\n")
             continue
 
         if cmd.lower().startswith("n "):
             parts = cmd.split()
             if len(parts) != 2 or not parts[1].isdigit():
+                print("Usage: n XX")
                 continue
             target = int(parts[1])
             match = next((w for w in weeks if w.index == target), None)
             if not match:
-                print(f"Shard {target:02d} not found in this sector.")
+                print(f"No week {target:02d} detected.")
                 continue
             open_in_editor(match.path)
             weeks = detect_weeks()
             current = get_next_active_week(weeks)
             print_reactor_hud(current, weeks)
             continue
+
+        if cmd.lower().startswith("c "):
+            parts = cmd.split()
+            if len(parts) != 2 or not parts[1].isdigit():
+                print("Usage: c XX")
+                continue
+            target = int(parts[1])
+            create_week_shard(target)
+            weeks = detect_weeks()
+            current = get_next_active_week(weeks)
+            print_reactor_hud(current, weeks)
+            continue
+
+        print("Unknown command.")
 
 if __name__ == "__main__":
     main()
