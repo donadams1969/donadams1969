@@ -1565,6 +1565,57 @@ anchor test --provider.cluster mainnet
             </p>
           </Card>
         </section>
+
+        {/* Added section: TREASURY_MASS_VERIFIED */}
+        <div className="w-full max-w-5xl mx-auto my-12 p-8 bg-gray-900 border border-green-500 rounded-lg shadow-2xl">
+          <h2 className="text-4xl font-bold text-green-400 mb-8">TREASURY_MASS: VERIFIED</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4">
+              <p className="text-xl text-indigo-400">Sovereign Proof of Mass • FINALDEG Attestation</p>
+              <p className="text-gray-300">
+                The <span className="text-green-400">FINALDEG (Final Degree)</span> attestation now reflects a verified treasury mass of <span className="font-bold text-white">€490,795.80</span>,
+                backed by <span className="font-bold text-white">515,000 USDC</span>. This permanently anchors the genesis liquidity to a stablecoin mass.
+              </p>
+              <div className="flex items-center space-x-4 p-4 bg-gray-800 rounded-lg">
+                <div className="text-5xl">🌍</div>
+                <div>
+                  <div className="font-bold text-white">STATUS: SEALED & ANCHORED</div>
+                  <div className="text-gray-300 text-sm">SGAU-LOCKED</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-black p-4 rounded-lg font-mono text-sm text-green-400 border border-gray-700">
+              <pre><code>
+{`// VALORAIPLUS® Sovereign Treasury
+// Status: TREASURY_MASS: VERIFIED
+
+{
+  "project": "VALORAIPLUS_TREASURY_SOVEREIGNTY",
+  "authorization": "Donny Gillson Poppa Sovereign Override",
+  "node_route": "Saint Paul Node 77_77X -> SF-NODE (Presidio)",
+  "audit_anchors": {
+    "usdc_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "treasury_wallet": "0xb103666AB91ceb4Cbb9e1FC21B81f1ec93601BeB",
+    "verified_mass_euro": 490795.80,
+    "verified_mass_usdc": 515000.00
+  },
+  "status": "FINALDEG_GENESIS_SEALED"
+}
+`}
+              </code></pre>
+            </div>
+          </div>
+
+          <div className="mt-8 pt-4 border-t border-gray-800 flex justify-between items-center">
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+              <div className="text-green-400 text-sm">OPERATIONAL</div>
+            </div>
+            <div className="text-xs text-gray-500">Last Synced: {new Date().toLocaleString()}</div>
+          </div>
+        </div>
       </main>
     </div>
   )

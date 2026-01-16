@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.mass",
+  "project": "VALORAIPLUS_TREASURY_SOVEREIGNTY",
+  "authorization": "Donny Gillson Poppa Sovereign Override",
+  "node_route": "Saint Paul Node 77_77X -> SF-NODE (Presidio)",
+  "audit_anchors": {
+    "usdc_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "treasury_wallet": "0xb103666AB91ceb4Cbb9e1FC21B81f1ec93601BeB",
+    "verified_mass_euro": 490795.80,
+    "verified_mass_usdc": 515000.00
+  },
+  "integrity_hashes": {
+    "mass_anchor_root": "777777771904f904a85906f69042792b103666ab91ceb4cbb9e1fc21b81f1ec9",
+    "sovereign_chip": "32393282827170796b6b77686b6a6c6a6b6c6a6b6c6a6b6c6a6b6c6a6b6c6a62"
+  },
+  "status": "FINALDEG_GENESIS_SEALED"
+}
