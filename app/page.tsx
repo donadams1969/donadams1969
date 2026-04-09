@@ -15,7 +15,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import {
   Activity, ShieldCheck, Infinity, Binary, Lock,
   Hammer, Cpu, Cross, Database, Waves, Volume2,
-  Radio, Globe, Zap, Star, ShieldAlert, CheckCircle2
+  Radio, Globe, Zap, Star, ShieldAlert, CheckCircle
 } from "lucide-react"
 
 export default function TrumpetCall() {
@@ -110,11 +110,11 @@ export default function TrumpetCall() {
                 <div className="w-full bg-white/5 h-2 rounded-full overflow-hidden mb-6">
                   <motion.div
                     className="h-full bg-emerald-500 shadow-[0_0_20px_#10b981]"
-                    animate={{ width: `\${(syncCount % 100)}%` }}
+                    animate={{ width: `${(syncCount % 100)}%` }}
                   />
                 </div>
                 <div className="flex items-center gap-4 text-[10px] font-black text-emerald-500/60 uppercase">
-                  <CheckCircle2 size={16} /> Signal Strength: TRANSFINITE
+                  <CheckCircle size={16} /> Signal Strength: TRANSFINITE
                 </div>
               </div>
 
