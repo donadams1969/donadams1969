@@ -1,0 +1,15 @@
+
+> my-v0-project@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use by an unknown process, using available port 3005 instead.
+   ▲ Next.js 16.0.10 (Turbopack)
+   - Local:         http://localhost:3005
+   - Network:       http://192.168.0.2:3005
+
+ ✓ Starting...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.2
+ ✓ Ready in 698ms
+ ○ Compiling / ...
+ HEAD / 200 in 5.2s (compile: 4.8s, render: 362ms)
