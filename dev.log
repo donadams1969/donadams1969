@@ -1,0 +1,28 @@
+
+> my-v0-project@0.1.0 dev /app
+> next dev
+
+   ▲ Next.js 16.0.10 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://192.168.0.2:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.2
+
+   We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+   The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+	- include was updated to add '.next/dev/types/**/*.ts'
+
+   The following mandatory changes were made to your tsconfig.json:
+
+	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+
+ ✓ Ready in 686ms
+ GET / 200 in 3.5s (compile: 3.2s, render: 297ms)
