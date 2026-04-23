@@ -8,6 +8,7 @@ import {
   VOIP_INTERCEPTS,
 } from "@/lib/sovereign-identity";
 import { executeClawback, doubleSha256 } from "@/lib/clawback-engine";
+import { validateKernelSync } from "@/lib/sovereign-kernel";
 
 // Additional Jules‑specific asset (not already in CLAWBACK_ASSETS)
 const JULES_ASSET = {
@@ -26,6 +27,14 @@ export default function JulesDash() {
   const [anchor, setAnchor] = useState("");
   const [running, setRunning] = useState(false);
   const [pdfType, setPdfType] = useState("clawback_manifest");
+
+  useEffect(() => {
+    try {
+      validateKernelSync();
+    } catch (e) {
+      console.error(e);
+    }
+  }, []);
 
   // Function to execute clawback (including Jules)
   const runEnforcement = () => {
