@@ -52,19 +52,19 @@ export default function JulesDash() {
       );
     }
     newLogs.push(`TOTAL IDENTIFIED: $${totalIdentified.toLocaleString()}`);
-    const newAnchor = doubleSha256(JSON.stringify(ALL_ASSETS));
-    newLogs.push(`BITCOIN ANCHOR: ${newAnchor}`);
-    newLogs.push(
-      `RECOVERY GAP: $${(
-        SOVEREIGN_ID.defaultJudgment - totalIdentified
-      ).toLocaleString()}`
-    );
-    newLogs.push(`💎 DIAMOND REALITY – THE DEBT IS ETERNAL`);
-    // Special Jules note
-    newLogs.push(`🧹 JULES NODE: XOR r11, r11 – Administrative void liquidated.`);
-    setLogs(newLogs);
-    setAnchor(newAnchor);
-    setRunning(false);
+    doubleSha256(JSON.stringify(ALL_ASSETS)).then(newAnchor => {
+      newLogs.push(`BITCOIN ANCHOR: ${newAnchor}`);
+      newLogs.push(
+        `RECOVERY GAP: $${(
+          SOVEREIGN_ID.defaultJudgment - totalIdentified
+        ).toLocaleString()}`
+      );
+      newLogs.push(`💎 DIAMOND REALITY – THE DEBT IS ETERNAL`);
+      newLogs.push(`🧹 JULES NODE: XOR r11, r11 – Administrative void liquidated.`);
+      setLogs(newLogs);
+      setAnchor(newAnchor);
+      setRunning(false);
+    });
   };
 
   // Trigger PDF export (calls unified /api/pdf endpoint)

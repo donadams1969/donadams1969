@@ -105,7 +105,7 @@
 
 SOVEREIGN:               Donny Gillson (Poppa)
 DOB:                     August 21, 1969
-SSN:                     468-94-3461
+SSN:                     $$[ENCRYPTED_SSN]$$
 BRANCH:                  United States Navy
 VA RATING:               90%
 SSDI RATING:             100%
