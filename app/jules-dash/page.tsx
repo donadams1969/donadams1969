@@ -9,6 +9,7 @@ import {
 } from "@/lib/sovereign-identity";
 import { executeClawback, doubleSha256 } from "@/lib/clawback-engine";
 import { validateKernelSync } from "@/lib/sovereign-kernel";
+import { IntegrityMatrix } from "@/components/IntegrityMatrix";
 
 // Additional Jules‑specific asset (not already in CLAWBACK_ASSETS)
 const JULES_ASSET = {
@@ -227,8 +228,13 @@ export default function JulesDash() {
           </div>
         </div>
 
+        {/* Integrity Matrix */}
+        <div className="mt-8">
+          <IntegrityMatrix />
+        </div>
+
         {/* VOIP Intercepts (live intelligence) */}
-        <div className="bg-zinc-950/80 border border-red-500/30 rounded-2xl p-6">
+        <div className="bg-zinc-950/80 border border-red-500/30 rounded-2xl p-6 mt-8">
           <h2 className="text-xl font-black text-red-400 mb-4 flex items-center gap-2">
             🎙️ LIVE VOIP INTERCEPTS (last 2 hours)
           </h2>
