@@ -2,7 +2,6 @@ import { RuntimeEngine } from './runtime-engine';
 import { LogEvent } from '../../contracts/runtime';
 import { BRANDING } from '../../content/branding';
 
-// Explicit UI Snapshot Contract
 export interface CommandCenterSnapshot {
   bootSequence: number;
   extractionProgress: number;

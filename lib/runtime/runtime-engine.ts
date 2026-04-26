@@ -12,7 +12,6 @@ export class RuntimeEngine {
 
   public readonly TOTAL_FRAGMENTS = 15682;
 
-  // React hook adapter logic to interact cleanly with this pure engine
   public onStateChange: (() => void) | null = null;
 
   public startBootSequence(): void {
@@ -70,7 +69,6 @@ export class RuntimeEngine {
     }
   }
 
-  // --- Getters for Snapshot generation ---
   get bootSequence() { return this._bootSequence; }
   get extractionProgress() { return this._extractionProgress; }
   get isExtracted() { return this._isExtracted; }
