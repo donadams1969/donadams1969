@@ -1,7 +1,22 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "valor-ai-plus-trinity-force",
+  "version": "901.8.0",
   "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "overrides": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vaul": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0"
+    }
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -57,7 +72,7 @@
     "sonner": "^1.7.4",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
-    "vaul": "^0.9.9",
+    "vaul": "^1.1.2",
     "zod": "3.25.76"
   },
   "devDependencies": {
