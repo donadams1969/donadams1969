@@ -123,3 +123,43 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-200%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes bounce-custom {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+}
+
+.animate-\\[bounce_5s_infinite\\] {
+  animation: bounce-custom 5s infinite;
+}
+
+.animate-\\[shimmer_2s_infinite\\] {
+  animation: shimmer 2s infinite;
+}
+
+.animate-\\[shimmer_3s_infinite\\] {
+  animation: shimmer 3s infinite;
+}
+
+.animate-\\[shimmer_1\\.5s_infinite\\] {
+  animation: shimmer 1.5s infinite;
+}
+
+.animate-\\[shimmer_2\\.5s_infinite\\] {
+  animation: shimmer 2.5s infinite;
+}

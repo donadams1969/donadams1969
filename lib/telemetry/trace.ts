@@ -1,13 +1,6 @@
-export interface TraceContext {
-  traceId: string;
-  spanId: string;
-  traceFlags: string;
-}
+import { TraceContext } from '../../contracts/schemas';
 
 export class TracePropagator {
-  // W3C Trace Context implementation
-  // Format: 00-{traceId}-{spanId}-{traceFlags}
-
   public static extract(traceparent: string): TraceContext | null {
     const parts = traceparent.split('-');
     if (parts.length !== 4 || parts[0] !== '00') {
@@ -16,20 +9,19 @@ export class TracePropagator {
 
     return {
       traceId: parts[1],
-      spanId: parts[2],
-      traceFlags: parts[3]
+      spanId: parts[2]
     };
   }
 
   public static inject(context: TraceContext): string {
-    return `00-${context.traceId}-${context.spanId}-${context.traceFlags}`;
+    return `00-${context.traceId}-${context.spanId}-01`;
   }
 
-  public static generateNewContext(): TraceContext {
+  public static generateNewContext(parentSpanId?: string): TraceContext {
     return {
       traceId: this.generateHex(32),
       spanId: this.generateHex(16),
-      traceFlags: '01' // sampled
+      parentSpanId
     };
   }
 
