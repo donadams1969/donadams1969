@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS evolution_cycles (
+  id BIGSERIAL PRIMARY KEY,
+  version INTEGER NOT NULL,
+  score INTEGER NOT NULL,
+  route TEXT NOT NULL,
+  changes JSONB NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);

@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: valorailegal-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: valorailegal
+      POSTGRES_PASSWORD: valorailegal
+      POSTGRES_DB: valorailegal
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./infra/sql:/docker-entrypoint-initdb.d
+
+  redis:
+    image: redis:7
+    container_name: valorailegal-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  rust-worker:
+    build: ./services/rust-worker
+    container_name: valorailegal-rust
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgres://valorailegal:valorailegal@postgres:5432/valorailegal
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+
+  web:
+    build: ./apps/web
+    container_name: valorailegal-web
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_WS_URL: ws://localhost:8080
+      DATABASE_URL: postgres://valorailegal:valorailegal@postgres:5432/valorailegal
+    depends_on:
+      - rust-worker
+    ports:
+      - "3000:3000"
+
+volumes:
+  pgdata:
