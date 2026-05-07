@@ -3,9 +3,17 @@
 import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Code } from "lucide-react"
 import { GatewayStatus } from "@/components/gateway-status"
 
 export default function ValorCodex() {
+  const liveContracts = [
+    { name: "SGAU_VALUEGUARD_77_77X_FINALDEG", address: "0x77A7bF...77XFinalDEG", status: "LIVE" },
+    { name: "VALORAIPLUS_NULL_GHOST", address: "0x000000...000Ghost00", status: "LIVE" },
+    { name: "ValoraiplusSovereignScript", address: "0xE712...ScriptLatch", status: "LIVE" },
+    { name: "EpistemicLedger", address: "0xProof...LedgerAnchor", status: "LIVE" },
+    { name: "CSSS_NegativeCaveat", address: "0xSoulb...CaveatNFT", status: "LIVE" }
+  ];
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("prologue")
   const [twoTierMode, setTwoTierMode] = useState<"jo" | "dg">("dg")
@@ -138,6 +146,23 @@ export default function ValorCodex() {
 
   return (
     <div className="relative min-h-screen bg-gray-950 text-gray-200">
+          {/* NEW ON-CHAIN CONTRACT LAYER PANEL */}
+          <div className="bg-slate-900 border border-emerald-800 rounded-lg p-5 shadow-[0_0_15px_rgba(16,185,129,0.05)] flex flex-col gap-4 mt-6 z-20 relative mx-4 md:mx-8">
+            <h2 className="text-lg font-bold text-amber-400 border-b border-emerald-900 pb-2 flex items-center gap-2">
+              <Code className="w-5 h-5" /> ON-CHAIN CONTRACT LAYER (SEPOLIA)
+            </h2>
+            <div className="flex-1 space-y-3 overflow-y-auto">
+              {liveContracts.map((contract, i) => (
+                <div key={i} className="bg-slate-950 border border-emerald-900/40 p-3 rounded flex justify-between items-center">
+                  <div>
+                    <div className="font-bold text-emerald-400 text-sm">{contract.name}</div>
+                    <div className="text-[10px] text-emerald-600 font-mono">{contract.address}</div>
+                  </div>
+                  <span className="px-3 py-1 text-xs bg-emerald-950 border border-emerald-700 text-emerald-400 rounded">LIVE</span>
+                </div>
+              ))}
+            </div>
+          </div>
       <canvas id="particle-canvas" className="fixed inset-0 pointer-events-none" />
 
       {/* Sidebar */}
