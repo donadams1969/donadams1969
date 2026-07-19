@@ -9,4 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: bash jules.sh
+      - name: Ensure Jules Script Executable
+        run: |
+          if [ -f jules.sh ]; then
+            chmod +x jules.sh
+          else
+            echo "jules.sh missing — this should not happen after fix"
+            exit 1
+          fi
+      - name: Run Jules Auto-Regen Supreme
+        run: bash jules.sh
