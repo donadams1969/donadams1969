@@ -31,9 +31,22 @@ export function GatewayStatus() {
       setAssetsVerified(true)
     }, 3500)
 
-    // Final state: online
+    // Final state: online + dispatch runtime-ready event
     const timer4 = setTimeout(() => {
       setState("online")
+
+      // Emit custom event so other modules can react
+      if (typeof window !== "undefined") {
+        const detail = {
+          timestamp: new Date().toISOString(),
+          node: "SAINT_PAUL_GENESIS",
+          status: "ONLINE",
+          assets: ["DG77.77X", "JAXX"],
+          version: "v5152-Ω",
+        }
+        window.dispatchEvent(new CustomEvent("valorloop:runtime-ready", { detail }))
+        console.log("[VALORLOOP] runtime-ready event dispatched", detail)
+      }
     }, 4000)
 
     return () => {
