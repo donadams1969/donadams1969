@@ -8,21 +8,29 @@ on:
   workflow_dispatch: # Allows manual trigger for retroactive fixes
 
 permissions:
-  contents: write  # Grants Jules permission to rename files
+  contents: write  # Grants Jules permission to commit compliance report / renames
 
 jobs:
   enforce-branding:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Fetch all history for retroactive checks
+          fetch-depth: 0 # Full history for any future retroactive analysis
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+
+      - name: Ensure branding script is present
+        run: |
+          if [ ! -f .github/scripts/branding_retrofix.py ]; then
+            echo "::error::Missing .github/scripts/branding_retrofix.py — this should have been committed with the workflow."
+            exit 1
+          fi
+          echo "Script present and ready."
 
       - name: Execute Jules Retroactive Fix
         run: |
@@ -36,6 +44,10 @@ jobs:
           git config --global user.name "Jules-Enforcer"
           git config --global user.email "jules@valoraiplus.ai"
           git add .
-          # Only commit if changes were made
-          git diff-index --quiet HEAD || git commit -m "VALOR AI+ Branding Retroactive Fix [Jules]"
-          git push
+          # Only commit if the working tree differs from HEAD
+          if git diff-index --quiet HEAD --; then
+            echo "No branding changes to commit."
+          else
+            git commit -m "VALOR AI+ Branding Retroactive Fix [Jules]"
+            git push
+          fi

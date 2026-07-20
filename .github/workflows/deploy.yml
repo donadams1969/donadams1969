@@ -1,0 +1,49 @@
+name: Deployment Registry Pipeline
+
+# Trigger the pipeline on push to the main branch or via manual execution
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# CRITICAL: GitHub Actions requires explicit permissions to request an OIDC id-token.
+# Without 'id-token: write', AWS will reject the authentication request.
+permissions:
+  id-token: write   # Required for OIDC federation with AWS
+  contents: read    # Required to check out the code
+
+jobs:
+  deploy:
+    name: Execute Safe Node Deployment
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the workspace files
+      - name: Checkout Repository Codebase
+        uses: actions/checkout@v4
+
+      # Step 2: Establish Python environment for branding retrofixes
+      - name: Setup Python Runtime Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # Step 3: Run the local compliance and branding retrofix
+      - name: Run Branding Retrofix Task
+        run: python3 .github/scripts/branding_retrofix.py
+        env:
+          BRANDING_PREFIXES: "valoraiplus_module_id,valoraiplus_,valoraiplus2e_,valoraiplus3e_"
+
+      # Step 4: Securely authenticate with AWS using OIDC (Zero-Trust gateway)
+      # We reference GitHub Repository Secrets to prevent hardcoded identity configuration.
+      - name: Configure AWS Credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION || 'us-east-1' }}
+          audience: sts.amazonaws.com
+          role-session-name: GitHubActionsSovereignSession
+
+      # Step 5: Verify AWS connectivity (Sovereign confirmation step)
+      - name: Verify Identity Telemetry
+        run: |
+          aws sts get-caller-identity
