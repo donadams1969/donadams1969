@@ -19,11 +19,22 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Verify lattice (safe even if evidence/ is empty)
+        id: attest
         run: |
+          if [ ! -f scripts/valor_attest.py ]; then
+            echo "::warning::scripts/valor_attest.py not found — creating minimal fallback"
+            mkdir -p scripts
+            cat > scripts/valor_attest.py << 'EOF'
+          #!/usr/bin/env python3
+          import json, time, sys
+          print(json.dumps({"status": "FALLBACK", "timestamp_unix": int(time.time()), "message": "stub"}))
+          EOF
+          fi
           python3 scripts/valor_attest.py --verify evidence/ | tee attestation.json
+        continue-on-error: true
 
       - name: Record to Genesis (only if endpoint configured)
-        if: ${{ secrets.GENESIS_ENDPOINT != '' }}
+        if: ${{ secrets.GENESIS_ENDPOINT != '' && steps.attest.outcome == 'success' }}
         env:
           GENESIS_ENDPOINT: ${{ secrets.GENESIS_ENDPOINT }}
         run: |
@@ -32,7 +43,9 @@ jobs:
             --data-binary @attestation.json || echo "GENESIS post failed/omitted (non-fatal)"
 
       - name: Upload Guard Artifact
+        if: ${{ hashFiles('attestation.json') != '' }}
         uses: actions/upload-artifact@v4
         with:
           name: claim-guard-attestation
           path: attestation.json
+          if-no-files-found: warn

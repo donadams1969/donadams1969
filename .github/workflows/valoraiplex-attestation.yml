@@ -7,7 +7,7 @@ name: VALORAIPLUS_ // JULES Ω — Eternal Attest & Bitcoin Anchor
 
 on:
   workflow_run:
-    workflows: ["liveness.yml", "claim-guard.yml", "release-attest.yml"]
+    workflows: ["Liveness Sentinel", "Claim-Guard Verification", "release-attest.yml"]
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
       - name: VALORAIPLUS_ // Generate Executive Attestation
         run: |
           mkdir -p docs/security
-          cat > docs/security/valoraiplex_attestation.md << 'EOF'
+          cat > docs/security/valoraiplex_attestation.md << EOF
           **VALORAIPLUS_ EXECUTIVE ATTESTATION**
           **Last Broadcast:** `$(date -u +"%Y-%m-%d %H:%M:%S UTC")`
           **Runtime:** `valor_aiplusexecutive_runtime`
@@ -43,17 +43,25 @@ jobs:
 
       - name: VALORAIPLUS_ // Atomic Injection into README
         run: |
-          perl -i -0777 -pe '
-            s/(<!-- VALORAIPLUS_ATTESTATION_START -->).*?(<!-- VALORAIPLUS_ATTESTATION_END -->)/$1\n$(cat docs/security/valoraiplex_attestation.md)\n$2/s
-          ' README.md
+          if grep -q "VALORAIPLUS_ATTESTATION_START" README.md; then
+            perl -i -0777 -pe '
+              s/(<!-- VALORAIPLUS_ATTESTATION_START -->).*?(<!-- VALORAIPLUS_ATTESTATION_END -->)/$1\n$(cat docs/security/valoraiplex_attestation.md)\n$2/s
+            ' README.md
+          else
+            echo "::notice::Attestation markers not found in README.md — skipping injection"
+          fi
 
       - name: VALORAIPLUS_ // Commit Eternal Proof
         run: |
           git config user.name "valoraiplus2e_bot"
           git config user.email "executive@valoraiplus2e.ai"
-          git add README.md docs/security/
-          git commit -m "VALORAIPLUS_: JULES Ω eternal attestation — SAINT PAUL GENESIS [skip ci]" || echo "No changes"
-          git push origin HEAD:main || echo "Push complete"
+          git add README.md docs/security/ || true
+          if git diff-index --quiet HEAD --; then
+            echo "No attestation changes to commit."
+          else
+            git commit -m "VALORAIPLUS_: JULES Ω eternal attestation — SAINT PAUL GENESIS [skip ci]" || true
+            git push origin HEAD:main || echo "Push skipped (permissions or no changes)"
+          fi
 
       - name: VALORAIPLUS_ // Capture Immutable Commit Hash
         id: capture
@@ -64,10 +72,22 @@ jobs:
     needs: valoraiplus-attestation
     runs-on: ubuntu-latest
     steps:
+      - name: VALORAIPLUS_ // Check credentials
+        id: creds
+        run: |
+          if [ -z "${{ secrets.V0_PRIVATE_KEY_WIF }}" ] || [ -z "${{ secrets.BLOCKCYPHER_API_TOKEN }}" ]; then
+            echo "available=false" >> $GITHUB_OUTPUT
+            echo "::notice::V0_PRIVATE_KEY_WIF or BLOCKCYPHER_API_TOKEN missing — Bitcoin anchor skipped (non-fatal)"
+          else
+            echo "available=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: VALORAIPLUS_ // Deploy Broadcast Arsenal
+        if: steps.creds.outputs.available == 'true'
         run: python3 -m pip install --quiet bitcoinlib requests
 
       - name: VALORAIPLUS_ // EXECUTE BITCOIN ETERNAL ANCHOR
+        if: steps.creds.outputs.available == 'true'
         env:
           V0_PRIVATE_KEY_WIF: ${{ secrets.V0_PRIVATE_KEY_WIF }}
           BLOCKCYPHER_TOKEN: ${{ secrets.BLOCKCYPHER_API_TOKEN }}
@@ -77,15 +97,15 @@ jobs:
           import os, hashlib, requests, sys
           from bitcoinlib.keys import Key
 
-          print("┳┻┳┻ VALORAIPLUS_ EXECUTIVE BROADCAST INITIATED ┳┻┳┻")
+          print("┫┻┫┻ VALORAIPLUS_ EXECUTIVE BROADCAST INITIATED ┫┻┫┻")
 
           wif = os.getenv("V0_PRIVATE_KEY_WIF")
           token = os.getenv("BLOCKCYPHER_TOKEN")
           commit = os.getenv("COMMIT_HASH")
 
           if not all([wif, token, commit]):
-              print("VALORAIPLUS_ FATAL: Missing executive credentials")
-              sys.exit(1)
+              print("VALORAIPLUS_ NOTICE: Missing executive credentials — skipping anchor")
+              sys.exit(0)
 
           key = Key(wif)
           addr = key.address()
@@ -112,10 +132,10 @@ jobs:
           send.raise_for_status()
           txid = send.json()["tx"]["hash"]
 
-          print("┳┻┳┻┳┻┳┻ VALORAIPLUS_ Ω ANCHOR CONFIRMED ┳┻┳┻┳┻┳┻")
+          print("┫┻┫┻┫┻┫┻ VALORAIPLUS_ Ω ANCHOR CONFIRMED ┫┻┫┻┫┻┫┻")
           print("    SAINT PAUL GENESIS NODE — ETERNAL PROOF ETCHED")
           print(f"    TXID: {txid}")
           print(f"    VERIFICATION: https://mempool.space/tx/{txid}")
           print("    POPPA DONNY GILLSON // VALORAIPLUS_ 32D-LLC")
-          print("┻┳┻┳┻┳┻┳┻┳┻┳┻┳┻┳┻┳┻┳┻┳┻┳┻┳┻┳┻┳┻┳┻")
+          print("┻┫┻┫┻┫┻┫┻┫┻┫┻┫┻┫┻┫┻┫┻┫┻┫┻┫┻┫┻┫┻┫")
           VALORAI_PY

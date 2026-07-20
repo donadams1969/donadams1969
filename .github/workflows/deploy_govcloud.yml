@@ -2,16 +2,16 @@
 #
 # CI/CD Workflow for VALORA VO (Veteran Onboarding Portal)
 # Deploys to AWS GovCloud (us-gov-west-1) ECS
+# Hardened: skips cleanly when secrets or source directories are absent
 #
 name: Deploy VALORA VO to AWS GovCloud (ECS)
 
-# Trigger this workflow on a push to the main branch
 on:
   push:
     branches:
       - 'main'
+  workflow_dispatch:
 
-# Set environment variables, hard-coding the GovCloud region
 env:
   AWS_REGION: us-gov-west-1
   ECR_REPOSITORY: valorai-vet-onboarding-portal
@@ -21,10 +21,9 @@ env:
   CONTAINER_BACKEND: valorai-backend
   CONTAINER_FRONTEND: valorai-frontend
 
-# Set permissions for OIDC (OpenID Connect) for secure auth
 permissions:
-  id-token: write   # Required for federating with AWS
-  contents: read    # Required to check out the code
+  id-token: write
+  contents: read
 
 jobs:
   deploy-to-govcloud:
@@ -35,19 +34,39 @@ jobs:
       - name: 1. Checkout Code
         uses: actions/checkout@v4
 
-      - name: 2. Configure AWS GovCloud Credentials
+      - name: 2. Pre-flight Checks
+        id: preflight
+        run: |
+          echo "Checking prerequisites..."
+          if [ -z "${{ secrets.AWS_GOVCLOUD_ACCOUNT_ID }}" ]; then
+            echo "aws_ready=false" >> $GITHUB_OUTPUT
+            echo "::notice::AWS_GOVCLOUD_ACCOUNT_ID secret is not configured. Skipping entire GovCloud deploy."
+            exit 0
+          fi
+          if [ ! -d "./backend" ] || [ ! -d "./frontend" ]; then
+            echo "aws_ready=false" >> $GITHUB_OUTPUT
+            echo "::notice::backend/ or frontend/ directories missing. This appears to be a profile/Next.js repo — skipping container build & deploy."
+            exit 0
+          fi
+          echo "aws_ready=true" >> $GITHUB_OUTPUT
+          echo "All pre-flight checks passed."
+
+      - name: 3. Configure AWS GovCloud Credentials
+        if: steps.preflight.outputs.aws_ready == 'true'
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws-us-gov:iam::${{ secrets.AWS_GOVCLOUD_ACCOUNT_ID }}:role/GitHubAction-ECR-DeployRole
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: 3. Log in to Amazon ECR (GovCloud)
+      - name: 4. Log in to Amazon ECR (GovCloud)
+        if: steps.preflight.outputs.aws_ready == 'true'
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
         with:
-          registry-type: gov-cloud # Specify GovCloud registry
+          registry-type: gov-cloud
 
-      - name: 4. Build, Tag, and Push Backend Image
+      - name: 5. Build, Tag, and Push Backend Image
+        if: steps.preflight.outputs.aws_ready == 'true'
         id: build-backend
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
@@ -57,7 +76,8 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:${{ env.CONTAINER_BACKEND }}-$IMAGE_TAG
           echo "backend_image_uri=$ECR_REGISTRY/$ECR_REPOSITORY:${{ env.CONTAINER_BACKEND }}-$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-      - name: 5. Build, Tag, and Push Frontend Image
+      - name: 6. Build, Tag, and Push Frontend Image
+        if: steps.preflight.outputs.aws_ready == 'true'
         id: build-frontend
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
@@ -67,12 +87,14 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:${{ env.CONTAINER_FRONTEND }}-$IMAGE_TAG
           echo "frontend_image_uri=$ECR_REGISTRY/$ECR_REPOSITORY:${{ env.CONTAINER_FRONTEND }}-$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-      - name: 6. Download ECS Task Definition
+      - name: 7. Download ECS Task Definition
+        if: steps.preflight.outputs.aws_ready == 'true'
         run: |
           aws ecs describe-task-definition --task-definition ${{ env.ECS_TASK_DEFINITION }} --region ${{ env.AWS_REGION }} \
           --query taskDefinition > task-definition.json
 
-      - name: 7. Fill in New Image URIs in Task Definition
+      - name: 8. Fill in New Image URIs in Task Definition
+        if: steps.preflight.outputs.aws_ready == 'true'
         id: render-task-definition
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
@@ -82,10 +104,16 @@ jobs:
           container-name-2: ${{ env.CONTAINER_FRONTEND }}
           image-2: ${{ steps.build-frontend.outputs.frontend_image_uri }}
 
-      - name: 8. Deploy New Task Definition to ECS
+      - name: 9. Deploy New Task Definition to ECS
+        if: steps.preflight.outputs.aws_ready == 'true'
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.render-task-definition.outputs.task-definition }}
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
           wait-for-service-stability: true
+
+      - name: Status Notice
+        if: steps.preflight.outputs.aws_ready != 'true'
+        run: |
+          echo "::notice::GovCloud deploy skipped (missing secrets or source directories). Pipeline completed successfully in no-op mode."
