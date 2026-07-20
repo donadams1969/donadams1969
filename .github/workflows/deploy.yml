@@ -10,7 +10,7 @@ on:
 # Without 'id-token: write', AWS will reject the authentication request.
 permissions:
   id-token: write   # Required for OIDC federation with AWS
-  contents: read    # Required to check out the code
+  contents: write   # Allow commit of branding compliance report if needed
 
 jobs:
   deploy:
@@ -33,9 +33,23 @@ jobs:
         env:
           BRANDING_PREFIXES: "valoraiplus_module_id,valoraiplus_,valoraiplus2e_,valoraiplus3e_"
 
+      # Step 3b: Commit any branding report updates (non-fatal)
+      - name: Commit Branding Compliance Report
+        run: |
+          git config --global user.name "Deployment-Registry"
+          git config --global user.email "deploy@valoraiplus.ai"
+          git add docs/security/branding_compliance.md || true
+          if git diff-index --quiet HEAD --; then
+            echo "No branding report changes to commit."
+          else
+            git commit -m "docs: update branding compliance report [Deployment Registry]" || true
+            git push || echo "Push skipped (permissions or no changes)"
+          fi
+
       # Step 4: Securely authenticate with AWS using OIDC (Zero-Trust gateway)
-      # We reference GitHub Repository Secrets to prevent hardcoded identity configuration.
+      # Only attempt if the secret is configured. Missing secret is non-fatal for this registry pipeline.
       - name: Configure AWS Credentials via OIDC
+        if: ${{ secrets.AWS_ROLE_ARN != '' }}
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
@@ -45,5 +59,12 @@ jobs:
 
       # Step 5: Verify AWS connectivity (Sovereign confirmation step)
       - name: Verify Identity Telemetry
+        if: ${{ secrets.AWS_ROLE_ARN != '' }}
         run: |
           aws sts get-caller-identity
+
+      - name: AWS OIDC Status
+        if: ${{ secrets.AWS_ROLE_ARN == '' }}
+        run: |
+          echo "::notice::AWS_ROLE_ARN secret is not configured. Skipping AWS OIDC authentication and identity verification."
+          echo "To enable: add repository secret AWS_ROLE_ARN with the full ARN of an IAM role that trusts this GitHub repo via OIDC."
