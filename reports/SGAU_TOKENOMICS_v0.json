@@ -1,0 +1,100 @@
+{
+  "schema_id": "SGAU-TOKENOMICS-v0",
+  "version": "v0",
+  "provenance": {
+    "root_pointer": "POS_77_77X_LEGAL_ANCHOR_v0.JSON",
+    "provenance_hash": "DG77.77X-SGAU-VALUEGUARD-77.77X-FINALDEG.SOL",
+    "projects": [
+      "VALORAIPLUS",
+      "VALORCHAIN",
+      "SGAU-VALUEGUARD"
+    ],
+    "operators": [
+      "That's Edutainment LLC"
+    ],
+    "notes": "Internal SGAU/VALUEGUARD tokenomics parameters for Saint Paul Node."
+  },
+  "token": {
+    "symbol": "SGAU",
+    "name": "SGAU ValueGuard Unit",
+    "decimals": 18,
+    "chain_context": {
+      "primary_chain": "EVM-compatible",
+      "network": "to-be-specified",
+      "contracts": {
+        "governance": null,
+        "treasury": null,
+        "router": null
+      }
+    }
+  },
+  "supply": {
+    "max_supply": null,
+    "initial_mint": null,
+    "mint_policy": "FIXED | CAPPED | ALGORITHMIC | MANUAL",
+    "burn_policy": "NONE | MANUAL | AUTOMATED",
+    "circulating_supply_at_genesis": null
+  },
+  "allocations": {
+    "categories": [
+      {
+        "label": "Treasury",
+        "percent": null,
+        "vesting": {
+          "type": "NONE | LINEAR | CLIFF",
+          "cliff_months": null,
+          "duration_months": null
+        }
+      },
+      {
+        "label": "Team",
+        "percent": null,
+        "vesting": {
+          "type": "NONE | LINEAR | CLIFF",
+          "cliff_months": null,
+          "duration_months": null
+        }
+      },
+      {
+        "label": "Community/Rewards",
+        "percent": null,
+        "vesting": {
+          "type": "NONE | LINEAR | CLIFF",
+          "cliff_months": null,
+          "duration_months": null
+        }
+      },
+      {
+        "label": "Strategic Reserve",
+        "percent": null,
+        "vesting": {
+          "type": "NONE | LINEAR | CLIFF",
+          "cliff_months": null,
+          "duration_months": null
+        }
+      }
+    ],
+    "sum_percent_must_equal_100": true
+  },
+  "emissions": {
+    "model": "NONE | FIXED_PER_BLOCK | DECAYING | PROGRAMMABLE",
+    "parameters": {
+      "emission_per_block": null,
+      "halving_interval_blocks": null,
+      "min_emission": null
+    }
+  },
+  "guards": {
+    "valueguard_contract": "SGAU-VALUEGUARD-77.77X-FINALDEG.SOL",
+    "safety_switches": {
+      "circuit_breaker": true,
+      "max_daily_inflation_percent": null,
+      "max_single_tx_mint_percent": null
+    },
+    "governance_requirements": {
+      "min_signers": null,
+      "quorum_percent": null,
+      "proposal_delay_seconds": null
+    }
+  }
+}

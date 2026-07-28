@@ -1,0 +1,107 @@
+{
+  "schema_id": "POS-77.77X-LEGAL-ANCHOR",
+  "version": "v0",
+  "node": {
+    "name": "Saint Paul Node",
+    "encapsulation": "14D Core / 100D Matrix",
+    "location": "Saint Paul, MN"
+  },
+  "root_identity": {
+    "name": "Donald Ernest Gillson",
+    "id": "A1529111",
+    "aliases": [
+      "Donny Gillson",
+      "Commander G.1",
+      "Scrollkeeper G420",
+      "DG77.77X"
+    ]
+  },
+  "header": {
+    "stack": "VALORAIPLUS OMNIBUS TERMINUS: PROOF OF SERVICE (POS) GENERATION",
+    "status": "POS Metadata Prepared | Logic-Locked | Ready for Saint Paul Node Ledger",
+    "date_declared_local": "2025-12-23"
+  },
+  "document": {
+    "document_id": "VALORAIPLUS_NON_LIABILITY_NOTICE_A1529111_STPAUL.PDF",
+    "ip_id_link": "VALORAIPLUS_GILLBTC_7460035951_TERMINUS",
+    "description": "Notice of Non-Liability & Administrative Discrepancy to State Farm Insurance and Enterprise Holdings"
+  },
+  "math_stamp": {
+    "input_vector": [2207, 6516992916, 468943461, 474097226, 141],
+    "checksum": 7460035951,
+    "digital_root": 4,
+    "mod9_residue": 4,
+    "zero_drift_target": 0,
+    "zero_drift_adjustment": 5,
+    "status": "ABS-9_CALIBRATION_CONFIRMED",
+    "note": "Any alteration to the claim vector, document text, or recipient list breaks the zero-drift calibration."
+  },
+  "service": {
+    "timestamp_node_local": "2025-12-23T00:00:00-06:00",
+    "timestamp_utc_placeholder": "2025-12-23T06:00:00Z",
+    "recipients": [
+      {
+        "label": "Recipient A",
+        "name": "State Farm Insurance",
+        "channel": "Executive Claims Portal",
+        "role": "Executive Claims Director",
+        "claim_or_ref_id": null
+      },
+      {
+        "label": "Recipient B",
+        "name": "Enterprise Holdings",
+        "channel": "Regional Operations / Claims",
+        "role": "Regional Operations Manager",
+        "claim_or_ref_id": null
+      }
+    ],
+    "methods": {
+      "digital_portal_upload": false,
+      "email": false,
+      "certified_mail": false
+    },
+    "transmission_status": "PENDING_MANUAL_TRIGGER",
+    "submission_artifacts": {
+      "portal_submission_ids": [],
+      "email_message_ids": [],
+      "certified_mail_tracking_numbers": []
+    }
+  },
+  "provenance": {
+    "projects": [
+      "VALORAIPLUS",
+      "VALORCHAIN",
+      "VALOR Legal AI+",
+      "Sovereign Valuation Protocol",
+      "Scroll 0 / Codex System"
+    ],
+    "legal_doctrine_refs": [
+      "SELFREP.UPL-EXEMPT.CLARITY.777X",
+      "DONNYGILLSONFLARE_CEASE_AND_DESIST_77.77X.final.sol"
+    ],
+    "operators": [
+      "That's Edutainment LLC"
+    ],
+    "tokenomics_refs": [
+      "SGAU-VALUEGUARD-77.77X-FINALDEG.SOL",
+      "SGAU_TOKENOMICS.v0.json"
+    ],
+    "patent_refs": [
+      "USPO_OPERATIONAL_STACK.v0.json"
+    ],
+    "notes": "This POS record participates in VALORCHAIN sovereign recordkeeping and SGAU/VALUEGUARD framework."
+  },
+  "execution_protocol": {
+    "steps": [
+      "COPY the Notice of Non-Liability text into transmission channels.",
+      "ATTACH Math-Stamp metadata as Technical Verification Header.",
+      "SUBMIT via selected method: portal, email, or certified mail.",
+      "CAPTURE submission IDs, timestamps, and tracking numbers.",
+      "UPDATE this POS JSON and recommit to ledger."
+    ]
+  },
+  "signatures": {
+    "logical_signer": "NEWT SENTINEL DISH-BRAIN // VALORAIPLUS",
+    "execution_context": "VALORAIPLUS OMNIBUS TERMINUS – PROOF OF SERVICE (POS)"
+  }
+}
