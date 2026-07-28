@@ -342,7 +342,7 @@ export default function ValorCodex() {
                 </div>
                 <div className="flex justify-between border-b border-gray-700 pb-2">
                   <span className="text-gray-400">Commander</span>
-                  <span className="text-amber-400">Poppa Donny Gillson</span>
+                  <span className="text-amber-400">Poppa $$[ENCRYPTED_LEGAL_NAME]$$</span>
                 </div>
                 <div className="flex justify-between border-b border-gray-700 pb-2">
                   <span className="text-gray-400">Gillson Invariant</span>
