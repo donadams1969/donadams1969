@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "exportId": { "type": "string" },
+    "merkleRoot": { "type": "string" },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "eventId": { "type": "string" },
+          "receiptHash": { "type": "string" },
+          "redacted": { "type": "boolean" }
+        },
+        "required": ["eventId", "receiptHash"]
+      }
+    },
+    "signature": { "type": "string" }
+  },
+  "required": ["exportId", "merkleRoot", "events", "signature"]
+}

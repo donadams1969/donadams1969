@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "version": { "type": "string", "enum": ["REV_34"] },
+    "identityHash": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+    "signature": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "provenance": { "type": "string" },
+    "capabilities": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["version", "identityHash", "signature", "timestamp", "provenance"]
+}
