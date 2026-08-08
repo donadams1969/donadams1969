@@ -1,0 +1,37 @@
+name: valorloop-mainnet
+on: { workflow_dispatch: {} }
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Deploy Ethereum Mainnet
+        env:
+          DEPLOYER_PRIVATE_KEY: ${{ secrets.DEPLOYER_PRIVATE_KEY }}
+          CONTROLLER_ADDRESS:   ${{ secrets.CONTROLLER_ADDRESS }}
+          ETHEREUM_MAINNET_RPC: ${{ secrets.ETHEREUM_MAINNET_RPC }}
+          NEXT_PUBLIC_VALOR_DID: ${{ secrets.NEXT_PUBLIC_VALOR_DID }}
+          LAUNCH_MARKER_CID:    ${{ secrets.LAUNCH_MARKER_CID }}
+        run: npm run deploy:mainnet:eth
+      - name: Deploy Polygon Mainnet
+        env:
+          DEPLOYER_PRIVATE_KEY: ${{ secrets.DEPLOYER_PRIVATE_KEY }}
+          CONTROLLER_ADDRESS:   ${{ secrets.CONTROLLER_ADDRESS }}
+          POLYGON_MAINNET_RPC:  ${{ secrets.POLYGON_MAINNET_RPC }}
+          NEXT_PUBLIC_VALOR_DID: ${{ secrets.NEXT_PUBLIC_VALOR_DID }}
+          LAUNCH_MARKER_CID:    ${{ secrets.LAUNCH_MARKER_CID }}
+        run: npm run deploy:mainnet:polygon
+      - name: Probe and Sign
+        env:
+          BANK_ADDR: ${{ steps.addr.outputs.address || '' }}
+          RPC_URLS: "${{ secrets.ETHEREUM_MAINNET_RPC }},${{ secrets.POLYGON_MAINNET_RPC }}"
+          DID_PRIVATE_KEY: ${{ secrets.DID_PRIVATE_KEY }}
+          PINATA_JWT: ${{ secrets.PINATA_JWT }}
+        run: node scripts/postdeploy_probe_and_sign.mjs
